@@ -330,3 +330,17 @@ form:focus {
 .col-lg-6 {
   margin-top: 2em;
 }
+
+/* list line spacing */
+ol.simple {
+  line-height: 1em;
+}
+
+ul.simple {
+  line-height: 1em;
+}
+
+/* ensure images stay within the column bounds*/
+img {
+  max-width: 100%;
+}
