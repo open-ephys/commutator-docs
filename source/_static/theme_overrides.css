@@ -332,12 +332,22 @@ form:focus {
 }
 
 /* list line spacing */
-ol.simple {
-  line-height: 1em;
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
 }
 
-ul.simple {
-  line-height: 1em;
+/* List items in main area, but not in side bars */
+body > li,
+p {
+  line-height: 1.5;
+  margin: 0.3em 0;
 }
 
 /* ensure images stay within the column bounds*/
