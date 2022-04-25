@@ -12,15 +12,15 @@ What to customize
 
 * License (at end of primary index page)
 * conf.py:
-  -  project = "OE docs"  # change to your project name
-  - "github_repo": "doc-template",  # change to new repo
-  -  html_logo = "_static/images/oe_logo_template.svg" # change to svg with your logo
+   * project = "OE docs"  # change to your project name
+   * "github_repo": "doc-template",  # change to new repo
+   * html_logo = "_static/images/oe_logo_template.svg" # change to svg with your logo
 
       Change the device name on the logo "oe_logo_name.svg"
       Miso, Bold, 36 pt, Kerning: Optical
       Be sure to expand text before saving as .svg as Miso will not load as font.
 * theme_overrides.css
-  - change overhead navigation bar colour (.navbar { background: })
+   * Change overhead navigation bar colour (.navbar { background: })
 
 
 How to build this documentation
