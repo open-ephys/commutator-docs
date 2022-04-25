@@ -43,7 +43,7 @@ Each documentation page is saved as an individual .rst file in the 'source' fold
       <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
         <div class="col mb-4">
           <div class="card h-100 text-center intro-card shadow">
-            <a href = pages/assemblyguide.html>
+            <a href = About/example1.html>
                 <img src="_static/images/noun_screwdriver.svg" class="card-img-top" height="160">
                 <div class="card-body flex-fill">
                   <p class="card-reference">TOPIC 1</p>
@@ -53,7 +53,7 @@ Each documentation page is saved as an individual .rst file in the 'source' fold
         </div>
         <div class="col mb-4">
           <div class="card h-100 text-center intro-card shadow">
-            <a href = pages/usingdrive.html>
+            <a href =  About/example2.html>
                 <img src="_static/images/noun_books.svg" class="card-img-top" height="160">
                 <div class="card-body flex-fill">
                   <p class="card-reference">TOPIC 2</p>
@@ -63,7 +63,7 @@ Each documentation page is saved as an individual .rst file in the 'source' fold
         </div>
         <div class="col mb-4">
           <div class="card h-100 text-center intro-card shadow">
-            <a href = "https://iopscience.iop.org/article/10.1088/1741-2552/ab77f9" target="_blank" rel="noopener noreferrer">
+            <a href = "About/index.html" target="_blank" rel="noopener noreferrer">
               <img src="_static/images/paper.svg" class="card-img-top" height="160">
               <div class="card-body flex-fill">
                 <p class="card-reference">TOPIC 3 </p>
@@ -74,7 +74,7 @@ Each documentation page is saved as an individual .rst file in the 'source' fold
         </div>
         <div class="col mb-4">
           <div class="card h-100 text-center intro-card shadow">
-            <a href = "https://open-ephys.org/drive-implant/drive-parts" target="_blank" rel="noopener noreferrer">
+            <a href = "https://github.com/open-ephys" target="_blank" rel="noopener noreferrer">
               <img src="_static/images/noun_macbook.svg" class="card-img-top" height="160" >
               <div class="card-body flex-fill">
                 <p class="card-reference">TOPIC 4 IS EXTERNAL LINK<i class="fas fa-external-link-alt" style = "font-size:0.5em; vertical-align: super"></i></p>
