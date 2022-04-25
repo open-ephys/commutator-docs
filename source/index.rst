@@ -19,6 +19,24 @@ It will eventually include the following information:
 * Point 2
 * Point 3
 
+What to customize
+####################################
+Each documentation page is saved as an individual .rst file in the 'source' folder. Docs are written primarily in reStructuredText, and HTML can be used within the .rst file. Images are saved under _static. Besides obviously customizing the content of the pages, you will need to make sure to update:
+
+* License (at end of primary index page)
+* conf.py:
+   * project = "OE docs"  # change to your project name
+   * "github_repo": "doc-template",  # change to new repo
+   * html_logo = "_static/images/oe_logo_template.svg" # change to svg with your logo
+
+      Change the device name on the logo "oe_logo_name.svg"
+      Miso, Bold, 36 pt, Kerning: Optical
+      Be sure to expand text before saving as .svg as Miso will not load as font.
+* theme_overrides.css
+   * Change overhead navigation bar colour (.navbar { background: yourfavecolour })
+* .github/workflows/sphinx-build.yml
+   * git clone https://github.com/open-ephys/doc-template.git # change to your repo
+
 .. raw:: html
 
     <h2 style = "text-align: center"> Getting Started </h2>
