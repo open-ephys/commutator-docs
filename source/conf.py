@@ -41,11 +41,10 @@ release = "0.0.0"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "sphinx.ext.todo",
-    "sphinx.ext.githubpages"
-    # "contributors",  # custom pandas extension
+    'sphinx.ext.todo',
+    'sphinx.ext.githubpages',
+    'sphinx.ext.graphviz',
 ]
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
 
@@ -80,7 +79,7 @@ todo_include_todos = True
 # a list of builtin themes.
 #
 html_theme = "pydata_sphinx_theme"
-html_logo = "_static/images/oe_logo_circle.svg"
+html_logo = "_static/images/oe_logo_template.svg"
 html_scaled_image_link = True
 
 
@@ -178,35 +177,32 @@ epub_exclude_files = ["search.html"]
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    "github_url": "https://github.com/open-ephys",
-    "twitter_url": "https://twitter.com/openephys",
-    "external_links": [{"name": "Open Ephys", "url": "https://open-ephys.org"},],
-    "navigation_with_keys": True,
-    # 'search_bar_position' : "navbar",
-    #'canonical_url': '',
-    #'analytics_id': '',
-    #'logo_only': False,
-    #
-    #'prev_next_buttons_location': 'bottom',
-    #'style_external_links': False,
-    # Toc options
-    #'collapse_navigation': False,
-    #'sticky_navigation': True,
-    #    'navigation_depth': 4,
-    #'includehidden': True,
-    #'titles_only': False
+    'external_links': [{'name': 'Open Ephys', 'url': 'https://open-ephys.org'},],
+    'navigation_with_keys': True,
+    'use_edit_page_button': True,
+    'show_toc_level': 1,
+    'icon_links': [
+        dict(name='GitHub',
+             url='https://github.com/open-ephys/onix-docs',
+             icon='fab fa-github'),
+        dict(name='Twitter',
+             url='https://twitter.com/openephys',
+             icon='fab fa-twitter'),
+        dict(name='Discord',
+             url='https://discord.gg/WXAx2URNQU',
+             icon='fab fa-discord')
+    ],
+    'footer_items': ['copyright', 'sphinx-version'],
 }
-
 html_favicon = "_static/images/favicon.png"
 
 html_context = {
     "github_user": "open-ephys",
     "github_repo": "doc-template",
-    "github_version": "master",
+    "github_version": "main",
     "doc_path": "source",
     "css_files": ["_static/theme_overrides.css",],
 }
 
 # Option for linkcheck
 linkcheck_anchors = False
-

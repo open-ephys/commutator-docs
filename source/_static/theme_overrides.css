@@ -33,33 +33,33 @@
   font-weight: bold;
 }
 
-/* navigation bar colors*/
+/* overhead navigation bar*/
 .navbar {
-  background: #5fb5dc !important;
-  font-size: 1em;
+  background: #ade0dc !important; /* overhead navigation bar color */
+  font-size: 1rem;
 }
 
-.navbar-nav > .active > .nav-link {
-  background-color: #f4d050 !important;
-  color: #344b39 !important;
-  font-weight: normal !important;
-  transition-duration: 0.4s;
-}
-
-.navbar-nav > .active > .nav-link:hover {
-  color: #519141 !important;
-  transition-duration: 0.4s;
-}
-
+/* navigation bar: text*/
 .navbar a {
   color: white !important;
-  font-family: "Bitter", sans-serif;
+  font-family: "Miso";
+  font-size: 1.5rem;
+  transition-duration: 0.4s;
+  margin-right: 10px;
+}
+
+/* navigation bar: text color of page titles when hovered*/
+.navbar a:hover {
+  color: #2f401f !important;
   transition-duration: 0.4s;
 }
 
-.navbar a:hover {
-  color: #f9f2d5 !important;
-  transition-duration: 0.4s;
+/* navigation bar: when page title is selected*/
+.navbar-nav > .active > .nav-link {
+  background-color: #e6eddf !important; /* selected text background fill */
+  color: #2f401f !important; /* selected text colour*/
+  font-weight: normal !important;
+  transition-duration: 0.4s; /* how quickly to change*/
 }
 
 /* left side links */
@@ -82,24 +82,39 @@
   border-left: 2px solid #da714a;
 }
 
-/* body links (external) */
-a.reference.external {
-  color: #9a5035;
+/* body text*/
+a {
+  color: #0086b3;
 }
 
-a.reference.external:hover {
-  color: #da714a;
+a:hover {
+  color: #004d66;
   text-decoration: none;
 }
 
-/* body links (internal) */
-a.reference.internal {
-  color: #3c81be;
+/* body links (external, add link icon) */
+a.reference.external:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: ' \f35d';
+  font-size: 0.5rem;
+  vertical-align: super;
 }
 
-a.reference.internal:hover {
-  color: #5fb5dc;
-  text-decoration: none;
+a.external-link:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: ' \f35d';
+  font-size: 0.5rem;
+  vertical-align: super;
+}
+
+p.card-reference {
+  margin: 2.75rem 0 1.05rem;
+  font-family: "Bitter", sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+  font-size: 1.1rem;
 }
 
 /* header links */
@@ -118,65 +133,68 @@ a.headerlink:hover {
 body {
   background-color: white;
   margin-bottom: 1.15rem;
-  font-size: 1em;
+  font-size: 1rem;
   padding-top: 100px;
   color: #242c16;
   font-family: "Source Sans", sans-serif;
 }
 
 h1 {
-  margin: 2.75rem 0 1.05rem;
-  font-family: "Bitter", sans-serif;
-  font-weight: 400;
-  line-height: 1.15;
-  margin-top: 0;
-  color: #242c16;
-  font-size: 2.488em;
+    margin: 2.75rem 0 1.05rem;
+    font-family: "Miso";
+    font-weight: 400;
+    line-height: 1.15;
+    text-align: center;
+    margin-top: 0;
+    color: #242c16;
+    font-size: 2.5rem;
 }
 
 h2 {
   margin: 2.75rem 0 1.05rem;
-  font-family: "Bitter", sans-serif;
-  font-weight: 400;
+  font-family: "Miso";
+  font-weight: 500;
   line-height: 1.15;
   color: #242c16;
-  font-size: 1.9em;
+  font-size: 2rem;
 }
 
 h3 {
-  margin: 2.75rem 0 1.05rem;
-  font-family: "Bitter", sans-serif;
+  margin: 0rem 0 1.05rem;
+  font-family: "Source Sans", sans-serif;
   font-weight: 400;
   line-height: 1.15;
   color: #242c16;
-  font-size: 1.728em;
+  font-size: 1.3rem;
 }
 
 h4 {
   margin: 2.75rem 0 1.05rem;
-  font-family: "Bitter", sans-serif;
+  font-family: "Source Sans", sans-serif;
   font-weight: 400;
   line-height: 1.15;
   color: #242c16;
-  font-size: 1.44em;
+  font-size: 1.1rem;
 }
 
 h5 {
   margin: 2.75rem 0 1.05rem;
   font-family: "Source Sans", sans-serif;
-  font-weight: 400;
+  font-style: italic;
+  font-weight: 550;
   line-height: 1.15;
   color: #242c16;
-  font-size: 1.2em;
+  font-size: 1.1rem;
 }
 
 h6 {
   margin: 2.75rem 0 1.05rem;
   font-family: "Source Sans", sans-serif;
+  font-style: italic;
   font-weight: 400;
   line-height: 1.15;
   color: #242c16;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 /* define admonition colors */
@@ -324,14 +342,24 @@ form:focus {
 }
 
 .card-img-top {
-  margin-top: 4em;
+  margin-top: 4rem;
 }
 
 .col-lg-6 {
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 /* list line spacing */
+/* ol.simple {
+  margin-bottom: 1em;
+}
+
+
+
+ul.simple {
+  margin-bottom: 1em;
+}
+*/
 ul,
 ol,
 h1,
@@ -347,10 +375,22 @@ h6 {
 body > li,
 p {
   line-height: 1.5;
-  margin: 0.3em 0;
+  margin: 0.3rem 0;
 }
 
 /* ensure images stay within the column bounds*/
 img {
   max-width: 100%;
+}
+
+/* allow center-aligned images*/
+
+img.align-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+/* change color of Twitter logo */
+i.fa-twitter-square:before {
+  color: #333;
 }
