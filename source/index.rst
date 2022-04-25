@@ -1,16 +1,17 @@
 :notoc:
 
-Open Ephys Documentation
-=================================================
+*************************************************
+NAME OF DEVICE
+*************************************************
 
-.. **Date**: |today|
+**Date**: |today|
 
 .. **Download documentation**: `PDF Version <open-ephys-documentation.pdf>`__ | `Zipped HTML <open-ephys-documentation.zip>`__
 
-This site provides documentation for [INSERT PROJECT HERE].
+This site provides documentation for [INSERT PROJECT HERE], that [SHORT DESCRIPTION OF STUFF PROJECT DOES].
 
-IT IS CURRENTLY UNDER CONSTRUCTION
-##################################
+It is currently under construction
+####################################
 
 It will eventually include the following information:
 
@@ -18,80 +19,62 @@ It will eventually include the following information:
 * Point 2
 * Point 3
 
-Additional documentation lives on the `Open Ephys Wiki
-<https://open-ephys.atlassian.net/wiki/spaces/OEW/overview?mode=global>`__ and 
-the `Open Ephys Forum <https://groups.google.com/forum/#!forum/open-ephys>`__
-
 .. raw:: html
+
+    <h2 style = "text-align: center"> Getting Started </h2>
 
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
-                <div class="card text-center intro-card shadow">
-                <img src="_static/images/about_icon.svg" class="card-img-top" alt="altText" height="52">
+      <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
+        <div class="col mb-4">
+          <div class="card h-100 text-center intro-card shadow">
+            <a href = pages/assemblyguide.html>
+                <img src="_static/images/noun_screwdriver.svg" class="card-img-top" height="160">
                 <div class="card-body flex-fill">
-                    <h5 class="card-title">About</h5>
-                    <p class="card-text">Card text goes here.</p>
-
-.. container:: custom-button
-
-    :ref:`Go to the about page<about>`
-
-.. raw:: html
-
+                  <p class="card-reference">TOPIC 1</p>
                 </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
-                <div class="card text-center intro-card shadow">
-                <img src="_static/images/hardware_icon.svg" class="card-img-top" alt="altText" height="52">
-                <div class="card-body flex-fill">
-                    <h5 class="card-title">User guide</h5>
-                    <p class="card-text">Card text goes here.</p>
-
-.. container:: custom-button
-
-    :ref:`Go to the about page<about>`
-
-.. raw:: html
-
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
-                <div class="card text-center intro-card shadow">
-                <img src="_static/images/api_reference_icon.svg" class="card-img-top" alt="altText" height="52">
-                <div class="card-body flex-fill">
-                    <h5 class="card-title">API reference</h5>
-                    <p class="card-text">Card text goes here.</p>
-
-.. container:: custom-button
-
-    :ref:`Go to the API reference<about>`
-
-.. raw:: html
-
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
-                <div class="card text-center intro-card shadow">
-                <img src="_static/images/software_icon.svg" class="card-img-top" alt="altText" height="52">
-                <div class="card-body flex-fill">
-                    <h5 class="card-title">Software guide</h5>
-                    <p class="card-text">Card text goes here.</p>
-
-.. container:: custom-button
-
-    :ref:`Go to the software guide<about>`
-
-.. raw:: html
-
-                </div>
-                </div>
-            </div>
+            </a>
+          </div>
         </div>
+        <div class="col mb-4">
+          <div class="card h-100 text-center intro-card shadow">
+            <a href = pages/usingdrive.html>
+                <img src="_static/images/noun_books.svg" class="card-img-top" height="160">
+                <div class="card-body flex-fill">
+                  <p class="card-reference">TOPIC 2</p>
+                </div>
+            </a>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card h-100 text-center intro-card shadow">
+            <a href = "https://iopscience.iop.org/article/10.1088/1741-2552/ab77f9" target="_blank" rel="noopener noreferrer">
+              <img src="_static/images/paper.svg" class="card-img-top" height="160">
+              <div class="card-body flex-fill">
+                <p class="card-reference">TOPIC 3 </p>
+              </div>
+            </a>
+
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card h-100 text-center intro-card shadow">
+            <a href = "https://open-ephys.org/drive-implant/drive-parts" target="_blank" rel="noopener noreferrer">
+              <img src="_static/images/noun_macbook.svg" class="card-img-top" height="160" >
+              <div class="card-body flex-fill">
+                <p class="card-reference">TOPIC 4 IS EXTERNAL LINK<i class="fas fa-external-link-alt" style = "font-size:0.5em; vertical-align: super"></i></p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
+
+License
+#################################################
+
+This work is licensed under CC BY-SA 4.0.
+
+To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
 
 .. toctree::
     :hidden:

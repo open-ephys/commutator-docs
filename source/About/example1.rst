@@ -1,8 +1,8 @@
-.. role:: raw-html-m2r(raw)
-   :format: html
+.. _ref_FAQ:
 
+*************************************************
 FAQ
-===
+*************************************************
 
 .. glossary::
 
@@ -16,5 +16,3 @@ FAQ
     2. Is the hardware available for purchase?
         The hardware is in a beta test phase and will be made available on
         the `Open Ephys Store <https://open-ephys.org/store>`_ following that.
-
- 

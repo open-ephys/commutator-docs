@@ -1,16 +1,34 @@
-=========
+*************************************************
 Template for Open Ephys Documentation
-=========
+*************************************************
 
 This documentation's source template was taken from the `Spinal HDL <https://github.com/SpinalHDL/SpinalDoc-RTD>`_ project.
 
 The theme is based on the `PyData Sphinx Theme <https://pydata-sphinx-theme.readthedocs.io/en/latest/>`_
 
+
+What to customize
+####################################
+
+* License (at end of primary index page)
+* conf.py:
+  -  project = "OE docs"  # change to your project name
+  - "github_repo": "doc-template",  # change to new repo
+  -  html_logo = "_static/images/oe_logo_template.svg" # change to svg with your logo
+
+      Change the device name on the logo "oe_logo_name.svg"
+      Miso, Bold, 36 pt, Kerning: Optical
+      Be sure to expand text before saving as .svg as Miso will not load as font.
+* theme_overrides.css
+  - change overhead navigation bar colour (.navbar { background: })
+
+
 How to build this documentation
-===============================
+####################################
 
 With pipenv (recommended)
------------
+*************************************************
+
 Requirements (system)
 
 * make
@@ -50,7 +68,7 @@ and then you can use ``make`` the usual way
 all the outputs will be in docs folder (for html: docs/html)
 
 without pipenv/virtualenv
--------------------------
+####################################
 Requirements (system):
 
 * make
@@ -69,14 +87,3 @@ After installing the requirements you can run
    make latex    # for latex
    make latexpdf # for latex (will require latexpdf installed)
    make          # list all the available output format
-
-Continuous Integration(CI)
-==========================
-
-This repo uses Travis for its CI needs.
-If you want have a gh-pages preview on your fork, you need to activate your repo on Travis admin page.
-After that you only need add ``GITHUB_TOKEN`` as Environment Variable with your Github personal token (you only need grant repo/public_repo access)
-More details here:
-
-* `Defining variables <https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings>`_
-* `Deploy to gh-pages <https://docs.travis-ci.com/user/deployment/pages/>`_
