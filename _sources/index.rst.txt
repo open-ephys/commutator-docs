@@ -21,7 +21,7 @@ What to customize
 ####################################
 Each documentation page is saved as an individual .rst file in the 'source' folder. Docs are written primarily in reStructuredText, and HTML can be used within the .rst file. Images are saved under _static. Besides obviously customizing the content of the pages, you will need to make sure to update:
 
-* license (at end of primary index page)
+* license (at the end of primary index page)
 * conf.py:
    * project = "OE docs"  # change to your project name
    * "github_repo": "doc-template",  # change to new repo
