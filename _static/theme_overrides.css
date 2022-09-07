@@ -33,6 +33,26 @@
   font-weight: bold;
 }
 
+
+@font-face {
+  font-family: "Miso";
+  font-weight: bold;
+  src: url("fonts/miso.woff")  format('woff');
+}
+
+@font-face {
+  font-family: "Miso Bold";
+  font-weight: bold;
+  src: url("fonts/miso-bold.woff")  format('woff');
+}
+
+@font-face {
+  font-family: "Miso Light";
+  font-weight: bold;
+  src: url("fonts/miso-light.woff")  format('woff');
+}
+
+
 /* overhead navigation bar*/
 .navbar {
   background: #ade0dc !important; /* overhead navigation bar color */
@@ -43,7 +63,7 @@
 .navbar a {
   color: white !important;
   font-family: "Miso";
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition-duration: 0.4s;
   margin-right: 10px;
 }
@@ -115,6 +135,13 @@ p.card-reference {
   font-weight: 400;
   line-height: 1.15;
   font-size: 1.1rem;
+}
+
+/* get rid of external link icon on linked images*/
+a.reference.external.image-reference:after {
+  content: ' ';
+  font-size: 0.5em;
+  vertical-align: super;
 }
 
 /* header links */
