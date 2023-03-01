@@ -21,7 +21,7 @@ from datetime import datetime, timezone
 
 # -- Project information -----------------------------------------------------
 
-project = "Open Ephys Documentation"
+project = "Commie-tator Documentation"
 copyright = "2010-{}, Open Ephys & Contributors".format(datetime.now(timezone.utc).year)
 author = "Open Ephys & Contributors"
 
@@ -197,7 +197,7 @@ html_favicon = "_static/images/favicon.png"
 
 html_context = {
     "github_user": "open-ephys",
-    "github_repo": "doc-template",
+    "github_repo": "commutator-docs",
     "github_version": "main",
     "doc_path": "source",
     "css_files": ["_static/theme_overrides.css",],

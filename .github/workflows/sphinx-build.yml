@@ -41,7 +41,7 @@ jobs:
       # 2. Add and commit HTML files to gh-pages branch
       - name: Commit documentation changes
         run: |
-          git clone https://github.com/open-ephys/doc-template.git --branch gh-pages --single-branch gh-pages
+          git clone https://github.com/open-ephys/commutator-docs.git --branch gh-pages --single-branch gh-pages
           cp -r docs/html/* gh-pages/
           cd gh-pages
           git config --local user.email "action@github.com"
