@@ -200,7 +200,7 @@ html_context = {
     "github_repo": "commutator-docs",
     "github_version": "main",
     "doc_path": "source",
-    "css_files": ["_static/theme_overrides.css",],
+    "css_files": ["_static/theme_overrides.css"],
 }
 
 # Option for linkcheck

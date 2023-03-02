@@ -11,10 +11,23 @@ This user guide
 What’s Included?
 #################################################
 
+#. Commutator
 #. SMA to Hirose X.FL Headstage Tether
 
 OEC Overview
 #################################################
+
+Features include:
+
+* Lightweight tether for minimal disturbance to the animal
+* High bandwidth (18 GHz) tether for signal fidelity in the frequencies of interest
+* Manual commutator control using integrated capacitive buttons
+* Computer control using human-readable JSON commands
+* Optical table & 80/20 rail mountable
+* RGB LED status indicator (can be turned off)
+* Silent and precise motor driver
+* Modular - Compatible with computer vision systems or IMU systems (not sure if this a feature)
+* USB Powered
 
 OEC functions and benefits
 
@@ -72,11 +85,10 @@ of the OEC. To control the OEC via computer, the user must learn to interface wi
 #. Open the `Arduino IDE's serial monitor <https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-serial-monitor>`_
 #. Set the serial monitor baud rate to 115200?
 
-The serial monitor  displays messages to and from the OEC and the computer to which the OEC is connected. There are
-several serial monitors that can be used (see `Termite <https://www.compuphase.com/software_termite.htm>`_ for
-instance), but these instructions recommend the Arduino IDE because the Arduino IDE is already quite common and allows
-the user to program the Teensy in a way that nicely integrated into the IDE if the user so desires. To communicate with
-the OEC using the serial monitor, refer to the following communication protocol.
+The serial monitor  displays messages to and from the OEC and the computer to which the OEC is connected. Other serial
+monitors can be used (see `Termite <https://www.compuphase.com/software_termite.htm>`_ for instance), but these
+instructions recommend the Arduino IDE because the Arduino IDE is already quite common and allows the user to conveniently
+program the Teensy. To communicate with the OEC using the serial monitor, refer to the following communication protocol.
 
 Communication Protocol
 --------------------------------------------------
