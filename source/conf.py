@@ -21,7 +21,7 @@ from datetime import datetime, timezone
 
 # -- Project information -----------------------------------------------------
 
-project = "Commie-tator Documentation"
+project = "Open Ephys Documentation"
 copyright = "2010-{}, Open Ephys & Contributors".format(datetime.now(timezone.utc).year)
 author = "Open Ephys & Contributors"
 
@@ -178,7 +178,7 @@ epub_exclude_files = ["search.html"]
 html_theme_options = {
     'external_links': [{'name': 'Open Ephys', 'url': 'https://open-ephys.org'},],
     'navigation_with_keys': True,
-    'use_edit_page_button': True,
+    'use_edit_page_button': False,
     'show_toc_level': 1,
     'icon_links': [
         dict(name='GitHub',
