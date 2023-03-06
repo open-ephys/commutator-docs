@@ -49,3 +49,5 @@ To learn more about how to use OECs or adapt them to your specific experiment, c
     * Bonsai screenshots
     * Connections images for commutators (fix labels?)
     * how to use with 80/20?
+    * Contents of quick-start guide:
+        * I think it's worth making the quick-start guide to be hardware-agnostic unless we want to have several quick-start guides
