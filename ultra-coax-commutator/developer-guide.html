@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Ultra-Coax Commutator &#8212; Open Ephys Documentation 0.0.0 documentation</title>
+    <title>Developer Guide &#8212; Open Ephys Documentation 0.0.0 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -32,8 +32,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Quick Start Guide" href="quick-start-guide.html" />
-    <link rel="prev" title="Open Ephys Commutators" href="../index.html" />
+    <link rel="next" title="SPI Commutator" href="../spi-commutator/overview.html" />
+    <link rel="prev" title="User Guide" href="user-guide.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -77,7 +77,7 @@
 </li>
 
 <li class="toctree-l1 current active nav-item">
- <a class="current reference internal nav-link" href="#">
+ <a class="reference internal nav-link" href="overview.html">
   Ultra-Coax Commutator
  </a>
 </li>
@@ -135,8 +135,8 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="overview.html">
    Introduction
   </a>
  </li>
@@ -150,8 +150,8 @@
    User Guide
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="developer-guide.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Developer Guide
   </a>
  </li>
@@ -172,9 +172,73 @@
               
               <div class="toc-item">
                 
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#open-source-designs">
+   Open Source Designs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bill-of-materials-bom">
+   Bill of Materials (BoM)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diy">
+   DIY
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mechanical">
+     Mechanical
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#electrical">
+     Electrical
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#computational">
+     Computational
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manufacturing">
+   Manufacturing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Mechanical
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Electrical
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-tips">
+     General Tips
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assembly">
+   Assembly
+  </a>
+ </li>
+</ul>
+
 </nav>
               </div>
               
@@ -194,28 +258,71 @@
               
               <div>
                 
-  <section id="ultra-coax-commutator">
-<h1>Ultra-Coax Commutator<a class="headerlink" href="#ultra-coax-commutator" title="Permalink to this headline">#</a></h1>
-<p>Welcome to the Ultra-Coax Commutator documentation. The Ultra-Coax tether is a lightweight high-bandwidth
+  <section id="developer-guide">
+<h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">#</a></h1>
+<p>Ultra-Coax</p>
+<p>((overview-start))
+Welcome to the Ultra-Coax Commutator documentation. The Ultra-Coax tether is a lightweight high-bandwidth
 (18 GHz) coaxial cable that promotes natural animal behavior during animal behavior experiments. The Ultra-Coax
 Commutator commutates it to preserve the integrity of the tether and prevent disconnections or any torsion/torque on the
-mouse.</p>
-<ul class="simple">
-<li><p>To start operating the commutator as quickly as possible (using key presses), refer to the quick-start guide.</p></li>
-<li><p>To learn other ways to control commutation, including interfacing the commutator with orientation data from specific hardware (such as miniscope v4, Onix, and custom hardware), refer to the more in-depth user guide.</p></li>
-<li><p>To learn how to design or build your own commutator, refer to the developer guide.</p></li>
-</ul>
-<div class="toctree-wrapper compound">
-</div>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<ul class="simple">
-<li><p>Have a better description above</p></li>
-<li><p>Make this page modular too (the problem is that doing 1 overview.rst doc will force the same title to occur in the header)</p></li>
-<li><p>Put picture of ultra-coax commutator</p></li>
-<li><p>Put references</p></li>
-</ul>
-</div>
+mouse.
+((overview-end))</p>
+<section id="open-source-designs">
+<h2>Open Source Designs<a class="headerlink" href="#open-source-designs" title="Permalink to this headline">#</a></h2>
+<p>The designs for the OECs are open-source. Accordingly, all of the files relevant to manufacturing the commutator are
+available in this <a class="reference external" href="https://github.com/open-ephys/onix-commutator">public Open Ephys Github repo</a>. The downloads are
+also available below:</p>
+</section>
+<section id="bill-of-materials-bom">
+<h2>Bill of Materials (BoM)<a class="headerlink" href="#bill-of-materials-bom" title="Permalink to this headline">#</a></h2>
+<p>This BoM contains links to specific vendors solely to calculate a total price. open ephys is not affiliated, and there
+are other places to get these parts. This BoM was created using prices on March 2nd, 2023.</p>
+<p>Prices depend on where you decide to manufacture these parts. More on that below.</p>
+</section>
+<section id="diy">
+<h2>DIY<a class="headerlink" href="#diy" title="Permalink to this headline">#</a></h2>
+<p>The following sections describes design considerations</p>
+<section id="mechanical">
+<h3>Mechanical<a class="headerlink" href="#mechanical" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="electrical">
+<h3>Electrical<a class="headerlink" href="#electrical" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="computational">
+<h3>Computational<a class="headerlink" href="#computational" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="manufacturing">
+<h2>Manufacturing<a class="headerlink" href="#manufacturing" title="Permalink to this headline">#</a></h2>
+<p>The following sections describe how to manufacture the parts that are custom</p>
+<p>This should probably be on its own page so that we can refer people to it from multiple products’ documentations instead
+of each products’ documentation containing its own manufacturing tips</p>
+<section id="id1">
+<h3>Mechanical<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>If you desire low quantity, first seek out local options. Many universities or libraries offer free 3D printing
+services. They don’t always have SLS/MJF like which is how the OEC enclosures were manufactured, but you can probably design a
+new enclosure that makes use of FDM or SLA 3D printing if necessary. The biggest difference is that you will need to design
+supports to assist in the printing process in an MCAD software such as Solidworks, Fusion360, or FreeCAD. If you don’t have access to a SLS/MJF printer and don’t want to design other
+enclosures, there are many online manufacturers that will 3D print this for you. They cost more and often have a minimum
+price to purchase (i.e. 3DHubs has a $90 minimum for those services at the time of writing this) which is not ideal if
+you are trying to print a low quantity of pieces. Other popular ones include Formlabs, etc. etc.</p>
+</section>
+<section id="id2">
+<h3>Electrical<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<p>PCBs are pretty cheap. You no longer have to order in bulk to get them relatively cheap. For instance,
+You can get a 5-pack of PCBs from JLCPCB for less than $10.</p>
+</section>
+<section id="general-tips">
+<h3>General Tips<a class="headerlink" href="#general-tips" title="Permalink to this headline">#</a></h3>
+<p>If you foresee being able to use multiple of these pieces, you benefit from ordering many for a cheaper price per piece.
+If you do not foresee that, you can still benefit from economies of scale while saving yourself (or a poor overworked
+undergrad/lab manager) from the labor of purchasing and assembling several parts from several vendors as well as the
+dread of lead times by purchasing from us. And you get to support <a class="reference external" href="https://open-ephys.org/about-us-overview">open ephys</a> :D</p>
+</section>
+</section>
+<section id="assembly">
+<h2>Assembly<a class="headerlink" href="#assembly" title="Permalink to this headline">#</a></h2>
+</section>
 </section>
 
 
@@ -224,17 +331,17 @@ mouse.</p>
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="user-guide.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Open Ephys Commutators</p>
+            <p class="prev-next-title">User Guide</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="quick-start-guide.html" title="next page">
+    <a class='right-next' id="next-link" href="../spi-commutator/overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Quick Start Guide</p>
+        <p class="prev-next-title">SPI Commutator</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

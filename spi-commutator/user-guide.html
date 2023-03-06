@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>User Guide &#8212; Open Ephys Documentation 0.0.0 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Developer Guide" href="developer-guide.html" />
+    <link rel="prev" title="Quick Start Guide" href="quick-start-guide.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/oe_logo_name.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  Open Ephys Commutators
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ultra-coax-commutator/overview.html">
+  Ultra-Coax Commutator
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="overview.html">
+  SPI Commutator
+ </a>
+</li>
+
+    
+    <li class="nav-item">
+        <a class="nav-link nav-external" href="https://open-ephys.org">Open Ephys<i class="fas fa-external-link-alt"></i></a>
+    </li>
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/open-ephys/onix-docs" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/openephys" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://discord.gg/WXAx2URNQU" rel="noopener" target="_blank" title="Discord"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="overview.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quick-start-guide.html">
+   Quick Start Guide
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   User Guide
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="developer-guide.html">
+   Developer Guide
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#whats-included">
+   What’s Included?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mounting-and-connecting-the-oec">
+   Mounting and Connecting the OEC
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mounting">
+     Mounting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#connecting">
+     Connecting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oec-control-modalities">
+   OEC Control Modalities
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manual-control">
+     Manual Control
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#computer-control">
+     Computer Control
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#teensy">
+       Teensy
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#communication-protocol-json">
+       Communication Protocol (JSON)
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#enable">
+         <strong>
+          enable
+         </strong>
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#led">
+         <strong>
+          led
+         </strong>
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#speed">
+         <strong>
+          speed
+         </strong>
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#turn">
+         <strong>
+          turn
+         </strong>
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#print">
+         <strong>
+          print
+         </strong>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#communication-protocol-examples">
+       Communication Protocol Examples
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bonsai-integration">
+       Bonsai Integration
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#troubleshooting">
+   Troubleshooting
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="user-guide">
+<h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">#</a></h1>
+<section id="whats-included">
+<h2>What’s Included?<a class="headerlink" href="#whats-included" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p>Commutator</p></li>
+<li><p>SMA to Hirose X.FL Headstage Tether</p></li>
+</ol>
+</section>
+<section id="mounting-and-connecting-the-oec">
+<h2>Mounting and Connecting the OEC<a class="headerlink" href="#mounting-and-connecting-the-oec" title="Permalink to this headline">#</a></h2>
+<section id="mounting">
+<h3>Mounting<a class="headerlink" href="#mounting" title="Permalink to this headline">#</a></h3>
+<p>The OEC can be mounted to a standard 80/20 aluminum extrusion or a standard mechanical breadboard. For custom mounting
+solutions, the dimensions of the mounting holes (1/4”-20 or M6) are indicated in the below schematic:</p>
+<img alt="schematic image" src="_static/images/commutator-mounting-holes.png" />
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Add isometric view?</p>
+</div>
+<p>If the OEC is used for an animal behavior experiment, mount the OEC such that the animal can traverse the behavior arena’s full area</p>
+</section>
+<section id="connecting">
+<h3>Connecting<a class="headerlink" href="#connecting" title="Permalink to this headline">#</a></h3>
+<dl>
+<dt>Establish all electrical connections:</dt><dd><ol class="arabic simple">
+<li><p>Secure the head-mount device to the OEC’s bottom SMA connector</p></li>
+<li><p>Secure the data acquisition device (DAQ) to the OEC’s top SMA connector</p></li>
+<li><p>Secure the computer to the OEC’s side micro-USB connector</p></li>
+</ol>
+<img alt="image indicating location of connections" src="../_images/connections.png" />
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<ul class="simple">
+<li><p>All cables must be appropriate length and within-spec (More info in User Guide) TODO: Insert link</p></li>
+<li><p>While establishing electrical connections, ensure cables are not within range to interfere with the tether when the animal moves. For example:</p></li>
+</ul>
+<img alt="image indicating location of connections" src="../_images/cable-management.png" />
+</div>
+</dd>
+</dl>
+</section>
+</section>
+<section id="oec-control-modalities">
+<h2>OEC Control Modalities<a class="headerlink" href="#oec-control-modalities" title="Permalink to this headline">#</a></h2>
+<p>The user can directly control the OEC manually or through a computer’s serial interface. The user can also transfer OEC
+control to other software to automate the commutation process.</p>
+<ol class="arabic simple">
+<li><p><strong>Direct Manual Control:</strong> The OEC’s manual control interface allows the user to change the OEC’s direction, enable/disable the OEC, and toggle LED functionality with buttons on the OEC enclosure</p></li>
+<li><p><strong>Direct Computer Control:</strong> The OEC’s computer control interface allows the user to perform the same functions as above as well as change the speed of commutation and query the OEC’s settings</p></li>
+<li><p><strong>Indirect Computer Control:</strong> The OEC’s computer control interface allows the user to interface the OEC with software such as Bonsai to automate the commutation process. This can be used to relieve torsion exerted on a behaving animal by a twisted electrical or optical tether</p></li>
+</ol>
+<p>The OEC’s LED functionality informs the user of its status (charging, disabled, enabled).</p>
+<p>The following sections detail the three OEC control modalities</p>
+<section id="manual-control">
+<h3>Manual Control<a class="headerlink" href="#manual-control" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Stop/Go Button: enable/disable the OEC</dt><dd><ul>
+<li><p><strong>Disabled (red LED):</strong> Motor halts instantly. Pressing direction buttons does nothing. All target turns provided via remote calls are cleared such that re-enabling the motor does not result in the OEC re-engaging an old target position. To re-enable the OEC, hold the Stop/Go button for &gt; 0.5 second or send the appropriate remote command</p></li>
+<li><p><strong>Enabled (green LED):</strong> The motor can be turned via button presses or remote commands. Pressing the Stop/Go button instantly disables the device</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Stop</span><span class="o">/</span><span class="n">go</span> <span class="n">should</span> <span class="n">be</span> <span class="n">changed</span> <span class="n">to</span> <span class="n">enable</span><span class="o">/</span><span class="n">disable</span> <span class="n">to</span> <span class="n">be</span> <span class="n">more</span> <span class="n">intuitive</span><span class="p">;</span> <span class="n">those</span> <span class="n">buttons</span> <span class="n">don</span><span class="s1">&#39;t do what I thought they did by their label</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Direction Button (2x): Manually control the motor rotation in the direction indicated on each button when the OEC is</dt><dd><p>These inputs take precedence over and override ongoing remote motor control. When pressed, all target turnsprovided via remote control will be cleared, such that releasing them will not result in the OEC re-engaging an
+old target position. Remote commands sent when a button is being pressed are ignored</p>
+</dd>
+</dl>
+</li>
+<li><p>LED Button: pressing the LED toggles the LED function (for cases in which the LED presents unwanted visual stimulus)</p></li>
+</ul>
+</section>
+<section id="computer-control">
+<h3>Computer Control<a class="headerlink" href="#computer-control" title="Permalink to this headline">#</a></h3>
+<section id="teensy">
+<h4>Teensy<a class="headerlink" href="#teensy" title="Permalink to this headline">#</a></h4>
+<p>The Teensy is a microcontroller development board (much like the Arduino for those who are familiar). It is the brains
+of the OEC. To control the OEC via computer, it helps to learn to interface with the Teensy. To do that:</p>
+<ol class="arabic simple">
+<li><p>Download the <a class="reference external" href="https://www.arduino.cc/en/software">Arduino IDE</a></p></li>
+<li><p>Install the Arduino IDE’s Teensy plugin, <a class="reference external" href="https://www.pjrc.com/teensy/td_download.html">Teensyduino</a></p></li>
+<li><p>Install relevant <a class="reference external" href="https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-installing-a-library">Arduino libraries</a>: <em>AccelStepper</em> and <em>Arduino JSON</em></p></li>
+<li><p>Open the <a class="reference external" href="https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-serial-monitor">Arduino IDE’s serial monitor</a></p></li>
+<li><p>Set correct COM port to which the Teensy is connected and set the serial monitor baud rate to 9600</p></li>
+<li><p>Send a command to the OEC according to the communication below.</p></li>
+</ol>
+<p>The serial monitor displays messages between the OEC and the computer to which the OEC is connected. Other serial
+monitors can be used (see <a class="reference external" href="https://www.compuphase.com/software_termite.htm">Termite</a> for instance), but these
+instructions recommend the Arduino IDE because the Arduino IDE is already quite common and allows the user to conveniently
+program the Teensy. Out-of-the-box, the Teensy is pre-programmed to receive messages from the user through serial
+communication. To communicate with the OEC using the serial monitor, refer to the following communication protocol.</p>
+</section>
+<section id="communication-protocol-json">
+<h4>Communication Protocol (JSON)<a class="headerlink" href="#communication-protocol-json" title="Permalink to this headline">#</a></h4>
+<p>The OEC communicates with a computer through the serial monitor using JavaScript Object Notation (JSON). For the
+purpose of interfacing with the OEC, JSON is a human-readable notation used to specify a property and assign a value to
+or read the value of that corresponding property. The notation is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nb">property</span><span class="p">:</span> <span class="n">value</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>The OEC has five properties:
+enable, led, speed, turn, and read. The set of acceptable values depends on the property to which the value is being
+assigned. This is how to use JSON to communicate with the OEC:</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The OEC only accepts JSON commands while buttons are not pressed</p>
+</div>
+<section id="enable">
+<h5><strong>enable</strong><a class="headerlink" href="#enable" title="Permalink to this headline">#</a></h5>
+<p>Acceptable values: [<em>false</em>, <em>true</em>]</p>
+<ul class="simple">
+<li><p>A <em>true</em> value for this property enables the OEC</p></li>
+<li><p>A <em>false</em> value for this property disables the OEC</p></li>
+</ul>
+<p>The default out-of-the-box value for this property is <em>false</em></p>
+</section>
+<section id="led">
+<h5><strong>led</strong><a class="headerlink" href="#led" title="Permalink to this headline">#</a></h5>
+<p>Acceptable values: [<em>false</em>, <em>true</em>]</p>
+<ul class="simple">
+<li><p>A <em>true</em> value for this property enables the LED function</p></li>
+<li><p>A <em>false</em> value for this property disables the LED function</p></li>
+</ul>
+<p>The default out-of-the-box value for this property is <em>true</em></p>
+</section>
+<section id="speed">
+<h5><strong>speed</strong><a class="headerlink" href="#speed" title="Permalink to this headline">#</a></h5>
+<p>Acceptable values: (<em>0</em>, <em>500</em>]</p>
+<ul class="simple">
+<li><p>The value for this property sets the rotational speed of the OEC in units of RPM</p></li>
+</ul>
+<p>The default out-of-the-box value for this property is <em>50</em></p>
+</section>
+<section id="turn">
+<h5><strong>turn</strong><a class="headerlink" href="#turn" title="Permalink to this headline">#</a></h5>
+<p>Acceptable values: <em>-255?</em>, <em>255?</em>]</p>
+<ul class="simple">
+<li><p>The value for this property sets the rotational speed of the OEC in units of RPM</p></li>
+</ul>
+<p>There is no default out-of-the-box value for this property</p>
+</section>
+<section id="print">
+<h5><strong>print</strong><a class="headerlink" href="#print" title="Permalink to this headline">#</a></h5>
+<p>Acceptable values: n/a</p>
+<ul class="simple">
+<li><p>Leave the value field empty. The OEC prints out the internal state of the OEC to the user in the serial interface</p></li>
+</ul>
+<p>There is no default out-of-the-box value for this property</p>
+<p>Multiple commands can be sent in one JSON message in the following format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">property1</span><span class="p">:</span> <span class="n">value1</span><span class="p">,</span> <span class="n">property2</span><span class="p">:</span> <span class="n">value2</span><span class="p">,</span> <span class="n">property3</span><span class="p">:</span> <span class="n">value3</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>The order of properties does not matter in this case.</p>
+</section>
+</section>
+<section id="communication-protocol-examples">
+<h4>Communication Protocol Examples<a class="headerlink" href="#communication-protocol-examples" title="Permalink to this headline">#</a></h4>
+<p>Enable the OEC:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">enable</span><span class="p">:</span> <span class="n">true</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Disable the OEC’s LED function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">led</span><span class="p">:</span> <span class="n">false</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Set the OEC’s rotational speed to 250 RPM:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">speed</span><span class="p">:</span> <span class="mi">250</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Turn the OEC’s 1.1 revolutions CW:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">turn</span><span class="p">:</span> <span class="mf">1.1</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Turn the OEC’s 2.3 revolutions CCW:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">turn</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.3</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Disable LED function, set speed to 25 RPM, and turn the OEC 1.1 revolutions clockwise all in one message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">led</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span> <span class="n">speed</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="n">turn</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.1</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Read the status of the OEC’s internal parameters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nb">print</span><span class="p">:}</span>
+</pre></div>
+</div>
+</section>
+<section id="bonsai-integration">
+<h4>Bonsai Integration<a class="headerlink" href="#bonsai-integration" title="Permalink to this headline">#</a></h4>
+<p><a class="reference external" href="https://open-ephys.org/bonsai">Bonsai</a> is open-source software for processing heterogeneous streams of data. It can
+be used to coordinate orientation data (IMU or visual) to provide feedback to OEC and automate the commutation process.</p>
+<dl class="simple">
+<dt>Download and configure Bonsai:</dt><dd><ol class="arabic simple">
+<li><p><a class="reference external" href="https://bonsai-rx.org/docs/articles/installation.html">Download Bonsai</a></p></li>
+<li><p><a class="reference external" href="https://bonsai-rx.org/docs/articles/packages.html">Install necessary packages</a>: <em>Bonsai.StarterPack</em> and <em>Bonsai.Miniscope</em>. Set package source correctly to find the necessary Bonsai packages)</p></li>
+<li><p>Download and open the example commutator workflow in Bonsai</p></li>
+<li><p>Configure the PortName property of the Commutator node to reflect the port to which the commutator is connected</p></li>
+</ol>
+</dd>
+</dl>
+<p>We have included example workflows for remote active compensation under each use case:
+Usage with Miniscope DAQ
+Remote control using Bonsai
+<a class="reference external" href="https://open-ephys.github.io/onix-docs/Software%20Guide/Bonsai%20Examples/Commutator.html">https://open-ephys.github.io/onix-docs/Software%20Guide/Bonsai%20Examples/Commutator.html</a></p>
+<p>To learn more about how to use Bonsai, explore the <a class="reference external" href="https://bonsai-rx.org/">bonsai-rx.org</a> website</p>
+</section>
+</section>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
+<p>This is a placeholder. Once common issues are known that can’t fixed by elegantly addressing the solution in other parts
+of the guide, we start filling out this section.</p>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="quick-start-guide.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Quick Start Guide</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="developer-guide.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Developer Guide</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2010-2023, Open Ephys &amp; Contributors.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
