@@ -3,6 +3,8 @@
 Developer Guide
 *************************************************
 
+.. include:: ./commutator-specific.txt
+
 Open Source Designs
 *************************************************
 
@@ -13,20 +15,15 @@ also available below:
 Bill of Materials (BoM)
 *************************************************
 
-Off-the-shelf parts:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. image:: ../_static/images/off-the-shelf-BoM.png
-
 This BoM contains links to specific vendors solely to calculate a total price. open ephys is not affiliated, and there
 are other places to get these parts. This BoM was created using prices on March 2nd, 2023.
 
-Custom parts:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. image:: ../_static/images/custom-BoM.png
-
 Prices depend on where you decide to manufacture these parts. More on that below.
+
+..
+    .. csv-table:: Table Title
+        :file: "./ONIX Commutator BOM - Mechanical.csv"
+        :header-rows: 1
 
 DIY
 *************************************************

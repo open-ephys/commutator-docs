@@ -21,7 +21,7 @@ solutions, the dimensions of the mounting holes (1/4"-20 or M6) are indicated in
 .. image:: ../_static/images/commutator-mounting-holes.png
     :alt: schematic image
 
-TODO: Add isometric view?
+.. TODO:: Add isometric view?
 
 If the OEC is used for an animal behavior experiment, mount the OEC such that the animal can traverse the behavior arena's full area
 
@@ -114,38 +114,43 @@ assigned. This is how to use JSON to communicate with the OEC:
 
 **enable**
 ...................................................
-[*false*, *true*]
-    *  A *true* value for this property enables the OEC
-    *  A *false* value for this property disables the OEC
+Acceptable values: [*false*, *true*]
+
+*  A *true* value for this property enables the OEC
+*  A *false* value for this property disables the OEC
 
 The default out-of-the-box value for this property is *false*
 
 **led**
 ...................................................
-[*false*, *true*]
-    * A *true* value for this property enables the LED function
-    * A *false* value for this property disables the LED function
+Acceptable values: [*false*, *true*]
+
+* A *true* value for this property enables the LED function
+* A *false* value for this property disables the LED function
 
 The default out-of-the-box value for this property is *true*
 
 **speed**
 ...................................................
-(*0*, *500*]
-    * The value for this property sets the rotational speed of the OEC in units of RPM
+Acceptable values: (*0*, *500*]
+
+* The value for this property sets the rotational speed of the OEC in units of RPM
 
 The default out-of-the-box value for this property is *50*
 
 **turn**
 ...................................................
-[*-255?*, *255?*]
-    * The value for this property sets the rotational speed of the OEC in units of RPM
+Acceptable values: *-255?*, *255?*]
+
+* The value for this property sets the rotational speed of the OEC in units of RPM
 
 There is no default out-of-the-box value for this property
 
 **print**
 ...................................................
-n/a
-    * Leave the value field empty. The OEC prints out the internal state of the OEC to the user in the serial interface
+Acceptable values: n/a
+
+* Leave the value field empty. The OEC prints out the internal state of the OEC to the user in the serial interface
 
 There is no default out-of-the-box value for this property
 
