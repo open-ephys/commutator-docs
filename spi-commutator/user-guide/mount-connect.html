@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Mounting and Connecting the Commutator &#8212; Open Ephys Documentation 0.0.0 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Commutator Status and LED Feedback" href="status-led.html" />
+    <link rel="prev" title="User Guide" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/oe_logo_name.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../index.html">
+  Open Ephys Commutators
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../sma-commutator/index.html">
+  SMA Commutator
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  SPI Commutator
+ </a>
+</li>
+
+    
+    <li class="nav-item">
+        <a class="nav-link nav-external" href="https://open-ephys.org">Open Ephys<i class="fas fa-external-link-alt"></i></a>
+    </li>
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/open-ephys/onix-docs" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/openephys" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://discord.gg/WXAx2URNQU" rel="noopener" target="_blank" title="Discord"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../quick-start-guide/index.html">
+   Quick Start Guide
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   User Guide
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Mounting and Connecting the Commutator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="status-led.html">
+     Commutator Status and LED Feedback
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="manual-control.html">
+     Manual Commutator Control
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="digital-control/index.html">
+     Digital Commutator Control
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="digital-control/details-digital-control.html">
+       Details of Digital Controls
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="digital-control/bonsai-keypress-control.html">
+       How to Control Commutation with Bonsai and Key Presses
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="digital-control/bonsai-headstage64-automate.html">
+       How to Automate Commutation with Bonsai and Headstage-64
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="digital-control/bonsai-miniscope-automate.html">
+       How to Automate Commutation with Bonsai and Miniscope
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="digital-control/gui-miniscope-automate.html">
+       How to Automate Commutation with GUI and Ephys Headstage
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="troubleshooting.html">
+     Troubleshooting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../developer-guide/index.html">
+   Developer Guide
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../developer-guide/mechanical.html">
+     Mechanical
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mounting">
+   Mounting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connecting">
+   Connecting
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="mounting-and-connecting-the-commutator">
+<h1>Mounting and Connecting the Commutator<a class="headerlink" href="#mounting-and-connecting-the-commutator" title="Permalink to this headline">#</a></h1>
+<section id="mounting">
+<h2>Mounting<a class="headerlink" href="#mounting" title="Permalink to this headline">#</a></h2>
+<p>The commutator can be mounted to a standard <a class="reference external" href="https://8020.net/framing-options/t-slotted-profiles/fractional/10series100basedprofiles.html">1” 80/20 aluminum extrusion</a> using <a class="reference external" href="https://youtu.be/nK-DsJxAdwM">t-nuts</a> or a standard mechanical breadboard.
+For custom mounting solutions, the dimensions for the mounting holes (1/4”-20 or M6) are indicated in the below schematic:</p>
+<img alt="schematic image" class="align-center" src="_static/images/commutator-mounting-holes.png" />
+<p>For more clarity, access the 3D model which can be downloaded <a class="reference external" href="https://github.com/open-ephys/onix-commutator">here</a> or
+in the <a class="reference internal" href="../developer-guide/mechanical.html"><span class="doc">Mechanical</span></a> section of our <a class="reference internal" href="../developer-guide/index.html"><span class="doc">Developer Guide</span></a>
+which contains more information about the enclosure and how to view such a file.</p>
+<p>If the commutator is used for an animal behavior experiment, mount the commutator such that the animal can traverse the
+behavior setup’s full area given the length of your tether.</p>
+</section>
+<section id="connecting">
+<h2>Connecting<a class="headerlink" href="#connecting" title="Permalink to this headline">#</a></h2>
+<p>There are three electrical interconnects on the commutator:</p>
+<ol class="arabic">
+<li><p>Micro-USB Connector</p>
+<blockquote>
+<div><p>The commutator receives power and communicates to another device (probably a computer) with serial communication (USB/UART) through this interconnect.</p>
+</div></blockquote>
+</li>
+<li><p>Top SMA Connector</p>
+<blockquote>
+<div><p>The commutator’s stator connects to the stationary data acquisition device (DAQ) through this interconnect.</p>
+</div></blockquote>
+</li>
+<li><p>Bottom SMA Connector</p>
+<blockquote>
+<div><p>The commutator’s rotor connects to the freely moving animal headstage through this interconnect.</p>
+</div></blockquote>
+</li>
+</ol>
+<img alt="image indicating location of connections" class="align-center" src="../../_images/connections-numbered.png" />
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<ul>
+<li><p>All cables must be appropriate length and within-spec</p>
+<blockquote>
+<div><div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>What are the appropriate lengths and specs? The SMA connector specs depends on the experiment/headstage, but I can at least specify the micro-USB specs</p>
+</div>
+</div></blockquote>
+</li>
+<li><p>While establishing electrical connections, manage cables such that they are not within range to interfere with the tether when the animal moves. For example:</p>
+<blockquote>
+<div><img alt="image indicating location of connections" class="align-center" src="../../_images/cable-management.png" />
+</div></blockquote>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">User Guide</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="status-led.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Commutator Status and LED Feedback</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2010-2023, Open Ephys &amp; Contributors.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
