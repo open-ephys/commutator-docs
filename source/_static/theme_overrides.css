@@ -109,7 +109,7 @@ a.external-link:after {
 }
 
 p.card-reference {
-  margin: 2.75rem 0 1.05rem;
+  margin: 0 0 0rem;
   font-family: "Bitter", sans-serif;
   font-weight: 400;
   line-height: 1.15;
@@ -382,17 +382,18 @@ p {
 }
 
 /* ensure images stay within the column bounds*/
-img {
+/*img {
   max-width: 100%;
-}
+}*/
 
 /* allow center-aligned images*/
-
+/*
 img.align-center {
     margin-left: auto;
     margin-right: auto;
     display: block;
-}
+}*/
+
 /* change color of Twitter logo */
 i.fa-twitter-square:before {
   color: #333;
