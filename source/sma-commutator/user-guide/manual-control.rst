@@ -4,9 +4,9 @@ Manual Commutator Control
 *******************************************************
 
 .. TODO::
-    * Should stop/go change to enable/disable? those buttons don't do what I thought they did
+    * Should "stop/go change" to "enable/disable"? those buttons don't do what I thought they did from their labels
     * format picture besides bullet points
-    * fix following description of use-case below?
+    * fix following description of manual control use-case below?
 
 This guide instructs how to control the commutator using buttons on the commutator's PCB/enclosure. This is useful for
 situations such as when the user wants to quickly stop automated commutation or untwist the tether without disconnecting

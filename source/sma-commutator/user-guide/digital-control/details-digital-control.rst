@@ -6,6 +6,8 @@ Details of Digital Controls
 Teensy
 **************************************************************
 
+.. TODO:: insert photo of teensy. unnecessary, but why not? Any other photos on this page?
+
 The Teensy is a microcontroller development board (much like the Arduino for those who are familiar). It is the brains
 of the commutator. To control the commutator via computer, it helps to learn to interface with the Teensy. To do that:
 

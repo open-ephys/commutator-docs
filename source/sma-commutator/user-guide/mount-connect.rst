@@ -17,6 +17,8 @@ For more clarity, access the 3D model which can be downloaded `here <https://git
 in the :doc:`Mechanical<../developer-guide/mechanical>` section of our :doc:`Developer Guide<../developer-guide/index>`
 which contains more information about the enclosure and how to view such a file.
 
+.. TODO:: Should there be another photo in here?
+
 If the commutator is used for an animal behavior experiment, mount the commutator such that the animal can traverse the
 behavior setup's full area given the length of your tether.
 
@@ -48,8 +50,8 @@ There are three electrical interconnects on the commutator:
 
     * While establishing electrical connections, manage cables such that they are not within range to interfere with the tether when the animal moves. For example:
 
-        .. TODO:: Another photo?
-
         .. image:: ../../_static/images/cable-management.png
             :alt: image indicating location of connections
             :align: center
+
+        .. TODO:: This photo does the job, but maybe we can replace with another?

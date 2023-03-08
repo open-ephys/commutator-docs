@@ -26,4 +26,4 @@ Welcome to the SMA Commutator documentation.
    developer-guide/index
 
 .. TODO::
-    * reformat picture next to words like overview page
+    * format picture next to bullet points
