@@ -3,12 +3,14 @@
 Developer Guide
 *************************************************
 
-.. include:: ./commutator-specific.txt
+.. include:: ./commutator-specific.rst
+    :start-after: ((overview-start))
+    :end-before: ((overview-end))
 
 Open Source Designs
 *************************************************
 
-The designs for the OECs are open-source. Accordingly, all of the files relevant to manufacturing the commutator are
+The designs for the commutators are open-source. Accordingly, all of the files relevant to manufacturing the commutator are
 available in this `public Open Ephys Github repo <https://github.com/open-ephys/onix-commutator>`_. The downloads are
 also available below:
 
@@ -53,7 +55,7 @@ Mechanical
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you desire low quantity, first seek out local options. Many universities or libraries offer free 3D printing
-services. They don't always have SLS/MJF like which is how the OEC enclosures were manufactured, but you can probably design a
+services. They don't always have SLS/MJF like which is how the commutator enclosures were manufactured, but you can probably design a
 new enclosure that makes use of FDM or SLA 3D printing if necessary. The biggest difference is that you will need to design
 supports to assist in the printing process in an MCAD software such as Solidworks, Fusion360, or FreeCAD. If you don't have access to a SLS/MJF printer and don't want to design other
 enclosures, there are many online manufacturers that will 3D print this for you. They cost more and often have a minimum
