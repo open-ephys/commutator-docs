@@ -41,7 +41,7 @@ Quick-Start Guides
       <div class="row">
         <div class="col-6">
           <div class="card h-100 text-center intro-card shadow">
-            <a href = ./sma-commutator/quick-start-guide.html>
+            <a href = ./sma-commutator/quick-start-guide/index.html>
                 <img src="_static/images/coax-icon.jpg" class="card-img-top">
                 <div class="card-body">
                   <p class="card-reference">SMA Commutator Quick-Start Guide</p>
@@ -51,7 +51,7 @@ Quick-Start Guides
         </div>
         <div class="col-6">
           <div class="card h-100 text-center intro-card shadow">
-            <a href = ./spi-commutator/quick-start-guide.html>
+            <a href = ./spi-commutator/quick-start-guide/index.html>
                 <img src="_static/images/SPI.png" class="card-img-top">
                 <div class="card-body">
                   <p class="card-reference">SPI Commutator Quick-Start Guide</p>
@@ -71,7 +71,6 @@ To view a copy of this license, visit https://creativecommons.org/licenses/by-sa
 
 .. toctree::
    :hidden:
-   :maxdepth: 2
 
    self
    sma-commutator/index
@@ -79,8 +78,7 @@ To view a copy of this license, visit https://creativecommons.org/licenses/by-sa
 
 
 .. TODO::
-    * How to improve format?
-    * Add picture slideshow for SMA and SPI commutators when SPI commutator is required
-    * Align quick-start guide icons? b&w icons - very dry (add some color, make it pop)?
+    * dynamic sizing on this page for html rows and on file navigation topbar
+    * Add picture slideshow for SMA and SPI commutators when SPI commutator is done
+    * Align quick-start guide icons? b&w icons - very dry. add some color, make it pop
     * Rip certain theme/css stuff from onix docs
-    * dynamic sizing?

@@ -32,5 +32,5 @@ This guide instructs how to perform commutation using Bonsai software and presse
 
 #. Run the workflow in Bonsai
 
-    * If all above steps are correctly performed, the commutator motor rotates when the up and down arrow keys are pressed.
-    * Angular displacement per key-press can be adjusted by left-clicking the *String* node and modifying the *Value* property when the workflow is not running
+    * Voila! If all above steps are correctly performed, the commutator motor rotates when the up and down arrow keys are pressed.
+    * Angular displacement per key-press can be adjusted by left-clicking the *String* nodes and modifying the *Value* property when the workflow is not running

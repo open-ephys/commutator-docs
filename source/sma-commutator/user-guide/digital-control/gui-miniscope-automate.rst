@@ -1,9 +1,9 @@
 
 ******************************************************************
-How to Automate Commutation with GUI and Ephys Headstage
+How to Automate Commutation with GUI and Miniscopev4
 ******************************************************************
 
-This guide instructs how to use the EEG GUI software to automate commutation of the tether between an ephys head stage mounted on a freely moving animal and a stationary DAQ.
+This guide instructs how to use the EEG GUI software to automate commutation of the tether between a miniscopev4 mounted on a freely moving animal and a stationary DAQ.
 
 .. TODO:: Finishing modifying this for automating the ephys headstage commutation with eeg gui
 

@@ -9,11 +9,9 @@ This guide instructs how to use Bonsai software to automate commutation of the t
 
 #. Download and configure Bonsai:
 
-    .. TODO:: Finishing modifying this for automating the miniscope commutation
-
     #. `Download and Install Bonsai <https://bonsai-rx.org/docs/articles/installation.html>`_ if you haven't already
     #. Open Bonsai and `install the necessary package <https://bonsai-rx.org/docs/articles/packages.html>`_: *Bonsai.StarterPack* and *Bonsai.Miniscope*
-    #. Blah
+    #. Download and open the .bonsai file (also known as workflow) for automating commutation using data from the miniscope’s on-board IMU sensor
 
         .. raw:: html
 
@@ -26,6 +24,8 @@ This guide instructs how to use Bonsai software to automate commutation of the t
             </div>
 
     #. Configure stuff. Placeholder image below:
+
+        .. TODO:: Finishing modifying this section for automating the miniscope commutation
 
         .. image:: ../../../_static/images/port.png
            :align: center

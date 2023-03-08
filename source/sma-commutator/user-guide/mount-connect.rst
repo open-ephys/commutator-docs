@@ -48,6 +48,8 @@ There are three electrical interconnects on the commutator:
 
     * While establishing electrical connections, manage cables such that they are not within range to interfere with the tether when the animal moves. For example:
 
+        .. TODO:: Another photo?
+
         .. image:: ../../_static/images/cable-management.png
             :alt: image indicating location of connections
             :align: center

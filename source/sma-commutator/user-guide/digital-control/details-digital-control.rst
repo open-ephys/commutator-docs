@@ -36,10 +36,12 @@ The commutator has five properties/commands:
 *enable*, *led*, *speed*, *turn*, and *read*. The set of acceptable values depends on the property to which the value is being
 assigned. This is how to use JSON to communicate with the commutator:
 
-.. attention:: The commutator only accepts JSON commands while buttons are not pressed
+.. attention:: The commutator rejects JSON commands while manual controls are in use
 
 JSON Commands
 #################################################
+
+.. TODO:: reformat this
 
 enable
 ...................................................
@@ -86,7 +88,7 @@ Acceptable values: n/a
 There is no default out-of-the-box value for this property
 
 Compound JSON Command
-...................................................
+#################################################
 
 Multiple commands can be sent in a compound JSON message in the following format::
 
@@ -94,7 +96,7 @@ Multiple commands can be sent in a compound JSON message in the following format
 
 The order of properties does not matter.
 
-Communication Protocol Examples
+JSON Command Examples
 **************************************************************
 
 Enable the commutator::
@@ -123,7 +125,7 @@ Disable LED feedback function, set speed to 25 RPM, and turn the commutator 1.1 
 
 Query the status of the commutator's internal parameters::
 
-    {print:}
+{print:}
 
 Bonsai Integration
 **************************************************************
@@ -131,5 +133,6 @@ Bonsai Integration
 `Bonsai <https://open-ephys.org/bonsai>`_ is open-source software for processing asynchronous, heterogeneous streams of
 data. In our case, it can be used to coordinate orientation data (from an IMU sensor or camera sensor for instance) to
 provide feedback to commutator and automate the commutation process. To learn more about how to use Bonsai, explore the
-`bonsai-rx.org <https://bonsai-rx.org/>`_ website. It's quite nice software so it is recommended. It is used in many of the
-following guides for controlling and automating the commutator.
+`bonsai-rx.org <https://bonsai-rx.org/>`_ website. It's recommended because it's quite nice and compatible with many
+open ephys products. It is used in many of the following guides for controlling and automating the commutator.
+

@@ -3,9 +3,12 @@
 SMA Commutator
 *************************************************
 
-.. include:: ./commutator-specific.rst
-    :start-after: ((overview-start))
-    :end-before: ((overview-end))
+.. image:: ../_static/images/commutator-front.jpg
+    :alt: coax commutator image
+    :align: center
+    :width: 200
+
+Welcome to the SMA Commutator documentation.
 
 * To start operating the commutator as quickly as possible (using key presses), refer to the :doc:`quick-start guide<quick-start-guide/index>`.
 
@@ -23,5 +26,4 @@ SMA Commutator
    developer-guide/index
 
 .. TODO::
-    * reformat picture next to words like overview page?
-    * modular documentation?
+    * reformat picture next to words like overview page

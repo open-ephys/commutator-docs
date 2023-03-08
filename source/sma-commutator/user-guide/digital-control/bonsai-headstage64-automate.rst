@@ -3,16 +3,14 @@
 How to Automate Commutation with Bonsai and Headstage-64
 ****************************************************************
 
-This guide instructs how to use Bonsai software to automate commutation of the tether between an ephys head stage mounted on a freely moving animal and stationary DAQ.
+This guide instructs how to use Bonsai software to automate commutation of the tether between a headstage-64 mounted on a freely moving animal and a stationary DAQ.
 
 #. Mount the commutator and establish all electrical connections according to the information found in the :doc:`Mounting and Connecting <../mount-connect>` section of this user guide
 
 #. Download and configure Bonsai:
 
-    .. TODO:: Finishing modifying this for automating the headstage64 commutation
-
     #. `Download and Install Bonsai <https://bonsai-rx.org/docs/articles/installation.html>`_ if you haven't already
-    #. Open Bonsai and `install the necessary package <https://bonsai-rx.org/docs/articles/packages.html>`_: *Bonsai.StarterPack*, *Bonsai.StarterPack*, and *Bonsai.StarterPack*
+    #. Open Bonsai and `install the necessary packages <https://bonsai-rx.org/docs/articles/packages.html>`_: *Bonsai.StarterPack* and *Bonsai.Onix*
     #. Download and open the .bonsai file (also known as workflow) for automating commutation using data from the headstage-64's on-board IMU sensor or external Lighthouse sensor
 
         .. raw:: html
@@ -26,6 +24,8 @@ This guide instructs how to use Bonsai software to automate commutation of the t
             </div>
 
     #. Configure stuff. Placeholder image below:
+
+        .. TODO:: Finishing modifying this section for automating the headstage-64 commutation
 
         .. image:: ../../../_static/images/port.png
            :align: center
