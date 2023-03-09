@@ -3,7 +3,9 @@
 Remote Control
 **************************************************************
 
-.. TODO:: fix .bonsai download buttons and templates for all docs in the remote control section
+.. TODO::
+    * fix .bonsai download buttons and templates for all docs in the remote control section
+    * images.. bonsai software images?
 
 Automating Commutation
 *************************

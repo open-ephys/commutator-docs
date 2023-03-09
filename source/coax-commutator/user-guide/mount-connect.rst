@@ -9,7 +9,7 @@ Mounting
 The commutator can be mounted to a standard `1" 80/20 aluminum extrusion <https://8020.net/framing-options/t-slotted-profiles/fractional/10series100basedprofiles.html>`_ using `t-nuts <https://youtu.be/nK-DsJxAdwM>`_ or a standard mechanical breadboard.
 For custom mounting solutions, the dimensions for the mounting holes (1/4"-20 or M6) are indicated in the below schematic:
 
-.. image:: ../../_static/images/commutator-mounting-holes.png
+.. image:: ../../_static/images/commutator-mounting-holes
     :alt: schematic image
     :align: center
 
