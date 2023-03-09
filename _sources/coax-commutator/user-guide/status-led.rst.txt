@@ -5,7 +5,7 @@ Commutator Status and LED Feedback
 
 .. TODO::
     * Add LED gifs
-    * reformat below?
+    * reformat below
 
 Commutator Status and LED Feedback:
 ***************************************
