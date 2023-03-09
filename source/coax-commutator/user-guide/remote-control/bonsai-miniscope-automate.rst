@@ -9,11 +9,11 @@ This guide instructs how to use Bonsai software to automate commutation of the t
 
 #. Download and configure Bonsai:
 
-    #. `Download and Install Bonsai <https://bonsai-rx.org/docs/articles/installation.html>`_ if you haven't already
-    #. Open Bonsai and `install the necessary package <https://bonsai-rx.org/docs/articles/packages.html>`_: *Bonsai.StarterPack* and *Bonsai.Miniscope*
-    #. Download and open the .bonsai file (also known as workflow) for automating commutation using data from the miniscope’s on-board IMU sensor
+   #. `Download and Install Bonsai <https://bonsai-rx.org/docs/articles/installation.html>`_ if you haven't already
+   #. Open Bonsai and `install the Bonsai.StarterPack and Bonsai.Miniscope packages <https://bonsai-rx.org/docs/articles/packages.html>`_
+   #. Download and open the .bonsai file (also known as workflow) for automating commutation using data from the miniscope’s on-board IMU sensor
 
-        .. raw:: html
+      .. raw:: html
 
             <div class="bonsai-workflow-container">
                 <div class="workflow-filler"></div>
@@ -23,13 +23,13 @@ This guide instructs how to use Bonsai software to automate commutation of the t
                 <div class="workflow-image"><img src="../../../_static/images/bonsai-miniscopev4.svg" /></div>
             </div>
 
-    #. Configure stuff. Placeholder image below:
+   #. Configure stuff. Placeholder image below:
 
-        .. TODO:: Finishing modifying this section for automating the miniscope commutation
+      .. TODO:: Finishing modifying this section for automating the miniscope commutation
 
-        .. image:: ../../../_static/images/port.png
+      .. image:: ../../../_static/images/port.png
            :align: center
 
 #. Run the workflow in Bonsai
 
-    * If all above steps are correctly performed, the commutator motor rotates when the miniscope rotates
+   * If all above steps are correctly performed, the commutator motor rotates when the miniscope rotates

@@ -11,6 +11,6 @@ This guide details all aspects of using the commutator.
     mount-connect
     status-led
     manual-control
-    digital-control/index
+    remote-control/index
     troubleshooting
 

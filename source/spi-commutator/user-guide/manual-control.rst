@@ -21,4 +21,4 @@ it from the head stage.
     * If LED feedback function is already disabled, the LED button enables the LED feedback function by being pressed for >0.5 seconds
     * If LED feedback function is already enabled, the LED button disables the LED feedback function by being pressed for any time at all
 
-.. Note:: Manual controls override any ongoing digital controls. In other words, digital commands sent when a button is being pressed are ignored and cleared
+.. Note:: Manual controls override any ongoing remote controls. In other words, remote commands sent when a button is being pressed are ignored and cleared

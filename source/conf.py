@@ -182,7 +182,7 @@ html_theme_options = {
     'show_toc_level': 1,
     'icon_links': [
         dict(name='GitHub',
-             url='https://github.com/open-ephys/onix-docs',
+             url='https://github.com/open-ephys/commutator-docs',
              icon='fab fa-github'),
         dict(name='Twitter',
              url='https://twitter.com/openephys',
