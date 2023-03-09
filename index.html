@@ -32,7 +32,7 @@
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="SMA Commutator" href="sma-commutator/index.html" />
+    <link rel="next" title="Coax Commutator" href="coax-commutator/index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -76,8 +76,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="sma-commutator/index.html">
-  SMA Commutator
+ <a class="reference internal nav-link" href="coax-commutator/index.html">
+  Coax Commutator
  </a>
 </li>
 
@@ -102,7 +102,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/open-ephys/onix-docs" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github"></i></span>
+          <a class="nav-link" href="https://github.com/open-ephys/commutator-docs" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
         <li class="nav-item">
@@ -161,8 +161,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quick-start-guides">
-   Quick-Start Guides
+  <a class="reference internal nav-link" href="#commutator-guides">
+   Commutator Guides
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -195,15 +195,15 @@
 <h1>Open Ephys Commutators<a class="headerlink" href="#open-ephys-commutators" title="Permalink to this headline">#</a></h1>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
-<div class="container-fluid"">
+<div class="container">
     <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-5 col-xs-5 m-0 p-0">
                 <img src="_static/images/commutator-front-thin.jpg" alt="Commutator front image">
             </div>
-            <div class="col-lg-9 col-md-9 col-sm-7 col-xs-7 m-0 p-0">
+            <div class="col-lg-9 col-md-9 col-sm-7 col-xs-7 d-flex flex-column m-0 p-0">
                 <div class="card-body">
                     <p class="card-text">
-                        Open Ephys Commutators are open-source, motorized commutators that can be controlled through button presses or a digital input. This is useful in a number of contexts, particularly for automating the commutation of conductors between a stationary data acquisition device and the headstage of a freely moving mouse undergoing electrophysiological or optical measurement during which minimal torsion/torque is exerted on a crucial interconnect. Open Ephys Commutators include:
+                        Open Ephys Commutators are open-source, motorized commutators that can be controlled through button presses or a remote input. This is useful in a number of contexts, particularly for automating the commutation of conductors between a stationary data acquisition device and the headstage of a freely moving mouse undergoing electrophysiological or optical measurement during which minimal torsion/torque is exerted on a crucial interconnect. Open Ephys Commutators include:
                     </p>
                     <ul class="simple">
                         <li><p><b>SMA Commutator:</b></p></li>
@@ -218,31 +218,29 @@
         </div>
     </div>
 </div></section>
-<section id="quick-start-guides">
-<h2>Quick-Start Guides<a class="headerlink" href="#quick-start-guides" title="Permalink to this headline">#</a></h2>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-6">
-      <div class="card h-100 text-center intro-card shadow">
-        <a href = ./sma-commutator/quick-start-guide/index.html>
-            <img src="_static/images/coax-icon.jpg" class="card-img-top">
-            <div class="card-body">
-              <p class="card-reference">SMA Commutator Quick-Start Guide</p>
+<section id="commutator-guides">
+<h2>Commutator Guides<a class="headerlink" href="#commutator-guides" title="Permalink to this headline">#</a></h2>
+<div class="container d-flex flex-wrap">
+        <div class="col" style="min-width: 20%">
+            <div class="card h-100 text-center shadow">
+                <a class="card-link" href="./sma-commutator/index.html">
+                    <img class="card-img-top" src="_static/images/coax-cables-unlabeled.jpg">
+                    <div class="card-body">
+                        <p class="card-reference">Coax Commutator User Guide</p>
+                    </div>
+                </a>
             </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="card h-100 text-center intro-card shadow">
-        <a href = ./spi-commutator/quick-start-guide/index.html>
-            <img src="_static/images/SPI.png" class="card-img-top">
-            <div class="card-body">
-              <p class="card-reference">SPI Commutator Quick-Start Guide</p>
+        </div>
+        <div class="col" style="min-width: 20%">
+            <div class="card h-100 text-center shadow" style="min-width: 20%">
+                <a class="card-link" href="./spi-commutator/index.html">
+                    <img class="card-img-top" src="_static/images/SPI-cable.jpg">
+                    <div class="card-body">
+                        <p class="card-reference">SPI Commutator User Guide</p>
+                    </div>
+                </a>
             </div>
-        </a>
-      </div>
-    </div>
-  </div>
+        </div>
 </div></section>
 <section id="license">
 <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">#</a></h2>
@@ -253,7 +251,7 @@
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <ul class="simple">
-<li><p>dynamic sizing on this page for html rows and on file navigation topbar</p></li>
+<li><p>responsive design</p></li>
 <li><p>Add picture slideshow for SMA and SPI commutators when SPI commutator is done</p></li>
 <li><p>Align quick-start guide icons? b&amp;w icons - very dry. add some color, make it pop</p></li>
 <li><p>Rip certain theme/css stuff from onix docs</p></li>
@@ -268,10 +266,10 @@
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="sma-commutator/index.html" title="next page">
+    <a class='right-next' id="next-link" href="coax-commutator/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">SMA Commutator</p>
+        <p class="prev-next-title">Coax Commutator</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

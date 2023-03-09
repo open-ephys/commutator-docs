@@ -17,7 +17,7 @@ This guide instructs how to perform commutation using Bonsai software and presse
     #. Open Bonsai and `install the necessary package <https://bonsai-rx.org/docs/articles/packages.html>`_: *Bonsai.StarterPack*
     #. Download and open the .bonsai file (also known as workflow) for controlling the commutator using key presses
 
-        .. raw:: html
+       .. raw:: html
 
             <div class="bonsai-workflow-container">
                 <div class="workflow-filler"></div>
@@ -29,7 +29,7 @@ This guide instructs how to perform commutation using Bonsai software and presse
 
     #. Configure the *PortName* property of the *SerialWriteString* node to reflect the port to which the commutator is connected by left-clicking the *SerialWriteString* node and modifying the *PortName* property
 
-        .. image:: ../../_static/images/port.png
+       .. image:: ../../_static/images/port.png
            :align: center
 
 #. Run the workflow in Bonsai
