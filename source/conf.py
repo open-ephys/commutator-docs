@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
@@ -30,7 +30,6 @@ version = "0.0"
 # The full version, including alpha/beta/rc tags
 release = "0.0.0"
 
-
 # -- General configuration ---------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -43,14 +42,24 @@ release = "0.0.0"
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.githubpages',
+    # 'sphinx-jinja'
+    # 'sphinx.ext.graphviz',
+    # 'sphinxcontrib.wavedrom',
+    # 'breathe',
+    # 'sphinx_csharp',
 ]
+
+# jinja_contexts = {
+#     'workflow': {'topics': {'a': 'b', 'c': 'd'}}
+# }
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-source_suffix = [".rst", ".md"]
+source_suffix = [".rst"]
 
 # The master toctree document.
 main_doc = "index"
@@ -60,7 +69,7 @@ main_doc = "index"
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -68,9 +77,13 @@ language = None
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = None
+pygments_style = 'monokai'
 
 todo_include_todos = True
+
+# Breathe Configuration
+# breathe_default_project = 'clroni'
+# breathe_projects = { 'clroni': './API Reference/clroni/doxygen-xml' }
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -81,13 +94,10 @@ html_theme = "pydata_sphinx_theme"
 html_logo = "_static/images/oe_logo_name.png"
 html_scaled_image_link = True
 
-
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
-
-html_style = "_static/theme_overrides.css"
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -96,13 +106,16 @@ html_style = "_static/theme_overrides.css"
 # defined by theme itself.  Builtin themes are using these templates by
 # default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
 # 'searchbox.html']``.
-#
-# html_sidebars = {}
+
+html_sidebars = {
+    'index': ['search-field.html'],
+    "**": ["search-field.html", "sidebar-nav-bs.html"]
+}
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "oe_docs"
+html_help_basename = "oe_docs"
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -128,13 +141,11 @@ latex_documents = [
     (main_doc, "oe-docs.tex", "Open Ephys Documentation", "Open Ephys", "manual"),
 ]
 
-
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [(main_doc, "oe-docs", "Open Ephys Documentation", [author], 1)]
-
 
 # -- Options for Texinfo output ----------------------------------------------
 
@@ -170,13 +181,17 @@ epub_title = project
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ["search.html"]
 
-
 # -- Extension configuration -------------------------------------------------
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
+
+html_theme = "pydata_sphinx_theme"
+html_logo = "_static/images/oe_logo_name_light.png"
+html_scaled_image_link = True
+
 html_theme_options = {
-    'external_links': [{'name': 'Open Ephys', 'url': 'https://open-ephys.org'},],
+    'external_links': [{'name': 'Open Ephys', 'url': 'https://open-ephys.org'}, ],
     'navigation_with_keys': True,
     'use_edit_page_button': False,
     'show_toc_level': 1,
@@ -191,7 +206,7 @@ html_theme_options = {
              url='https://discord.gg/WXAx2URNQU',
              icon='fab fa-discord')
     ],
-    'footer_items': ['copyright', 'sphinx-version'],
+    'footer_end': ['copyright', 'sphinx-version'],
 }
 html_favicon = "_static/images/favicon.png"
 
@@ -199,9 +214,36 @@ html_context = {
     "github_user": "open-ephys",
     "github_repo": "commutator-docs",
     "github_version": "main",
-    "doc_path": "generated-source",
+    "doc_path": "source",
     "css_files": ["_static/theme_overrides.css"],
+    'default_mode': 'light',
 }
 
 # Option for linkcheck
 linkcheck_anchors = False
+
+
+def rstjinja(app, docname, source):
+    '''
+    Render pages as a jinja template.
+    '''
+    # Make sure we're outputting HTML
+    if app.builder.format != 'html':
+        return
+    src = source[0]
+    rendered = app.builder.templates.render_string(
+        src, app.config.html_context
+    )
+    # if src[0:8] == ":orphan:":
+    #     print(src)
+    #     print(docname)
+    #     new_filename = os.path.splitext(docname)[0]+'.html'
+    #     with open('source/'+new_filename, 'w') as file:
+    #         file.write(rendered)
+    #     print(rendered)
+    source[0] = rendered
+
+
+def setup(app):
+    app.connect('source-read', rstjinja)
+    app.add_js_file('copyURLToClipboard.js')

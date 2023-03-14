@@ -10,7 +10,7 @@ situations such as when the user wants to quickly stop automated commutation or 
 it from the head stage.
 
 * Stop/Go Button:
-    * If the commutator is already disabled (solid red LED), the stop/go button enables the commutator by being pressed for >0.5 seconds
+    * If the commutator is already disabled (solid red LED), the stop/go button enables the commutator by being touched for >0.5 seconds
     * If the commutator is already enabled (solid green LED), The stop/go button disables the commutator instantly by being pressed for any time at all
 
 * Direction Button (2x):
@@ -18,7 +18,7 @@ it from the head stage.
       button's silk screen. This only happen while the commutator is in its enabled state.
 
 * LED Button:
-    * If LED feedback function is already disabled, the LED button enables the LED feedback function by being pressed for >0.5 seconds
-    * If LED feedback function is already enabled, the LED button disables the LED feedback function by being pressed for any time at all
+    * If LED feedback function is already disabled, the LED button enables the LED feedback function by being touched for >0.5 seconds
+    * If LED feedback function is already enabled, the LED button disables the LED feedback function by being touched for any time at all
 
 .. Note:: Manual controls override any ongoing remote controls. In other words, remote commands sent when a button is being pressed are ignored and cleared

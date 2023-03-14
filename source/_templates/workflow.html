@@ -1,0 +1,7 @@
+        <div class="bonsai-workflow-container">
+                <div class="workflow-filler"></div>
+                <div class="workflow-download"><img class="download-copy-img" src="{{ static_path }}/images/download.svg" onclick="getFileFromURL('{{ static_path }}/downloads/{{ name }}.bonsai')" width=18px /></div>
+                <div class="workflow-copy"><img class="download-copy-img" src="{{ static_path }}/images/copy.svg" onclick="getTextFromURL('{{ static_path }}/downloads/{{ name }}.bonsai')" width=18px /></div>
+                <div class="workflow-name"><b>{{ name }}.bonsai</b></div>
+                <div class="workflow-image"><img src="{{ static_path }}/images/{{ name }}.svg" alt="{{ name}}" /></div>
+        </div>
