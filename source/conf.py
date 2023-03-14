@@ -187,7 +187,7 @@ epub_exclude_files = ["search.html"]
 # documentation.
 
 html_theme = "pydata_sphinx_theme"
-html_logo = "_static/images/oe_logo_name_light.png"
+html_logo = "_static/images/oe_logo_name.png"
 html_scaled_image_link = True
 
 html_theme_options = {
