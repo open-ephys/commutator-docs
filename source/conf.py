@@ -49,9 +49,6 @@ extensions = [
     # 'sphinx_csharp',
 ]
 
-# jinja_contexts = {
-#     'workflow': {'topics': {'a': 'b', 'c': 'd'}}
-# }
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -77,7 +74,7 @@ language = 'en'
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'monokai'
+pygments_style = None
 
 todo_include_todos = True
 

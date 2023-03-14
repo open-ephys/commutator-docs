@@ -5,5 +5,5 @@ verify_ssl = true
 
 [packages]
 sphinx = "*"
-pydata-sphinx-theme = "*"
-sphinx-jinja = "*"
+pydata-sphinx-theme = "0.3.1"
+

@@ -39,7 +39,7 @@ Commutator Guides
 
     <div class="container d-flex flex-wrap">
             <div class="col" style="min-width: 20%">
-                <div class="card h-100 text-center shadow">
+                <div class="card intro-card h-100 text-center shadow">
                     <a class="card-link" href="./coax-commutator/index.html">
                         <img class="card-img-top" src="_static/images/coax-cables-unlabeled.jpg">
                         <div class="card-body">
@@ -49,7 +49,7 @@ Commutator Guides
                 </div>
             </div>
             <div class="col" style="min-width: 20%">
-                <div class="card h-100 text-center shadow">
+                <div class="card intro-card h-100 text-center shadow">
                     <a class="card-link" href="./spi-commutator/index.html">
                         <img class="card-img-top" src="_static/images/SPI-cable.jpg">
                         <div class="card-body">
@@ -70,7 +70,6 @@ To view a copy of this license, visit https://creativecommons.org/licenses/by-sa
 .. toctree::
    :hidden:
 
-   self
    coax-commutator/index
    spi-commutator/index
 

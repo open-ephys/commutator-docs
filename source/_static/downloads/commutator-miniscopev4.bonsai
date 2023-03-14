@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowBuilder Version="2.6.2"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:p1="clr-namespace:Bonsai.ONIX;assembly=Bonsai.ONIX"
+                 xmlns:rx="clr-namespace:Bonsai.Reactive;assembly=Bonsai.Core"
+                 xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
+                 xmlns:cv="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision"
+                 xmlns="https://bonsai-rx.org/2018/workflow">
+  <Workflow>
+    <Nodes>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="p1:ONIContext">
+          <p1:ContextConfiguration>
+            <p1:Slot>
+              <p1:Driver>riffa</p1:Driver>
+              <p1:Index>0</p1:Index>
+            </p1:Slot>
+            <p1:ReadSize>2048</p1:ReadSize>
+            <p1:WriteSize>2048</p1:WriteSize>
+          </p1:ContextConfiguration>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="p1:MiniscopeV4Device">
+          <p1:DeviceAddress>
+            <p1:HardwareSlot>
+              <p1:Driver>riffa</p1:Driver>
+              <p1:Index>0</p1:Index>
+            </p1:HardwareSlot>
+            <p1:Address>8</p1:Address>
+          </p1:DeviceAddress>
+          <p1:EnableStream>true</p1:EnableStream>
+          <p1:LEDBrightness>20</p1:LEDBrightness>
+          <p1:FrameRate>FPS30Hz</p1:FrameRate>
+          <p1:Gain>Low</p1:Gain>
+          <p1:LiquidLensVoltage>47.006</p1:LiquidLensVoltage>
+          <p1:InterleaveLED>true</p1:InterleaveLED>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Image</Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="cv:VideoWriter">
+          <cv:FileName>image_.avi</cv:FileName>
+          <cv:Suffix>Timestamp</cv:Suffix>
+          <cv:Buffered>true</cv:Buffered>
+          <cv:Overwrite>false</cv:Overwrite>
+          <cv:FourCC>FMP4</cv:FourCC>
+          <cv:FrameRate>30</cv:FrameRate>
+          <cv:FrameSize>
+            <cv:Width>0</cv:Width>
+            <cv:Height>0</cv:Height>
+          </cv:FrameSize>
+          <cv:ResizeInterpolation>NearestNeighbor</cv:ResizeInterpolation>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Clock</Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Timestamp" />
+      </Expression>
+      <Expression xsi:type="io:CsvWriter">
+        <io:FileName>image-time_.csv</io:FileName>
+        <io:Append>false</io:Append>
+        <io:Overwrite>false</io:Overwrite>
+        <io:Suffix>Timestamp</io:Suffix>
+        <io:IncludeHeader>false</io:IncludeHeader>
+        <io:Selector>Timestamp,Value</io:Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="p1:MiniscopeV4BNO055Device">
+          <p1:DeviceAddress>
+            <p1:HardwareSlot>
+              <p1:Driver>riffa</p1:Driver>
+              <p1:Index>0</p1:Index>
+            </p1:HardwareSlot>
+            <p1:Address>8</p1:Address>
+          </p1:DeviceAddress>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Timestamp" />
+      </Expression>
+      <Expression xsi:type="io:CsvWriter">
+        <io:FileName>bno055_.csv</io:FileName>
+        <io:Append>false</io:Append>
+        <io:Overwrite>false</io:Overwrite>
+        <io:Suffix>Timestamp</io:Suffix>
+        <io:IncludeHeader>false</io:IncludeHeader>
+        <io:Selector>Timestamp,Value.Quaternion,Value.LinearAcceleration,Value.GravityVector,Value.Euler,Value.Temperature,Value.Calibration</io:Selector>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Value.Quaternion</Selector>
+      </Expression>
+    </Nodes>
+    <Edges>
+      <Edge From="1" To="2" Label="Source1" />
+      <Edge From="1" To="4" Label="Source1" />
+      <Edge From="2" To="3" Label="Source1" />
+      <Edge From="4" To="5" Label="Source1" />
+      <Edge From="5" To="6" Label="Source1" />
+      <Edge From="7" To="8" Label="Source1" />
+      <Edge From="8" To="9" Label="Source1" />
+      <Edge From="9" To="10" Label="Source1" />
+    </Edges>
+  </Workflow>
+</WorkflowBuilder>
