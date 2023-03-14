@@ -210,6 +210,12 @@ provide feedback to commutator and automate the commutation process. To learn mo
 open ephys products. It is used in many of the following guides for controlling and automating the commutator.
 
 
+* Enable/disable the commutator
+* Command the commutator to rotate
+* Change the speed of commutator's speed of rotation
+* Toggle the LED Feedback function
+* Query the commutator's current settings
+
 
 Assembly
 *************************************************

@@ -3,7 +3,11 @@
 User Guide
 *************************************************
 
-This guide details all aspects of using the commutator.
+.. Attention:: If you haven't verified the core functionality of your Open Ephys commutator, refer to the
+               :doc:`Quick Start Guide <../quick-start-guide/index>`.
+
+The coaxial commutator's compatibility with lightweight high-bandwidth coaxial cables facilitate experiments by promoting natural
+animal behavior and enabling higher data transfer rates. This user guide details how to use the coaxial commutator.
 
 .. toctree::
     :hidden:
@@ -11,6 +15,6 @@ This guide details all aspects of using the commutator.
     mount-connect
     status-led
     manual-control
-    remote-control/index
+    automatic-control/index
     troubleshooting
 
