@@ -6,4 +6,3 @@ verify_ssl = true
 [packages]
 sphinx = "*"
 pydata-sphinx-theme = "0.3.1"
-

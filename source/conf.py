@@ -203,7 +203,6 @@ html_theme_options = {
              url='https://discord.gg/WXAx2URNQU',
              icon='fab fa-discord')
     ],
-    'footer_end': ['copyright', 'sphinx-version'],
 }
 html_favicon = "_static/images/favicon.png"
 

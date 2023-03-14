@@ -36,7 +36,7 @@ Connecting
         </div>
         <div class="row">
                 <div class="col d-flex flex-column m-0 p-0">
-                    <div class="card-body">
+                    <div class="card-body m-0 p-0">
                         <ol class="simple">
                             <li><p><b>Micro-USB Connector:</b></p></li>
                             <p> The commutator receives power and communicates to another device (probably a computer) with serial communication (USB/UART) through this interconnect </p> </ol>
@@ -44,7 +44,7 @@ Connecting
                     </div>
                 </div>
                 <div class="col d-flex flex-column m-0 p-0">
-                    <div class="card-body">
+                    <div class="card-body m-0 p-0">
                         <ol class="simple" start="2">
                             <li><p><b>Top SMA Connector:</b></p></li>
                             <p> The commutator’s stator connects to the stationary data acquisition device (DAQ) through this interconnect </p>
@@ -52,7 +52,7 @@ Connecting
                     </div>
                 </div>
                 <div class="col d-flex flex-column m-0 p-0">
-                    <div class="card-body">
+                    <div class="card-body m-0 p-0">
                         <ol class="simple" start="3">
                             <li><p><b>Bottom SMA Connector:</b></p></li>
                             <p> The commutator’s rotor connects to the freely moving animal headstage through this interconnect </p>
