@@ -1,5 +1,5 @@
 
-/* import fonts *//*
+/* import fonts */
 @font-face {
   font-family: "Source Sans";
   src: url("fonts/SourceSansPro-Regular.ttf");
@@ -34,13 +34,13 @@
   font-weight: bold;
 }
 
-*//**//**//**//* overhead navigation bar*//**//**//**//*
+/* overhead navigation bar*/
 .navbar {
-  background: #723D46 !important; *//**//**//**//* # overhead navigation bar color *//**//**//**//*
+  background: #723D46 !important;
   font-size: 1rem;
 }
 
-*//**//**//**//* navigation bar: text*//**//**//**//*
+/* navigation bar: text*/
 .navbar a {
   color: #ffffff !important;
   font-family: "Bitter", sans-serif;
@@ -48,21 +48,21 @@
   margin-right: 10px;
 }
 
-*//**//**//**//* navigation bar: text color of page titles when hovered*//**//**//**//*
+/* navigation bar: text color of page titles when hovered*/
 .navbar a:hover {
   color: #2f401f !important;
   transition-duration: 0.4s;
 }
 
-*//**//**//**//* navigation bar: when page title is selected*//**//**//**//*
+/* navigation bar: when page title is selected*/
 .navbar-nav > .active > .nav-link {
-  background-color: #e6eddf !important; *//**//**//**//* selected text background fill *//**//**//**//*
-  color: #2f401f !important; *//**//**//**//* selected text colour*//**//**//**//*
+  background-color: #e6eddf !important; /* selected text background fill */
+  color: #2f401f !important; /* selected text colour*/
   font-weight: normal !important;
-  transition-duration: 0.4s; *//**//**//**//* how quickly to change*//**//**//**//*
+  transition-duration: 0.4s; /* how quickly to change*/
 }
 
-*//**//**//**//* left side links *//**//**//**//*
+/* left side links */
 .bd-links > .active a {
   color: #3c81be !important;
   transition-duration: 0.4s;
@@ -74,7 +74,7 @@
   transform: translate(2px, 0px);
 }
 
-*//**//**//**//* right side links *//**//**//**//*
+/* right side links */
 .toc-entry > .nav-link.active {
   font-weight: 600;
   color: #344b39;
@@ -82,7 +82,7 @@
   border-left: 2px solid #da714a;
 }
 
-*//**//**//**//* body text*//**//**//**//*
+/* body text*/
 a {
   color: #0086b3;
 }
@@ -92,7 +92,7 @@ a:hover {
   text-decoration: none;
 }
 
-*//**//**//**//* body links (external, add link icon) *//**//**//**//*
+/* body links (external, add link icon) */
 a.reference.external:after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
@@ -117,14 +117,14 @@ p.card-reference {
   font-size: 1.1rem;
 }
 
-*//**//**//**//* get rid of external link icon on linked images*//**//**//**//*
+/* get rid of external link icon on linked images*/
 a.reference.external.image-reference:after {
   content: ' ';
   font-size: 0.5em;
   vertical-align: super;
 }
 
-*//**//**//**//* header links *//**//**//**//*
+/* header links */
 a.headerlink {
   color: white;
   transition-duration: 0.2s;
@@ -136,7 +136,7 @@ a.headerlink:hover {
   transition-duration: 0.2s;
 }
 
-*//**//**//**//* text fonts and colors *//**//**//**//*
+/* text fonts and colors */
 body {
   background-color: white;
   margin-bottom: 1.15rem;
@@ -204,111 +204,7 @@ h6 {
   font-size: 1em;
 }
 
-*//**//**//**//* define admonition colors *//**//**//**//*
-.admonition.attention {
-  border-color: #927a90;
-}
-
-.attention > .admonition-title {
-  background-color: #efe8ef !important;
-}
-
-.attention > .admonition-title:before {
-  color: #927a90 !important;
-}
-
-.admonition.note {
-  border-color: #5fb5dc;
-}
-
-.note > .admonition-title {
-  background-color: #d9e7f3 !important;
-}
-
-.note > .admonition-title:before {
-  color: #5fb5dc !important;
-}
-
-.admonition.error {
-  border-color: #da714a;
-}
-
-.error > .admonition-title {
-  background-color: #f1d7c7 !important;
-}
-
-.error > .admonition-title:before {
-  color: #da714a !important;
-}
-
-.admonition.warning {
-  border-color: #da714a;
-}
-
-.warning > .admonition-title {
-  background-color: #f1d7c7 !important;
-}
-
-.warning > .admonition-title:before {
-  color: #da714a !important;
-}
-
-.admonition.danger {
-  border-color: #da714a;
-}
-
-.danger > .admonition-title {
-  background-color: #f1d7c7 !important;
-}
-
-.danger > .admonition-title:before {
-  color: #da714a !important;
-}
-
-.admonition.caution {
-  border-color: #f4d050;
-}
-
-.caution > .admonition-title {
-  background-color: #f9f2d5 !important;
-}
-
-.caution > .admonition-title:before {
-  color: #f4d050 !important;
-}
-
-.admonition.tip {
-  border-color: #519141;
-}
-
-.tip > .admonition-title {
-  background-color: #d1dac5 !important;
-}
-
-.tip > .admonition-title:before {
-  color: #519141 !important;
-}
-
-.admonition.hint {
-  border-color: #519141;
-}
-
-.hint > .admonition-title {
-  background-color: #d1dac5 !important;
-}
-
-.hint > .admonition-title:before {
-  color: #519141 !important;
-}
-
-*//**//**//**//* logo *//**//**//**//*
-.navbar-brand {
-  position: relative;
-  height: 60px;
-  width: auto;
-}
-
-*//**//**//**//* format search bar *//**//**//**//*
+/* format search bar */
 .bd-search {
   position: relative;
   padding: 1rem 15px;
@@ -348,22 +244,15 @@ form:focus {
   }
 }
 
-.card-img-top {
-  margin-top: 4rem;
-}
 
-.col-lg-6 {
-  margin-top: 2rem;
-}
-
-*//**//**//**//* list line spacing *//**//**//**//*
-*//**//**//**//* ol.simple {
+/* list line spacing */
+ol.simple {
   margin-bottom: 1em;
 }
 ul.simple {
   margin-bottom: 1em;
 }
-*//**//**//**//*
+
 ul,
 ol,
 h1,
@@ -375,129 +264,27 @@ h6 {
   line-height: 1.5;
 }
 
-*//**//**//**//* List items in main area, but not in side bars *//**//**//**//*
+/* List items in main area, but not in side bars */
 body > li,
 p {
   line-height: 1.5;
   margin: 0.3rem 0;
 }
 
-*//**//**//**//* ensure images stay within the column bounds*//**//**//**//*
-*//**//**//**//*img {
-  max-width: 100%;
-}*//**//**//**//*
-
-*//**//**//**//* allow center-aligned images*//**//**//**//*
-*//**//**//**//*
-img.align-center {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}*//**//**//**//*
-
-*//**//**//**//* change color of Twitter logo *//**//**//**//*
+/* change color of Twitter logo */
 i.fa-twitter-square:before {
   color: #333;
-}*//**//*
-
-.download-copy-img
-{
-  text-align: right;
 }
 
-.download-copy-img:active {
-  filter: invert(75%);
-  cursor: pointer;
+
+
+
+/* logo */
+.navbar-brand {
+  position: relative;
+  height: 60px;
+  width: auto;
 }
-
-.download-copy-img:hover {
-  cursor: pointer;
-}
-
-.bonsai-workflow-container {
-  display: grid;
-  grid-template-columns: 1fr max-content max-content min-content;
-  grid-template-rows: min-content min-content;
-  gap: 0px 0px;
-  grid-template-areas:
-    "workflow-filler workflow-download workflow-copy workflow-name"
-    "workflow-image workflow-image workflow-image workflow-image";
-}
-
-.workflow-filler {
-    grid-area: workflow-filler;
-    margin-top: 10px;
-}
-
-.workflow-download {
-    grid-area: workflow-download;
-    border-style: solid hidden hidden solid;
-    border-width: 1px;
-    padding-right: 0px;
-    padding-left: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    margin-top: 10px;
-    background-color: #f0f0f0;
-    border-radius: 4px 0px 0px 0px;
-}
-
-.workflow-copy {
-    grid-area: workflow-copy;
-    border-style: solid hidden hidden hidden;
-    border-width: 1px;
-    padding-right: 0px;
-    padding-left: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    margin-top: 10px;
-    background-color: #f0f0f0;
-}
-
-.workflow-name {
-    grid-area: workflow-name;
-    border-style: solid solid hidden hidden;
-    border-width: 1px;
-    padding-right: 5px;
-    padding-left: 5px;
-    padding-top: 2px;
-    padding-bottom:2px;
-    margin-top: 10px;
-    background-color: #f0f0f0;
-    border-radius: 0px 4px 0px 0px;
-}
-
-.workflow-image {
-    grid-area: workflow-image;
-    border-style: solid solid solid solid;
-    border-width: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    border-radius: 4px 0px 4px 4px;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Remove skip link from top of page */
 .skip-link {
@@ -508,6 +295,16 @@ i.fa-twitter-square:before {
 .navbar {
     font-size: 1.1em;
 }
+
+
+
+
+
+
+
+
+
+
 
 /* Bonsai workflows & copy button */
 .download-copy-img
@@ -601,395 +398,11 @@ i.fa-twitter-square:before {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Variable overrides */
-//html {
-//  --pst-color-primary: #005282;
-//  --pst-color-link: #005282;
-//  --pst-color-link-hover: #da714a;
-//  --onix-bar-color: rgba(27, 27, 27, 0.2);
-//  --onix-txt-color: #1b1b1b;
-//}
-//
-//.bd-content {
-//  flex-grow: 1; !important
-//  max-width: 100%; !important
-//
-//}
-//
-///* import fonts */
-//@font-face {
-//  font-family: "Source Sans";
-//  src: url("fonts/SourceSansPro-Regular.ttf");
-//}
-//
-//@font-face {
-//  font-family: "Source Sans";
-//  font-style: italic;
-//  src: url("fonts/SourceSansPro-Italic.ttf");
-//}
-//
-//@font-face {
-//  font-family: "Source Sans";
-//  font-weight: bold;
-//  src: url("fonts/SourceSansPro-Bold.ttf");
-//}
-//
-//@font-face {
-//  font-family: "Bitter";
-//  src: url("fonts/Bitter-Regular.ttf");
-//}
-//
-//@font-face {
-//  font-family: "Bitter";
-//  src: url("fonts/Bitter-Italic.ttf");
-//  font-style: italic;
-//}
-//
-//@font-face {
-//  font-family: "Bitter";
-//  src: url("fonts/Bitter-Bold.ttf");
-//  font-weight: bold;
-//}
-//
-///* Edit this page */
-//.editthispage a {
-//  color: var(--onix-text-color)
-//}
-//
-//.sourcelink a {
-//  color: var(--onix-text-color)
-//}
-//
-///* Navigation bar colors*/
-//.navbar-light {
-//  border-bottom: 1px solid var(--onix-bar-color) !important;
-//  box-shadow: none !important;
-//}
-//
-//.navbar {
-//  background: #FFFFFF !important;
-//  font-size: 1.1em;
-//}
-//
-//.navbar-nav > .active > .nav-link {
-//  background-color: var(--onix-txt-color) !important;
-//  color: #FFFFFF !important;
-//  font-weight: normal !important;
-//  transition-duration: 0.3s;
-//  text-decoration: none !important;
-//}
-//
-//.navbar a {
-//  color: var(--onix-txt-color) !important;
-//  font-family: "Bitter", sans-serif;
-//  transition-duration: 0.3s;
-//  margin-right: 10px;
-//}
-//
-//.navbar a:hover {
-//  text-decoration: underline !important;
-//  transition-duration: 0.3s !important;
-//}
-//
-///* left side links */
-//.bd-links > .active a {
-//  color: #005282 !important; /*#3c81be */
-//  transition-duration: 0.3s;
-//}
-//
-//.bd-links > .active a:hover {
-//  color: #5fb5dc !important;
-//  transition-duration: 0.3s;
-//  transform: translate(2px, 0px);
-//}
-//
-//.bd-sidebar {
-//  border-right: 1px solid var(--onix-bar-color) !important;
-//}
-//
-///* right side links */
-//.toc-entry > .nav-link.active {
-//  font-weight: 600;
-//  color: var(--onix-txt-color) !important;
-//  background-color: transparent;
-//  border-left: 2px solid #da714a;
-//}
-//
-//
-///* Main text links (internal & external) */
-//a {
-//  color: var(--onix-txt-color);
-//}
-//
-//a.reference.internal {
-//  color: #005282;
-//}
-//
-//a.reference.internal:hover {
-//  color: #005282;
-//}
-//
-//main a.reference.internal, a.reference.external {
-//  color: #005282;
-//}
-//
-//main a.reference.internal:hover, a.reference.external:hover {
-//  color: #005282;
-//  text-decoration: underline !important;
-//}
-//
-///* Main text links (external) */
-//main a.reference.external:after {
-//    background: transparent url(external.svg) 0 0 no-repeat !important;
-//    background-size: 14px;
-//    content: "";
-//    height: 13px;
-//    margin-left: 2px;
-//    width: 13.5px;
-//}
-//
-//main a.external:after {
-//    display: inline-block;
-//}
-//
-///* Header links */
-//a.headerlink {
-//  color: white;
-//  transition-duration:0.3s
-//}
-//
-//a.headerlink:hover {
-//  color: #ceacca;
-//  background-color: white;
-//  transition-duration:0.3s
-//}
-//
-///* text fonts and colors */
-//
-//body {
-//  background-color: white;
-//  margin-bottom: 1.15rem;
-//  font-size: 1em;
-//  padding-top: 50px;
-//  color: var(--onix-txt-color);
-//  font-family: "Source Sans", sans-serif;
-//}
-//
-//h1 {
-//  margin: 2.75rem 0 1.05rem;
-//  font-family: "Bitter", sans-serif;
-//  font-weight: 400;
-//  line-height: 1.15;
-//  margin-top: 0;
-//  color: var(--onix-txt-color);
-//  font-size: 2.2em;
-//}
-//
-//h2 {
-//  margin: 2.75rem 0 1.05rem;
-//  font-family: "Bitter", sans-serif;
-//  font-weight: 400;
-//  line-height: 1.15;
-//  color: var(--onix-txt-color);
-//  font-size: 1.5em;
-//}
-//
-//h3 {
-//  margin: 2.75rem 0 1.05rem;
-//  font-family: "Bitter", sans-serif;
-//  font-weight: 400;
-//  line-height: 1.15;
-//  color: var(--onix-txt-color);
-//  font-size: 1.3em;
-//}
-//
-//h4 {
-//  margin: 2.75rem 0 1.05rem;
-//  font-family: "Bitter", sans-serif;
-//  font-weight: 400;
-//  line-height: 1.15;
-//  color: var(--onix-txt-color);
-//  font-size: 1.1em;
-//}
-//
-//h5 {
-//  margin: 2.75rem 0 1.05rem;
-//  font-family: "Source Sans", sans-serif;
-//  font-weight: 400;
-//  line-height: 1.15;
-//  color: var(--onix-txt-color);
-//  font-size: 1.1em;
-//}
-//
-//h6 {
-//  margin: 2.75rem 0 1.05rem;
-//  font-family: "Source Sans", sans-serif;
-//  font-weight: 400;
-//  line-height: 1.15;
-//  color: var(--onix-txt-color);
-//  font-size: 1em;
-//}
-//
-//
-///* define admonition colors */
-//.admonition.attention {
-//  border-color: #927a90;
-//}
-//
-//.attention > .admonition-title {
-//  background-color: #efe8ef !important;
-//}
-//
-//.attention > .admonition-title:before {
-//  color: #927a90 !important;
-//}
-//
-//.admonition.note {
-//  border-color: #5fb5dc;
-//}
-//
-//.note > .admonition-title {
-//  background-color: #d9e7f3 !important;
-//}
-//
-//.note > .admonition-title:before {
-//  color: #5fb5dc !important;
-//}
-//
-//.admonition.error {
-//  border-color: #da714a;
-//}
-//
-//.error > .admonition-title {
-//  background-color: #f1d7c7 !important;
-//}
-//
-//.error > .admonition-title:before {
-//  color: #da714a !important;
-//}
-//
-//.admonition.warning {
-//  border-color: #da714a;
-//}
-//
-//.warning > .admonition-title {
-//  background-color: #f1d7c7 !important;
-//}
-//
-//.warning > .admonition-title:before {
-//  color: #da714a !important;
-//}
-//
-//.admonition.danger {
-//  border-color: #da714a;
-//}
-//
-//.danger > .admonition-title {
-//  background-color: #f1d7c7 !important;
-//}
-//
-//.danger > .admonition-title:before {
-//  color: #da714a !important;
-//}
-//
-//.admonition.caution {
-//  border-color: #f4d050;
-//}
-//
-//.caution > .admonition-title {
-//  background-color: #f9f2d5 !important;
-//}
-//
-//.caution > .admonition-title:before {
-//  color: #f4d050 !important;
-//}
-//
-//.admonition.tip {
-//  border-color: #519141;
-//}
-//
-//.tip > .admonition-title {
-//  background-color: #d1dac5 !important;
-//}
-//
-//.tip > .admonition-title:before {
-//  color: #519141 !important;
-//}
-//
-//.admonition.hint {
-//  border-color: #519141;
-//}
-//
-//.hint > .admonition-title {
-//  background-color: #d1dac5 !important;
-//}
-//
-//.hint > .admonition-title:before {
-//  color: #519141 !important;
-//}
-//
-//
-///* format search bar */
-//.bd-search {
-//  position: relative;
-//  padding: 1rem 15px;
-//  margin-right: -15px;
-//  margin-left: -15px;
-//}
-//
-//.form-control {
-//  outline: none !important;
-//  box-shadow: none !important;
-//  border: none !important;
-//}
-//
-//.form-control:focus {
-//  outline: black !important;
-//  box-shadow: none !important;
-//  border: 1px !important;
-//}
-//
-//form:focus {
-//  outline: black !important;
-//  box-shadow: none !important;
-//  border: 1px !important;
-//}
-//
 /* Quick links */
 .quicklinks {
   color: var(--onix-txt-color) !important;
 }
-//
-///* override table width restrictions */
-//@media screen and (min-width: 767px) {
-//  .wy-table-responsive table td {
-//    /* !important prevents the common CSS stylesheets from overriding
-//          this as on RTD they are loaded after this stylesheet */
-//    white-space: normal !important;
-//  }
-//
-//  .wy-table-responsive {
-//    overflow: visible !important;
-//  }
-//}
+
 
 /* Landing page cards */
 .card-columns {
@@ -1022,9 +435,6 @@ i.fa-twitter-square:before {
   transform: scale(1.05);
 }
 
-.col-lg-6 {
-  margin-top: 2em;
-}
 
 /* Gallery cards */
 
@@ -1037,39 +447,8 @@ i.fa-twitter-square:before {
 
   } /* example of the default height for title */
 
-///* list line spacing */
-//ul,
-//ol,
-//h1,
-//h2,
-//h3,
-//h4,
-//h5,
-//h6 {
-//  line-height: 1.5;
-//  margin-bottom: 1em;
-//}
-//
-///* List items in main area, but not in side bars */
-//body > li,
-//p {
-//  line-height: 1.5;
-//  margin: 0.3em 0;
-//  margin-bottom: 1em;
-//}
-//
-//p.prev-next-title {
-//  color: var(--onix-txt-color) !important;
-//}
-//
 
 /* ensure images stay within the column bounds*/
 img {
   max-width: 100%;
 }
-
-//
-///* change color of Twitter logo */
-//i.fa-twitter-square:before {
-//  color: #333;
-//}
