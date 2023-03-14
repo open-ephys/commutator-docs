@@ -10,33 +10,33 @@ Commutator States
 
     <div class="container">
         <div class="row">
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                    <img src="../../_static/images/disabled-led.gif" alt="led gif" style="vertical-align: middle">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 d-flex align-items-center justify-content-center">
+                    <img src="../../_static/images/disabled-led.gif" alt="led gif">
                 </div>
                 <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 d-flex flex-column m-0 p-0">
-                    <div class="card-body">
+                    <div>
                         <p><b>Disabled State:</b></p>
                         <p>All controls (except ones that enable the commutator) and motor operations are locked. When the disabled status is entered, the motor is halted instantly. All commands (remote or manual) received during the disabled state are cleared such that they do not engage when the commutator is enabled.</p>
                     </div>
             </div>
         </div>
         <div class="row">
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 d-flex align-items-center justify-content-center">
                     <img src="../../_static/images/charging-led.gif" alt="led gif">
                 </div>
                 <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 d-flex flex-column m-0 p-0">
-                    <div class="card-body">
+                    <div>
                         <p><b>Charging State:</b></p>
                         <p> Super-capacitors are charging. The commutator is effectively disabled, except the commutator cannot be enabled until charging completes which can take up to 30 seconds. </p>
                     </div>
             </div>
         </div>
         <div class="row">
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 d-flex align-items-center justify-content-center">
                     <img src="../../_static/images/enabled-led.gif" alt="led gif">
                 </div>
                 <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 d-flex flex-column m-0 p-0">
-                    <div class="card-body">
+                    <div>
                         <p><b>Enabled State:</b></p>
                         <p> Remote and manual controls are unlocked. </p>
                     </div>

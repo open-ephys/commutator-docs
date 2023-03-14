@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>How to Automate Commutation with GUI and Ephys Headstage &#8212; Open Ephys Documentation 0.0.0 documentation</title>
+    <title>Automate Commutation with Bonsai and UCLA Miniscope v4 &#8212; Open Ephys Documentation 0.0.0 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -33,8 +33,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Troubleshooting" href="../troubleshooting.html" />
-    <link rel="prev" title="How to Automate Commutation with Bonsai and Miniscope" href="bonsai-miniscope-automate.html" />
+    <link rel="next" title="Automate Commutation with Bonsai and Computer Vision" href="bonsai-computervision.html" />
+    <link rel="prev" title="Automate Commutation with Bonsai and Headstage-64" href="bonsai-headstage64.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -71,14 +71,14 @@
       
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
-    <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../coax-commutator/index.html">
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../../index.html">
   Coax Commutator
  </a>
 </li>
 
-<li class="toctree-l1 current active nav-item">
- <a class="reference internal nav-link" href="../../index.html">
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../spi-commutator/index.html">
   SPI Commutator
  </a>
 </li>
@@ -162,12 +162,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../manual-control.html">
-     Manual Commutator Control
+     Manual Control
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="index.html">
-     Remote Commutator Control
+     Automatic Control
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -176,28 +176,23 @@
     </label>
     <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="details-remote-control.html">
-       Details of Remote Controls
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="bonsai-keypress-control.html">
-       How to Control Commutation with Bonsai and Key Presses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="bonsai-headstage64-automate.html">
-       How to Automate Commutation with Bonsai and Headstage-64
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="bonsai-miniscope-automate.html">
-       How to Automate Commutation with Bonsai and Miniscope
+      <a class="reference internal" href="bonsai-headstage64.html">
+       Automate Commutation with Bonsai and Headstage-64
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       How to Automate Commutation with GUI and Ephys Headstage
+       Automate Commutation with Bonsai and UCLA Miniscope v4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="bonsai-computervision.html">
+       Automate Commutation with Bonsai and Computer Vision
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="gui-miniscope.html">
+       Automate Commutation with Miniscope GUI and UCLA Miniscope v4
       </a>
      </li>
     </ul>
@@ -265,35 +260,51 @@
               
               <div>
                 
-  <section id="how-to-automate-commutation-with-gui-and-ephys-headstage">
-<h1>How to Automate Commutation with GUI and Ephys Headstage<a class="headerlink" href="#how-to-automate-commutation-with-gui-and-ephys-headstage" title="Permalink to this headline">#</a></h1>
-<p>This guide instructs how to use the EEG GUI software to automate commutation of the tether between an ephys head stage mounted on a freely moving animal and a stationary DAQ.</p>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Finishing modifying this for automating the ephys headstage commutation with eeg gui</p>
-</div>
+  <section id="automate-commutation-with-bonsai-and-ucla-miniscope-v4">
+<h1>Automate Commutation with Bonsai and UCLA Miniscope v4<a class="headerlink" href="#automate-commutation-with-bonsai-and-ucla-miniscope-v4" title="Permalink to this headline">#</a></h1>
+<p>This section outlines how to use Bonsai software to automate commutation of the tether between a miniscope mounted on a freely moving animal and a stationary DAQ.</p>
 <ol class="arabic">
 <li><p>Mount the commutator and establish all electrical connections according to the information found in the <a class="reference internal" href="../mount-connect.html"><span class="doc">Mounting and Connecting</span></a> section of this user guide</p></li>
 <li><p>Download and configure Bonsai:</p>
-<blockquote>
-<div><ol class="arabic">
-<li><p><a class="reference external" href="https://open-ephys.org/gui">Download and Install placeholder GUI</a> if you haven’t already</p></li>
-<li><p>Open the GUI and <a class="reference external" href="https://bonsai-rx.org/docs/articles/packages.html">install the necessary plug-ins</a>: <em>plug-in</em></p></li>
-<li><p>Download and open the .bonsai file (also known as workflow) for automating commutation using data from the miniscopev4’s on-board IMU sensor</p></li>
-<li><p>Configure stuff. Placeholder image below:</p>
-<blockquote>
-<div><img alt="../../../_images/port.png" class="align-center" src="../../../_images/port.png" />
-</div></blockquote>
+<ul class="simple">
+<li><p><a class="reference external" href="https://bonsai-rx.org/docs/articles/installation.html">Download and Install Bonsai</a> if you haven’t already</p></li>
+<li><p>Open Bonsai and <a class="reference external" href="https://bonsai-rx.org/docs/articles/packages.html">install the Bonsai.StarterPack and Bonsai.Miniscope packages</a> if you haven’t already</p></li>
+</ul>
 </li>
-</ol>
-</div></blockquote>
+<li><p>Download, configure, and run the .bonsai file (also known as a workflow) for automating commutation using orientation
+data from the miniscope’s on-board IMU sensor:</p>
+                <div class="bonsai-workflow-container">
+        <div class="workflow-filler"></div>
+        <div class="workflow-download"><img class="download-copy-img" src="../../../_static/images/download.svg" onclick="getFileFromURL('../../../_static/downloads/commutator-miniscopev4-automate.bonsai')" width=18px /></div>
+        <div class="workflow-copy"><img class="download-copy-img" src="../../../_static/images/copy.svg" onclick="getTextFromURL('../../../_static/downloads/commutator-miniscopev4-automate.bonsai')" width=18px /></div>
+        <div class="workflow-name"><b>commutator-miniscopev4-automate.bonsai</b></div>
+        <div class="workflow-image"><img src="../../../_static/images/commutator-miniscopev4-automate.svg" alt="commutator-miniscopev4-automate" /></div>
+</div><ul>
+<li><p>Configure the <em>PortName</em> property of the <em>Commutator</em> node to reflect the port to which the commutator is
+connected.</p>
+<ul>
+<li><p>The process to determine to which port the commutator is connected depends on the operating system:</p>
+<ul>
+<li><p>On Windows, <a class="reference external" href="https://support.microsoft.com/en-us/windows/open-device-manager-a7f2db46-faaf-24f0-8b7b-9e4a6032fc8c">open Device Manager</a>
+and expand the <em>Ports</em> directory. The correct port is indicated by the <em>Teensy USB Serial</em> entry as seen as in the below example screenshot.
+In the example, the correct port is <em>COM5</em></p>
+<img alt="_static/images/teensy-device-manager.jpg" src="_static/images/teensy-device-manager.jpg" />
+</li>
+<li><p>On Linux, run <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/dev/tty*</span></code> in the root directory and note the port name <em>/dev/ttyUSB*</em> with</p></li>
+</ul>
+</li>
+<li><p>Left-click the <em>Commutator</em> node (highlighted below) and modify the <em>PortName</em> property (highlighted below)
+to the value found in the previous step</p>
+<img alt="../../../_images/bonsai-miniscopev4-comport.png" src="../../../_images/bonsai-miniscopev4-comport.png" />
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li><p>Run the workflow in Bonsai</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>If all above steps are correctly performed, the commutator motor rotates when the headstage rotates</p></li>
+<ul class="simple">
+<li><p>If all above steps are correctly performed, the commutator motor rotates when the miniscope rotates</p></li>
 </ul>
-</div></blockquote>
 </li>
 </ol>
 </section>
@@ -304,17 +315,17 @@
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="bonsai-miniscope-automate.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="bonsai-headstage64.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">How to Automate Commutation with Bonsai and Miniscope</p>
+            <p class="prev-next-title">Automate Commutation with Bonsai and Headstage-64</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../troubleshooting.html" title="next page">
+    <a class='right-next' id="next-link" href="bonsai-computervision.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Troubleshooting</p>
+        <p class="prev-next-title">Automate Commutation with Bonsai and Computer Vision</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
