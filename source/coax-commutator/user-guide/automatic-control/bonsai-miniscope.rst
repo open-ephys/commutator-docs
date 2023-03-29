@@ -1,18 +1,26 @@
 
-**************************************************************
 Automate Commutation with Bonsai and UCLA Miniscope v4
 **************************************************************
+This section outlines how to use Bonsai software to automate commutation of the
+tether between a miniscope mounted on a freely moving animal and a stationary
+DAQ.
 
-This section outlines how to use Bonsai software to automate commutation of the tether between a miniscope mounted on a freely moving animal and a stationary DAQ.
+#. Follow the :ref:`quick_start` to ensure you can control the commutator using Bonsai.
 
-#. Mount the commutator and establish all electrical connections according to the information found in the :doc:`Mounting and Connecting <../mount-connect>` section of this user guide
+#. Install the **Bonsai.Miniscope** Package from Bonsai's package manager.
 
-#. Download and configure Bonsai:
+   - Select Community Feed
 
-   * `Download and Install Bonsai <https://bonsai-rx.org/docs/articles/installation.html>`_ if you haven't already
-   * Open Bonsai and `install the Bonsai.StarterPack and Bonsai.Miniscope packages <https://bonsai-rx.org/docs/articles/packages.html>`_ if you haven't already
+     .. todo:: Image
 
-#. Download, configure, and run the .bonsai file (also known as a workflow) for automating commutation using orientation
+   - Install **Bonsai.Miniscope**
+
+     .. todo:: Image
+
+#. Mount the commutator and establish all electrical connections according to
+   the information found in the :ref:`mounting`.
+
+#. Download, configure, and run the following Bonsai workflow for automating commutation using orientation
    data from the miniscope’s on-board IMU sensor:
 
    .. raw:: html
@@ -21,24 +29,9 @@ This section outlines how to use Bonsai software to automate commutation of the 
                 {% include 'workflow.html' %}
             {% endwith %}
 
-   * Configure the *PortName* property of the *Commutator* node to reflect the port to which the commutator is
-     connected.
+   .. note:: Be sure to Configure the **PortName** property of the
+      **Commutator** node to reflect the port to which the commutator is
+      connected.
 
-     * The process to determine to which port the commutator is connected depends on the operating system:
-
-       * On Windows, `open Device Manager <https://support.microsoft.com/en-us/windows/open-device-manager-a7f2db46-faaf-24f0-8b7b-9e4a6032fc8c>`_
-         and expand the *Ports* directory. The correct port is indicated by the *Teensy USB Serial* entry as seen as in the below example screenshot.
-         In the example, the correct port is *COM5*
-
-         .. image:: /_static/images/teensy-device-manager.jpg
-
-       * On Linux, run ``ls /dev/tty*`` in the root directory and note the port name */dev/ttyUSB\** with
-
-     * Left-click the *Commutator* node (highlighted below) and modify the *PortName* property (highlighted below)
-       to the value found in the previous step
-
-       .. image:: /_static/images/bonsai-miniscopev4-comport.png
-
-#. Run the workflow in Bonsai
-
-   * If all above steps are correctly performed, the commutator motor rotates when the miniscope rotates
+#. Run the workflow in Bonsai. If all above steps are correctly performed, the
+   commutator will follow miniscope rotations

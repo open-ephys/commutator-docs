@@ -1,10 +1,11 @@
-
-*************************************************
 Open Ephys Commutators
 *************************************************
 
-Overview
-*************************************************
+.. toctree::
+   :hidden:
+
+   coax-commutator/index
+   spi-commutator/index
 
 .. raw:: html
 
@@ -16,24 +17,49 @@ Overview
                 <div class="col-lg-9 col-md-9 col-sm-7 col-xs-7 d-flex flex-column m-0 p-0">
                     <div class="card-body">
                         <p class="card-text">
-                            Open Ephys Commutators are open-source, motorized commutators that can be controlled through button presses or remote input. This is useful in a number of contexts, particularly for automating the commutation of conductors between a stationary data acquisition device and the headstage of a freely moving mouse undergoing electrophysiological or optical measurement. Open Ephys Commutators include:
+                            Internal-measurement
+                            units (IMUs) or video-based pose-estimation methods
+                            (e.g. <a
+                            href="https://github.com/DeepLabCut/DeepLabCut">
+                            Deeplcabcut </a> or <a
+                            href="https://github.com/talmolab/sleap"> SLEAP
+                            </a>) provide real-time measurements of animals'
+                            rotational state in an environment. This obviates
+                            the need for tether torque measurements to drive an
+                            active commutator during neural recordings in
+                            freely moving animals because the rotational state of
+                            the animal is known and the
+                            commutator can simply follow along. This method
+                            permits the use of extremely thin <a
+                            href="http://www.axon-cable.com/en/02_products/06_coaxial-cables/02/index.aspx">
+                            extremely thin tethers </a> that cannot function
+                            with a standard active commutator because they are
+                            too flexible to accurately translate rotational torque.  
+                            <br> 
+                            <br> 
+                            Open Ephys Commutators are open-source, motorized
+                            commutators that use this principle to prevent
+                            eletrical or optical tethers from twisting during
+                            experiments with freely moving animals. They can be
+                            controlled manually through button presses or
+                            remote input pose-estimation software.
+                            Open Ephys Commutators include:
                         </p>
                         <ul class="simple">
                             <li><p><b>Coax Commutator:</b></p></li>
                             <p style="margin-left: 1em"> Compatible with <a href="https://open-ephys.org/miniscope-v4/miniscope-v4">UCLA miniscope headstages</a> and <a href="https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html"> Open Ephys electrophysiology headstages</a> </p>
                             <li><p><b>SPI Commutator:</b></p></li>
-                            <p style="margin-left: 1em"> Compatible with headstages that have standard SPI electrophysiology interconnects such as those from <a href="https://open-ephys.org/acquisition-system/low-profile-spi-headstage-64ch">Open Ephys</a> and <a href="https://intantech.com/pricing.html">Intan</a> </p>
+                            <p style="margin-left: 1em"> Compatible with headstages that use SPI digital communcaiton such as those from <a href="https://open-ephys.org/acquisition-system/low-profile-spi-headstage-64ch">Open Ephys</a> and <a href="https://intantech.com/pricing.html">Intan</a> </p>
                         </ul>
                         <p class="card-text">
-                            To start using your Open Ephys Commutator, please refer to the guide that corresponds with your commutator:
+                            To start using your your Open Ephys Commutator, please
+                            refer to the guide that corresponds with your
+                            device:
                         </p>
                     </div>
             </div>
         </div>
     </div>
-
-Commutator Guides
-*************************************************
 
 .. raw:: html
 
@@ -60,22 +86,13 @@ Commutator Guides
             </div>
     </div>
 
-License
-*************************************************
 
-This work is licensed under CC BY-SA 4.0.
 
-To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
-
-.. toctree::
-   :hidden:
-
-   coax-commutator/index
-   spi-commutator/index
-
-.. TODO::
-    * responsive design
-    * Replace coax commutator picture with slideshow containing both SPI and coax commutators once SPI picture is abailable
+.. todo::
+    * Responsive design
+    * Replace coax commutator picture with slideshow containing both SPI and
+      coax commutators once SPI picture is abailable
     * Align quick-start guide icons
     * Steal certain theme/css stuff from onix docs
-    * link to coax headstage sales page instead of coax headstage section of the onix docs
+    * Link to coax headstage sales page instead of coax headstage section of
+      the onix docs

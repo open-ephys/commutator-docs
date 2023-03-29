@@ -1,57 +1,82 @@
 
-*************************************************
+.. _quick_start:
+
 Quick Start Guide
 *************************************************
 
-.. NOTE:: For instructions on how to interface the commutator with orientation data from other
-          hardware (such as `UCLA miniscope headstage <https://open-ephys.org/miniscope-v4/miniscope-v4>`_ and
-          `headstage-64 <https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html>`_) to automate
-          the commutation process, please refer to the :doc:`Automatic Control<../user-guide/automatic-control/index>` sections of
-          the more in-depth :doc:`User Guide<../user-guide/index>`
+.. important:: Although this example uses `Bonsai <https://bonsai-rx.org>`__
+   and Windows, the commutator communicates over a serial connection using a
+   simple :ref:`set of JSON commands <remote_control>` and therefore is
+   software and operating system agnostic.
 
-This guide instructs how to perform commutation using Bonsai software and presses of the left/right arrows on the keyboard.
-It is useful for remotely controlling the commutator and verifying its core functionality.
+This quick start guide provides a basic setup instructions to verify the
+commutator's functionality.  By following these steps, you will be able to turn
+the commutator using keyboard presses from a  `Bonsai Visual Programming
+Language <https://bonsai-rx.org>`__ workflow.
 
-#. Connect a computer to the commutator via the commutator's micro-USB connector to establish power and serial
-   communication between the commutator and the computer (only the interconnect numbered 1 in the following figure is
-   necessary for this quick start guide):
+#. If you have not already done so, download and configure Bonsai:
+
+   * `Download and Install Bonsai
+     <https://bonsai-rx.org/docs/articles/installation.html>`_
+   * Open Bonsai and `install the Bonsai.StarterPack package
+     <https://bonsai-rx.org/docs/articles/packages.html>`_
+
+#. Connect the commutator to the computer to the commutator using micro-USB
+   cable (connector 1 in the figure below) to establish power and serial
+   communication between the commutator and the computer. For this quick start
+   guide, the coaxial connections are not needed.
 
    .. image:: /_static/images/connections-numbered.png
 
-#. Position the commutator such that gears can freely rotate
+   .. note:: The commutator's RGB LED will flash red when the commutator is
+      plugged in. During this time, the commutator is charging an internal
+      supercapacitor bank that prevents the motor from loading the USB port. This
+      can take up to 30 seconds to complete.
 
-#. Download and configure Bonsai:
+#. Position the commutator to ensure there is nothing preventing the
+   commutator's gears from rotating freely.
 
-   * `Download and Install Bonsai <https://bonsai-rx.org/docs/articles/installation.html>`_ if you haven't already
-   * Open Bonsai and `install the Bonsai.StarterPack package <https://bonsai-rx.org/docs/articles/packages.html>`_ if you haven't already
-
-#. Download, configure and run the .bonsai file (also known as a workflow) for controlling the commutator using key presses:
+#. Download and run the following .bonsai file (also known as a "workflow") for
+   controlling the commutator using key presses:
 
    .. raw:: html
 
             {% with static_path = '../../_static', name = 'commutator-keypress-control' %}
                 {% include 'workflow.html' %}
             {% endwith %}
+            <br>
 
-   * Configure the *PortName* property of the *SerialWriteString* node to reflect the port to which the commutator is
-     connected.
+#. Configure the **PortName** property of the **SerialWriteString** node to
+   reflect the port to which the commutator is connected. To
+   determine to which port the commutator is connected to:
 
-     * The process to determine to which port the commutator is connected depends on the operating system:
+   * Open the `Device Manager
+     <https://support.microsoft.com/en-us/windows/open-device-manager-a7f2db46-faaf-24f0-8b7b-9e4a6032fc8c>`_
+     and expand the **Ports** directory. The correct port is indicated by the
+     **Teensy USB Serial** entry as seen as in the below example screenshot.  In
+     this example, the correct port is **COM5**
 
-       * On Windows, `open Device Manager <https://support.microsoft.com/en-us/windows/open-device-manager-a7f2db46-faaf-24f0-8b7b-9e4a6032fc8c>`_
-         and expand the *Ports* directory. The correct port is indicated by the *Teensy USB Serial* entry as seen as in the below example screenshot.
-         In the example, the correct port is *COM5*
+     .. image:: /_static/images/teensy-device-manager.jpg
 
-         .. image:: /_static/images/teensy-device-manager.jpg
+   * In Bonsai, click the **SerialWriteString** node and modify the
+     **PortName** property (highlighted below) to the value found in the
+     previous step
 
-       * On Linux, run ``ls /dev/tty*`` in the root directory and note the port name */dev/ttyUSB\** with
+     .. image:: /_static/images/bonsai-keypress-comport.png
 
-     * Left-click the *SerialWriteString* node (highlighted below) and modify the *PortName* property (highlighted below)
-       to the value found in the previous step
+#. Run the workflow in Bonsai by pressing the green Start arrow.
 
-       .. image:: /_static/images/bonsai-keypress-comport.png
+   * Et voilà! The commutator motor now rotates when the left and right arrow
+     keys are pressed on the keyboard.
+   * The angular displacement per key-press can be adjusted by clicking the
+     **String** nodes and modifying the **Value** property
+   * To see the JSON commands being sent to the commutator, double-click the
+     **SerialStringWrite** node during while the workflow is running to show a text
+     visualizer.
 
-#. Run the workflow in Bonsai
+#. After confirming the functionality of the commutator, you are ready to mount
+   it and start using it for automated commutation during experiments with
+   `UCLA miniscopes <https://open-ephys.org/miniscope-v4/miniscope-v4>`_ and
+   `ONIX headstages
+   <https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/index.html>`_.
 
-   * Voila! If all above steps are correctly performed, the commutator motor rotates when the left and right arrow keys are pressed
-   * Angular displacement per key-press can be adjusted by left-clicking the *String* nodes and modifying the *Value* property when the workflow is not running

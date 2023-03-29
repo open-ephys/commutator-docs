@@ -1,22 +1,23 @@
 
-*************************************************
+.. _dev_guide:
+
 Developer Guide
+-------------------------------------------------
+
+.. todo:: This section is a work in progress.
+
+Design Files
 *************************************************
+Open Ephys commutators are open-source. Mechanical, electrical, and firmware
+desings are available are available in ONIX-Commutator git repo. Below we
+provide an explaination of the repository structure and some helpful tips if
+you plan to make a commutator yourself or want to extend its functionality.
 
-Open Source Designs
+Bill of Materials (BOM)
 *************************************************
-
-The designs for the commutators are open-source. Accordingly, all of the files relevant to manufacturing the commutator are
-available in this `public Open Ephys Github repo <https://github.com/open-ephys/onix-commutator>`_. The downloads are
-also available below:
-
-Bill of Materials (BoM)
-*************************************************
-
-This BoM contains links to specific vendors solely to calculate a total price. open ephys is not affiliated, and there
-are other places to get these parts. This BoM was created using prices on March 2nd, 2023.
-
-Prices depend on where you decide to manufacture these parts. More on that below.
+This BOM for the mechanical and electrical components are provided below. This
+BOM contains links to specific vendors solely to calculate a total price. The
+BOM cost may vary. This BOM was created using prices on March 2nd, 2023.
 
 ..
     .. csv-table:: Table Title
@@ -30,7 +31,6 @@ The following sections describes design considerations
 
 Mechanical
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 
 Electrical
