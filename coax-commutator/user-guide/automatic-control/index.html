@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Automatic Control &#8212; Open Ephys Documentation 0.0.0 documentation</title>
+    <title>Automating Commutation &#8212; Open Ephys Documentation 0.0.0 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -34,7 +34,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Automate Commutation with Bonsai and Headstage-64" href="bonsai-headstage64.html" />
-    <link rel="prev" title="Manual Control" href="../manual-control.html" />
+    <link rel="prev" title="Remote Control" href="../remote-control.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -157,7 +157,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../status-led.html">
-     Commutator Status and LED Feedback
+     Commutator Status LED
     </a>
    </li>
    <li class="toctree-l2">
@@ -165,9 +165,14 @@
      Manual Control
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../remote-control.html">
+     Remote Control
+    </a>
+   </li>
    <li class="toctree-l2 current active has-children">
     <a class="current reference internal" href="#">
-     Automatic Control
+     Automating Commutation
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -238,36 +243,9 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage mt-5 pt-1 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
 
 <nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preface">
-   Preface
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bonsai-introduction">
-     Bonsai Introduction
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#json-commands">
-     JSON Commands
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#automating-commutation">
-   Automating Commutation
-  </a>
- </li>
-</ul>
-
+    
 </nav>
               </div>
               
@@ -287,54 +265,31 @@
               
               <div>
                 
-  <section id="automatic-control">
-<h1>Automatic Control<a class="headerlink" href="#automatic-control" title="Permalink to this headline">#</a></h1>
-<section id="preface">
-<h2>Preface<a class="headerlink" href="#preface" title="Permalink to this headline">#</a></h2>
-<section id="bonsai-introduction">
-<h3>Bonsai Introduction<a class="headerlink" href="#bonsai-introduction" title="Permalink to this headline">#</a></h3>
-<p><a class="reference external" href="https://open-ephys.org/bonsai">Bonsai</a> is open-source software for processing asynchronous, heterogeneous streams of
-data. In our case, it can be used to coordinate orientation data (from an IMU sensor or camera sensor for instance) to
-provide feedback to commutator and automate the commutation process. To learn more about how to use Bonsai, explore the
-<a class="reference external" href="https://bonsai-rx.org/">bonsai-rx.org</a> website. It is briefly introduced here because it is utilized heavily in the remainder
-following guides for controlling and automating commutation.</p>
-</section>
-<section id="json-commands">
-<h3>JSON Commands<a class="headerlink" href="#json-commands" title="Permalink to this headline">#</a></h3>
-<p><a class="reference external" href="https://www.json.org/json-en.html">JSON</a> is a human-readable notation with the following format <code class="docutils literal notranslate"><span class="pre">{property:value}</span></code>.
-The commutator is programmed out-of-the-box to parse JSON data received via a serial interface. It processes five commands:</p>
-<dl class="field-list simple">
-<dt class="field-odd">enable</dt>
-<dd class="field-odd"><p>Enables/disables the commutator</p>
-</dd>
-<dt class="field-even">turn</dt>
-<dd class="field-even"><p>Commands the commutator to rotate</p>
-</dd>
-<dt class="field-odd">speed</dt>
-<dd class="field-odd"><p>Changes the speed of commutator’s speed of rotation</p>
-</dd>
-<dt class="field-even">led</dt>
-<dd class="field-even"><p>Toggles the LED Feedback function</p>
-</dd>
-<dt class="field-odd">read</dt>
-<dd class="field-odd"><p>Queries the commutator’s current settings</p>
-</dd>
-</dl>
-<p>To learn more about how to interface with the commutator through JSON and the serial interface, refer to the
-<a class="reference internal" href="../../developer-guide/index.html"><span class="doc">developer guide</span></a>.</p>
-</section>
-</section>
-<section id="automating-commutation">
-<h2>Automating Commutation<a class="headerlink" href="#automating-commutation" title="Permalink to this headline">#</a></h2>
-<p>The commutator’s remote control system detailed above enables the user to interface the commutator with other software
-and hardware to automate the commutation process for the purpose of (for example) preserving signal integrity and
-relieving the torsion exerted on a freely moving animal during animal behavior experiments.</p>
+  <section id="automating-commutation">
+<h1>Automating Commutation<a class="headerlink" href="#automating-commutation" title="Permalink to this headline">#</a></h1>
+<p>The commutator’s <a class="reference internal" href="../remote-control.html#remote-control"><span class="std std-ref">remote control system</span></a>  enables the
+user to interface the commutator with software to automate the commutation
+process for the purpose of (for example) preserving signal integrity and
+relieving the torsion exerted on a freely moving animal during animal behavior
+experiments.</p>
 <img alt="../../../_images/demo.gif" class="align-center" src="../../../_images/demo.gif" />
-<p>The following sections outline how to automate the commutator with different hardware systems. To interface your Open
-Ephys commutator with a third-party/custom system, refer to the <a class="reference internal" href="../../developer-guide/index.html"><span class="doc">developer guide</span></a>.</p>
+<p>The following sections outline how to automate the commutator with different
+headstages, miniscopes, and pose-esitimation data sources. To interface your
+Open Ephys commutator with a third-party/custom system, refer to the
+<a class="reference internal" href="../../developer-guide/index.html#dev-guide"><span class="std std-ref">Developer Guide</span></a></p>
 <div class="toctree-wrapper compound">
 </div>
-</section>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Many of these examples use <a class="reference external" href="https://open-ephys.org/bonsai">Bonsai</a>.
+Bonsai is open-source software for processing asynchronous, heterogeneous
+streams of data. In our case, it can be used to coordinate orientation data
+(from an IMU sensor or camera sensor for instance) to provide feedback to
+commutator and automate the commutation process. To learn more about how to
+use Bonsai, explore the <a class="reference external" href="https://bonsai-rx.org/">bonsai-rx.org</a> website.
+It is briefly introduced here because it is utilized heavily in the
+remainder following guides for controlling and automating commutation.</p>
+</div>
 </section>
 
 
@@ -343,11 +298,11 @@ Ephys commutator with a third-party/custom system, refer to the <a class="refere
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../manual-control.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../remote-control.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Manual Control</p>
+            <p class="prev-next-title">Remote Control</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="bonsai-headstage64.html" title="next page">

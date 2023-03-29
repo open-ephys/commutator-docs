@@ -1,17 +1,13 @@
+.. spi_commutator::
 
-*************************************************
 SPI Commutator
 *************************************************
 
-.. TODO:: placeholder webpage
+.. todo:: The SPI commutator is in active development. Its documentation will go here once it is publically available.
 
 .. toctree::
    :hidden:
    :maxdepth: 1
 
-   Introduction <self>
-   quick-start-guide/index
-   user-guide/index
-   developer-guide/index
 
 

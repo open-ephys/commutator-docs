@@ -1,24 +1,32 @@
+.. _mounting:
 
-**************************************************************
 Mounting and Connecting the Commutator
 **************************************************************
 
 Mounting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The commutator can be mounted to a standard `80/20 aluminum extrusion <https://8020.net/framing-options/t-slotted-profiles/fractional/10series100basedprofiles.html>`_ using `t-nuts <https://youtu.be/nK-DsJxAdwM>`_ or a standard mechanical breadboard.
-For custom mounting solutions, the dimensions for the mounting holes (1/4"-20 or M6) are indicated in the below schematic:
+The commutator should be mounted such that it is roughly centered over the
+behavioral arena. There are several holes in various positions around the
+commutator's body that are compatible standard `80/20 aluminum extrusion
+<https://8020.net/framing-options/t-slotted-profiles/fractional/10series100basedprofiles.html>`_
+using `t-nuts <https://youtu.be/nK-DsJxAdwM>`_ or a standard mechanical
+breadboard.  Not all the holes need to be used. Select the mounting holes that
+are convienient for your behavioral setup. For custom mounting solutions, the
+dimensions for the mounting holes (1/4"-20 or M6) are indicated in the below
+schematic:
 
 .. image:: ../../_static/images/commutator-mounting-holes.png
     :alt: schematic image
     :align: center
 
-For more clarity, access the 3D model which can be downloaded `here <https://github.com/open-ephys/onix-commutator>`_ or
-in the :doc:`Mechanical<../developer-guide/mechanical>` section of our :doc:`Developer Guide<../developer-guide/index>`
-which contains more information about the enclosure and how to view such a 3D file.
+.. note:: For clarity and planning, 3D models of the commutator body are
+   available on the git repository
 
-If the commutator is used for an animal behavior experiment, mount the commutator such that the animal can traverse the
-behavior setup's full area given the length of your tether.
+.. todo:: Show how to mount the elastic thread as well. This sentence can be
+   used there: If the commutator is used for an animal behavior experiment,
+   mount the commutator such that the animal can traverse the behavior setup's
+   full area given the length of your tether.
 
 Connecting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -64,11 +72,16 @@ Connecting
 
 
 .. Attention::
-    * Ensure that the Micro-USB carries digital signals as well as power
-    * Source your coaxial tether from a reputable vendor such as `Digikey <https://www.digikey.com/>`_, `Mouser <https://www.digikey.com/>`_,
-      or `Open Ephys <https://open-ephys.org/store>`_
-    * For animal behavior experiments, manage cables such that they are not within range to interfere with the tether when the animal moves. For example:
+   * Some cheap Micro-USB cables only supply power. Be sure to use a cable that
+     provides power and digital signals 
+   * Source your coaxial tether from a reputable vendor such as `Digikey
+     <https://www.digikey.com/>`_, `Mouser <https://www.digikey.com/>`_, or `Open Ephys <https://open-ephys.org/store>`_
+   * For animal behavior experiments, manage cables such that they are not
+     within range to interfere with the tether when the animal moves. For
+     example:
 
-      .. image:: ../../_static/images/cable-management.png
-            :alt: image indicating location of connections
-            :align: center
+     .. image:: ../../_static/images/cable-management.png
+        :alt: image indicating location of connections
+        :align: center
+
+     .. todo:: Better image

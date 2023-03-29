@@ -157,7 +157,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../status-led.html">
-     Commutator Status and LED Feedback
+     Commutator Status LED
     </a>
    </li>
    <li class="toctree-l2">
@@ -165,9 +165,14 @@
      Manual Control
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../remote-control.html">
+     Remote Control
+    </a>
+   </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="index.html">
-     Automatic Control
+     Automating Commutation
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -262,16 +267,30 @@
                 
   <section id="automate-commutation-with-bonsai-and-ucla-miniscope-v4">
 <h1>Automate Commutation with Bonsai and UCLA Miniscope v4<a class="headerlink" href="#automate-commutation-with-bonsai-and-ucla-miniscope-v4" title="Permalink to this headline">#</a></h1>
-<p>This section outlines how to use Bonsai software to automate commutation of the tether between a miniscope mounted on a freely moving animal and a stationary DAQ.</p>
+<p>This section outlines how to use Bonsai software to automate commutation of the
+tether between a miniscope mounted on a freely moving animal and a stationary
+DAQ.</p>
 <ol class="arabic">
-<li><p>Mount the commutator and establish all electrical connections according to the information found in the <a class="reference internal" href="../mount-connect.html"><span class="doc">Mounting and Connecting</span></a> section of this user guide</p></li>
-<li><p>Download and configure Bonsai:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://bonsai-rx.org/docs/articles/installation.html">Download and Install Bonsai</a> if you haven’t already</p></li>
-<li><p>Open Bonsai and <a class="reference external" href="https://bonsai-rx.org/docs/articles/packages.html">install the Bonsai.StarterPack and Bonsai.Miniscope packages</a> if you haven’t already</p></li>
+<li><p>Follow the <a class="reference internal" href="../../quick-start-guide/index.html#quick-start"><span class="std std-ref">Quick Start Guide</span></a> to ensure you can control the commutator using Bonsai.</p></li>
+<li><p>Install the <strong>Bonsai.Miniscope</strong> Package from Bonsai’s package manager.</p>
+<ul>
+<li><p>Select Community Feed</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Image</p>
+</div>
+</li>
+<li><p>Install <strong>Bonsai.Miniscope</strong></p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Image</p>
+</div>
+</li>
 </ul>
 </li>
-<li><p>Download, configure, and run the .bonsai file (also known as a workflow) for automating commutation using orientation
+<li><p>Mount the commutator and establish all electrical connections according to
+the information found in the <a class="reference internal" href="../mount-connect.html#mounting"><span class="std std-ref">Mounting and Connecting the Commutator</span></a>.</p></li>
+<li><p>Download, configure, and run the following Bonsai workflow for automating commutation using orientation
 data from the miniscope’s on-board IMU sensor:</p>
                 <div class="bonsai-workflow-container">
         <div class="workflow-filler"></div>
@@ -279,33 +298,15 @@ data from the miniscope’s on-board IMU sensor:</p>
         <div class="workflow-copy"><img class="download-copy-img" src="../../../_static/images/copy.svg" onclick="getTextFromURL('../../../_static/downloads/commutator-miniscopev4-automate.bonsai')" width=18px /></div>
         <div class="workflow-name"><b>commutator-miniscopev4-automate.bonsai</b></div>
         <div class="workflow-image"><img src="../../../_static/images/commutator-miniscopev4-automate.svg" alt="commutator-miniscopev4-automate" /></div>
-</div><ul>
-<li><p>Configure the <em>PortName</em> property of the <em>Commutator</em> node to reflect the port to which the commutator is
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be sure to Configure the <strong>PortName</strong> property of the
+<strong>Commutator</strong> node to reflect the port to which the commutator is
 connected.</p>
-<ul>
-<li><p>The process to determine to which port the commutator is connected depends on the operating system:</p>
-<ul>
-<li><p>On Windows, <a class="reference external" href="https://support.microsoft.com/en-us/windows/open-device-manager-a7f2db46-faaf-24f0-8b7b-9e4a6032fc8c">open Device Manager</a>
-and expand the <em>Ports</em> directory. The correct port is indicated by the <em>Teensy USB Serial</em> entry as seen as in the below example screenshot.
-In the example, the correct port is <em>COM5</em></p>
-<img alt="_static/images/teensy-device-manager.jpg" src="_static/images/teensy-device-manager.jpg" />
+</div>
 </li>
-<li><p>On Linux, run <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/dev/tty*</span></code> in the root directory and note the port name <em>/dev/ttyUSB*</em> with</p></li>
-</ul>
-</li>
-<li><p>Left-click the <em>Commutator</em> node (highlighted below) and modify the <em>PortName</em> property (highlighted below)
-to the value found in the previous step</p>
-<img alt="../../../_images/bonsai-miniscopev4-comport.png" src="../../../_images/bonsai-miniscopev4-comport.png" />
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Run the workflow in Bonsai</p>
-<ul class="simple">
-<li><p>If all above steps are correctly performed, the commutator motor rotates when the miniscope rotates</p></li>
-</ul>
-</li>
+<li><p>Run the workflow in Bonsai. If all above steps are correctly performed, the
+commutator will follow miniscope rotations</p></li>
 </ol>
 </section>
 

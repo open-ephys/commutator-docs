@@ -1,13 +1,15 @@
+.. _manual_control:
 
-*******************************************************
 Manual Control
 *******************************************************
+This section details how to control the commutator using the commutator's
+buttons. This is useful for situations such as when the user desires to quickly
+stop automated commutation or untwist the tether without disconnecting it from
+the head stage or removing the head stage from the behaving animal.
 
-This section details how to control the commutator using the commutator's buttons. This is useful for
-situations such as when the user desires to quickly stop automated commutation or untwist the tether without disconnecting
-it from the head stage or removing the head stage from the behaving animal.
-
-.. Important:: Manual controls override any ongoing remote controls. In other words, remote commands sent when a button is being pressed are ignored and cleared
+.. important:: Manual controls override any ongoing remote controls. In other
+   words, remote commands sent when a button is being pressed are ignored and
+   cleared.
 
 .. raw:: html
 

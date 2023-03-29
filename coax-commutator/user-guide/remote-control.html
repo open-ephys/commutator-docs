@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Mounting and Connecting the Commutator &#8212; Open Ephys Documentation 0.0.0 documentation</title>
+    <title>Remote Control &#8212; Open Ephys Documentation 0.0.0 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -33,8 +33,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Commutator Status LED" href="status-led.html" />
-    <link rel="prev" title="User Guide" href="index.html" />
+    <link rel="next" title="Automating Commutation" href="automatic-control/index.html" />
+    <link rel="prev" title="Manual Control" href="manual-control.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -150,8 +150,8 @@
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="mount-connect.html">
      Mounting and Connecting the Commutator
     </a>
    </li>
@@ -165,8 +165,8 @@
      Manual Control
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="remote-control.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Remote Control
     </a>
    </li>
@@ -250,13 +250,13 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Mounting
+  <a class="reference internal nav-link" href="#json-commands">
+   JSON Commands
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#connecting">
-   Connecting
+  <a class="reference internal nav-link" href="#compound-json-commands">
+   Compound JSON commands
   </a>
  </li>
 </ul>
@@ -280,86 +280,112 @@
               
               <div>
                 
-  <section id="mounting-and-connecting-the-commutator">
-<span id="mounting"></span><h1>Mounting and Connecting the Commutator<a class="headerlink" href="#mounting-and-connecting-the-commutator" title="Permalink to this headline">#</a></h1>
-<section id="id1">
-<h2>Mounting<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<p>The commutator should be mounted such that it is roughly centered over the
-behavioral arena. There are several holes in various positions around the
-commutator’s body that are compatible standard <a class="reference external" href="https://8020.net/framing-options/t-slotted-profiles/fractional/10series100basedprofiles.html">80/20 aluminum extrusion</a>
-using <a class="reference external" href="https://youtu.be/nK-DsJxAdwM">t-nuts</a> or a standard mechanical
-breadboard.  Not all the holes need to be used. Select the mounting holes that
-are convienient for your behavioral setup. For custom mounting solutions, the
-dimensions for the mounting holes (1/4”-20 or M6) are indicated in the below
-schematic:</p>
-<img alt="schematic image" class="align-center" src="../../_images/commutator-mounting-holes.png" />
+  <section id="remote-control">
+<span id="id1"></span><h1>Remote Control<a class="headerlink" href="#remote-control" title="Permalink to this headline">#</a></h1>
+<p>The commutator communicates with a computer using <a class="reference external" href="https://en.wikipedia.org/wiki/JSON">JavaScript Object Notation
+(JSON)</a> strings sent over the USB cable
+using a (<a class="reference external" href="https://en.wikipedia.org/wiki/Virtual_COM_port">virtual</a>) serial
+port connection. This allows it to be controlled from any piece of software or
+script capable of writing strings to a serial port. Virtually every programming
+language will provide a library for doing this (e.g. the <a class="reference external" href="https://pyserial.readthedocs.io/en/latest/pyserial.html">pySerial</a> Python library).
+Additionally, many pieces of software (e.g.  Bonsai, Labview, Arduino IDE)
+provide the ability to write to a serial port without any programming.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For clarity and planning, 3D models of the commutator body are
-available on the git repository</p>
+<p>An easy way to test remote control is to to type commands into the
+<a class="reference external" href="https://en.wikipedia.org/wiki/JSON">Arduino IDE’s serial monitor</a>.</p>
 </div>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>Show how to mount the elastic thread as well. This sentence can be
-used there: If the commutator is used for an animal behavior experiment,
-mount the commutator such that the animal can traverse the behavior setup’s
-full area given the length of your tether.</p>
-</div>
-</section>
-<section id="connecting">
-<h2>Connecting<a class="headerlink" href="#connecting" title="Permalink to this headline">#</a></h2>
-<div class="container">
-    <div class ="row">
-        <p class="card-text">
-            There are three electrical interconnects on the commutator:
-        </p>
-    </div>
-    <div class="row">
-        <img src="../../_static/images/connections-numbered.png" alt="commutator connections image">
-    </div>
-    <div class="row">
-            <div class="col d-flex flex-column m-0 p-0">
-                <div class="card-body m-0 p-0">
-                    <ol class="simple">
-                        <li><p><b>Micro-USB Connector:</b></p></li>
-                        <p> The commutator receives power and communicates to another device (probably a computer) with serial communication (USB/UART) through this interconnect </p> </ol>
-                    </ol>
-                </div>
-            </div>
-            <div class="col d-flex flex-column m-0 p-0">
-                <div class="card-body m-0 p-0">
-                    <ol class="simple" start="2">
-                        <li><p><b>Top SMA Connector:</b></p></li>
-                        <p> The commutator’s stator connects to the stationary data acquisition device (DAQ) through this interconnect </p>
-                    </ol>
-                </div>
-            </div>
-            <div class="col d-flex flex-column m-0 p-0">
-                <div class="card-body m-0 p-0">
-                    <ol class="simple" start="3">
-                        <li><p><b>Bottom SMA Connector:</b></p></li>
-                        <p> The commutator’s rotor connects to the freely moving animal headstage through this interconnect </p>
-                    </ol>
-                </div>
-            </div>
-    </div>
-</div><div class="admonition attention">
+<div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<ul>
-<li><p>Some cheap Micro-USB cables only supply power. Be sure to use a cable that
-provides power and digital signals</p></li>
-<li><p>Source your coaxial tether from a reputable vendor such as <a class="reference external" href="https://www.digikey.com/">Digikey</a>, <a class="reference external" href="https://www.digikey.com/">Mouser</a>, or <a class="reference external" href="https://open-ephys.org/store">Open Ephys</a></p></li>
-<li><p>For animal behavior experiments, manage cables such that they are not
-within range to interfere with the tether when the animal moves. For
-example:</p>
-<img alt="image indicating location of connections" class="align-center" src="../../_images/cable-management.png" />
-<div class="admonition-todo admonition" id="id3">
-<p class="admonition-title">Todo</p>
-<p>Better image</p>
+<p><a class="reference internal" href="manual-control.html#manual-control"><span class="std std-ref">Manual control</span></a> takes precedence over remote commands. The
+commutator will ignore and dispose all received JSON commands while manual
+controls are in use.</p>
 </div>
-</li>
+<section id="json-commands">
+<h2>JSON Commands<a class="headerlink" href="#json-commands" title="Permalink to this headline">#</a></h2>
+<p>JSON is a human-readable notation used to specify a property
+and assign a value to or read the value of that corresponding property. The
+notation is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nb">property</span><span class="p">:</span> <span class="n">value</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>The commutator responds to six JSON properties: <cite>enable</cite>, <cite>led</cite>, <cite>speed</cite>, <cite>accel</cite>, <cite>turn</cite>,
+and <cite>print</cite>. The set of acceptable values depends on the property to which the
+value is being assigned. Each of these five properties is documented here:</p>
+<dl>
+<dt>{enable<span class="classifier">bool}</span></dt><dd><p>A boolean value to enable or disable the commutator.</p>
+<ul class="simple">
+<li><p><em>true</em>: enable the commutator.</p></li>
+<li><p><em>false</em> (default): disable the commutator</p></li>
 </ul>
+<p>For example, to enable the commutator:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">enable</span><span class="p">:</span> <span class="n">true</span><span class="p">}</span>
+</pre></div>
 </div>
+</dd>
+<dt>{led: bool}</dt><dd><p>A boolean value to enable or disable the <a class="reference internal" href="status-led.html#status-led"><span class="std std-ref">status LED</span></a>.</p>
+<ul class="simple">
+<li><p><em>true</em> (default): Turn on the status LED</p></li>
+<li><p><em>false</em>: Turn off the status LED.</p></li>
+</ul>
+<p>For example, to turn the status LED off:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">led</span><span class="p">:</span> <span class="n">false</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt>{speed: float}</dt><dd><p>A floating point value in the range (<em>0</em>, <em>1000</em>] to set the maximum
+rotation speed in RPM. The default value is 100 RPM. For example, to set
+the maximal rotation speed to 6.28319 RPM:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">speed</span><span class="p">:</span> <span class="mf">6.28319</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt>{accel: float}</dt><dd><p>A floating point value in the range (<em>0</em>, <em>1000</em>] to set the maximum
+rotational acceleration in RPMM. The default value is 200 RPMM. For
+example, to set the rotational acceleration to 6.28319 RPMM:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">accel</span><span class="p">:</span> <span class="mf">6.28319</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt>{turn: float}</dt><dd><p>A floating point value indicating the number of turns to perform. The sign
+indicates the direction of motion. Turn commands are integrated. For
+instance, if a second turn command is received before the first completes,
+the final position of the commutator will be the sum of both commands. For
+example, to turn the commutator clockwise (from some perspective) 1.1
+turns:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">turn</span><span class="p">:</span> <span class="mf">1.1</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>To turn it back counterclockwise (from the same perspective) by 0.5 turns:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">turn</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt>{print:}</dt><dd><p>Return a JSON object containing parameters and motor operational state. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nb">print</span><span class="p">:}</span>
+</pre></div>
+</div>
+<p>might return</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;led&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span> <span class="s2">&quot;enable&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span> <span class="s2">&quot;speed&quot;</span><span class="p">:</span> <span class="mf">6.28319</span><span class="p">,</span> <span class="s2">&quot;accel&quot;</span><span class="p">:</span><span class="mf">6.28319</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="p">:</span><span class="o">-</span><span class="mf">42.00</span><span class="p">,</span> <span class="s2">&quot;motor_running&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>where “target” is the target position of the motor and “motor_running”
+indicates if the motor is currently turning.</p>
+</dd>
+</dl>
+</section>
+<section id="compound-json-commands">
+<h2>Compound JSON commands<a class="headerlink" href="#compound-json-commands" title="Permalink to this headline">#</a></h2>
+<p>Multiple commands can be sent in a compound JSON message in the following format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">property1</span><span class="p">:</span> <span class="n">value1</span><span class="p">,</span> <span class="n">property2</span><span class="p">:</span> <span class="n">value2</span><span class="p">,</span> <span class="n">property3</span><span class="p">:</span> <span class="n">value3</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>The order of properties does not matter. For instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">led</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span> <span class="n">speed</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="n">turn</span> <span class="p">:</span> <span class="o">-</span><span class="mf">1.1</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>will turn the LED off, set the maximum speed to 25 RPM, and tell the
+commutator to turn 1.1 rotations CCW.</p>
 </section>
 </section>
 
@@ -369,17 +395,17 @@ example:</p>
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="manual-control.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">User Guide</p>
+            <p class="prev-next-title">Manual Control</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="status-led.html" title="next page">
+    <a class='right-next' id="next-link" href="automatic-control/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Commutator Status LED</p>
+        <p class="prev-next-title">Automating Commutation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -157,7 +157,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../user-guide/status-led.html">
-     Commutator Status and LED Feedback
+     Commutator Status LED
     </a>
    </li>
    <li class="toctree-l2">
@@ -165,9 +165,14 @@
      Manual Control
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../user-guide/remote-control.html">
+     Remote Control
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../user-guide/automatic-control/index.html">
-     Automatic Control
+     Automating Commutation
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -245,13 +250,13 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#open-source-designs">
-   Open Source Designs
+  <a class="reference internal nav-link" href="#design-files">
+   Design Files
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bill-of-materials-bom">
-   Bill of Materials (BoM)
+   Bill of Materials (BOM)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -282,12 +287,12 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#id2">
      Mechanical
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#id3">
      Electrical
     </a>
    </li>
@@ -384,18 +389,23 @@
               <div>
                 
   <section id="developer-guide">
-<h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">#</a></h1>
-<section id="open-source-designs">
-<h2>Open Source Designs<a class="headerlink" href="#open-source-designs" title="Permalink to this headline">#</a></h2>
-<p>The designs for the commutators are open-source. Accordingly, all of the files relevant to manufacturing the commutator are
-available in this <a class="reference external" href="https://github.com/open-ephys/onix-commutator">public Open Ephys Github repo</a>. The downloads are
-also available below:</p>
+<span id="dev-guide"></span><h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">#</a></h1>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>This section is a work in progress.</p>
+</div>
+<section id="design-files">
+<h2>Design Files<a class="headerlink" href="#design-files" title="Permalink to this headline">#</a></h2>
+<p>Open Ephys commutators are open-source. Mechanical, electrical, and firmware
+desings are available are available in ONIX-Commutator git repo. Below we
+provide an explaination of the repository structure and some helpful tips if
+you plan to make a commutator yourself or want to extend its functionality.</p>
 </section>
 <section id="bill-of-materials-bom">
-<h2>Bill of Materials (BoM)<a class="headerlink" href="#bill-of-materials-bom" title="Permalink to this headline">#</a></h2>
-<p>This BoM contains links to specific vendors solely to calculate a total price. open ephys is not affiliated, and there
-are other places to get these parts. This BoM was created using prices on March 2nd, 2023.</p>
-<p>Prices depend on where you decide to manufacture these parts. More on that below.</p>
+<h2>Bill of Materials (BOM)<a class="headerlink" href="#bill-of-materials-bom" title="Permalink to this headline">#</a></h2>
+<p>This BOM for the mechanical and electrical components are provided below. This
+BOM contains links to specific vendors solely to calculate a total price. The
+BOM cost may vary. This BOM was created using prices on March 2nd, 2023.</p>
 </section>
 <section id="diy">
 <h2>DIY<a class="headerlink" href="#diy" title="Permalink to this headline">#</a></h2>
@@ -415,8 +425,8 @@ are other places to get these parts. This BoM was created using prices on March 
 <p>The following sections describe how to manufacture the parts that are custom</p>
 <p>This should probably be on its own page so that we can refer people to it from multiple products’ documentations instead
 of each products’ documentation containing its own manufacturing tips</p>
-<section id="id1">
-<h3>Mechanical<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<section id="id2">
+<h3>Mechanical<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>If you desire low quantity, first seek out local options. Many universities or libraries offer free 3D printing
 services. They don’t always have SLS/MJF like which is how the commutator enclosures were manufactured, but you can probably design a
 new enclosure that makes use of FDM or SLA 3D printing if necessary. The biggest difference is that you will need to design
@@ -425,8 +435,8 @@ enclosures, there are many online manufacturers that will 3D print this for you.
 price to purchase (i.e. 3DHubs has a $90 minimum for those services at the time of writing this) which is not ideal if
 you are trying to print a low quantity of pieces. Other popular ones include Formlabs, etc. etc.</p>
 </section>
-<section id="id2">
-<h3>Electrical<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<section id="id3">
+<h3>Electrical<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <p>PCBs are pretty cheap. You no longer have to order in bulk to get them relatively cheap. For instance,
 You can get a 5-pack of PCBs from JLCPCB for less than $10.</p>
 </section>
@@ -440,7 +450,7 @@ dread of lead times by purchasing from us. And you get to support <a class="refe
 </section>
 <section id="teensy">
 <h2>Teensy<a class="headerlink" href="#teensy" title="Permalink to this headline">#</a></h2>
-<div class="admonition-todo admonition" id="id3">
+<div class="admonition-todo admonition" id="id4">
 <p class="admonition-title">Todo</p>
 <p>insert photo of teensy. unnecessary, but why not? Any other photos on this page?</p>
 </div>
@@ -478,7 +488,7 @@ assigned. This is how to use JSON to communicate with the commutator:</p>
 </div>
 <section id="json-commands">
 <h3>JSON Commands<a class="headerlink" href="#json-commands" title="Permalink to this headline">#</a></h3>
-<div class="admonition-todo admonition" id="id4">
+<div class="admonition-todo admonition" id="id5">
 <p class="admonition-title">Todo</p>
 <p>reformat this</p>
 </div>
@@ -515,7 +525,7 @@ assigned. This is how to use JSON to communicate with the commutator:</p>
 <li><p>The value for this property sets the rotational speed of the commutator in units of RPM</p></li>
 </ul>
 <p>There is no default out-of-the-box value for this property</p>
-<div class="admonition-todo admonition" id="id5">
+<div class="admonition-todo admonition" id="id6">
 <p class="admonition-title">Todo</p>
 <p>what is the set of acceptable values?</p>
 </div>

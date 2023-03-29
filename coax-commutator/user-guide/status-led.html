@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Commutator Status and LED Feedback &#8212; Open Ephys Documentation 0.0.0 documentation</title>
+    <title>Commutator Status LED &#8212; Open Ephys Documentation 0.0.0 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -157,7 +157,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Commutator Status and LED Feedback
+     Commutator Status LED
     </a>
    </li>
    <li class="toctree-l2">
@@ -165,9 +165,14 @@
      Manual Control
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="remote-control.html">
+     Remote Control
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="automatic-control/index.html">
-     Automatic Control
+     Automating Commutation
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -238,24 +243,9 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage mt-5 pt-1 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
 
 <nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#commutator-states">
-   Commutator States
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#toggle-led-feedback">
-   Toggle LED Feedback
-  </a>
- </li>
-</ul>
-
+    
 </nav>
               </div>
               
@@ -275,52 +265,59 @@
               
               <div>
                 
-  <section id="commutator-status-and-led-feedback">
-<h1>Commutator Status and LED Feedback<a class="headerlink" href="#commutator-status-and-led-feedback" title="Permalink to this headline">#</a></h1>
-<section id="commutator-states">
-<h2>Commutator States<a class="headerlink" href="#commutator-states" title="Permalink to this headline">#</a></h2>
+  <section id="commutator-status-led">
+<span id="status-led"></span><h1>Commutator Status LED<a class="headerlink" href="#commutator-status-led" title="Permalink to this headline">#</a></h1>
+<p>The LED on the front panel provides information about the operational state of
+the commutator:</p>
+<a class="reference internal image-reference" href="../../_images/commutator-front-status-led.jpg"><img alt="Status LED" class="align-center" src="../../_images/commutator-front-status-led.jpg" style="width: 50%;" /></a>
 <div class="container">
-    <div class="row">
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 d-flex align-items-center justify-content-center">
-                <img src="../../_static/images/disabled-led.gif" alt="led gif">
-            </div>
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 d-flex flex-column m-0 p-0">
-                <div>
-                    <p><b>Disabled State:</b></p>
-                    <p>All controls (except ones that enable the commutator) and motor operations are locked. When the disabled status is entered, the motor is halted instantly. All commands (remote or manual) received during the disabled state are cleared such that they do not engage when the commutator is enabled.</p>
-                </div>
-        </div>
-    </div>
     <div class="row">
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 d-flex align-items-center justify-content-center">
                 <img src="../../_static/images/charging-led.gif" alt="led gif">
             </div>
             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 d-flex flex-column m-0 p-0">
                 <div>
-                    <p><b>Charging State:</b></p>
-                    <p> Super-capacitors are charging. The commutator is effectively disabled, except the commutator cannot be enabled until charging completes which can take up to 30 seconds. </p>
+                    <p><b>Charging: </b>Super-capacitors are charging. The
+                    commutator is effectively disabled, and  be used until
+                    charging completes, which can take up to 30 seconds.
+                    </p> </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 d-flex align-items-center justify-content-center">
+                <img src="../../_static/images/disabled-led.gif" alt="led gif">
+            </div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 d-flex flex-column m-0 p-0">
+                <div>
+                    <p><b>Disabled: </b>All controls, except the Stop/Go
+                    button or enable remote command, are ignored and the
+                    motor is locked.  When the disabled status is entered,
+                    the motor is halted instantly. All commands (remote or
+                    manual) received during the disabled state are cleared
+                    such that they do not engage when the commutator is
+                    enabled.</p>
                 </div>
         </div>
     </div>
+    <br>
     <div class="row">
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 d-flex align-items-center justify-content-center">
                 <img src="../../_static/images/enabled-led.gif" alt="led gif">
             </div>
             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 d-flex flex-column m-0 p-0">
                 <div>
-                    <p><b>Enabled State:</b></p>
-                    <p> Remote and manual controls are unlocked. </p>
+                    <p><b>Enabled: </b>Remote and manual controls are unlocked. </p>
                 </div>
         </div>
     </div>
-</div></section>
-<section id="toggle-led-feedback">
-<h2>Toggle LED Feedback<a class="headerlink" href="#toggle-led-feedback" title="Permalink to this headline">#</a></h2>
-<p>The LED can be toggled off if it presents unwanted visual stimulus by touching the LED button for &gt;0.5 seconds. The LED
-can be toggled on by touching the LED button for any amount of time. Refer to this guide’s <a class="reference internal" href="manual-control.html"><span class="doc">Manual Control</span></a>
-section for more informaton about that. The LED can also be toggled on/off remotely by sending the proper JSON command to the
-commutator. Refer to the <a class="reference internal" href="../developer-guide/index.html"><span class="doc">Developer Guide</span></a> to learn how to do this.</p>
-</section>
+</div><div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The LED can be toggled off if it presents unwanted visual stimulus by
+pressing the LED button for &gt; 0.5 seconds. The LED can then be toggled on by
+pressing the button again. Alternatively, the LED can be toggled on/off
+remotely using the <a class="reference internal" href="remote-control.html#remote-control"><span class="std std-ref">led JSON command</span></a></p>
+</div>
 </section>
 
 

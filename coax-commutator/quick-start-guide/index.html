@@ -157,7 +157,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../user-guide/status-led.html">
-     Commutator Status and LED Feedback
+     Commutator Status LED
     </a>
    </li>
    <li class="toctree-l2">
@@ -165,9 +165,14 @@
      Manual Control
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../user-guide/remote-control.html">
+     Remote Control
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../user-guide/automatic-control/index.html">
-     Automatic Control
+     Automating Commutation
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -261,65 +266,83 @@
               <div>
                 
   <section id="quick-start-guide">
-<h1>Quick Start Guide<a class="headerlink" href="#quick-start-guide" title="Permalink to this headline">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For instructions on how to interface the commutator with orientation data from other
-hardware (such as <a class="reference external" href="https://open-ephys.org/miniscope-v4/miniscope-v4">UCLA miniscope headstage</a> and
-<a class="reference external" href="https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html">headstage-64</a>) to automate
-the commutation process, please refer to the <a class="reference internal" href="../user-guide/automatic-control/index.html"><span class="doc">Automatic Control</span></a> sections of
-the more in-depth <a class="reference internal" href="../user-guide/index.html"><span class="doc">User Guide</span></a></p>
+<span id="quick-start"></span><h1>Quick Start Guide<a class="headerlink" href="#quick-start-guide" title="Permalink to this headline">#</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Although this example uses <a class="reference external" href="https://bonsai-rx.org">Bonsai</a>
+and Windows, the commutator communicates over a serial connection using a
+simple <a class="reference internal" href="../user-guide/remote-control.html#remote-control"><span class="std std-ref">set of JSON commands</span></a> and therefore is
+software and operating system agnostic.</p>
 </div>
-<p>This guide instructs how to perform commutation using Bonsai software and presses of the left/right arrows on the keyboard.
-It is useful for remotely controlling the commutator and verifying its core functionality.</p>
+<p>This quick start guide provides a basic setup instructions to verify the
+commutator’s functionality.  By following these steps, you will be able to turn
+the commutator using keyboard presses from a  <a class="reference external" href="https://bonsai-rx.org">Bonsai Visual Programming
+Language</a> workflow.</p>
 <ol class="arabic">
-<li><p>Connect a computer to the commutator via the commutator’s micro-USB connector to establish power and serial
-communication between the commutator and the computer (only the interconnect numbered 1 in the following figure is
-necessary for this quick start guide):</p>
-<img alt="../../_images/connections-numbered.png" src="../../_images/connections-numbered.png" />
-</li>
-<li><p>Position the commutator such that gears can freely rotate</p></li>
-<li><p>Download and configure Bonsai:</p>
+<li><p>If you have not already done so, download and configure Bonsai:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://bonsai-rx.org/docs/articles/installation.html">Download and Install Bonsai</a> if you haven’t already</p></li>
-<li><p>Open Bonsai and <a class="reference external" href="https://bonsai-rx.org/docs/articles/packages.html">install the Bonsai.StarterPack package</a> if you haven’t already</p></li>
+<li><p><a class="reference external" href="https://bonsai-rx.org/docs/articles/installation.html">Download and Install Bonsai</a></p></li>
+<li><p>Open Bonsai and <a class="reference external" href="https://bonsai-rx.org/docs/articles/packages.html">install the Bonsai.StarterPack package</a></p></li>
 </ul>
 </li>
-<li><p>Download, configure and run the .bonsai file (also known as a workflow) for controlling the commutator using key presses:</p>
+<li><p>Connect the commutator to the computer to the commutator using micro-USB
+cable (connector 1 in the figure below) to establish power and serial
+communication between the commutator and the computer. For this quick start
+guide, the coaxial connections are not needed.</p>
+<img alt="../../_images/connections-numbered.png" src="../../_images/connections-numbered.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The commutator’s RGB LED will flash red when the commutator is
+plugged in. During this time, the commutator is charging an internal
+supercapacitor bank that prevents the motor from loading the USB port. This
+can take up to 30 seconds to complete.</p>
+</div>
+</li>
+<li><p>Position the commutator to ensure there is nothing preventing the
+commutator’s gears from rotating freely.</p></li>
+<li><p>Download and run the following .bonsai file (also known as a “workflow”) for
+controlling the commutator using key presses:</p>
                 <div class="bonsai-workflow-container">
         <div class="workflow-filler"></div>
         <div class="workflow-download"><img class="download-copy-img" src="../../_static/images/download.svg" onclick="getFileFromURL('../../_static/downloads/commutator-keypress-control.bonsai')" width=18px /></div>
         <div class="workflow-copy"><img class="download-copy-img" src="../../_static/images/copy.svg" onclick="getTextFromURL('../../_static/downloads/commutator-keypress-control.bonsai')" width=18px /></div>
         <div class="workflow-name"><b>commutator-keypress-control.bonsai</b></div>
         <div class="workflow-image"><img src="../../_static/images/commutator-keypress-control.svg" alt="commutator-keypress-control" /></div>
-</div><ul>
-<li><p>Configure the <em>PortName</em> property of the <em>SerialWriteString</em> node to reflect the port to which the commutator is
-connected.</p>
+</div>
+
+    <br></li>
+<li><p>Configure the <strong>PortName</strong> property of the <strong>SerialWriteString</strong> node to
+reflect the port to which the commutator is connected. To
+determine to which port the commutator is connected to:</p>
 <ul>
-<li><p>The process to determine to which port the commutator is connected depends on the operating system:</p>
-<ul>
-<li><p>On Windows, <a class="reference external" href="https://support.microsoft.com/en-us/windows/open-device-manager-a7f2db46-faaf-24f0-8b7b-9e4a6032fc8c">open Device Manager</a>
-and expand the <em>Ports</em> directory. The correct port is indicated by the <em>Teensy USB Serial</em> entry as seen as in the below example screenshot.
-In the example, the correct port is <em>COM5</em></p>
-<img alt="_static/images/teensy-device-manager.jpg" src="_static/images/teensy-device-manager.jpg" />
+<li><p>Open the <a class="reference external" href="https://support.microsoft.com/en-us/windows/open-device-manager-a7f2db46-faaf-24f0-8b7b-9e4a6032fc8c">Device Manager</a>
+and expand the <strong>Ports</strong> directory. The correct port is indicated by the
+<strong>Teensy USB Serial</strong> entry as seen as in the below example screenshot.  In
+this example, the correct port is <strong>COM5</strong></p>
+<img alt="../../_images/teensy-device-manager.jpg" src="../../_images/teensy-device-manager.jpg" />
 </li>
-<li><p>On Linux, run <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/dev/tty*</span></code> in the root directory and note the port name <em>/dev/ttyUSB*</em> with</p></li>
-</ul>
-</li>
-<li><p>Left-click the <em>SerialWriteString</em> node (highlighted below) and modify the <em>PortName</em> property (highlighted below)
-to the value found in the previous step</p>
+<li><p>In Bonsai, click the <strong>SerialWriteString</strong> node and modify the
+<strong>PortName</strong> property (highlighted below) to the value found in the
+previous step</p>
 <img alt="../../_images/bonsai-keypress-comport.png" src="../../_images/bonsai-keypress-comport.png" />
 </li>
 </ul>
 </li>
-</ul>
-</li>
-<li><p>Run the workflow in Bonsai</p>
+<li><p>Run the workflow in Bonsai by pressing the green Start arrow.</p>
 <ul class="simple">
-<li><p>Voila! If all above steps are correctly performed, the commutator motor rotates when the left and right arrow keys are pressed</p></li>
-<li><p>Angular displacement per key-press can be adjusted by left-clicking the <em>String</em> nodes and modifying the <em>Value</em> property when the workflow is not running</p></li>
+<li><p>Et voilà! The commutator motor now rotates when the left and right arrow
+keys are pressed on the keyboard.</p></li>
+<li><p>The angular displacement per key-press can be adjusted by clicking the
+<strong>String</strong> nodes and modifying the <strong>Value</strong> property</p></li>
+<li><p>To see the JSON commands being sent to the commutator, double-click the
+<strong>SerialStringWrite</strong> node during while the workflow is running to show a text
+visualizer.</p></li>
 </ul>
 </li>
+<li><p>After confirming the functionality of the commutator, you are ready to mount
+it and start using it for automated commutation during experiments with
+<a class="reference external" href="https://open-ephys.org/miniscope-v4/miniscope-v4">UCLA miniscopes</a> and
+<a class="reference external" href="https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/index.html">ONIX headstages</a>.</p></li>
 </ol>
 </section>
 
