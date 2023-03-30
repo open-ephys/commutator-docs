@@ -3,7 +3,7 @@
 
 Saving Settings
 **********************************************
-The enabled state, LED, motor speed and, and motor acceleration parameters,
+The enabled state, LED state, motor speed, and motor acceleration settings,
 whether changed via the remote or manual interface, are saved automatically in
 non-volatile memory each time they are changed. The device will start in the
-same state it was last used. No action to save settings between sessions.
+same state it was last used. No action is required by the user.
