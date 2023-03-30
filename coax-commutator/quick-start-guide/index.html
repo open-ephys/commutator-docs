@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Quick Start Guide &#8212; Open Ephys Documentation 0.0.0 documentation</title>
+    <title>Quick Start &#8212; Open Ephys Documentation 0.0.0 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -130,14 +130,9 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../index.html">
-   Introduction
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Quick Start Guide
+   Quick Start
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -157,7 +152,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../user-guide/status-led.html">
-     Commutator Status LED
+     Status LED
     </a>
    </li>
    <li class="toctree-l2">
@@ -168,6 +163,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../user-guide/remote-control.html">
      Remote Control
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../user-guide/saving-settings.html">
+     Saving Settings
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -265,8 +265,8 @@
               
               <div>
                 
-  <section id="quick-start-guide">
-<span id="quick-start"></span><h1>Quick Start Guide<a class="headerlink" href="#quick-start-guide" title="Permalink to this headline">#</a></h1>
+  <section id="quick-start">
+<span id="id1"></span><h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">#</a></h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Although this example uses <a class="reference external" href="https://bonsai-rx.org">Bonsai</a>
@@ -279,16 +279,16 @@ commutator’s functionality.  By following these steps, you will be able to tur
 the commutator using keyboard presses from a  <a class="reference external" href="https://bonsai-rx.org">Bonsai Visual Programming
 Language</a> workflow.</p>
 <ol class="arabic">
-<li><p>If you have not already done so, download and configure Bonsai:</p>
+<li><p>If you have not already done so,</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://bonsai-rx.org/docs/articles/installation.html">Download and Install Bonsai</a></p></li>
 <li><p>Open Bonsai and <a class="reference external" href="https://bonsai-rx.org/docs/articles/packages.html">install the Bonsai.StarterPack package</a></p></li>
 </ul>
 </li>
 <li><p>Connect the commutator to the computer to the commutator using micro-USB
-cable (connector 1 in the figure below) to establish power and serial
-communication between the commutator and the computer. For this quick start
-guide, the coaxial connections are not needed.</p>
+cable (connector 1 in the figure below) to establish power and communication
+between the commutator and the computer. For this quick start guide, the
+coaxial connections are not needed.</p>
 <img alt="../../_images/connections-numbered.png" src="../../_images/connections-numbered.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -298,8 +298,8 @@ supercapacitor bank that prevents the motor from loading the USB port. This
 can take up to 30 seconds to complete.</p>
 </div>
 </li>
-<li><p>Position the commutator to ensure there is nothing preventing the
-commutator’s gears from rotating freely.</p></li>
+<li><p>Position the commutator on a table and ensure there is nothing preventing
+the commutator’s gears from rotating freely.</p></li>
 <li><p>Download and run the following .bonsai file (also known as a “workflow”) for
 controlling the commutator using key presses:</p>
                 <div class="bonsai-workflow-container">
@@ -340,7 +340,8 @@ visualizer.</p></li>
 </ul>
 </li>
 <li><p>After confirming the functionality of the commutator, you are ready to mount
-it and start using it for automated commutation during experiments with
+it above your behavioral arena and start using it for automated commutation
+during experiments with
 <a class="reference external" href="https://open-ephys.org/miniscope-v4/miniscope-v4">UCLA miniscopes</a> and
 <a class="reference external" href="https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/index.html">ONIX headstages</a>.</p></li>
 </ol>

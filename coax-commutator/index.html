@@ -33,7 +33,7 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Quick Start Guide" href="quick-start-guide/index.html" />
+    <link rel="next" title="Quick Start" href="quick-start-guide/index.html" />
     <link rel="prev" title="Open Ephys Commutators" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -129,15 +129,10 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Introduction
-  </a>
- </li>
+    <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="quick-start-guide/index.html">
-   Quick Start Guide
+   Quick Start
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -157,7 +152,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="user-guide/status-led.html">
-     Commutator Status LED
+     Status LED
     </a>
    </li>
    <li class="toctree-l2">
@@ -168,6 +163,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="user-guide/remote-control.html">
      Remote Control
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="user-guide/saving-settings.html">
+     Saving Settings
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -243,9 +243,24 @@
               
               <div class="toc-item">
                 
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#features">
+   Features
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-these-docs">
+   Using these Docs
+  </a>
+ </li>
+</ul>
+
 </nav>
               </div>
               
@@ -267,6 +282,10 @@
                 
   <section id="coax-commutator">
 <span id="id1"></span><h1>Coax Commutator<a class="headerlink" href="#coax-commutator" title="Permalink to this headline">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">#</a></h2>
 <div class="container">
     <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-5 col-xs-5 m-0 p-0">
@@ -274,33 +293,42 @@
             </div>
             <div class="col-lg-9 col-md-9 col-sm-7 col-xs-7 d-flex flex-column m-0 p-0">
                 <div class="card-body">
-                    <p class="card-text">
-                        Welcome to the Coax Commutator documentation.
-                    </p>
                     <ul class="simple">
-                        <li>To confirm proper function of the commutator by
-                        controlling it with Bonsai and key presses, refer
-                        to the <a href="./quick-start-guide/index.html">
-                        quick start guide </a> </li>
-                        <li>To automate the commutator with orientation
-                        data from specific hardware (such as <a
-                        href="https://open-ephys.org/miniscope-v4/miniscope-v4">UCLA
-                        miniscope </a> or <a
-                        href="https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html">
-                        headstage-64 </a>) refer to the more in-depth <a
-                        href="./user-guide/index.html"> user guide
-                        </a></li>
-                        <li>To interface the commutator with your custom
-                        software, third-party/custom devices, or
-                        design/build your own commutator, refer to the <a
-                        href="./developer-guide/index.html"> developer
-                        guide </a> </li>
+                        <li>High bandwidth link up to 18 GHz</li>
+                        <li>Optical table & 80/20 rail mountable</li>
+                        <li>Remote control using JSON-encoded commands</li>
+                        <li>Settings are saved between power cycles</li>
+                        <li>Manual control using capacitive sense buttons</li>
+                        <li>Indication LED (can be turned off)</li>
+                        <li>Advanced stepper driver (TMC2130)</li>
+                        <ul class="simple">
+                            <li>Voltage-controlled for silent operation</li>
+                            <li>Precise motion using step interpolation (256 uSteps/step)</li>
+                        </ul>
+                        <li>USB powered and controlled</li>
+                        <ul class="simple">
+                            <li>Internal super-capacitor circuitry prevents loading the USB bus during
+                            motion</li>
+                        </ul>
                     </ul>
                 </div>
         </div>
     </div>
-</div><div class="toctree-wrapper compound">
-</div>
+</div></section>
+<section id="using-these-docs">
+<h2>Using these Docs<a class="headerlink" href="#using-these-docs" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>To confirm proper function of the commutator by controlling it with Bonsai
+and key presses, refer to the <a class="reference internal" href="quick-start-guide/index.html#quick-start"><span class="std std-ref">Quick Start</span></a> page.</p></li>
+<li><p>To automate the commutator with orientation data from specific hardware such
+as <a class="reference external" href="https://open-ephys.org/miniscope-v4/miniscope-v4">Miniscopes</a> or <a class="reference external" href="https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html">ONIX
+headstages</a>
+refer to the complete <a class="reference internal" href="user-guide/index.html#user-guide"><span class="std std-ref">User Guide</span></a>.</p></li>
+<li><p>To interface the commutator with your custom software, third-party devices,
+modif your device, or build your own commutator, refer to the
+<a class="reference internal" href="developer-guide/index.html#dev-guide"><span class="std std-ref">Developer Guide</span></a>.</p></li>
+</ul>
+</section>
 </section>
 
 
@@ -319,7 +347,7 @@
     <a class='right-next' id="next-link" href="quick-start-guide/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Quick Start Guide</p>
+        <p class="prev-next-title">Quick Start</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

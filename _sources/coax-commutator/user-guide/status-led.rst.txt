@@ -1,7 +1,7 @@
 
 .. _status_led:
 
-Commutator Status LED
+Status LED
 **********************************************
 The LED on the front panel provides information about the operational state of
 the commutator:
