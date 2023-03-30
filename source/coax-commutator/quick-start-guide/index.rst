@@ -1,7 +1,7 @@
 
 .. _quick_start:
 
-Quick Start Guide
+Quick Start
 *************************************************
 
 .. important:: Although this example uses `Bonsai <https://bonsai-rx.org>`__
@@ -14,7 +14,7 @@ commutator's functionality.  By following these steps, you will be able to turn
 the commutator using keyboard presses from a  `Bonsai Visual Programming
 Language <https://bonsai-rx.org>`__ workflow.
 
-#. If you have not already done so, download and configure Bonsai:
+#. If you have not already done so,
 
    * `Download and Install Bonsai
      <https://bonsai-rx.org/docs/articles/installation.html>`_
@@ -22,9 +22,9 @@ Language <https://bonsai-rx.org>`__ workflow.
      <https://bonsai-rx.org/docs/articles/packages.html>`_
 
 #. Connect the commutator to the computer to the commutator using micro-USB
-   cable (connector 1 in the figure below) to establish power and serial
-   communication between the commutator and the computer. For this quick start
-   guide, the coaxial connections are not needed.
+   cable (connector 1 in the figure below) to establish power and communication
+   between the commutator and the computer. For this quick start guide, the
+   coaxial connections are not needed.
 
    .. image:: /_static/images/connections-numbered.png
 
@@ -33,8 +33,8 @@ Language <https://bonsai-rx.org>`__ workflow.
       supercapacitor bank that prevents the motor from loading the USB port. This
       can take up to 30 seconds to complete.
 
-#. Position the commutator to ensure there is nothing preventing the
-   commutator's gears from rotating freely.
+#. Position the commutator on a table and ensure there is nothing preventing
+   the commutator's gears from rotating freely.
 
 #. Download and run the following .bonsai file (also known as a "workflow") for
    controlling the commutator using key presses:
@@ -75,7 +75,8 @@ Language <https://bonsai-rx.org>`__ workflow.
      visualizer.
 
 #. After confirming the functionality of the commutator, you are ready to mount
-   it and start using it for automated commutation during experiments with
+   it above your behavioral arena and start using it for automated commutation
+   during experiments with
    `UCLA miniscopes <https://open-ephys.org/miniscope-v4/miniscope-v4>`_ and
    `ONIX headstages
    <https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/index.html>`_.

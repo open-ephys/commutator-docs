@@ -24,17 +24,17 @@ Open Ephys Commutators
                             Deeplcabcut </a> or <a
                             href="https://github.com/talmolab/sleap"> SLEAP
                             </a>) provide real-time measurements of animals'
-                            rotational state in an environment. This obviates
-                            the need for tether torque measurements to drive an
-                            active commutator during neural recordings in
-                            freely moving animals because the rotational state of
+                            3D pose. This obviates
+                            the need for tether torque measurements to drive
+                            active commutation during freely moving neural recordings
+                            because the real-time rotational state of
                             the animal is known and the
                             commutator can simply follow along. This method
-                            permits the use of extremely thin <a
-                            href="http://www.axon-cable.com/en/02_products/06_coaxial-cables/02/index.aspx">
+                            permits the use of <a
+                            href="https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html">
                             extremely thin tethers </a> that cannot function
                             with a standard active commutator because they are
-                            too flexible to accurately translate rotational torque.  
+                            too flexible to translate rotational torque.  
                             <br> 
                             <br> 
                             Open Ephys Commutators are open-source, motorized
@@ -42,8 +42,8 @@ Open Ephys Commutators
                             eletrical or optical tethers from twisting during
                             experiments with freely moving animals. They can be
                             controlled manually through button presses or
-                            remote input pose-estimation software.
-                            Open Ephys Commutators include:
+                            remote control by pose-estimation software.
+                            There are two types of commutator available:
                         </p>
                         <ul class="simple">
                             <li><p><b>Coax Commutator:</b></p></li>
