@@ -286,34 +286,35 @@
 (JSON)</a> strings sent over the USB cable
 using a (<a class="reference external" href="https://en.wikipedia.org/wiki/Virtual_COM_port">virtual</a>) serial
 port connection. This allows it to be controlled from any piece of software or
-script capable of writing strings to a serial port. Virtually every programming
-language will provide a library for doing this (e.g. the <a class="reference external" href="https://pyserial.readthedocs.io/en/latest/pyserial.html">pySerial</a> Python library).
-Additionally, many pieces of software (e.g.  Bonsai, Labview, Arduino IDE)
+script capable of writing data to a serial port. Virtually every programming
+language will have a library for doing this (e.g. the <a class="reference external" href="https://pyserial.readthedocs.io/en/latest/pyserial.html">pySerial</a> Python library).
+Additionally, many pieces of software (e.g. Bonsai, Labview, Arduino IDE)
 provide the ability to write to a serial port without any programming.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>An easy way to test remote control is to to type commands into the
-<a class="reference external" href="https://en.wikipedia.org/wiki/JSON">Arduino IDE’s serial monitor</a>.</p>
+<p>An easy way to test remote control of the commutator is to to type
+commands into the <a class="reference external" href="https://en.wikipedia.org/wiki/JSON">Arduino IDE’s serial monitor</a>.</p>
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p><a class="reference internal" href="manual-control.html#manual-control"><span class="std std-ref">Manual control</span></a> takes precedence over remote commands. The
-commutator will ignore and dispose all received JSON commands while manual
-controls are in use.</p>
+<p><a class="reference internal" href="manual-control.html#manual-control"><span class="std std-ref">Manual control</span></a> takes precedence over
+remote commands. The commutator will dispose all  JSON commands that a
+received while manual controls are in use.</p>
 </div>
 <section id="json-commands">
 <h2>JSON Commands<a class="headerlink" href="#json-commands" title="Permalink to this headline">#</a></h2>
-<p>JSON is a human-readable notation used to specify a property
-and assign a value to or read the value of that corresponding property. The
+<p>JSON is a human-readable data interchange format used to specify a property and
+assign a value to or read the value of that corresponding property. The
 notation is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nb">property</span><span class="p">:</span> <span class="n">value</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>The commutator responds to six JSON properties: <cite>enable</cite>, <cite>led</cite>, <cite>speed</cite>, <cite>accel</cite>, <cite>turn</cite>,
-and <cite>print</cite>. The set of acceptable values depends on the property to which the
-value is being assigned. Each of these five properties is documented here:</p>
+<p>The commutator responds to six JSON properties: <cite>enable</cite>, <cite>led</cite>, <cite>speed</cite>,
+<cite>accel</cite>, <cite>turn</cite>, and <cite>print</cite>. The set of acceptable values depends on the
+property to which the value is being assigned. Each of these properties is
+documented here:</p>
 <dl>
-<dt>{enable<span class="classifier">bool}</span></dt><dd><p>A boolean value to enable or disable the commutator.</p>
+<dt>{enable: <em>bool</em>}</dt><dd><p>A boolean value to enable or disable the commutator.</p>
 <ul class="simple">
 <li><p><em>true</em>: enable the commutator.</p></li>
 <li><p><em>false</em> (default): disable the commutator</p></li>
@@ -323,7 +324,7 @@ value is being assigned. Each of these five properties is documented here:</p>
 </pre></div>
 </div>
 </dd>
-<dt>{led: bool}</dt><dd><p>A boolean value to enable or disable the <a class="reference internal" href="status-led.html#status-led"><span class="std std-ref">status LED</span></a>.</p>
+<dt>{led: <em>bool</em>}</dt><dd><p>A boolean value to enable or disable the <a class="reference internal" href="status-led.html#status-led"><span class="std std-ref">status LED</span></a>.</p>
 <ul class="simple">
 <li><p><em>true</em> (default): Turn on the status LED</p></li>
 <li><p><em>false</em>: Turn off the status LED.</p></li>
@@ -333,21 +334,21 @@ value is being assigned. Each of these five properties is documented here:</p>
 </pre></div>
 </div>
 </dd>
-<dt>{speed: float}</dt><dd><p>A floating point value in the range (<em>0</em>, <em>1000</em>] to set the maximum
+<dt>{speed: <em>float</em>}</dt><dd><p>A floating point value in the range (<em>0</em>, <em>1000</em>] to set the maximum
 rotation speed in RPM. The default value is 100 RPM. For example, to set
 the maximal rotation speed to 6.28319 RPM:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">speed</span><span class="p">:</span> <span class="mf">6.28319</span><span class="p">}</span>
 </pre></div>
 </div>
 </dd>
-<dt>{accel: float}</dt><dd><p>A floating point value in the range (<em>0</em>, <em>1000</em>] to set the maximum
+<dt>{accel: <em>float</em>}</dt><dd><p>A floating point value in the range (<em>0</em>, <em>1000</em>] to set the maximum
 rotational acceleration in RPMM. The default value is 200 RPMM. For
 example, to set the rotational acceleration to 6.28319 RPMM:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">accel</span><span class="p">:</span> <span class="mf">6.28319</span><span class="p">}</span>
 </pre></div>
 </div>
 </dd>
-<dt>{turn: float}</dt><dd><p>A floating point value indicating the number of turns to perform. The sign
+<dt>{turn: <em>float</em>}</dt><dd><p>A floating point value indicating the number of turns to perform. The sign
 indicates the direction of motion. Turn commands are integrated. For
 instance, if a second turn command is received before the first completes,
 the final position of the commutator will be the sum of both commands. For
@@ -361,7 +362,8 @@ turns:</p>
 </pre></div>
 </div>
 </dd>
-<dt>{print:}</dt><dd><p>Return a JSON object containing parameters and motor operational state. For example:</p>
+<dt>{print:}</dt><dd><p>Return a JSON string containing parameters and motor operational state. For
+example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nb">print</span><span class="p">:}</span>
 </pre></div>
 </div>
@@ -369,8 +371,8 @@ turns:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;led&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span> <span class="s2">&quot;enable&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span> <span class="s2">&quot;speed&quot;</span><span class="p">:</span> <span class="mf">6.28319</span><span class="p">,</span> <span class="s2">&quot;accel&quot;</span><span class="p">:</span><span class="mf">6.28319</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="p">:</span><span class="o">-</span><span class="mf">42.00</span><span class="p">,</span> <span class="s2">&quot;motor_running&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>where “target” is the target position of the motor and “motor_running”
-indicates if the motor is currently turning.</p>
+<p>where “target” is the target position of the motor in rotations and
+“motor_running” indicates if the motor is currently turning.</p>
 </dd>
 </dl>
 </section>
@@ -384,8 +386,9 @@ indicates if the motor is currently turning.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">led</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span> <span class="n">speed</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="n">turn</span> <span class="p">:</span> <span class="o">-</span><span class="mf">1.1</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>will turn the LED off, set the maximum speed to 25 RPM, and tell the
-commutator to turn 1.1 rotations CCW.</p>
+<p>will turn the LED off, set the maximum speed to 25 RPM, and tell the commutator
+to turn 1.1 rotations CCW, but the order that these events happen in hardware
+is dicated by the firmware.</p>
 </section>
 </section>
 

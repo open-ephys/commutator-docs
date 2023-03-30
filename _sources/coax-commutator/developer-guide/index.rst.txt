@@ -96,110 +96,6 @@ the Teensy in a convenient way if that is desired. Out-of-the-box, the commutato
 messages from the user through serial communication. To communicate with the commutator using the serial monitor, refer
 to the following communication protocol.
 
-Communication Protocol (JSON)
-**************************************************************
-
-The commutator communicates with a computer through the serial monitor using JavaScript Object Notation (JSON). For the
-purpose of interfacing with the commutator, JSON is a human-readable notation used to specify a property and assign a value to
-or read the value of that corresponding property. The notation is::
-
-{property: value}
-
-The commutator has five properties/commands:
-*enable*, *led*, *speed*, *turn*, and *read*. The set of acceptable values depends on the property to which the value is being
-assigned. This is how to use JSON to communicate with the commutator:
-
-.. attention:: The commutator rejects JSON commands while manual controls are in use
-
-JSON Commands
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. TODO:: reformat this
-
-enable
-###############
-Acceptable values: *false*, *true*
-
-*  A *true* value for this property enables the commutator
-*  A *false* value for this property disables the commutator
-
-The default out-of-the-box value for this property is *false*
-
-led
-###############
-Acceptable values: *false*, *true*
-
-* A *true* value for this property enables the LED function
-* A *false* value for this property disables the LED function
-
-The default out-of-the-box value for this property is *true*
-
-speed
-###############
-Acceptable values: (*0*, *500*]
-
-* The value for this property sets the rotational speed of the commutator in units of RPM
-
-The default out-of-the-box value for this property is *50*
-
-turn
-###############
-Acceptable values: [*-255?*, *255?*]
-
-* The value for this property sets the rotational speed of the commutator in units of RPM
-
-There is no default out-of-the-box value for this property
-
-.. TODO:: what is the set of acceptable values?
-
-print
-###############
-Acceptable values: n/a
-
-* Leave the value field empty. The commutator prints out the internal state of the commutator to the user in the serial interface
-
-There is no default out-of-the-box value for this property
-
-Compound JSON Command
-#################################################
-
-Multiple commands can be sent in a compound JSON message in the following format::
-
-{property1: value1, property2: value2, property3: value3}
-
-The order of properties does not matter.
-
-JSON Command Examples
-**************************************************************
-
-Enable the commutator::
-
-{enable: true}
-
-Disable the commutator's LED function::
-
-{led: false}
-
-Set the commutator's rotational speed to 250 RPM::
-
-{speed: 250}
-
-Turn the commutator's 1.1 revolutions CW::
-
-{turn: 1.1}
-
-Turn the commutator's 2.3 revolutions CCW::
-
-{turn: -2.3}
-
-Disable LED feedback function, set speed to 25 RPM, and turn the commutator 1.1 revolutions clockwise all in one message::
-
-{led: false, speed: 25, turn: -1.1}
-
-Query the status of the commutator's internal parameters::
-
-{print:}
-
 Bonsai Integration
 **************************************************************
 
@@ -208,10 +104,6 @@ data. In our case, it can be used to coordinate orientation data (from an IMU se
 provide feedback to commutator and automate the commutation process. To learn more about how to use Bonsai, explore the
 `bonsai-rx.org <https://bonsai-rx.org/>`_ website. It's recommended because it's quite nice and compatible with many
 open ephys products. It is used in many of the following guides for controlling and automating the commutator.
-
-
-
-
 
 Assembly
 *************************************************
