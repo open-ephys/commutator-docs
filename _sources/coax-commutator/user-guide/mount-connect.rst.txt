@@ -5,14 +5,13 @@ Mounting and Connecting the Commutator
 
 Mounting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 The commutator should be mounted such that it is roughly centered over the
 behavioral arena. There are several holes in various positions around the
 commutator's body that are compatible standard `80/20 aluminum extrusion
 <https://8020.net/framing-options/t-slotted-profiles/fractional/10series100basedprofiles.html>`_
 using `t-nuts <https://youtu.be/nK-DsJxAdwM>`_ or a standard mechanical
 breadboard.  Not all the holes need to be used. Select the mounting holes that
-are convienient for your behavioral setup. For custom mounting solutions, the
+are convenient for your behavioral setup. For custom mounting solutions, the
 dimensions for the mounting holes (1/4"-20 or M6) are indicated in the below
 schematic:
 
@@ -30,6 +29,10 @@ schematic:
 
 Connecting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. todo:: Add more information on the specific cables that can be used. Link to
+    the tether docs on the ONIX docs site and the miniscope tether sold by OE.
+    Also, link to potential high quality SMA cables that can go vetween the
+    commutator in the host acquisition hardware.
 
 .. raw:: html
 
