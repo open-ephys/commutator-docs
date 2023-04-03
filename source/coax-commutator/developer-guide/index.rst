@@ -77,8 +77,29 @@ dread of lead times by purchasing from us. And you get to support `open ephys <h
 Teensy
 **************************************************************
 
+Firmware
+-------------------------------------
+
+- `Arduino IDE <https://www.arduino.cc/en/Main/Software>`__
+- `Teensyduino add-on <https://www.pjrc.com/teensy/td_download.html>`__
+- `AccelStepper <https://www.airspayce.com/mikem/arduino/AccelStepper/>`__
+- `Arduino JSON <https://arduinojson.org/>`__
+
+The firmware can be uploaded to the device using the `Arduino
+IDE <https://www.arduino.cc/en/Main/Software>`__. 
+
+.. note:: You will need to add the `Teensyduino add-on
+   <https://www.pjrc.com/teensy/teensyduino.html>`__ to the Arduino IDE to program
+   the Teensy. When installing Teensyduino, you should opt to install all of the
+   bundled libraries as well. This takes care of installing :code:`AccelStepper`
+   library rather than having to install it manually. ArduinoJSON can be
+   installed through the Arduino IDE's package manager.
+
 .. TODO:: insert photo of teensy. unnecessary, but why not? Any other photos on this page?
 
+The controller firmware runs on a `Teensy
+3.2 <https://www.pjrc.com/store/teensy32.html>`__. To compile this firmware and
+program the microcontroller, you need the following dependencies:
 The Teensy is a microcontroller development board (much like the Arduino for those who are familiar). It is the brains
 of the commutator. To control the commutator via computer, it helps to learn to interface with the Teensy. To do that:
 

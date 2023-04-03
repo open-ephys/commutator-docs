@@ -2,60 +2,58 @@
 
 Manual Control
 *******************************************************
-This section details how to control the commutator using the commutator's
-buttons. This is useful for situations such as when the user desires to quickly
-stop automated commutation or untwist the tether without disconnecting it from
-the head stage or removing the head stage from the behaving animal.
+The front panel of the commutator has four buttons for manual control.
+They are useful for situations such as
+
+- Quickly halting motor operation 
+- Screwing in the tether's SMA connector by turning the motor
+- Untwisting the tether due an error during automated commutator
 
 .. important:: Manual controls override any ongoing remote controls. In other
    words, remote commands sent when a button is being pressed are ignored and
    cleared.
+   
+.. note:: The buttons on the front panel are capacitive sensor buttons. They are not mechanical so they do not provide tactile or auditory feedback.   
 
-.. raw:: html
+.. image:: ../../_static/images/commutator-buttons-numbered.png
+    :width: 50%
+    :align: center
+    :alt: Commutator front image
 
-    <div class="container">
-        <div class="row">
-            There are four buttons on the commutator front panel:
-        </div>
-        <div class="row">
-                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 m-0 p-0">
-                    <img src="../../_static/images/commutator-front-buttons-numbered.png" alt="Commutator front image">
-                </div>
-                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6 d-flex flex-column m-0 p-0">
-                    <div class="card-body">
-                        <ol class="simple">
-                            <li style="color:red"><p><b>Stop/Go Button:</b></p></li>
-                                <ul class="simple">
-                                    <li> If the commutator is already disabled (solid red LED), touching the stop/go button for >0.5 seconds enables the commutator by being pressed </li>
-                                    <li> If the commutator is already enabled (solid green LED), touching the stop/go for any time at all disables the commutator instantly by being pressed </li>
-                                </ul>
-                            <li style="color:red"><p><b>Direction Buttons (CW and CCW):</b></p></li>
-                                <ul class="simple">
-                                    <li> Touching the direction button changes the direction of the commutator's rotation to the direction indicated by the respective button's label. This only happens while the commutator is in its enabled state. </li>
-                                </ul>
-                            <li style="color:red"><p><b>LED Button:</b></p></li>
-                                <ul class="simple">
-                                    <li> If LED feedback function is already disabled, touching the LED button for >0.5 seconds enables the LED feedback function </li>
-                                    <li> If LED feedback function is already enabled, touching the LED button for any time at all disables the LED feedback function </li>
-                                </ul>
-                        </ol>
-                    </div>
-            </div>
-        </div>
-    </div>
+:1. Stop/Go: 	  Press to toggle commutator enable/disable.
 
-.. NOTE:: The buttons on the front panel are capacitive sensor buttons. They are not mechanical so they do not provide tactile or auditory feedback.
+		  - *Disabled* (LED is red): All motor output will halt instantly, and motor
+		    driver is powered down. Pressing directional buttons in the stopped state
+		    will not work. All target turns provided via remote calls will be
+		    cleared, such that re-enabling the motor will not result in the commutator
+		    re-engaging an old target position. In this state, pressing and holding
+		    the Stop/Go button for > 0.5 second, or sending the approriate remote
+		    command will enable the device.
+		  - *Enabled* (LED  green): When in the *enabled* state, the LED will be
+		    green and the motor can be turned via button presses or RPCs . In this
+		    state, pressing the Stop/Go button will instantly disable the device.
 
-.. raw:: html
+:2. Directional: Press to manually control the motor rotation in the direction indicated on
+              	 each button when the commutator is *Enabled*. These inputs take
+              	 precedence over and override ongoing remote motor control.  When
+              	 pressed, all target turns provided via remote control will be
+              	 cleared, such that releasing them will not result in the
+              	 commutator re-engaging an old target position. Remote commands
+              	 sent when a button is being pressed are ignored.
 
-    <div class="container">
-        <div class="row">
-            <p>There is additionally a (<span style="color:red">1.</span>) <strong>Reset Button</strong> on the commutator's side which power cycles the commutator when pressed:</p>
-        </div>
-        <div class="row">
-            <div class="col">
-                <img src="../../_static/images/commutator-side-button-numbered.png" alt="Commutator side image">
-            </div>
-        </div>
-    </div>
+:3. LED: Pressing the LED turns it off (e.g for cases where it presents an
+     	 unwanted visual stimulus). Pressing the LED button for > 0.5 seconds enables the LED.
+
+
+
+Reset Button
+______________________________________________
+On the side of the device, there is a hard **Reset Button**. Pressing this button will reset the internal microcontroller's firmware. This might be useful if you are having trouble with USB connectivity or you have created custom firmware that are having trouble uploading to the device.
+
+
+.. image:: ../../_static/images/commutator-side-button-numbered.png
+    :width: 50%
+    :align: center
+    :alt: Commutator side image
+
 
