@@ -57,6 +57,6 @@ Using these Docs
   <https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html>`__
   refer to the complete :ref:`user_guide`.
 - To interface the commutator with your custom software, third-party devices,
-  modif your device, or build your own commutator, refer to the
+  modify your device, or build your own commutator, refer to the
   :ref:`dev_guide`. 
 
