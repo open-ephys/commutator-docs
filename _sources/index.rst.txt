@@ -39,7 +39,7 @@ Open Ephys Commutators
                             <br> 
                             Open Ephys Commutators are open-source, motorized
                             commutators that use this principle to prevent
-                            eletrical or optical tethers from twisting during
+                            electrical or optical tethers from twisting during
                             experiments with freely moving animals. They can be
                             controlled manually through button presses or
                             remote control by pose-estimation software.
