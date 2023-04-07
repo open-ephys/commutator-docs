@@ -11,11 +11,13 @@ stationary DAQ.
 
    - Select Community Feed
 
-     .. todo:: Image
+     .. image:: ../../../_static/images/bonsai-community-feed.png
+        :alt: Screenshot for selecting package source
 
    - Install **Bonsai.ONIX**
 
-     .. todo:: Image
+     .. image:: ../../../_static/images/install-bonsai-onix.png
+        :alt: Screenshot for installing Bonsai.Onix
 
 #. Download, configure, and run the following Bonsai workflow for automating commutation using orientation
    data from the headstages’s on-board IMU sensor:

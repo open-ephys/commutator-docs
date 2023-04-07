@@ -24,7 +24,7 @@ Features
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-7 col-xs-7 d-flex flex-column m-0 p-0">
                     <div class="card-body">
-                        <ul class="simple">
+                        <ul class="simple" style="margin:0">
                             <li>High bandwidth link up to 18 GHz</li>
                             <li>Optical table & 80/20 rail mountable</li>
                             <li>Remote control using JSON-encoded commands</li>
@@ -32,12 +32,12 @@ Features
                             <li>Manual control using capacitive sense buttons</li>
                             <li>Indication LED (can be turned off)</li>
                             <li>Advanced stepper driver (TMC2130)</li>
-                            <ul class="simple">
+                            <ul class="simple" style="margin:0" >
                                 <li>Voltage-controlled for silent operation</li>
                                 <li>Precise motion using step interpolation (256 uSteps/step)</li>
                             </ul>
                             <li>USB powered and controlled</li>
-                            <ul class="simple">
+                            <ul class="simple" style="margin:0">
                                 <li>Internal super-capacitor circuitry prevents loading the USB bus during
                                 motion</li>
                             </ul>
@@ -55,7 +55,7 @@ Using these Docs
   as `Miniscopes <https://open-ephys.org/miniscope-v4/miniscope-v4>`__ or `ONIX
   headstages
   <https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html>`__
-  refer to the complete :ref:`user_guide`.
+  , refer to the complete :ref:`user_guide`.
 - To interface the commutator with your custom software, third-party devices,
   modify your device, or build your own commutator, refer to the
   :ref:`dev_guide`. 

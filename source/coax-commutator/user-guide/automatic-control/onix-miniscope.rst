@@ -11,11 +11,13 @@ DAQ.
 
    - Select Community Feed
 
-     .. todo:: Image
+     .. image:: ../../../_static/images/bonsai-community-feed.png
+        :alt: Screenshot for selecting package source
 
    - Install **Bonsai.Miniscope**
 
-     .. todo:: Image
+     .. image:: ../../../_static/images/install-bonsai-miniscope.png
+        :alt: Screenshot for installing Bonsai.Miniscope
 
 #. Mount the commutator and establish all electrical connections according to
    the information found in the :ref:`mounting`.
