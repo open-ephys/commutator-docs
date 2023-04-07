@@ -10,7 +10,7 @@ behavioral arena. There are several holes in various positions around the
 commutator's body that are compatible standard `80/20 aluminum extrusion
 <https://8020.net/framing-options/t-slotted-profiles/fractional/10series100basedprofiles.html>`_
 using `t-nuts <https://youtu.be/nK-DsJxAdwM>`_ or a standard mechanical
-breadboard.  Not all the holes need to be used. Select the mounting holes that
+breadboard. Not all the holes need to be used. Select the mounting holes that
 are convenient for your behavioral setup. For custom mounting solutions, the
 dimensions for the mounting holes (1/4"-20 or M6) are indicated in the below
 schematic:
@@ -19,20 +19,30 @@ schematic:
     :alt: schematic image
     :align: center
 
-.. note:: For clarity and planning, 3D models of the commutator body are
-   available on the git repository
+.. note:: For clarity and planning, a 3D model of the commutator body are
+   available on the `git repository <https://github.com/open-ephys/onix-commutator/tree/master/mechanical/single_channel>`_
 
-.. todo:: Show how to mount the elastic thread as well. This sentence can be
-   used there: If the commutator is used for an animal behavior experiment,
-   mount the commutator such that the animal can traverse the behavior setup's
-   full area given the length of your tether.
+If the commutator is used for an animal behavior experiment, mount it such that the animal can traverse the
+behavior setup's full area given the length of your tether. Elastic thread can be utilized to prevent the tether from
+entering the animal's field while the the animal moves around by catching the thread onto the gear hook and attaching it
+to the tether at various points using kapton tape.
+
+.. todo:: image
 
 Connecting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. todo:: Add more information on the specific cables that can be used. Link to
-    the tether docs on the ONIX docs site and the miniscope tether sold by OE.
-    Also, link to potential high quality SMA cables that can go vetween the
-    commutator in the host acquisition hardware.
+
+Compatible Cables
+#################################################
+
+A variety of tethers are compatible with the commutator as long as they are terminated with a SMA connector (such as
+the `Miniscope V4 tether <https://open-ephys.org/miniscope-v4/miniscope-v4-coax-cable-kit>`_) or something that can be
+adapted to a SMA connector (such as the `headstage link <https://open-ephys.org/miniscope-v4/miniscope-v4-coax-cable-kit>`_)
+on the commutator end. A standard, high quality SMA-SMA cable (such as `these from Open Ephys <https://open-ephys.org/minicam/sma-to-sma-cable>`_)
+can be used between the commutator and the data acquisition device.
+
+Commutator Connectors
+##################################################
 
 .. raw:: html
 
@@ -75,8 +85,8 @@ Connecting
 
 
 .. Attention::
-   * Some cheap Micro-USB cables only supply power. Be sure to use a cable that
-     provides power and digital signals 
+   * Some cheap Micro-USB cables only supply power. Ensure the cable used transfers both
+     power and digital signals
    * Source your coaxial tether from a reputable vendor such as `Digikey
      <https://www.digikey.com/>`_, `Mouser <https://www.digikey.com/>`_, or `Open Ephys <https://open-ephys.org/store>`_
    * For animal behavior experiments, manage cables such that they are not

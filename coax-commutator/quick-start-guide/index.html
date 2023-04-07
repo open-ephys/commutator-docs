@@ -181,22 +181,22 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../user-guide/automatic-control/bonsai-headstage64.html">
+      <a class="reference internal" href="../user-guide/automatic-control/onix-headstage64.html">
        Automate Commutation with Bonsai and Headstage-64
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../user-guide/automatic-control/bonsai-miniscope.html">
+      <a class="reference internal" href="../user-guide/automatic-control/onix-miniscope.html">
        Automate Commutation with Bonsai and UCLA Miniscope v4
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../user-guide/automatic-control/bonsai-computervision.html">
+      <a class="reference internal" href="../user-guide/automatic-control/onix-computervision.html">
        Automate Commutation with Bonsai and Computer Vision
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../user-guide/automatic-control/gui-miniscope.html">
+      <a class="reference internal" href="../user-guide/automatic-control/miniscopedaq-miniscope.html">
        Automate Commutation with Miniscope GUI and UCLA Miniscope v4
       </a>
      </li>
@@ -209,10 +209,17 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../developer-guide/index.html">
    Developer Guide
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
 </ul>
 
@@ -273,7 +280,7 @@ Language</a> workflow.</p>
 <li><p>Open Bonsai and <a class="reference external" href="https://bonsai-rx.org/docs/articles/packages.html">install the Bonsai.StarterPack package</a></p></li>
 </ul>
 </li>
-<li><p>Connect the commutator to the computer to the commutator using micro-USB
+<li><p>Connect a computer to the commutator using a micro-USB
 cable (connector 1 in the figure below) to establish power and communication
 between the commutator and the computer. For this quick start guide, the
 coaxial connections are not needed.</p>
@@ -323,7 +330,7 @@ keys are pressed on the keyboard.</p></li>
 <li><p>The angular displacement per key-press can be adjusted by clicking the
 <strong>String</strong> nodes and modifying the <strong>Value</strong> property</p></li>
 <li><p>To see the JSON commands being sent to the commutator, double-click the
-<strong>SerialStringWrite</strong> node during while the workflow is running to show a text
+<strong>SerialStringWrite</strong> node while the workflow is running to show a text
 visualizer.</p></li>
 </ul>
 </li>

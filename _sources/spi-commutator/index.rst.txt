@@ -1,4 +1,5 @@
-.. spi_commutator::
+
+.. _spi_commutator:
 
 SPI Commutator
 *************************************************

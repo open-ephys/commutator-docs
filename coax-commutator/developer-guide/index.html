@@ -33,7 +33,7 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Mechanical" href="mechanical.html" />
+    <link rel="next" title="SPI Commutator" href="../../spi-commutator/index.html" />
     <link rel="prev" title="Troubleshooting" href="../user-guide/troubleshooting.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -181,22 +181,22 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../user-guide/automatic-control/bonsai-headstage64.html">
+      <a class="reference internal" href="../user-guide/automatic-control/onix-headstage64.html">
        Automate Commutation with Bonsai and Headstage-64
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../user-guide/automatic-control/bonsai-miniscope.html">
+      <a class="reference internal" href="../user-guide/automatic-control/onix-miniscope.html">
        Automate Commutation with Bonsai and UCLA Miniscope v4
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../user-guide/automatic-control/bonsai-computervision.html">
+      <a class="reference internal" href="../user-guide/automatic-control/onix-computervision.html">
        Automate Commutation with Bonsai and Computer Vision
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../user-guide/automatic-control/gui-miniscope.html">
+      <a class="reference internal" href="../user-guide/automatic-control/miniscopedaq-miniscope.html">
        Automate Commutation with Miniscope GUI and UCLA Miniscope v4
       </a>
      </li>
@@ -209,10 +209,17 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Developer Guide
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
 </ul>
 
@@ -237,88 +244,42 @@
 
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Developer Guide
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#design-files">
+   Design Files
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#design-files">
-     Design Files
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bill-of-materials-bom">
+   Bill of Materials (BoM)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ordering-and-manufacturing-parts">
+   Ordering and Manufacturing Parts
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mechanical">
+     Mechanical
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bill-of-materials-bom">
-     Bill of Materials (BOM)
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diy">
-     DIY
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#mechanical">
-       Mechanical
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#electrical">
-       Electrical
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#computational">
-       Computational
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#manufacturing">
-     Manufacturing
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       Mechanical
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
-       Electrical
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#general-tips">
-       General Tips
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#teensy">
-     Teensy
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#electrical">
+     Electrical
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#firmware">
-   Firmware
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teensy-and-programming-an-open-ephys-commutator">
+   Teensy and Programming an Open Ephys Commutator
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bonsai-integration">
-     Bonsai Integration
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#assembly">
-     Assembly
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assembly">
+   Assembly
+  </a>
  </li>
 </ul>
 
@@ -341,97 +302,102 @@
               
               <div>
                 
-  <section id="developer-guide">
+  <p>For an overview of Open Ephys Commutators, visit the <a class="reference internal" href="../../index.html#oec"><span class="std std-ref">Open Ephys Commutators</span></a>.
+For instructions on how to use the Coaxial Commutator, visit the Coaxial Commutator
+<a class="reference internal" href="../quick-start-guide/index.html#quick-start"><span class="std std-ref">Quick Start</span></a> Guide and <a class="reference internal" href="../user-guide/index.html#user-guide"><span class="std std-ref">User Guide</span></a>.</p>
+<section id="developer-guide">
 <span id="dev-guide"></span><h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">#</a></h1>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>This section is a work in progress.</p>
-</div>
 <section id="design-files">
 <h2>Design Files<a class="headerlink" href="#design-files" title="Permalink to this headline">#</a></h2>
-<p>Open Ephys commutators are open-source. Mechanical, electrical, and firmware
-desings are available are available in ONIX-Commutator git repo. Below we
-provide an explaination of the repository structure and some helpful tips if
-you plan to make a commutator yourself or want to extend its functionality.</p>
+<p>Open Ephys commutators are open-source. Mechanical, electrical, and firmware designs are available in the
+<a class="reference external" href="https://github.com/open-ephys/onix-commutator">onix-commutator git repo</a>. Below explains how to manufacture
+your own Open Ephys Commutator using these files. This is helpful if you
+intend to create a custom commutator or adapt an off-shelf-commutator Open Ephys Commutator to your system by reprogramming it to accept
+other inputs instead of or in addition to the JSON remote procedure calls (RPCs) that the commutator is already designed
+to accept.</p>
 </section>
 <section id="bill-of-materials-bom">
-<h2>Bill of Materials (BOM)<a class="headerlink" href="#bill-of-materials-bom" title="Permalink to this headline">#</a></h2>
-<p>This BOM for the mechanical and electrical components are provided below. This
-BOM contains links to specific vendors solely to calculate a total price. The
-BOM cost may vary. This BOM was created using prices on March 2nd, 2023.</p>
+<h2>Bill of Materials (BoM)<a class="headerlink" href="#bill-of-materials-bom" title="Permalink to this headline">#</a></h2>
+<p>BoMs contain references to specific vendors solely to calculate a total price; Open Ephys is not affiliated with
+any of them.</p>
+<p>The BoM for the mechanical components is provided below.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>post mechanical BoM here. Also provide link to a a google sheet or a spreadsheet in a repo?</p>
+</div>
+<p>The BoM for the electrical components is provided below.</p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>post electrical BoM here. Also provide link to a a google sheet or a spreadsheet in a repo?</p>
+</div>
 </section>
-<section id="diy">
-<h2>DIY<a class="headerlink" href="#diy" title="Permalink to this headline">#</a></h2>
-<p>The following sections describes design considerations</p>
+<section id="ordering-and-manufacturing-parts">
+<h2>Ordering and Manufacturing Parts<a class="headerlink" href="#ordering-and-manufacturing-parts" title="Permalink to this headline">#</a></h2>
+<p>The following sections describe how to fabricate the parts that comprise the Coaxial Commutator</p>
 <section id="mechanical">
 <h3>Mechanical<a class="headerlink" href="#mechanical" title="Permalink to this headline">#</a></h3>
+<p>If you desire low quantity, first seek out local options. Many universities or libraries offer free 3D printing
+services. They don’t always have SLS/MJF which is how the commutator enclosures are manufactured, but you might be able to use
+a FDM/SLA 3D printing if necessary. The big difference is that you will probably be required to to add structural
+supports that assist in the printing process. Post-processing the removal of the structural support can be time-demanding.
+If you don’t have access to a SLS/MJF printer and don’t want to
+deal with supports, there are many online manufacturers that will 3D print this for you. They cost more and often have a minimum
+price to purchase (i.e. <a class="reference external" href="hubs.com">3DHubs</a> has a $90 minimum for those services at the time of writing this) which is not ideal if
+you are trying to print a low quantity of pieces. Other popular ones include <a class="reference external" href="formlabs.com">Formlabs</a>,
+<a class="reference external" href="shapeways.com">Shapeways</a>, <a class="reference external" href="xometry.com">Xometry</a>, <a class="reference external" href="sculpteo.com">Sculpteo</a> etc. Open Ephys has no affiliation
+with any of these companies. Usually to manufacture with the companies, it is required to upload an <a class="reference external" href="https://github.com/open-ephys/onix-commutator/tree/master/mechanical/single_channel/stl">STL</a> or STEP file,
+but they are starting now to accommodate other file types as well such as sldprt files.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In creating your own custom commutator, it is possible to change the gear ratio while making minimal changes
+the commutator electronics and <a class="reference external" href="https://github.com/open-ephys/onix-commutator/tree/master/firmware/commutator">firmware</a>.
+The only change that must be made is a modification of the GEAR_RATIO macro on line 22</p>
+</div>
 </section>
 <section id="electrical">
 <h3>Electrical<a class="headerlink" href="#electrical" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="computational">
-<h3>Computational<a class="headerlink" href="#computational" title="Permalink to this headline">#</a></h3>
-</section>
-</section>
-<section id="manufacturing">
-<h2>Manufacturing<a class="headerlink" href="#manufacturing" title="Permalink to this headline">#</a></h2>
-<p>The following sections describe how to manufacture the parts that are custom</p>
-<p>This should probably be on its own page so that we can refer people to it from multiple products’ documentations instead
-of each products’ documentation containing its own manufacturing tips</p>
-<section id="id2">
-<h3>Mechanical<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
-<p>If you desire low quantity, first seek out local options. Many universities or libraries offer free 3D printing
-services. They don’t always have SLS/MJF like which is how the commutator enclosures were manufactured, but you can probably design a
-new enclosure that makes use of FDM or SLA 3D printing if necessary. The biggest difference is that you will need to design
-supports to assist in the printing process in an MCAD software such as Solidworks, Fusion360, or FreeCAD. If you don’t have access to a SLS/MJF printer and don’t want to design other
-enclosures, there are many online manufacturers that will 3D print this for you. They cost more and often have a minimum
-price to purchase (i.e. 3DHubs has a $90 minimum for those services at the time of writing this) which is not ideal if
-you are trying to print a low quantity of pieces. Other popular ones include Formlabs, etc. etc.</p>
-</section>
-<section id="id3">
-<h3>Electrical<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
-<p>PCBs are pretty cheap. You no longer have to order in bulk to get them relatively cheap. For instance,
-You can get a 5-pack of PCBs from JLCPCB for less than $10.</p>
-</section>
-<section id="general-tips">
-<h3>General Tips<a class="headerlink" href="#general-tips" title="Permalink to this headline">#</a></h3>
-<p>If you foresee being able to use multiple of these pieces, you benefit from ordering many for a cheaper price per piece.
-If you do not foresee that, you can still benefit from economies of scale while saving yourself (or a poor overworked
-undergrad/lab manager) from the labor of purchasing and assembling several parts from several vendors as well as the
-dread of lead times by purchasing from us. And you get to support <a class="reference external" href="https://open-ephys.org/about-us-overview">open ephys</a> :D</p>
+<p>Printed circuit boards (PCBs) are boards that electrically connect a set of electronics components to create functional circuits.
+Those parts are soldered to the PCB to create mechanically stable and reliable operation. The commutator front panel
+is an example of a PCB. If you were to make a own commutator that utilizes a similar type front panel, it would probably
+be required to purchase fabrication from another company. Thankfully, PCBs are pretty cheap to fabricate nowadays.
+You no longer have to order in bulk to get them relatively cheap. For instance,
+You can get a 5-pack of PCBs from <a class="reference external" href="jlcpcb.com">JLCPCB</a> for less than $5. To fabricate a PCB, a manufacturer usually
+requires that you upload <a class="reference external" href="https://github.com/open-ephys/onix-commutator/tree/master/control-board/gerber">Gerber files</a>.
+To create a PCB (or modify the one used as the front panel of the Open Ephys Commutator), ECAD software such as <a class="reference external" href="https://www.kicad.org/">KiCad</a> is used.
+There is other ECAD software available, but KiCad is strongly encouraged as it is open-source, extensible, undergoing constant
+improvement, and most importantly easy-to-use. Gerbers can be produced in CAD software after the design is finalized.
+Teaching such software is beyond the scope of this guide, but you can find
+<a class="reference external" href="https://www.kicad.org/help/learning-resources/">tutorials on KiCad’s website</a> and elsewhere on the web.</p>
+<p>For ordering the electronics parts that are mounted onto the PCB, <a class="reference external" href="digikey.com">Digikey</a>, <a class="reference external" href="mouser.com">Mouser</a>, and <a class="reference external" href="arrow.com">Arrow</a> are go-to vendors.
+Open Ephys has no affiliation with any of these companies. Some parts may be out-of-stock in which case you are forced to
+purchase from more than one distributor if you inflexible regarding component selection. <a class="reference external" href="octopart.com">Octopart</a> is
+helpful for sorting through stock at various vendors and comparing prices. The electrical components for the commutator
+PCB are mounted (and electrically connected) through solder joints. Soldering instructions are beyond the scope of this
+developer guide but there are several <a class="reference external" href="https://www.youtube.com/results?search_query=how+to+solder+pcb">great guides on YouTube</a>.</p>
 </section>
 </section>
-<section id="teensy">
-<h2>Teensy<a class="headerlink" href="#teensy" title="Permalink to this headline">#</a></h2>
-</section>
-</section>
-<section id="firmware">
-<h1>Firmware<a class="headerlink" href="#firmware" title="Permalink to this headline">#</a></h1>
+<section id="teensy-and-programming-an-open-ephys-commutator">
+<h2>Teensy and Programming an Open Ephys Commutator<a class="headerlink" href="#teensy-and-programming-an-open-ephys-commutator" title="Permalink to this headline">#</a></h2>
+<p>Commutator firmware can be uploaded to the device using the <a class="reference external" href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will need to add the <a class="reference external" href="https://www.pjrc.com/teensy/teensyduino.html">Teensyduino add-on</a> to the Arduino IDE to program
+the Teensy inside the commutator. When installing Teensyduino, you should opt to install the
+bundled libraries as well. This takes care of installing <code class="code docutils literal notranslate"><span class="pre">AccelStepper</span></code>
+library rather than having to install it manually. ArduinoJSON can be
+installed through the Arduino IDE’s package manager.</p>
+</div>
+<p>It runs on a <a class="reference external" href="https://www.pjrc.com/store/teensy32.html">Teensy
+3.2</a>. To compile this firmware and
+program the microcontroller, the following dependencies are required:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a></p></li>
 <li><p><a class="reference external" href="https://www.pjrc.com/teensy/td_download.html">Teensyduino add-on</a></p></li>
 <li><p><a class="reference external" href="https://www.airspayce.com/mikem/arduino/AccelStepper/">AccelStepper</a></p></li>
 <li><p><a class="reference external" href="https://arduinojson.org/">Arduino JSON</a></p></li>
 </ul>
-<p>The firmware can be uploaded to the device using the <a class="reference external" href="https://www.arduino.cc/en/Main/Software">Arduino
-IDE</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You will need to add the <a class="reference external" href="https://www.pjrc.com/teensy/teensyduino.html">Teensyduino add-on</a> to the Arduino IDE to program
-the Teensy. When installing Teensyduino, you should opt to install all of the
-bundled libraries as well. This takes care of installing <code class="code docutils literal notranslate"><span class="pre">AccelStepper</span></code>
-library rather than having to install it manually. ArduinoJSON can be
-installed through the Arduino IDE’s package manager.</p>
-</div>
-<div class="admonition-todo admonition" id="id4">
-<p class="admonition-title">Todo</p>
-<p>insert photo of teensy. unnecessary, but why not? Any other photos on this page?</p>
-</div>
-<p>The controller firmware runs on a <a class="reference external" href="https://www.pjrc.com/store/teensy32.html">Teensy
-3.2</a>. To compile this firmware and
-program the microcontroller, you need the following dependencies:
-The Teensy is a microcontroller development board (much like the Arduino for those who are familiar). It is the brains
-of the commutator. To control the commutator via computer, it helps to learn to interface with the Teensy. To do that:</p>
+<p>The Teensy is a microcontroller development board (much like the Arduino for those who are familiar). It is the brains
+of the commutator. To directly  control the commutator via computer, it helps to learn to interface with the Teensy. To do that:</p>
 <ol class="arabic simple">
 <li><p>Download the <a class="reference external" href="https://www.arduino.cc/en/software">Arduino IDE</a></p></li>
 <li><p>Install the Arduino IDE’s Teensy plugin, <a class="reference external" href="https://www.pjrc.com/teensy/td_download.html">Teensyduino</a></p></li>
@@ -440,22 +406,25 @@ of the commutator. To control the commutator via computer, it helps to learn to 
 <li><p>Set correct COM port to which the Teensy is connected and set the serial monitor baud rate to 9600</p></li>
 <li><p>Send a command to the commutator according to the communication below.</p></li>
 </ol>
-<p>The serial monitor displays messages between the commutator and the computer to which the commutator is connected. Other serial
+<p>The serial monitor displays messages between the commutator and the computer to which the commutator is connected.To send
+RPCs to the commutator through the serial monitor, type in the Arduino IDE’s Serial Monitor input field. The commutator’s Teensy is pre-programmed to receive
+specific RPCs in the JSON format. Refer to the <a class="reference internal" href="../user-guide/remote-control.html#remote-control"><span class="std std-ref">Remote Control</span></a> page of the User Guide for more information on that. Other serial
 monitors can be used (see <a class="reference external" href="https://www.compuphase.com/software_termite.htm">Termite</a> for instance), but these
-instructions recommend the Arduino IDE because the Arduino IDE is already quite common and allows the user to program
-the Teensy in a convenient way if that is desired. Out-of-the-box, the commutator’s Teensy is pre-programmed to receive
-messages from the user through serial communication. To communicate with the commutator using the serial monitor, refer
-to the following communication protocol.</p>
-<section id="bonsai-integration">
-<h2>Bonsai Integration<a class="headerlink" href="#bonsai-integration" title="Permalink to this headline">#</a></h2>
-<p><a class="reference external" href="https://open-ephys.org/bonsai">Bonsai</a> is open-source software for processing asynchronous, heterogeneous streams of
-data. In our case, it can be used to coordinate orientation data (from an IMU sensor or camera sensor for instance) to
-provide feedback to commutator and automate the commutation process. To learn more about how to use Bonsai, explore the
-<a class="reference external" href="https://bonsai-rx.org/">bonsai-rx.org</a> website. It’s recommended because it’s quite nice and compatible with many
-open ephys products. It is used in many of the following guides for controlling and automating the commutator.</p>
+instructions recommend the Arduino IDE because the Arduino IDE is already quite common in the open-source and science community.
+It also allows the user to program the Teensy in a convenient way if that is desired. Its firmware can be modified to accept other RPCs or inputs.</p>
+<p>This is the <a class="reference external" href="https://github.com/open-ephys/onix-commutator/tree/master/firmware/commutator">firmware with which the commutator ships</a>.</p>
 </section>
 <section id="assembly">
 <h2>Assembly<a class="headerlink" href="#assembly" title="Permalink to this headline">#</a></h2>
+<p>After the PCB is finished being soldered, assembly is pretty straight forward. The stepper motor is inserted and fastened by
+four M2.5 screws. The SMA rotary joint is inserted and fastened by M3 or #4-40 screws. The stepper motor connects to a
+4-pin connector on the one of the commutator PCB’s daughter boards. The commutator PCB is fastened to the enclosure with
+#2-56 screws. The most difficult part is the gears. They are glued in-place to the motor and rotary joint rotors. Clamp
+to ensure the gears do not mis-align during the curing process.</p>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>are #2-56 actually the screws used for fastening PCB to enclosure? Metric equivalent? What glue is used?</p>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -474,10 +443,10 @@ open ephys products. It is used in many of the following guides for controlling 
             <p class="prev-next-title">Troubleshooting</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="mechanical.html" title="next page">
+    <a class='right-next' id="next-link" href="../../spi-commutator/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Mechanical</p>
+        <p class="prev-next-title">SPI Commutator</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

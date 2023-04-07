@@ -17,10 +17,10 @@ Open Ephys commutator with a third-party/custom system, refer to the
 .. toctree::
     :hidden:
 
-    bonsai-headstage64
-    bonsai-miniscope
-    bonsai-computervision
-    gui-miniscope
+    onix-headstage64
+    onix-miniscope
+    onix-computervision
+    miniscopedaq-miniscope
 
 
 .. note:: Many of these examples use `Bonsai <https://open-ephys.org/bonsai>`_.

@@ -22,7 +22,7 @@ the commutator:
                     <div>
                         <p><b>Charging: </b>Super-capacitors are charging. The
                         commutator is effectively disabled, and can't be used
-                        until charging completes, which can take up to 30
+                        until charging completes which can take up to 30
                         seconds.
                         </p> </div>
             </div>

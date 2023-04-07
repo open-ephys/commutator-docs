@@ -181,22 +181,22 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="automatic-control/bonsai-headstage64.html">
+      <a class="reference internal" href="automatic-control/onix-headstage64.html">
        Automate Commutation with Bonsai and Headstage-64
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="automatic-control/bonsai-miniscope.html">
+      <a class="reference internal" href="automatic-control/onix-miniscope.html">
        Automate Commutation with Bonsai and UCLA Miniscope v4
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="automatic-control/bonsai-computervision.html">
+      <a class="reference internal" href="automatic-control/onix-computervision.html">
        Automate Commutation with Bonsai and Computer Vision
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="automatic-control/gui-miniscope.html">
+      <a class="reference internal" href="automatic-control/miniscopedaq-miniscope.html">
        Automate Commutation with Miniscope GUI and UCLA Miniscope v4
       </a>
      </li>
@@ -209,10 +209,17 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../developer-guide/index.html">
    Developer Guide
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
 </ul>
 
@@ -246,6 +253,18 @@
   <a class="reference internal nav-link" href="#connecting">
    Connecting
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compatible-cables">
+     Compatible Cables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commutator-connectors">
+     Commutator Connectors
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -276,33 +295,37 @@
 behavioral arena. There are several holes in various positions around the
 commutator’s body that are compatible standard <a class="reference external" href="https://8020.net/framing-options/t-slotted-profiles/fractional/10series100basedprofiles.html">80/20 aluminum extrusion</a>
 using <a class="reference external" href="https://youtu.be/nK-DsJxAdwM">t-nuts</a> or a standard mechanical
-breadboard.  Not all the holes need to be used. Select the mounting holes that
+breadboard. Not all the holes need to be used. Select the mounting holes that
 are convenient for your behavioral setup. For custom mounting solutions, the
 dimensions for the mounting holes (1/4”-20 or M6) are indicated in the below
 schematic:</p>
 <img alt="schematic image" class="align-center" src="../../_images/commutator-mounting-holes.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For clarity and planning, 3D models of the commutator body are
-available on the git repository</p>
+<p>For clarity and planning, a 3D model of the commutator body are
+available on the <a class="reference external" href="https://github.com/open-ephys/onix-commutator/tree/master/mechanical/single_channel">git repository</a></p>
 </div>
+<p>If the commutator is used for an animal behavior experiment, mount it such that the animal can traverse the
+behavior setup’s full area given the length of your tether. Elastic thread can be utilized to prevent the tether from
+entering the animal’s field while the the animal moves around by catching the thread onto the gear hook and attaching it
+to the tether at various points using kapton tape.</p>
 <div class="admonition-todo admonition" id="id2">
 <p class="admonition-title">Todo</p>
-<p>Show how to mount the elastic thread as well. This sentence can be
-used there: If the commutator is used for an animal behavior experiment,
-mount the commutator such that the animal can traverse the behavior setup’s
-full area given the length of your tether.</p>
+<p>image</p>
 </div>
 </section>
 <section id="connecting">
 <h2>Connecting<a class="headerlink" href="#connecting" title="Permalink to this headline">#</a></h2>
-<div class="admonition-todo admonition" id="id3">
-<p class="admonition-title">Todo</p>
-<p>Add more information on the specific cables that can be used. Link to
-the tether docs on the ONIX docs site and the miniscope tether sold by OE.
-Also, link to potential high quality SMA cables that can go vetween the
-commutator in the host acquisition hardware.</p>
-</div>
+<section id="compatible-cables">
+<h3>Compatible Cables<a class="headerlink" href="#compatible-cables" title="Permalink to this headline">#</a></h3>
+<p>A variety of tethers are compatible with the commutator as long as they are terminated with a SMA connector (such as
+the <a class="reference external" href="https://open-ephys.org/miniscope-v4/miniscope-v4-coax-cable-kit">Miniscope V4 tether</a>) or something that can be
+adapted to a SMA connector (such as the <a class="reference external" href="https://open-ephys.org/miniscope-v4/miniscope-v4-coax-cable-kit">headstage link</a>)
+on the commutator end. A standard, high quality SMA-SMA cable (such as <a class="reference external" href="https://open-ephys.org/minicam/sma-to-sma-cable">these from Open Ephys</a>)
+can be used between the commutator and the data acquisition device.</p>
+</section>
+<section id="commutator-connectors">
+<h3>Commutator Connectors<a class="headerlink" href="#commutator-connectors" title="Permalink to this headline">#</a></h3>
 <div class="container">
     <div class ="row">
         <p class="card-text">
@@ -341,20 +364,21 @@ commutator in the host acquisition hardware.</p>
 </div><div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <ul>
-<li><p>Some cheap Micro-USB cables only supply power. Be sure to use a cable that
-provides power and digital signals</p></li>
+<li><p>Some cheap Micro-USB cables only supply power. Ensure the cable used transfers both
+power and digital signals</p></li>
 <li><p>Source your coaxial tether from a reputable vendor such as <a class="reference external" href="https://www.digikey.com/">Digikey</a>, <a class="reference external" href="https://www.digikey.com/">Mouser</a>, or <a class="reference external" href="https://open-ephys.org/store">Open Ephys</a></p></li>
 <li><p>For animal behavior experiments, manage cables such that they are not
 within range to interfere with the tether when the animal moves. For
 example:</p>
 <img alt="image indicating location of connections" class="align-center" src="../../_images/cable-management.png" />
-<div class="admonition-todo admonition" id="id4">
+<div class="admonition-todo admonition" id="id3">
 <p class="admonition-title">Todo</p>
 <p>Better image</p>
 </div>
 </li>
 </ul>
 </div>
+</section>
 </section>
 </section>
 

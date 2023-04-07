@@ -181,22 +181,22 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="automatic-control/bonsai-headstage64.html">
+      <a class="reference internal" href="automatic-control/onix-headstage64.html">
        Automate Commutation with Bonsai and Headstage-64
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="automatic-control/bonsai-miniscope.html">
+      <a class="reference internal" href="automatic-control/onix-miniscope.html">
        Automate Commutation with Bonsai and UCLA Miniscope v4
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="automatic-control/bonsai-computervision.html">
+      <a class="reference internal" href="automatic-control/onix-computervision.html">
        Automate Commutation with Bonsai and Computer Vision
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="automatic-control/gui-miniscope.html">
+      <a class="reference internal" href="automatic-control/miniscopedaq-miniscope.html">
        Automate Commutation with Miniscope GUI and UCLA Miniscope v4
       </a>
      </li>
@@ -209,10 +209,17 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../developer-guide/index.html">
    Developer Guide
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
 </ul>
 
@@ -266,11 +273,11 @@
   <section id="manual-control">
 <span id="id1"></span><h1>Manual Control<a class="headerlink" href="#manual-control" title="Permalink to this headline">#</a></h1>
 <p>The front panel of the commutator has four buttons for manual control.
-They are useful for situations such as</p>
+They are useful for situations such as:</p>
 <ul class="simple">
 <li><p>Quickly halting motor operation</p></li>
-<li><p>Screwing in the tether’s SMA connector by turning the motor</p></li>
-<li><p>Untwisting the tether due an error during automated commutator</p></li>
+<li><p>Screwing or unscrewing the tether’s SMA connector by turning the motor</p></li>
+<li><p>Untwisting the tether due to an error during automated commutation</p></li>
 </ul>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -287,15 +294,15 @@ cleared.</p>
 <dt class="field-odd">1. Stop/Go</dt>
 <dd class="field-odd"><p>Press to toggle commutator enable/disable.</p>
 <ul class="simple">
-<li><p><em>Disabled</em> (LED is red): All motor output will halt instantly, and motor
+<li><p><em>Disabled</em> (LED is red): All motor output halts instantly, and motor
 driver is powered down. Pressing directional buttons in the stopped state
 will not work. All target turns provided via remote calls will be
 cleared, such that re-enabling the motor will not result in the commutator
 re-engaging an old target position. In this state, pressing and holding
-the Stop/Go button for &gt; 0.5 second, or sending the approriate remote
+the Stop/Go button for &gt; 0.5 second, or sending the appropriate remote
 command will enable the device.</p></li>
 <li><p><em>Enabled</em> (LED  green): When in the <em>enabled</em> state, the LED will be
-green and the motor can be turned via button presses or RPCs . In this
+green and the motor can be turned via button presses or remote procedure commands. In this
 state, pressing the Stop/Go button will instantly disable the device.</p></li>
 </ul>
 </dd>
@@ -315,7 +322,8 @@ unwanted visual stimulus). Pressing the LED button for &gt; 0.5 seconds enables 
 </dl>
 <section id="reset-button">
 <h2>Reset Button<a class="headerlink" href="#reset-button" title="Permalink to this headline">#</a></h2>
-<p>On the side of the device, there is a hard <strong>Reset Button</strong>. Pressing this button will reset the internal microcontroller’s firmware. This might be useful if you are having trouble with USB connectivity or you have created custom firmware that are having trouble uploading to the device.</p>
+<p>On the side of the device, there is a hard <strong>Reset Button</strong>. Pressing this button will reset the internal
+microcontroller’s firmware. This might be useful if USB connectivity or custom firmware is causing difficulty.</p>
 <a class="reference internal image-reference" href="../../_images/commutator-side-button-numbered.png"><img alt="Commutator side image" class="align-center" src="../../_images/commutator-side-button-numbered.png" style="width: 50%;" /></a>
 </section>
 </section>

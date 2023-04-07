@@ -21,7 +21,7 @@ Language <https://bonsai-rx.org>`__ workflow.
    * Open Bonsai and `install the Bonsai.StarterPack package
      <https://bonsai-rx.org/docs/articles/packages.html>`_
 
-#. Connect the commutator to the computer to the commutator using micro-USB
+#. Connect a computer to the commutator using a micro-USB
    cable (connector 1 in the figure below) to establish power and communication
    between the commutator and the computer. For this quick start guide, the
    coaxial connections are not needed.
@@ -71,7 +71,7 @@ Language <https://bonsai-rx.org>`__ workflow.
    * The angular displacement per key-press can be adjusted by clicking the
      **String** nodes and modifying the **Value** property
    * To see the JSON commands being sent to the commutator, double-click the
-     **SerialStringWrite** node during while the workflow is running to show a text
+     **SerialStringWrite** node while the workflow is running to show a text
      visualizer.
 
 #. After confirming the functionality of the commutator, you are ready to mount

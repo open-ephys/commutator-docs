@@ -181,22 +181,22 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="user-guide/automatic-control/bonsai-headstage64.html">
+      <a class="reference internal" href="user-guide/automatic-control/onix-headstage64.html">
        Automate Commutation with Bonsai and Headstage-64
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="user-guide/automatic-control/bonsai-miniscope.html">
+      <a class="reference internal" href="user-guide/automatic-control/onix-miniscope.html">
        Automate Commutation with Bonsai and UCLA Miniscope v4
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="user-guide/automatic-control/bonsai-computervision.html">
+      <a class="reference internal" href="user-guide/automatic-control/onix-computervision.html">
        Automate Commutation with Bonsai and Computer Vision
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="user-guide/automatic-control/gui-miniscope.html">
+      <a class="reference internal" href="user-guide/automatic-control/miniscopedaq-miniscope.html">
        Automate Commutation with Miniscope GUI and UCLA Miniscope v4
       </a>
      </li>
@@ -209,10 +209,17 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="developer-guide/index.html">
    Developer Guide
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
 </ul>
 
@@ -281,7 +288,7 @@
             </div>
             <div class="col-lg-9 col-md-9 col-sm-7 col-xs-7 d-flex flex-column m-0 p-0">
                 <div class="card-body">
-                    <ul class="simple">
+                    <ul class="simple" style="margin:0">
                         <li>High bandwidth link up to 18 GHz</li>
                         <li>Optical table & 80/20 rail mountable</li>
                         <li>Remote control using JSON-encoded commands</li>
@@ -289,12 +296,12 @@
                         <li>Manual control using capacitive sense buttons</li>
                         <li>Indication LED (can be turned off)</li>
                         <li>Advanced stepper driver (TMC2130)</li>
-                        <ul class="simple">
+                        <ul class="simple" style="margin:0" >
                             <li>Voltage-controlled for silent operation</li>
                             <li>Precise motion using step interpolation (256 uSteps/step)</li>
                         </ul>
                         <li>USB powered and controlled</li>
-                        <ul class="simple">
+                        <ul class="simple" style="margin:0">
                             <li>Internal super-capacitor circuitry prevents loading the USB bus during
                             motion</li>
                         </ul>
@@ -311,7 +318,7 @@ and key presses, refer to the <a class="reference internal" href="quick-start-gu
 <li><p>To automate the commutator with orientation data from specific hardware such
 as <a class="reference external" href="https://open-ephys.org/miniscope-v4/miniscope-v4">Miniscopes</a> or <a class="reference external" href="https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html">ONIX
 headstages</a>
-refer to the complete <a class="reference internal" href="user-guide/index.html#user-guide"><span class="std std-ref">User Guide</span></a>.</p></li>
+, refer to the complete <a class="reference internal" href="user-guide/index.html#user-guide"><span class="std std-ref">User Guide</span></a>.</p></li>
 <li><p>To interface the commutator with your custom software, third-party devices,
 modify your device, or build your own commutator, refer to the
 <a class="reference internal" href="developer-guide/index.html#dev-guide"><span class="std std-ref">Developer Guide</span></a>.</p></li>
