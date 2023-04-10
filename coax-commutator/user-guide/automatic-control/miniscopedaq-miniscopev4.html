@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Automate Commutation with ONIX and Coaxial Headstage-64 &#8212; Open Ephys Documentation 0.0.0 documentation</title>
+    <title>Automate Commutation with Onix and UCLA Miniscope v4 &#8212; Open Ephys Documentation 0.0.0 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -33,8 +33,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Automate Commutation with Miniscope DAQ and UCLA Miniscope v4" href="onix-miniscopev4.html" />
-    <link rel="prev" title="Automating Commutation" href="index.html" />
+    <link rel="next" title="Troubleshooting" href="../troubleshooting.html" />
+    <link rel="prev" title="Automate Commutation with ONIX and Computer Vision" href="onix-computervision.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -180,8 +180,8 @@
      </i>
     </label>
     <ul class="current">
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+     <li class="toctree-l3">
+      <a class="reference internal" href="onix-coaxheadstage64.html">
        Automate Commutation with ONIX and Coaxial Headstage-64
       </a>
      </li>
@@ -195,8 +195,8 @@
        Automate Commutation with ONIX and Computer Vision
       </a>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="miniscopedaq-miniscopev4.html">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
        Automate Commutation with Onix and UCLA Miniscope v4
       </a>
      </li>
@@ -260,32 +260,34 @@
               
               <div>
                 
-  <section id="automate-commutation-with-onix-and-coaxial-headstage-64">
-<h1>Automate Commutation with ONIX and Coaxial Headstage-64<a class="headerlink" href="#automate-commutation-with-onix-and-coaxial-headstage-64" title="Permalink to this headline">#</a></h1>
-<img alt="../../../_images/onix-coaxheadstage64.jpg" src="../../../_images/onix-coaxheadstage64.jpg" />
+  <section id="automate-commutation-with-onix-and-ucla-miniscope-v4">
+<h1>Automate Commutation with Onix and UCLA Miniscope v4<a class="headerlink" href="#automate-commutation-with-onix-and-ucla-miniscope-v4" title="Permalink to this headline">#</a></h1>
+<img alt="../../../_images/onix-miniscopev4.jpg" src="../../../_images/onix-miniscopev4.jpg" />
 <p>This section outlines how to use Bonsai software to automate commutation of the
-tether between a headstage-64 mounted on a freely moving animal and a
-stationary DAQ.</p>
+tether between a miniscope mounted on a freely moving animal and a stationary
+DAQ.</p>
 <ol class="arabic">
 <li><p>Follow the <a class="reference internal" href="../../quick-start-guide/index.html#quick-start"><span class="std std-ref">Quick Start</span></a> to ensure you can control the commutator using Bonsai.</p></li>
-<li><p>Install the <strong>Bonsai.ONIX</strong> Package from Bonsai’s package manager.</p>
+<li><p>Install the <strong>Bonsai.Miniscope</strong> Package from Bonsai’s package manager.</p>
 <ul>
 <li><p>Select Community Feed</p>
 <img alt="Screenshot for selecting package source" src="../../../_images/bonsai-community-feed.png" />
 </li>
-<li><p>Install <strong>Bonsai.ONIX</strong></p>
-<img alt="Screenshot for installing Bonsai.Onix" src="../../../_images/install-bonsai-onix.png" />
+<li><p>Install <strong>Bonsai.Miniscope</strong></p>
+<img alt="Screenshot for installing Bonsai.Miniscope" src="../../../_images/install-bonsai-miniscope.png" />
 </li>
 </ul>
 </li>
+<li><p>Mount the commutator and establish all electrical connections according to
+the information found in the <a class="reference internal" href="../mount-connect.html#mounting"><span class="std std-ref">Mounting and Connecting the Commutator</span></a>.</p></li>
 <li><p>Download, configure, and run the following Bonsai workflow for automating commutation using orientation
-data from the headstages’s on-board IMU sensor:</p>
+data from the miniscope’s on-board IMU sensor:</p>
                 <div class="bonsai-workflow-container">
         <div class="workflow-filler"></div>
-        <div class="workflow-download"><img class="download-copy-img" src="../../../_static/images/download.svg" onclick="getFileFromURL('../../../_static/downloads/commutator-headstage64-automate.bonsai')" width=18px /></div>
-        <div class="workflow-copy"><img class="download-copy-img" src="../../../_static/images/copy.svg" onclick="getTextFromURL('../../../_static/downloads/commutator-headstage64-automate.bonsai')" width=18px /></div>
-        <div class="workflow-name"><b>commutator-headstage64-automate.bonsai</b></div>
-        <div class="workflow-image"><img src="../../../_static/images/commutator-headstage64-automate.svg" alt="commutator-headstage64-automate" /></div>
+        <div class="workflow-download"><img class="download-copy-img" src="../../../_static/images/download.svg" onclick="getFileFromURL('../../../_static/downloads/commutator-miniscopev4-automate.bonsai')" width=18px /></div>
+        <div class="workflow-copy"><img class="download-copy-img" src="../../../_static/images/copy.svg" onclick="getTextFromURL('../../../_static/downloads/commutator-miniscopev4-automate.bonsai')" width=18px /></div>
+        <div class="workflow-name"><b>commutator-miniscopev4-automate.bonsai</b></div>
+        <div class="workflow-image"><img src="../../../_static/images/commutator-miniscopev4-automate.svg" alt="commutator-miniscopev4-automate" /></div>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Be sure to Configure the <strong>PortName</strong> property of the
@@ -293,13 +295,8 @@ data from the headstages’s on-board IMU sensor:</p>
 connected.</p>
 </div>
 </li>
-<li><p>Run the workflow in Bonsai. If all above steps are correctly performed, the commutator will follow headstage rotations</p></li>
-<li><p>Load data produced by the above workflow in Python or MATLAB:</p>
-<ul class="simple">
-<li><p>Python: <a class="reference download internal" download="" href="../../../_downloads/42ac01d31f65561322d8f91bd1634be5/load_headstage64.py"><code class="xref download docutils literal notranslate"><span class="pre">load_headstage64.py</span></code></a></p></li>
-<li><p>MATLAB: <a class="reference download internal" download="" href="../../../_downloads/2fbbbf9e9bf9f1cbd744daa57b5fd9b4/load_headstage64.m"><code class="xref download docutils literal notranslate"><span class="pre">load_headstage64.m</span></code></a></p></li>
-</ul>
-</li>
+<li><p>Run the workflow in Bonsai. If all above steps are correctly performed, the
+commutator will follow miniscope rotations</p></li>
 </ol>
 </section>
 
@@ -309,17 +306,17 @@ connected.</p>
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="onix-computervision.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Automating Commutation</p>
+            <p class="prev-next-title">Automate Commutation with ONIX and Computer Vision</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="onix-miniscopev4.html" title="next page">
+    <a class='right-next' id="next-link" href="../troubleshooting.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Automate Commutation with Miniscope DAQ and UCLA Miniscope v4</p>
+        <p class="prev-next-title">Troubleshooting</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
