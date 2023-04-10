@@ -1,6 +1,9 @@
 
-Automate Commutation with Bonsai and UCLA Miniscope v4
+Automate Commutation with Onix and UCLA Miniscope v4
 **************************************************************
+
+.. image:: ../../../_static/images/onix-miniscopev4.jpg
+
 This section outlines how to use Bonsai software to automate commutation of the
 tether between a miniscope mounted on a freely moving animal and a stationary
 DAQ.

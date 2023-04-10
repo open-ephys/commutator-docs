@@ -17,7 +17,7 @@ Open Ephys commutator with a third-party/custom system, refer to the
 .. toctree::
     :hidden:
 
-    onix-headstage64
+    onix-coaxheadstage64
     onix-miniscope
     onix-computervision
     miniscopedaq-miniscope
