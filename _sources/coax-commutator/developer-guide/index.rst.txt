@@ -72,7 +72,7 @@ Electrical
 
 Printed circuit boards (PCBs) are boards that electrically connect a set of electronics components to create functional circuits.
 Those parts are soldered to the PCB to create mechanically stable and reliable operation. The commutator front panel
-is an example of a PCB. If you were to make a own commutator that utilizes a similar type front panel, it would probably
+is an example of a PCB. If you were to make a own commutator that utilizes a similar type front panel, you will likely
 be required to purchase fabrication from another company. Thankfully, PCBs are pretty cheap to fabricate nowadays.
 You no longer have to order in bulk to get them relatively cheap. For instance,
 You can get a 5-pack of PCBs from `JLCPCB <jlcpcb.com>`_ for less than $5. To fabricate a PCB, a manufacturer usually
@@ -89,6 +89,7 @@ purchase from more than one distributor if you inflexible regarding component se
 helpful for sorting through stock at various vendors and comparing prices. The electrical components for the commutator
 PCB are mounted (and electrically connected) through solder joints. Soldering instructions are beyond the scope of this
 developer guide but there are several `great guides on YouTube <https://www.youtube.com/results?search_query=how+to+solder+pcb>`_.
+You can also get them pre-assembled by PCB assemblers. Some PCB fabricators will also assemble the PCBs like JLCPCB.
 
 Teensy and Programming an Open Ephys Commutator
 **************************************************************
@@ -120,7 +121,7 @@ of the commutator. To directly  control the commutator via computer, it helps to
 #. Set correct COM port to which the Teensy is connected and set the serial monitor baud rate to 9600
 #. Send a command to the commutator according to the communication below.
 
-The serial monitor displays messages between the commutator and the computer to which the commutator is connected.To send
+The serial monitor displays messages between the commutator and the computer to which the commutator is connected. To send
 RPCs to the commutator through the serial monitor, type in the Arduino IDE's Serial Monitor input field. The commutator's Teensy is pre-programmed to receive
 specific RPCs in the JSON format. Refer to the :ref:`remote_control` page of the User Guide for more information on that. Other serial
 monitors can be used (see `Termite <https://www.compuphase.com/software_termite.htm>`_ for instance), but these
@@ -135,7 +136,7 @@ Assembly
 After the PCB is finished being soldered, assembly is pretty straight forward. The stepper motor is inserted and fastened by
 four M2.5 screws. The SMA rotary joint is inserted and fastened by M3 or #4-40 screws. The stepper motor connects to a
 4-pin connector on the one of the commutator PCB's daughter boards. The commutator PCB is fastened to the enclosure with
-#2-56 screws. The most difficult part is the gears. They are glued in-place to the motor and rotary joint rotors. Clamp
+#2-56 screws. The most trickiest part is gluing the gears. They are glued to the motor and rotary joint rotors. Clamp
 to ensure the gears do not mis-align during the curing process.
 
 .. TODO:: are #2-56 actually the screws used for fastening PCB to enclosure? Metric equivalent? What glue is used?

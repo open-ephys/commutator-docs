@@ -147,7 +147,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../user-guide/mount-connect.html">
-     Mounting and Connecting the Commutator
+     Mounting and Connecting
     </a>
    </li>
    <li class="toctree-l2">
@@ -358,7 +358,7 @@ The only change that must be made is a modification of the GEAR_RATIO macro on l
 <h3>Electrical<a class="headerlink" href="#electrical" title="Permalink to this headline">#</a></h3>
 <p>Printed circuit boards (PCBs) are boards that electrically connect a set of electronics components to create functional circuits.
 Those parts are soldered to the PCB to create mechanically stable and reliable operation. The commutator front panel
-is an example of a PCB. If you were to make a own commutator that utilizes a similar type front panel, it would probably
+is an example of a PCB. If you were to make a own commutator that utilizes a similar type front panel, you will likely
 be required to purchase fabrication from another company. Thankfully, PCBs are pretty cheap to fabricate nowadays.
 You no longer have to order in bulk to get them relatively cheap. For instance,
 You can get a 5-pack of PCBs from <a class="reference external" href="jlcpcb.com">JLCPCB</a> for less than $5. To fabricate a PCB, a manufacturer usually
@@ -373,7 +373,8 @@ Open Ephys has no affiliation with any of these companies. Some parts may be out
 purchase from more than one distributor if you inflexible regarding component selection. <a class="reference external" href="octopart.com">Octopart</a> is
 helpful for sorting through stock at various vendors and comparing prices. The electrical components for the commutator
 PCB are mounted (and electrically connected) through solder joints. Soldering instructions are beyond the scope of this
-developer guide but there are several <a class="reference external" href="https://www.youtube.com/results?search_query=how+to+solder+pcb">great guides on YouTube</a>.</p>
+developer guide but there are several <a class="reference external" href="https://www.youtube.com/results?search_query=how+to+solder+pcb">great guides on YouTube</a>.
+You can also get them pre-assembled by PCB assemblers. Some PCB fabricators will also assemble the PCBs like JLCPCB.</p>
 </section>
 </section>
 <section id="teensy-and-programming-an-open-ephys-commutator">
@@ -406,7 +407,7 @@ of the commutator. To directly  control the commutator via computer, it helps to
 <li><p>Set correct COM port to which the Teensy is connected and set the serial monitor baud rate to 9600</p></li>
 <li><p>Send a command to the commutator according to the communication below.</p></li>
 </ol>
-<p>The serial monitor displays messages between the commutator and the computer to which the commutator is connected.To send
+<p>The serial monitor displays messages between the commutator and the computer to which the commutator is connected. To send
 RPCs to the commutator through the serial monitor, type in the Arduino IDE’s Serial Monitor input field. The commutator’s Teensy is pre-programmed to receive
 specific RPCs in the JSON format. Refer to the <a class="reference internal" href="../user-guide/remote-control.html#remote-control"><span class="std std-ref">Remote Control</span></a> page of the User Guide for more information on that. Other serial
 monitors can be used (see <a class="reference external" href="https://www.compuphase.com/software_termite.htm">Termite</a> for instance), but these
@@ -419,7 +420,7 @@ It also allows the user to program the Teensy in a convenient way if that is des
 <p>After the PCB is finished being soldered, assembly is pretty straight forward. The stepper motor is inserted and fastened by
 four M2.5 screws. The SMA rotary joint is inserted and fastened by M3 or #4-40 screws. The stepper motor connects to a
 4-pin connector on the one of the commutator PCB’s daughter boards. The commutator PCB is fastened to the enclosure with
-#2-56 screws. The most difficult part is the gears. They are glued in-place to the motor and rotary joint rotors. Clamp
+#2-56 screws. The most trickiest part is gluing the gears. They are glued to the motor and rotary joint rotors. Clamp
 to ensure the gears do not mis-align during the curing process.</p>
 <div class="admonition-todo admonition" id="id3">
 <p class="admonition-title">Todo</p>
