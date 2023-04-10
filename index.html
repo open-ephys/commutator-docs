@@ -174,19 +174,25 @@
             <div class="col-lg-9 col-md-9 col-sm-7 col-xs-7 d-flex flex-column m-0 p-0">
                 <div class="card-body">
                     <p class="card-text">
-                        Internal-measurement
-                        units (IMUs) or video-based pose-estimation methods
-                        (e.g. <a
+                        Internal-measurement units (IMUs) or video-based
+                        pose-estimation methods (e.g. <a
                         href="https://github.com/DeepLabCut/DeepLabCut">
                         DeepLabCut </a> or <a
                         href="https://github.com/talmolab/sleap"> SLEAP
-                        </a>) provide real-time measurements of freely moving animals'
-                        3D pose. A commutator can be interfaced with such technologies
-                        to drive active commutation instead of relying on feedback loops that
-                        require measuring torque on the tether such as in the case of conventional active
-                        commutators. This permits the use of novel <a
+                        </a>) provide real-time measurements of freely
+                        moving animals' 3D pose. These technologies can be
+                        used to drive active commutation instead of relying
+                        using tether torque measurement, which is used in
+                        conventional active commutators. This permits the
+                        use of <a
                         href="https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html">
-                        extremely thin tethers </a> that promote natural animal behavior.
+                        extremely thin tethers </a> that promote natural
+                        animal behavior but are incompatible with
+                        torque-based active commutators because their
+                        flexibility precludes accurate torque measurement.
+                        Additionally, because these commutators do not rely
+                        on torque transmission, they are effectively
+                        <b>zero-toque</b>.
                         <br>
                         <br>
                         Open Ephys Commutators are open-source, motorized
