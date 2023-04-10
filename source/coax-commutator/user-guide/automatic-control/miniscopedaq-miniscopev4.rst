@@ -1,8 +1,16 @@
 
-Automate Commutation with Onix and UCLA Miniscope v4
+Automate Commutation with Miniscope DAQ and UCLA Miniscope v4
 **************************************************************
 
-.. image:: ../../../_static/images/onix-miniscopev4.jpg
+.. image:: ../../../_static/images/miniscopedaq-miniscopev4.jpg
+
+There are two applications that can be used for automate commutation with the Miniscope DAQ and UCLA Miniscope v4.
+They are :ref:`Bonsai` and :ref:`Miniscope-DAQ-QT-GUI`.
+
+.. _Bonsai:
+
+Bonsai
+#######
 
 This section outlines how to use Bonsai software to automate commutation of the
 tether between a miniscope mounted on a freely moving animal and a stationary
@@ -40,3 +48,10 @@ DAQ.
 
 #. Run the workflow in Bonsai. If all above steps are correctly performed, the
    commutator will follow miniscope rotations
+
+.. _Miniscope-DAQ-QT-GUI:
+
+Miniscope-DAQ-QT-GUI
+#################################
+
+.. TODO:: document
