@@ -1,5 +1,5 @@
 
-Automate Commutation with ONIX and Computer Vision
+ONIX and Computer Vision
 ****************************************************************
 
 .. image:: ../../../_static/images/onix-dlc-sleap.jpg

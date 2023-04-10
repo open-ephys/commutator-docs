@@ -1,5 +1,5 @@
 
-Automate Commutation with ONIX and Coaxial Headstage-64
+ONIX and Coaxial Headstage-64
 ****************************************************************
 
 .. image:: ../../../_static/images/onix-coaxheadstage64.jpg
