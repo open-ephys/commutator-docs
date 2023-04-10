@@ -1,6 +1,9 @@
 
-Automate Commutation with Bonsai and Headstage-64
+Automate Commutation with ONIX and Coaxial Headstage-64
 ****************************************************************
+
+.. image:: ../../../_static/images/onix-coaxheadstage64.jpg
+
 This section outlines how to use Bonsai software to automate commutation of the
 tether between a headstage-64 mounted on a freely moving animal and a
 stationary DAQ.
