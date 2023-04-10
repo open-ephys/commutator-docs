@@ -1,5 +1,5 @@
 
-Automate Commutation with Miniscope DAQ and UCLA Miniscope v4
+Miniscope DAQ and UCLA Miniscope v4
 **************************************************************
 
 .. image:: ../../../_static/images/miniscopedaq-miniscopev4.jpg
