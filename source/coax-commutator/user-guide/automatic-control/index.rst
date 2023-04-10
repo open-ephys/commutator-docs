@@ -18,9 +18,9 @@ Open Ephys commutator with a third-party/custom system, refer to the
     :hidden:
 
     onix-coaxheadstage64
-    onix-miniscope
+    onix-miniscopev4
     onix-computervision
-    miniscopedaq-miniscope
+    miniscopedaq-miniscopev4
 
 
 .. note:: Many of these examples use `Bonsai <https://open-ephys.org/bonsai>`_.
