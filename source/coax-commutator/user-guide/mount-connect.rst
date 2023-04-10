@@ -1,6 +1,6 @@
 .. _mounting:
 
-Mounting and Connecting the Commutator
+Mounting and Connecting
 **************************************************************
 
 Mounting
@@ -19,7 +19,7 @@ schematic:
     :alt: schematic image
     :align: center
 
-.. note:: For clarity and planning, a 3D model of the commutator body are
+.. note:: For clarity and planning, a 3D model of the commutator body is
    available on the `git repository <https://github.com/open-ephys/onix-commutator/tree/master/mechanical/single_channel>`_
 
 If the commutator is used for an animal behavior experiment, mount it such that the animal can traverse the
