@@ -19,7 +19,7 @@ Open Ephys commutator with a third-party/custom system, refer to the
 
     onix-coaxheadstage64
     onix-miniscopev4
-    onix-computervision
+    computervision
     miniscopedaq-miniscopev4
 
 

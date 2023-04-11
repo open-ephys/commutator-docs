@@ -4,7 +4,7 @@ Miniscope DAQ and UCLA Miniscope v4
 
 .. image:: ../../../_static/images/miniscopedaq-miniscopev4.jpg
 
-There are two applications that can be used for automate commutation with the Miniscope DAQ and UCLA Miniscope v4.
+There are two applications that can be used to automate commutation with the Miniscope DAQ and UCLA Miniscope v4.
 They are :ref:`Bonsai` and :ref:`Miniscope-DAQ-QT-GUI`.
 
 .. _Bonsai:
@@ -12,9 +12,8 @@ They are :ref:`Bonsai` and :ref:`Miniscope-DAQ-QT-GUI`.
 Bonsai
 #######
 
-This section outlines how to use Bonsai software to automate commutation of the
-tether between a miniscope mounted on a freely moving animal and a stationary
-DAQ.
+This section outlines how to use Bonsai software to automate commutation of the coaxial
+tether between a UCLA Miniscope v4 mounted on a freely moving animal and ONIX.
 
 #. Follow the :ref:`quick_start` to ensure you can control the commutator using Bonsai.
 
@@ -38,11 +37,11 @@ DAQ.
 
    .. raw:: html
 
-            {% with static_path = '../../../_static', name = 'commutator-miniscopev4-automate' %}
+            {% with static_path = '../../../_static', name = 'miniscopedaq-miniscopev4-commutate' %}
                 {% include 'workflow.html' %}
             {% endwith %}
 
-   .. note:: Be sure to Configure the **PortName** property of the
+   .. note:: Be sure to configure the **PortName** property of the
       **Commutator** node to reflect the port to which the commutator is
       connected.
 
@@ -53,5 +52,8 @@ DAQ.
 
 Miniscope-DAQ-QT-GUI
 #################################
+
+This section outlines how to use Miniscope software to automate commutation of the coaxial
+tether between a UCLA Miniscope v4 mounted on a freely moving animal and ONIX.
 
 .. TODO:: document

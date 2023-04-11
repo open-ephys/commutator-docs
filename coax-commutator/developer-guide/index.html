@@ -191,8 +191,8 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../user-guide/automatic-control/onix-computervision.html">
-       ONIX and Computer Vision
+      <a class="reference internal" href="../user-guide/automatic-control/computervision.html">
+       Computer Vision
       </a>
      </li>
      <li class="toctree-l3">
@@ -277,8 +277,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assembly">
-   Assembly
+  <a class="reference internal nav-link" href="#mechanical-assembly">
+   Mechanical Assembly
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#design-consideration">
+   Design Consideration
   </a>
  </li>
 </ul>
@@ -302,22 +307,20 @@
               
               <div>
                 
-  <section id="developer-guide">
-<span id="dev-guide"></span><h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For an overview of Open Ephys Commutators, visit the <a class="reference internal" href="../../index.html#oec"><span class="std std-ref">Open Ephys Commutators</span></a>.  For
-instructions on how to use the Coaxial Commutator, visit the Coaxial Commutator
+  <p>For an overview of Open Ephys Commutators, visit the <a class="reference internal" href="../../index.html#oec"><span class="std std-ref">Open Ephys Commutators</span></a>.
+For instructions on how to use the Coaxial Commutator, visit the Coaxial Commutator
 <a class="reference internal" href="../quick-start-guide/index.html#quick-start"><span class="std std-ref">Quick Start</span></a> Guide and <a class="reference internal" href="../user-guide/index.html#user-guide"><span class="std std-ref">User Guide</span></a>.</p>
-</div>
+<section id="developer-guide">
+<span id="dev-guide"></span><h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">#</a></h1>
 <section id="design-files">
 <h2>Design Files<a class="headerlink" href="#design-files" title="Permalink to this headline">#</a></h2>
 <p>Open Ephys commutators are open-source. Mechanical, electrical, and firmware designs are available in the
 <a class="reference external" href="https://github.com/open-ephys/onix-commutator">onix-commutator git repo</a>. Below explains how to manufacture
-your own Open Ephys Commutator using these files. This is helpful if you
-intend to create a custom commutator or adapt an off-shelf-commutator Open Ephys Commutator to your system by reprogramming it to accept
+your own Open Ephys Commutator using these files. This is helpful if you intend to create a custom commutator or adapt
+an off-shelf-commutator Open Ephys Commutator to your system by reprogramming it to accept
 other inputs instead of or in addition to the JSON remote procedure calls (RPCs) that the commutator is already designed
-to accept.</p>
+to accept. Finally, there are some design considerations at the bottom of the page in case you are considering designing
+your own commutator.</p>
 </section>
 <section id="bill-of-materials-bom">
 <h2>Bill of Materials (BoM)<a class="headerlink" href="#bill-of-materials-bom" title="Permalink to this headline">#</a></h2>
@@ -340,8 +343,8 @@ any of them.</p>
 <section id="mechanical">
 <h3>Mechanical<a class="headerlink" href="#mechanical" title="Permalink to this headline">#</a></h3>
 <p>If you desire low quantity, first seek out local options. Many universities or libraries offer free 3D printing
-services. They don’t always have SLS/MJF which is how the commutator enclosures are manufactured, but you might be able to use
-a FDM/SLA 3D printing if necessary. The big difference is that you will probably be required to to add structural
+services. They don’t always have SLS/MJF which is how the commutator enclosures are manufactured, but you might be able
+to use a FDM/SLA 3D printing if necessary. The big difference is that you will probably be required to to add structural
 supports that assist in the printing process. Post-processing the removal of the structural support can be time-demanding.
 If you don’t have access to a SLS/MJF printer and don’t want to
 deal with supports, there are many online manufacturers that will 3D print this for you. They cost more and often have a minimum
@@ -391,8 +394,7 @@ bundled libraries as well. This takes care of installing <code class="code docut
 library rather than having to install it manually. ArduinoJSON can be
 installed through the Arduino IDE’s package manager.</p>
 </div>
-<p>It runs on a <a class="reference external" href="https://www.pjrc.com/store/teensy32.html">Teensy
-3.2</a>. To compile this firmware and
+<p>It runs on a <a class="reference external" href="https://www.pjrc.com/store/teensy32.html">Teensy 3.2</a>. To compile this firmware and
 program the microcontroller, the following dependencies are required:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a></p></li>
@@ -418,17 +420,20 @@ instructions recommend the Arduino IDE because the Arduino IDE is already quite 
 It also allows the user to program the Teensy in a convenient way if that is desired. Its firmware can be modified to accept other RPCs or inputs.</p>
 <p>This is the <a class="reference external" href="https://github.com/open-ephys/onix-commutator/tree/master/firmware/commutator">firmware with which the commutator ships</a>.</p>
 </section>
-<section id="assembly">
-<h2>Assembly<a class="headerlink" href="#assembly" title="Permalink to this headline">#</a></h2>
+<section id="mechanical-assembly">
+<h2>Mechanical Assembly<a class="headerlink" href="#mechanical-assembly" title="Permalink to this headline">#</a></h2>
 <p>After the PCB is finished being soldered, assembly is pretty straight forward. The stepper motor is inserted and fastened by
-four M2.5 screws. The SMA rotary joint is inserted and fastened by M3 or #4-40 screws. The stepper motor connects to a
+four M2.5 screws 6mm long. The SMA rotary joint is inserted and fastened by M2.5 screws 10mm long. The stepper motor connects to a
 4-pin connector on the one of the commutator PCB’s daughter boards. The commutator PCB is fastened to the enclosure with
-#2-56 screws. The most trickiest part is gluing the gears. They are glued to the motor and rotary joint rotors. Clamp
+#2-56 screws. The trickiest part is attaching the gears. They are glued to the motor and rotary joint rotors. Clamp
 to ensure the gears do not mis-align during the curing process.</p>
 <div class="admonition-todo admonition" id="id3">
 <p class="admonition-title">Todo</p>
 <p>are #2-56 actually the screws used for fastening PCB to enclosure? Metric equivalent? What glue is used?</p>
 </div>
+</section>
+<section id="design-consideration">
+<h2>Design Consideration<a class="headerlink" href="#design-consideration" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
 </div>
 </section>

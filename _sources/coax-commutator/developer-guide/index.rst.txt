@@ -1,20 +1,22 @@
+
+For an overview of Open Ephys Commutators, visit the :ref:`oec`.
+For instructions on how to use the Coaxial Commutator, visit the Coaxial Commutator
+:ref:`quick_start` Guide and :ref:`user_guide`.
+
 .. _dev_guide:
 
 Developer Guide
 -------------------------------------------------
 
-.. note:: For an overview of Open Ephys Commutators, visit the :ref:`oec`.  For
-    instructions on how to use the Coaxial Commutator, visit the Coaxial Commutator
-    :ref:`quick_start` Guide and :ref:`user_guide`.
-
 Design Files
 *************************************************
 Open Ephys commutators are open-source. Mechanical, electrical, and firmware designs are available in the
 `onix-commutator git repo <https://github.com/open-ephys/onix-commutator>`_. Below explains how to manufacture
-your own Open Ephys Commutator using these files. This is helpful if you
-intend to create a custom commutator or adapt an off-shelf-commutator Open Ephys Commutator to your system by reprogramming it to accept
+your own Open Ephys Commutator using these files. This is helpful if you intend to create a custom commutator or adapt
+an off-shelf-commutator Open Ephys Commutator to your system by reprogramming it to accept
 other inputs instead of or in addition to the JSON remote procedure calls (RPCs) that the commutator is already designed
-to accept.
+to accept. Finally, there are some design considerations at the bottom of the page in case you are considering designing
+your own commutator.
 
 Bill of Materials (BoM)
 *************************************************
@@ -40,7 +42,6 @@ The BoM for the electrical components is provided below.
         :file: "./ONIX Commutator BOM - Electrical.csv"
         :header-rows: 1
 
-
 Ordering and Manufacturing Parts
 *************************************************
 
@@ -50,8 +51,8 @@ Mechanical
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you desire low quantity, first seek out local options. Many universities or libraries offer free 3D printing
-services. They don't always have SLS/MJF which is how the commutator enclosures are manufactured, but you might be able to use
-a FDM/SLA 3D printing if necessary. The big difference is that you will probably be required to to add structural
+services. They don't always have SLS/MJF which is how the commutator enclosures are manufactured, but you might be able
+to use a FDM/SLA 3D printing if necessary. The big difference is that you will probably be required to to add structural
 supports that assist in the printing process. Post-processing the removal of the structural support can be time-demanding.
 If you don't have access to a SLS/MJF printer and don't want to
 deal with supports, there are many online manufacturers that will 3D print this for you. They cost more and often have a minimum
@@ -64,7 +65,6 @@ but they are starting now to accommodate other file types as well such as sldprt
 .. Note:: In creating your own custom commutator, it is possible to change the gear ratio while making minimal changes
    the commutator electronics and `firmware <https://github.com/open-ephys/onix-commutator/tree/master/firmware/commutator>`_.
    The only change that must be made is a modification of the GEAR_RATIO macro on line 22
-
 
 Electrical
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -101,8 +101,7 @@ Commutator firmware can be uploaded to the device using the `Arduino IDE <https:
    library rather than having to install it manually. ArduinoJSON can be
    installed through the Arduino IDE's package manager.
 
-It runs on a `Teensy
-3.2 <https://www.pjrc.com/store/teensy32.html>`__. To compile this firmware and
+It runs on a `Teensy 3.2 <https://www.pjrc.com/store/teensy32.html>`__. To compile this firmware and
 program the microcontroller, the following dependencies are required:
 
 - `Arduino IDE <https://www.arduino.cc/en/Main/Software>`__
@@ -129,16 +128,21 @@ It also allows the user to program the Teensy in a convenient way if that is des
 
 This is the `firmware with which the commutator ships <https://github.com/open-ephys/onix-commutator/tree/master/firmware/commutator>`_.
 
-Assembly
+Mechanical Assembly
 **************************************************************
 
 After the PCB is finished being soldered, assembly is pretty straight forward. The stepper motor is inserted and fastened by
-four M2.5 screws. The SMA rotary joint is inserted and fastened by M3 or #4-40 screws. The stepper motor connects to a
+four M2.5 screws 6mm long. The SMA rotary joint is inserted and fastened by M2.5 screws 10mm long. The stepper motor connects to a
 4-pin connector on the one of the commutator PCB's daughter boards. The commutator PCB is fastened to the enclosure with
-#2-56 screws. The most trickiest part is gluing the gears. They are glued to the motor and rotary joint rotors. Clamp
+#2-56 screws. The trickiest part is attaching the gears. They are glued to the motor and rotary joint rotors. Clamp
 to ensure the gears do not mis-align during the curing process.
 
 .. TODO:: are #2-56 actually the screws used for fastening PCB to enclosure? Metric equivalent? What glue is used?
+
+Design Consideration
+**************************************************************
+
+
 
 .. toctree::
     :hidden:

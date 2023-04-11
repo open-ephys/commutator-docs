@@ -34,7 +34,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Troubleshooting" href="../troubleshooting.html" />
-    <link rel="prev" title="ONIX and Computer Vision" href="onix-computervision.html" />
+    <link rel="prev" title="Computer Vision" href="computervision.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -191,8 +191,8 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="onix-computervision.html">
-       ONIX and Computer Vision
+      <a class="reference internal" href="computervision.html">
+       Computer Vision
       </a>
      </li>
      <li class="toctree-l3 current active">
@@ -278,13 +278,12 @@
   <section id="miniscope-daq-and-ucla-miniscope-v4">
 <h1>Miniscope DAQ and UCLA Miniscope v4<a class="headerlink" href="#miniscope-daq-and-ucla-miniscope-v4" title="Permalink to this headline">#</a></h1>
 <img alt="../../../_images/miniscopedaq-miniscopev4.jpg" src="../../../_images/miniscopedaq-miniscopev4.jpg" />
-<p>There are two applications that can be used for automate commutation with the Miniscope DAQ and UCLA Miniscope v4.
+<p>There are two applications that can be used to automate commutation with the Miniscope DAQ and UCLA Miniscope v4.
 They are <a class="reference internal" href="#bonsai"><span class="std std-ref">Bonsai</span></a> and <a class="reference internal" href="#miniscope-daq-qt-gui"><span class="std std-ref">Miniscope-DAQ-QT-GUI</span></a>.</p>
 <section id="bonsai">
 <span id="id1"></span><h2>Bonsai<a class="headerlink" href="#bonsai" title="Permalink to this headline">#</a></h2>
-<p>This section outlines how to use Bonsai software to automate commutation of the
-tether between a miniscope mounted on a freely moving animal and a stationary
-DAQ.</p>
+<p>This section outlines how to use Bonsai software to automate commutation of the coaxial
+tether between a UCLA Miniscope v4 mounted on a freely moving animal and ONIX.</p>
 <ol class="arabic">
 <li><p>Follow the <a class="reference internal" href="../../quick-start-guide/index.html#quick-start"><span class="std std-ref">Quick Start</span></a> to ensure you can control the commutator using Bonsai.</p></li>
 <li><p>Install the <strong>Bonsai.Miniscope</strong> Package from Bonsai’s package manager.</p>
@@ -303,13 +302,13 @@ the information found in the <a class="reference internal" href="../mount-connec
 data from the miniscope’s on-board IMU sensor:</p>
                 <div class="bonsai-workflow-container">
         <div class="workflow-filler"></div>
-        <div class="workflow-download"><img class="download-copy-img" src="../../../_static/images/download.svg" onclick="getFileFromURL('../../../_static/downloads/commutator-miniscopev4-automate.bonsai')" width=18px /></div>
-        <div class="workflow-copy"><img class="download-copy-img" src="../../../_static/images/copy.svg" onclick="getTextFromURL('../../../_static/downloads/commutator-miniscopev4-automate.bonsai')" width=18px /></div>
-        <div class="workflow-name"><b>commutator-miniscopev4-automate.bonsai</b></div>
-        <div class="workflow-image"><img src="../../../_static/images/commutator-miniscopev4-automate.svg" alt="commutator-miniscopev4-automate" /></div>
+        <div class="workflow-download"><img class="download-copy-img" src="../../../_static/images/download.svg" onclick="getFileFromURL('../../../_static/downloads/miniscopedaq-miniscopev4-commutate.bonsai')" width=18px /></div>
+        <div class="workflow-copy"><img class="download-copy-img" src="../../../_static/images/copy.svg" onclick="getTextFromURL('../../../_static/downloads/miniscopedaq-miniscopev4-commutate.bonsai')" width=18px /></div>
+        <div class="workflow-name"><b>miniscopedaq-miniscopev4-commutate.bonsai</b></div>
+        <div class="workflow-image"><img src="../../../_static/images/miniscopedaq-miniscopev4-commutate.svg" alt="miniscopedaq-miniscopev4-commutate" /></div>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Be sure to Configure the <strong>PortName</strong> property of the
+<p>Be sure to configure the <strong>PortName</strong> property of the
 <strong>Commutator</strong> node to reflect the port to which the commutator is
 connected.</p>
 </div>
@@ -320,6 +319,8 @@ commutator will follow miniscope rotations</p></li>
 </section>
 <section id="miniscope-daq-qt-gui">
 <span id="id2"></span><h2>Miniscope-DAQ-QT-GUI<a class="headerlink" href="#miniscope-daq-qt-gui" title="Permalink to this headline">#</a></h2>
+<p>This section outlines how to use Miniscope software to automate commutation of the coaxial
+tether between a UCLA Miniscope v4 mounted on a freely moving animal and ONIX.</p>
 <div class="admonition-todo admonition" id="id3">
 <p class="admonition-title">Todo</p>
 <p>document</p>
@@ -333,11 +334,11 @@ commutator will follow miniscope rotations</p></li>
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="onix-computervision.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="computervision.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ONIX and Computer Vision</p>
+            <p class="prev-next-title">Computer Vision</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../troubleshooting.html" title="next page">

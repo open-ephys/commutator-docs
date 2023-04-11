@@ -33,7 +33,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="ONIX and Computer Vision" href="onix-computervision.html" />
+    <link rel="next" title="Computer Vision" href="computervision.html" />
     <link rel="prev" title="ONIX and Coaxial Headstage-64" href="onix-coaxheadstage64.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -191,8 +191,8 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="onix-computervision.html">
-       ONIX and Computer Vision
+      <a class="reference internal" href="computervision.html">
+       Computer Vision
       </a>
      </li>
      <li class="toctree-l3">
@@ -263,10 +263,41 @@
   <section id="onix-and-ucla-miniscope-v4">
 <h1>ONIX and UCLA Miniscope v4<a class="headerlink" href="#onix-and-ucla-miniscope-v4" title="Permalink to this headline">#</a></h1>
 <img alt="../../../_images/onix-miniscopev4.jpg" src="../../../_images/onix-miniscopev4.jpg" />
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>document</p>
+<p>This section outlines how to use Bonsai software to automate commutation of the coaxial
+tether between a UCLA Miniscope v4 mounted on a freely moving animal and ONIX.</p>
+<ol class="arabic">
+<li><p>Follow the <a class="reference internal" href="../../quick-start-guide/index.html#quick-start"><span class="std std-ref">Quick Start</span></a> to ensure you can control the commutator using Bonsai.</p></li>
+<li><p>Install the <strong>Bonsai.ONIX</strong> Package from Bonsai’s package manager.</p>
+<ul>
+<li><p>Select Community Feed</p>
+<img alt="Screenshot for selecting package source" src="../../../_images/bonsai-community-feed.png" />
+</li>
+<li><p>Install <strong>Bonsai.ONIX</strong></p>
+<img alt="Screenshot for installing Bonsai.Onix" src="../../../_images/install-bonsai-onix.png" />
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will not be able to open the workflow if ONIX is not already properly installed and connected</p>
 </div>
+</li>
+<li><p>Download, configure, and run the following Bonsai workflow for automating commutation using orientation
+data from the headstages’s on-board IMU sensor:</p>
+                <div class="bonsai-workflow-container">
+        <div class="workflow-filler"></div>
+        <div class="workflow-download"><img class="download-copy-img" src="../../../_static/images/download.svg" onclick="getFileFromURL('../../../_static/downloads/onix-miniscopev4-commutate.bonsai')" width=18px /></div>
+        <div class="workflow-copy"><img class="download-copy-img" src="../../../_static/images/copy.svg" onclick="getTextFromURL('../../../_static/downloads/onix-miniscopev4-commutate.bonsai')" width=18px /></div>
+        <div class="workflow-name"><b>onix-miniscopev4-commutate.bonsai</b></div>
+        <div class="workflow-image"><img src="../../../_static/images/onix-miniscopev4-commutate.svg" alt="onix-miniscopev4-commutate" /></div>
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be sure to configure the <strong>PortName</strong> property of the
+<strong>Commutator</strong> node to reflect the port to which the commutator is
+connected.</p>
+</div>
+</li>
+<li><p>Run the workflow in Bonsai. If all above steps are correctly performed, the commutator will follow headstage rotations</p></li>
+</ol>
 </section>
 
 
@@ -282,10 +313,10 @@
             <p class="prev-next-title">ONIX and Coaxial Headstage-64</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="onix-computervision.html" title="next page">
+    <a class='right-next' id="next-link" href="computervision.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ONIX and Computer Vision</p>
+        <p class="prev-next-title">Computer Vision</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
