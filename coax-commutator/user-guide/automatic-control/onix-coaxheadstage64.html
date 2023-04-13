@@ -33,7 +33,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="ONIX and UCLA Miniscope v4" href="onix-miniscopev4.html" />
+    <link rel="next" title="ONIX and Neuropixels 1.0" href="onix-neuropixels1%2C0.html" />
     <link rel="prev" title="Automating Commutation" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -186,13 +186,18 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="onix-neuropixels1%2C0.html">
+       ONIX and Neuropixels 1.0
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="onix-miniscopev4.html">
        ONIX and UCLA Miniscope v4
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="computervision.html">
-       Computer Vision
+       Computer Vision and Any Coaxial Headstage
       </a>
      </li>
      <li class="toctree-l3">
@@ -282,27 +287,23 @@ tether between a headstage-64 mounted on a freely moving animal and ONIX.</p>
 </div>
 </li>
 <li><p>Download, configure, and run the following Bonsai workflow for automating commutation using orientation
-data from the headstages’s on-board IMU sensor:</p>
+data from the headstage’s on-board IMU sensor:</p>
                 <div class="bonsai-workflow-container">
         <div class="workflow-filler"></div>
-        <div class="workflow-download"><img class="download-copy-img" src="../../../_static/images/download.svg" onclick="getFileFromURL('../../../_static/downloads/onix-coaxheadstage64-commutate.bonsai')" width=18px /></div>
-        <div class="workflow-copy"><img class="download-copy-img" src="../../../_static/images/copy.svg" onclick="getTextFromURL('../../../_static/downloads/onix-coaxheadstage64-commutate.bonsai')" width=18px /></div>
-        <div class="workflow-name"><b>onix-coaxheadstage64-commutate.bonsai</b></div>
-        <div class="workflow-image"><img src="../../../_static/images/onix-coaxheadstage64-commutate.svg" alt="onix-coaxheadstage64-commutate" /></div>
-</div><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Be sure to configure the <strong>PortName</strong> property of the
-<strong>Commutator</strong> node to reflect the port to which the commutator is
-connected.</p>
-</div>
+        <div class="workflow-download"><img class="download-copy-img" src="../../../_static/images/download.svg" onclick="getFileFromURL('../../../_static/downloads/onix-coaxheadstage-commutate.bonsai')" width=18px /></div>
+        <div class="workflow-copy"><img class="download-copy-img" src="../../../_static/images/copy.svg" onclick="getTextFromURL('../../../_static/downloads/onix-coaxheadstage-commutate.bonsai')" width=18px /></div>
+        <div class="workflow-name"><b>onix-coaxheadstage-commutate.bonsai</b></div>
+        <div class="workflow-image"><img src="../../../_static/images/onix-coaxheadstage-commutate.svg" alt="onix-coaxheadstage-commutate" /></div>
+</div><ul>
+<li><p>Configure the <strong>DeviceAddress</strong> property of the <strong>BNO055 9-Axis IMU &amp; Commutator</strong> node to reflect the address in
+which the BNO055 resides on this particular headstage device.</p>
+<img alt="../../../_images/bno-address.png" src="../../../_images/bno-address.png" />
 </li>
-<li><p>Run the workflow in Bonsai. If all above steps are correctly performed, the commutator will follow headstage rotations</p></li>
-<li><p>Load data produced by the above workflow in Python or MATLAB:</p>
-<ul class="simple">
-<li><p>Python: <a class="reference download internal" download="" href="../../../_downloads/42ac01d31f65561322d8f91bd1634be5/load_headstage64.py"><code class="xref download docutils literal notranslate"><span class="pre">load_headstage64.py</span></code></a></p></li>
-<li><p>MATLAB: <a class="reference download internal" download="" href="../../../_downloads/2fbbbf9e9bf9f1cbd744daa57b5fd9b4/load_headstage64.m"><code class="xref download docutils literal notranslate"><span class="pre">load_headstage64.m</span></code></a></p></li>
+<li><p>Configure the <strong>PortName</strong> property of the <strong>Commutator</strong> node to reflect the port to which the commutator is
+connected.</p></li>
 </ul>
 </li>
+<li><p>Run the workflow in Bonsai. If all above steps are correctly performed, the commutator will follow headstage rotations</p></li>
 </ol>
 </section>
 
@@ -319,10 +320,10 @@ connected.</p>
             <p class="prev-next-title">Automating Commutation</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="onix-miniscopev4.html" title="next page">
+    <a class='right-next' id="next-link" href="onix-neuropixels1%2C0.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ONIX and UCLA Miniscope v4</p>
+        <p class="prev-next-title">ONIX and Neuropixels 1.0</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

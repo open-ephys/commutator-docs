@@ -1,11 +1,11 @@
 
-ONIX and Coaxial Headstage-64
+ONIX and Neuropixels 1.0
 ****************************************************************
 
-.. image:: ../../../_static/images/onix-coaxheadstage64.jpg
+.. image:: ../../../_static/images/onix-neuropixels1,0.jpg
 
 This section outlines how to use Bonsai software to automate commutation of the coaxial
-tether between a headstage-64 mounted on a freely moving animal and ONIX.
+tether between a Neuropixels 1.0 mounted on a freely moving animal and ONIX.
 
 #. Follow the :ref:`quick_start` to ensure you can control the commutator using Bonsai.
 
@@ -33,7 +33,7 @@ tether between a headstage-64 mounted on a freely moving animal and ONIX.
             {% endwith %}
 
    -  Configure the **DeviceAddress** property of the **BNO055 9-Axis IMU & Commutator** node to reflect the address in
-      which the BNO055 resides on this particular headstage device.
+      which the BNO055 resides on the headstage device.
 
       .. image:: ../../../_static/images/bno-address.png
 

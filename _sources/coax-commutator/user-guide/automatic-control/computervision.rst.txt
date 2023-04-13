@@ -1,5 +1,5 @@
 
-Computer Vision
+Computer Vision and Any Coaxial Headstage
 ****************************************************************
 
 .. image:: ../../../_static/images/computervision.jpg
@@ -8,7 +8,7 @@ Computer Vision
    the GPU, the more computationally heavy tasks your computer will be able to perform in real-time such as processing
    higher resolution images or more frames per second.
 
-There are two pose-estimation software suites that can be interfaced with Bonsai and a camera to automate commutation of
+There are multiple pose-estimation software suites that can be interfaced with Bonsai and a camera to automate commutation of
 the coaxial tether attached to the head stage of a freely moving animal using computer vision.
 They are :ref:`SLEAP` and :ref:`DeepLabCut`
 

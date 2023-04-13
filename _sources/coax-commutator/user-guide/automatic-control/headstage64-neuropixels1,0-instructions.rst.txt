@@ -1,11 +1,6 @@
+:orphan:
 
-ONIX and Coaxial Headstage-64
-****************************************************************
-
-.. image:: ../../../_static/images/onix-coaxheadstage64.jpg
-
-This section outlines how to use Bonsai software to automate commutation of the coaxial
-tether between a headstage-64 mounted on a freely moving animal and ONIX.
+part1-start
 
 #. Follow the :ref:`quick_start` to ensure you can control the commutator using Bonsai.
 
@@ -26,14 +21,11 @@ tether between a headstage-64 mounted on a freely moving animal and ONIX.
 #. Download, configure, and run the following Bonsai workflow for automating commutation using orientation
    data from the headstage’s on-board IMU sensor:
 
-   .. raw:: html
-
-            {% with static_path = '../../../_static', name = 'onix-coaxheadstage-commutate' %}
-                {% include 'workflow.html' %}
-            {% endwith %}
+part1-end
+part2-start
 
    -  Configure the **DeviceAddress** property of the **BNO055 9-Axis IMU & Commutator** node to reflect the address in
-      which the BNO055 resides on this particular headstage device.
+      which the BNO055 resides on the headstage device.
 
       .. image:: ../../../_static/images/bno-address.png
 
@@ -41,3 +33,5 @@ tether between a headstage-64 mounted on a freely moving animal and ONIX.
       connected.
 
 #. Run the workflow in Bonsai. If all above steps are correctly performed, the commutator will follow headstage rotations
+
+part2-end
