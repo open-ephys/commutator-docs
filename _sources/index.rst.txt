@@ -27,11 +27,11 @@ Open Ephys Commutators
                             </a>) provide real-time measurements of freely
                             moving animals' 3D pose. These technologies can be
                             used to drive active commutation instead of relying
-                            using tether torque measurement, which is used in
+                            on torque measurements of the tether which is used in
                             conventional active commutators. This permits the
-                            use of <a
+                            use of super thin coaxial cables (such as these <a
                             href="https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html">
-                            extremely thin tethers </a> that promote natural
+                            extremely thin tethers </a>) that promote natural
                             animal behavior but are incompatible with
                             torque-based active commutators because their
                             flexibility precludes accurate torque measurement.
