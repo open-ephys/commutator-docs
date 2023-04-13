@@ -18,6 +18,7 @@ Open Ephys commutator with a third-party/custom system, refer to the
     :hidden:
 
     onix-coaxheadstage64
+    onix-neuropixels1,0
     onix-miniscopev4
     computervision
     miniscopedaq-miniscopev4
