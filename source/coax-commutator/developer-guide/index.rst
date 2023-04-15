@@ -1,12 +1,12 @@
-
-For an overview of Open Ephys Commutators, visit the :ref:`oec`.
-For instructions on how to use the Coaxial Commutator, visit the Coaxial Commutator
-:ref:`quick_start` Guide and :ref:`user_guide`.
-
 .. _dev_guide:
 
 Developer Guide
 -------------------------------------------------
+
+.. attention:: This section provides informaiton on hacking a commutator or
+   building your own. For an overview of Open Ephys Commutators, visit the
+   :ref:`oec`.  For instructions on how to use the Coaxial Commutator, visit
+   the Coaxial Commutator :ref:`quick_start` Guide and :ref:`user_guide`.
 
 Design Files
 *************************************************

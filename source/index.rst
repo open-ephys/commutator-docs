@@ -19,6 +19,8 @@ Open Ephys Commutators
                 <div class="col-lg-9 col-md-9 col-sm-7 col-xs-7 d-flex flex-column m-0 p-0">
                     <div class="card-body">
                         <p class="card-text">
+                            Open-ephys commutators provide nearly <b>torque-free</b>
+                            tether management for freely moving recordings.
                             Internal-measurement units (IMUs) or video-based
                             pose-estimation methods (e.g. <a
                             href="https://github.com/DeepLabCut/DeepLabCut">
@@ -26,33 +28,24 @@ Open Ephys Commutators
                             href="https://github.com/talmolab/sleap"> SLEAP
                             </a>) provide real-time measurements of freely
                             moving animals' 3D pose. These technologies can be
-                            used to drive active commutation instead of relying
-                            on torque measurements of the tether which is used in
-                            conventional active commutators. This permits the
-                            use of super thin coaxial cables (such as these <a
+                            used to drive active tether commutation instead of
+                            relying on tether torque measurements  which is
+                            used in conventional active commutators. This
+                            permits the use of exceptionally thin coaxial
+                            cables (such as these <a
                             href="https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html">
                             extremely thin tethers </a>) that promote natural
-                            animal behavior but are incompatible with
-                            torque-based active commutators because their
-                            flexibility precludes accurate torque measurement.
-                            Additionally, because these commutators do not rely
-                            on torque transmission, they are effectively
-                            <b>zero-toque</b>.
+                            animal behavior but are to flexivle to be used with
+                            torque-based active commutators.
                             <br> 
                             <br> 
-                            Open Ephys Commutators are open-source, motorized
-                            commutators that utilize this principle to prevent
-                            electrical or optical tethers from twisting during
-                            experiments with freely moving animals. They can be
-                            controlled manually through button presses or
-                            remote control by pose-estimation software.
                             Currently available Open Ephys Commutators include:
                         </p>
                         <ul class="simple">
                             <li><p><b>Coax Commutator:</b></p></li>
                             <p style="margin-left: 1em"> Compatible with <a href="https://open-ephys.org/miniscope-v4/miniscope-v4">UCLA miniscope headstages</a> and <a href="https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html"> Open Ephys electrophysiology headstages</a> </p>
                             <li><p><b>SPI Commutator:</b></p></li>
-                            <p style="margin-left: 1em"> Compatible with headstages that use SPI digital communcaiton such as those from <a href="https://open-ephys.org/acquisition-system/low-profile-spi-headstage-64ch">Open Ephys</a> and <a href="https://intantech.com/pricing.html">Intan</a> </p>
+                            <p style="margin-left: 1em"> Compatible with headstages that use SPI digital communication such as those from <a href="https://open-ephys.org/acquisition-system/low-profile-spi-headstage-64ch">Open Ephys</a> and <a href="https://intantech.com/pricing.html">Intan</a> </p>
                         </ul>
                         <p class="card-text">
                             To start using your your Open Ephys Commutator, please
