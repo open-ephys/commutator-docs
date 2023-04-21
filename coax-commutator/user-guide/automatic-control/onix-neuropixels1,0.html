@@ -295,12 +295,14 @@ data from the headstage’s on-board IMU sensor:</p>
         <div class="workflow-name"><b>onix-coaxheadstage-commutate.bonsai</b></div>
         <div class="workflow-image"><img src="../../../_static/images/onix-coaxheadstage-commutate.svg" alt="onix-coaxheadstage-commutate" /></div>
 </div><ul>
+<li><p>Configure the <strong>CommutatorSerialPort</strong> property of the <strong>BNO055 9-Axis IMU &amp; Commutator</strong> node to reflect the port
+to which the commutator is connected.</p></li>
+<li><p>Configure the <strong>EnableStream</strong> property of the <strong>BNO055 9-Axis IMU &amp; Commutator</strong> node as <em>True</em>.</p></li>
 <li><p>Configure the <strong>DeviceAddress</strong> property of the <strong>BNO055 9-Axis IMU &amp; Commutator</strong> node to reflect the address in
-which the BNO055 resides on the headstage device.</p>
+which corresponds to the BNO055 for this particular headstage device. The correct address can be found by
+referencing the ONIContext table.</p>
 <img alt="../../../_images/bno-address.png" src="../../../_images/bno-address.png" />
 </li>
-<li><p>Configure the <strong>PortName</strong> property of the <strong>Commutator</strong> node to reflect the port to which the commutator is
-connected.</p></li>
 </ul>
 </li>
 <li><p>Run the workflow in Bonsai. If all above steps are correctly performed, the commutator will follow headstage rotations</p></li>
