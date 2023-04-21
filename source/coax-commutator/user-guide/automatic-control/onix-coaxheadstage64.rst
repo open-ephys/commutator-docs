@@ -32,12 +32,15 @@ tether between a headstage-64 mounted on a freely moving animal and ONIX.
                 {% include 'workflow.html' %}
             {% endwith %}
 
+   -  Configure the **CommutatorSerialPort** property of the **BNO055 9-Axis IMU & Commutator** node to reflect the port
+      to which the commutator is connected.
+
+   -  Configure the **EnableStream** property of the **BNO055 9-Axis IMU & Commutator** node as *True*.
+
    -  Configure the **DeviceAddress** property of the **BNO055 9-Axis IMU & Commutator** node to reflect the address in
-      which the BNO055 resides on this particular headstage device.
+      which corresponds to the BNO055 for this particular headstage device. The correct address can be found by
+      referencing the ONIContext table.
 
       .. image:: ../../../_static/images/bno-address.png
-
-   -  Configure the **PortName** property of the **Commutator** node to reflect the port to which the commutator is
-      connected.
 
 #. Run the workflow in Bonsai. If all above steps are correctly performed, the commutator will follow headstage rotations
