@@ -27,16 +27,15 @@ Open Ephys Commutators
                             DeepLabCut </a> or <a
                             href="https://github.com/talmolab/sleap"> SLEAP
                             </a>) provide real-time measurements of freely
-                            moving animals' 3D pose. These technologies can be
-                            used to drive active tether commutation instead of
-                            relying on tether torque measurements  which is
+                            moving animals' 3D orientation. These technologies can be
+                            used to drive active commutation instead of
+                            relying on tether tether torque measurement, which is
                             used in conventional active commutators. This
-                            permits the use of exceptionally thin coaxial
-                            cables (such as these <a
+                            permits the use of exceptionally thin tethers (such as these <a
                             href="https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html">
-                            extremely thin tethers </a>) that promote natural
-                            animal behavior but are to flexivle to be used with
-                            torque-based active commutators.
+                            micro coaxial cables </a>) that promote natural
+                            animal behavior but are to flexible to be used with
+                            conventional commutators.
                             <br> 
                             <br> 
                             Currently available Open Ephys Commutators include:
