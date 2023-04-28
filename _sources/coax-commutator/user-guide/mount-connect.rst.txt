@@ -86,9 +86,10 @@ Commutator Connectors
 
 .. Attention::
    * Some cheap Micro-USB cables only supply power. Ensure the cable used transfers both
-     power and digital signals
-   * Source your coaxial tether from a reputable vendor such as `Digikey
-     <https://www.digikey.com/>`_, `Mouser <https://www.digikey.com/>`_, or `Open Ephys <https://open-ephys.org/store>`_
+     power and digital signals.
+   * Source your coaxial cables from a reputable vendor such as `Digikey
+     <https://www.digikey.com/>`_, `Mouser <https://www.digikey.com/>`_.
+   * Source your coaxial tether from the `Open Ephys <https://open-ephys.org/store>`_ or make your own using `this guide <https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/tethers.html>`__.
    * For animal behavior experiments, manage cables such that they are not
      within range to interfere with the tether when the animal moves. For
      example:
