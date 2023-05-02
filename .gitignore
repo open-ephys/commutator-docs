@@ -18,3 +18,5 @@ docs/*
 
 # macOS specific
 .DS_Store
+
+venv/

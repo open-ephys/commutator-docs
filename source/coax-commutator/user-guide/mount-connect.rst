@@ -38,7 +38,8 @@ Compatible Cables
 A variety of tethers are compatible with the commutator as long as they are terminated with a SMA connector (such as
 the `Miniscope V4 tether <https://open-ephys.org/miniscope-v4/miniscope-v4-coax-cable-kit>`_) or something that can be
 adapted to a SMA connector (such as the `headstage link <https://open-ephys.org/miniscope-v4/miniscope-v4-coax-cable-kit>`_)
-on the commutator end. A standard, high quality SMA-SMA cable (such as `these from Open Ephys <https://open-ephys.org/minicam/sma-to-sma-cable>`_)
+on the commutator end. A standard, high quality SMA-SMA cable (such as
+`these from Open Ephys <https://open-ephys.org/minicam/sma-to-sma-cable>`_)
 can be used between the commutator and the data acquisition device.
 
 Commutator Connectors
@@ -85,17 +86,15 @@ Commutator Connectors
 
 
 .. Attention::
-   * Some cheap Micro-USB cables only supply power. Ensure the cable used transfers both
-     power and digital signals.
-   * Source your coaxial cables from a reputable vendor such as `Digikey
-     <https://www.digikey.com/>`_, `Mouser <https://www.digikey.com/>`_.
-   * Source your coaxial tether from the `Open Ephys <https://open-ephys.org/store>`_ or make your own using `this guide <https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/tethers.html>`__.
-   * For animal behavior experiments, manage cables such that they are not
-     within range to interfere with the tether when the animal moves. For
-     example:
+    * Some cheap Micro-USB cables only supply power. Ensure the cable used transfers both
+      power and digital signals.
+    * Source your coaxial cables from a reputable vendor such as `Digikey <https://www.digikey.com/>`_,
+      `Mouser <https://www.digikey.com/>`_.
+    * Source your coaxial tether from the `Open Ephys <https://open-ephys.org/store>`_ or make your own using `this guide <https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/tethers.html>`__.
+    * For animal behavior experiments, manage cables such that they are not
+      within range to interfere with the tether when the animal moves. For
+      example:
 
-     .. image:: ../../_static/images/cable-management.png
+    .. image:: ../../_static/images/commutator-cable-management.tiff
         :alt: image indicating location of connections
         :align: center
-
-     .. todo:: Better image
