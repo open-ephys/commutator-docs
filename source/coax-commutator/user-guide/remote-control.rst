@@ -8,7 +8,7 @@ The commutator communicates with a computer using `JavaScript Object Notation
 using a (`virtual <https://en.wikipedia.org/wiki/Virtual_COM_port>`__) serial
 port connection. This allows it to be controlled from any piece of software or
 script capable of writing data to a serial port. Virtually every programming
-language will have a library for doing this (i.e. the `pySerial
+language will have a library for doing this (e.g. the `pySerial
 <https://pyserial.readthedocs.io/en/latest/pyserial.html>`__ Python library).
 Additionally, many pieces of software (e.g. Bonsai, Labview, Arduino IDE)
 provide the ability to write to a serial port without any programming.
