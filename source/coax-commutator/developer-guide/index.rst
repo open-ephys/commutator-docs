@@ -119,7 +119,7 @@ This is the `firmware with which the commutator ships <https://github.com/open-e
 Mechanical Assembly
 **************************************************************
 
-#. Gather the materials listed in the `BoM <bom>`__ for the coaxial commutator
+#. Gather the materials listed in the `bom`_ for the coaxial commutator
 #. Visually inspect to confirm that all the components on the PCB are properly soldered
 #. Insert the SMA rotary joint and fasten it with three M2.5 screws 10mm long to the case
 #. Insert the stepper motor and fasten it to the case with four M2.5 screws 6mm long
