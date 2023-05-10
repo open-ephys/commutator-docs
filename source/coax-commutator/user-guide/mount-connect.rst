@@ -27,7 +27,7 @@ behavior setup's full area given the length of your tether. Elastic thread can b
 entering the animal's field while the the animal moves around by catching the thread onto the gear hook and attaching it
 to the tether at various points using Kapton tape.
 
-.. figure:: ../../_static/images/tether-drawing.webp
+.. figure:: ../../_static/images/tether-drawing.png
     :alt: tether drawing
     :align: center
 
