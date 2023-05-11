@@ -255,15 +255,15 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bill-of-materials-bom">
-   Bill of Materials (BoM)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ordering-and-manufacturing-parts">
    Ordering and Manufacturing Parts
   </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bill-of-materials-bom">
+     Bill of Materials (BoM)
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#mechanical">
      Mechanical
@@ -282,8 +282,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mechanical-assembly">
-   Mechanical Assembly
+  <a class="reference internal nav-link" href="#assembly">
+   Assembly
   </a>
  </li>
 </ul>
@@ -319,21 +319,24 @@ the Coaxial Commutator <a class="reference internal" href="../quick-start-guide/
 <section id="design-files">
 <h2>Design Files<a class="headerlink" href="#design-files" title="Permalink to this headline">#</a></h2>
 <p>Open Ephys commutators are open-source. Mechanical, electrical, and firmware designs are available in the
-<a class="reference external" href="https://github.com/open-ephys/onix-commutator">onix-commutator git repo</a>. Below explains how to manufacture
-your own Open Ephys Commutator using these files. This is helpful if you intend to create a custom commutator or adapt
-an off-shelf-commutator Open Ephys Commutator to your system by reprogramming it to accept
-other inputs instead of or in addition to the JSON remote procedure calls (RPCs) that the commutator is already designed
-to accept. Finally, there are some design considerations at the bottom of the page in case you are considering designing
+<a class="reference external" href="https://github.com/open-ephys/onix-commutator">onix-commutator git repo</a>. Here we explain how to build
+your own commutator using these files. You might want to do this to make a custom variant of the design (e.g. with a different RF rotary joint) or adapt
+an Open Ephys Commutator to your system by reprogramming it to accept
+other inputs in addition to the <a class="reference internal" href="../user-guide/remote-control.html#remote-control"><span class="std std-ref">JSON commands</span></a> that the commutator already
+accepts. Finally, there are some design considerations at the bottom of the page in case you are considering designing
 your own commutator.</p>
-</section>
-<section id="bill-of-materials-bom">
-<span id="bom"></span><h2>Bill of Materials (BoM)<a class="headerlink" href="#bill-of-materials-bom" title="Permalink to this headline">#</a></h2>
-<p>Open Ephys is not affiliated with any of the linked vendors in the following
-<a class="reference external" href="https://docs.google.com/spreadsheets/d/1M2R0Q2-OuRHzctt05BxtA3hxNcCHtRZHORzCKElmG1Q/edit?usp=sharing">BoM</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The RF rotary joint and slip rings used in Open Ephys commutator are specified for millions of cycles without failure. If you want to replace these components, make sure you get them from a reputable manufacturer to maintain their reliability. We have found that <a class="reference external" href="https://www.spinner-group.com/en/products/rf-rotary-joints">Spinner</a> is a very good option for gettin high quality rotary joints.</p>
+</div>
 </section>
 <section id="ordering-and-manufacturing-parts">
-<h2>Ordering and Manufacturing Parts<a class="headerlink" href="#ordering-and-manufacturing-parts" title="Permalink to this headline">#</a></h2>
+<span id="bom"></span><h2>Ordering and Manufacturing Parts<a class="headerlink" href="#ordering-and-manufacturing-parts" title="Permalink to this headline">#</a></h2>
 <p>The following sections describe how to fabricate the mechanical parts that comprise the Coaxial Commutator (gears and case).</p>
+<section id="bill-of-materials-bom">
+<h3>Bill of Materials (BoM)<a class="headerlink" href="#bill-of-materials-bom" title="Permalink to this headline">#</a></h3>
+<p>The bill of materials is located <a class="reference external" href="https://docs.google.com/spreadsheets/d/1M2R0Q2-OuRHzctt05BxtA3hxNcCHtRZHORzCKElmG1Q/edit?usp=sharing">here</a>.</p>
+</section>
 <section id="mechanical">
 <h3>Mechanical<a class="headerlink" href="#mechanical" title="Permalink to this headline">#</a></h3>
 <p>If you desire low quantity, first seek out local options. Many universities or libraries offer free 3D printing
@@ -345,7 +348,7 @@ print this for you. They cost more and sometimes have a minimum price to purchas
 <a class="reference external" href="https://www.hubs.com/">3DHubs</a> has a $90 minimum at the time of writing this) which is not great if you are trying to
 print a low quantity of pieces. Other popular ones include <a class="reference external" href="https://formlabs.com/">Formlabs</a>,
 <a class="reference external" href="https://www.shapeways.com/">Shapeways</a>, <a class="reference external" href="https://www.xometry.com/">Xometry</a>,
-<a class="reference external" href="https://www.sculpteo.com/en/">Sculpteo</a> etc. Open Ephys has no affiliation with any of these companies by the way. To
+<a class="reference external" href="https://www.sculpteo.com/en/">Sculpteo</a> etc. Open Ephys has no affiliation with any of these companies. To
 manufacture with these companies, it is often required to upload an
 <a class="reference external" href="https://github.com/open-ephys/onix-commutator/tree/master/mechanical/single_channel/stl">STL</a> or STEP file, but they
 are starting now to accommodate other file types as well such as sldprt files.</p>
@@ -353,20 +356,17 @@ are starting now to accommodate other file types as well such as sldprt files.</
 <p class="admonition-title">Note</p>
 <p>In creating your own custom commutator, it is possible to change the gear ratio. You are only required to make
 one change in the <a class="reference external" href="https://github.com/open-ephys/onix-commutator/tree/master/firmware/commutator">firmware</a>.
-which it to modify the GEAR_RATIO macro on line 22.</p>
+which it to modify the GEAR_RATIO macro.</p>
 </div>
 </section>
 <section id="electrical">
 <h3>Electrical<a class="headerlink" href="#electrical" title="Permalink to this headline">#</a></h3>
 <p>Printed circuit boards (PCBs) are boards that electrically connect a set of electronic components to create functional circuits.
 Those parts are soldered to the PCB to create mechanically stable and reliable operation. The commutator front panel
-is an example of a PCB. Fortunately, PCBs are pretty cheap to fabricate nowadays. For instance,
+is a PCB. Fortunately, PCBs are pretty cheap to fabricate nowadays. For instance,
 you can get a 5-pack of PCBs from <a class="reference external" href="https://jlcpcb.com">JLCPCB</a> for less than $5. To fabricate a PCB, a manufacturer usually
 requires that you upload <a class="reference external" href="https://github.com/open-ephys/onix-commutator/tree/master/control-board/gerber">Gerber files</a>. For the commutator front panel,
-these Gerber files can be found in the public Github repository or produced using ECAD (electrical computer-assisted drawing) files in ECAD software. E
-ECAD software permits the design of a PCB. Open Ephys uses <a class="reference external" href="https://www.kicad.org/">KiCad</a> for this purpose.
-There are other ECAD softwares available, but KiCad is strongly encouraged as it is open-source, extensible, undergoing constant
-improvement, and most importantly easy-to-use. Teaching such software is beyond the scope of this guide, but you can find
+these Gerber files can be found in the public Github repository or produced using ECAD (electrical computer-assisted drawing) files in ECAD software. ECAD software permits the design of a PCB. Open Ephys uses <a class="reference external" href="https://www.kicad.org/">KiCad</a> for this purpose. Teaching such software is beyond the scope of this guide, but you can find
 <a class="reference external" href="https://www.kicad.org/help/learning-resources/">tutorials on KiCad’s website</a> and elsewhere on the web.</p>
 <p>For ordering the electronics parts that are mounted onto the PCB, <a class="reference external" href="https://www.digikey.com">Digikey</a>, <a class="reference external" href="https://www.mouser.com">Mouser</a>, and <a class="reference external" href="https://www.arrow.com">Arrow</a> are go-to vendors.
 Open Ephys has no affiliation with any of these companies. Some parts may be out-of-stock in which case you are forced to
@@ -418,17 +418,20 @@ instructions recommend the Arduino IDE because the Arduino IDE is already quite 
 It also allows the user to program the Teensy in a convenient way if that is desired. Commutator firmware can be modified to accept other RPCs or inputs.</p>
 <p>This is the <a class="reference external" href="https://github.com/open-ephys/onix-commutator/tree/master/firmware/commutator">firmware with which the commutator ships</a>.</p>
 </section>
-<section id="mechanical-assembly">
-<h2>Mechanical Assembly<a class="headerlink" href="#mechanical-assembly" title="Permalink to this headline">#</a></h2>
+<section id="assembly">
+<h2>Assembly<a class="headerlink" href="#assembly" title="Permalink to this headline">#</a></h2>
 <ol class="arabic simple">
-<li><p>Gather the materials listed in the <a class="reference internal" href="#bom">bom</a> for the coaxial commutator</p></li>
-<li><p>Visually inspect to confirm that all the components on the PCB are properly soldered</p></li>
+<li><p>Gather the materials listed in the BOM for the commutator</p></li>
+<li><p>Visually inspect to confirm that all the components on the PCB are properly soldered.</p></li>
+<li><p>If you have access to a multi-meter, check for shorts between power supply rails and ground.</p></li>
+<li><p>Plug a USB cable into the PCB and ensure that the LED and capacitive sense buttons seems to work. Unplug the USB cable.</p></li>
 <li><p>Insert the SMA rotary joint and fasten it with three M2.5 screws 10mm long to the case</p></li>
 <li><p>Insert the stepper motor and fasten it to the case with four M2.5 screws 6mm long</p></li>
 <li><p>Connect the stepper motor to the 4-pin connector on the back of the commutator front panel</p></li>
 <li><p>Fasten the commutator PCB to the case with four M2.5 screws 6mm long</p></li>
 <li><p>Insert the gears onto the rotary joint rotor and motor rotor. Glue them in place such that the gears are properly
 meshed. Clamp to ensure the gears do not mis-align during the curing process.</p></li>
+<li><p>Plug the USB cable into the commutator and try a few manual turns. If the commutator is turning the wrong way, remove the PCB and flip the motor connections.</p></li>
 </ol>
 <div class="toctree-wrapper compound">
 </div>
