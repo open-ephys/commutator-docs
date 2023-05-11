@@ -4,9 +4,9 @@
 <svg
    id="svg5"
    version="1.1"
-   viewBox="0 0 141.78143 95.383278"
+   viewBox="0 0 115.76323 95.383278"
    height="95.383278mm"
-   width="141.78143mm"
+   width="115.76324mm"
    sodipodi:docname="tether-drawing.svg"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    inkscape:export-filename="tether-drawing.png"
@@ -26,9 +26,9 @@
      inkscape:pagecheckerboard="true"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.77869208"
-     inkscape:cx="326.18799"
-     inkscape:cy="349.30367"
+     inkscape:zoom="1.1012369"
+     inkscape:cx="175.71151"
+     inkscape:cy="26.334025"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="1912"
@@ -2320,7 +2320,27 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-32.70719,-21.676307)">
+     transform="translate(-58.725389,-21.676307)">
+    <path
+       style="fill:none;stroke:#800080;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 100.30538,54.620529 c 5.50276,12.79045 7.15777,10.367442 10.40051,13.660962 6.02182,6.11611 19.33805,14.33169 25.69745,16.58985 4.77966,1.69721 22.25001,13.1923 23.05367,14.855479 0.48987,1.0138 3.38231,2.16986 3.38231,2.16986"
+       id="path13055"
+       sodipodi:nodetypes="csssc"
+       inkscape:export-filename="/home/cris/Documents/repos/open-ephys/commutator-docs/source/_static/images/path13055.webp"
+       inkscape:export-xdpi="194.73332"
+       inkscape:export-ydpi="194.73332" />
+    <path
+       style="fill:none;stroke:#800080;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 100.26419,54.544297 c -1.986117,6.75626 -6.85567,8.290019 -0.18328,12.638783 6.36157,2.417035 11.21981,8.006868 0.50243,15.093785 -13.152371,8.697064 -0.0182,11.791377 0.91051,17.100967 0.1361,0.778108 -0.013,2.369738 -0.013,2.369738 h 0.005"
+       id="path7038"
+       sodipodi:nodetypes="ccsscc" />
+    <rect
+       style="fill:#d4aa00;stroke-width:0.79375;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1412"
+       width="2.5077152"
+       height="3.949276"
+       x="98.958916"
+       y="51.708824" />
     <path
        style="fill:#ffffff;stroke:none;stroke-width:0.011811;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9;stroke-dasharray:none;paint-order:normal"
        d=""
@@ -2366,7 +2386,7 @@
        sodipodi:nodetypes="css" />
     <g
        id="g4322"
-       transform="matrix(0.77348057,0,0,1,22.651943,10.05378)">
+       transform="matrix(0.6543626,0,0,1,50.218675,10.05378)">
       <rect
          style="fill:#808080;stroke:none;stroke-width:0;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
          id="rect25705"
@@ -3167,11 +3187,6 @@
        d="m 99.911255,61.453246 1.582595,37.924586"
        id="path6767"
        sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#800080;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 100.26419,54.544297 c -8.27793,4.113399 -6.85567,8.290019 -0.18328,12.638783 6.36157,2.417035 11.21981,8.006868 0.50243,15.093785 -13.152371,8.697064 -0.0182,11.791377 0.91051,17.100967 0.1361,0.778108 -0.013,2.369738 -0.013,2.369738 h 0.005"
-       id="path7038"
-       sodipodi:nodetypes="ccsscc" />
     <circle
        style="fill:#ffcc00;stroke:#ffcc00;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        id="path66919-9"
@@ -3195,18 +3210,18 @@
     <ellipse
        style="fill:#ffcc00;stroke:#ffcc00;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        id="path66919-0"
-       cx="40.830521"
-       cy="44.217239"
+       cx="127.40501"
+       cy="47.484905"
        rx="2.1906216"
        ry="2.1906259" />
     <path
-       style="fill:#0000ff;stroke:#0000ff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="m 36.698228,57.913733 h 8"
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.840942;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 124.57628,58.972828 h 5.65746"
        id="path84157"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:#800080;stroke:#800080;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="m 36.698228,51.065485 h 3.47848 4.52152"
+       style="fill:#800080;stroke:#800080;stroke-width:0.840942;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 124.57628,53.228866 h 2.45992 3.19754"
        id="path84157-6"
        sodipodi:nodetypes="ccc" />
     <g
@@ -3774,14 +3789,6 @@
        style="fill:none;stroke:#0000ff;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 99.71048,61.236791 63.12884,40.659889"
        id="path12262" />
-    <path
-       style="fill:none;stroke:#800080;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-       d="m 100.33541,54.049911 c 5.50276,12.79045 7.12774,10.93806 10.37048,14.23158 6.02182,6.11611 19.33805,14.33169 25.69745,16.58985 4.77966,1.69721 22.25001,13.1923 23.05367,14.855479 0.48987,1.0138 3.38231,2.16986 3.38231,2.16986"
-       id="path13055"
-       sodipodi:nodetypes="csssc"
-       inkscape:export-filename="/home/cris/Documents/repos/open-ephys/commutator-docs/source/_static/images/path13055.webp"
-       inkscape:export-xdpi="194.73332"
-       inkscape:export-ydpi="194.73332" />
     <ellipse
        style="fill:#ffcc00;stroke:#ffcc00;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        id="path66919-2-7"
@@ -3805,25 +3812,25 @@
        ry="0.99999946" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:5.29167px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="46.226849"
-       y="46.363338"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="131.9628"
+       y="49.461109"
        id="text44561"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
-         x="46.226849"
-         y="46.363338"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="131.9628"
+         y="49.461109"
          id="tspan44567">Kapton Tape</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
-         x="46.226849"
-         y="53.039181"
-         id="tspan1826">Elastic Thread</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="131.9628"
+         y="54.801777"
+         id="tspan1828">Tether</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
-         x="46.226849"
-         y="59.715023"
-         id="tspan1828">Tether</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="131.9628"
+         y="60.142445"
+         id="tspan1260">Elastic Thread</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:12.3472px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
