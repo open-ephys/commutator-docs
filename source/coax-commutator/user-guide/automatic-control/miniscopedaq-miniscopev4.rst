@@ -13,7 +13,7 @@ Bonsai
 #######
 
 This section outlines how to use Bonsai software to automate commutation of the coaxial
-tether between a UCLA Miniscope v4 mounted on a freely moving animal and ONIX.
+tether between a UCLA Miniscope v4 mounted on a freely moving animal and a UCLA Miniscope DAQ.
 
 #. Follow the :ref:`quick_start` to ensure you can control the commutator using Bonsai.
 
@@ -54,6 +54,6 @@ Miniscope-DAQ-QT-GUI
 #################################
 
 This section outlines how to use Miniscope software to automate commutation of the coaxial
-tether between a UCLA Miniscope v4 mounted on a freely moving animal and ONIX.
+tether between a UCLA Miniscope v4 mounted on a freely moving animal and a UCLA Miniscope DAQ.
 
 .. TODO:: document
