@@ -249,14 +249,16 @@ h4,
 h5,
 h6 {
   line-height: 1.5;
+  margin-bottom: 0.7em;
 }
 
 /* List items in main area, but not in side bars */
 body > li,
 p {
   line-height: 1.5;
-  margin: 0.3rem 0;
+  margin: 0.7rem 0;
 }
+
 
 
 /* logo */
