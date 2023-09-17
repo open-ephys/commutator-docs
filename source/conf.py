@@ -21,7 +21,7 @@ import os
 
 # -- Project information -----------------------------------------------------
 
-project = "Open Ephys Documentation"
+project = "Open Ephys Commutator Docs"
 copyright = "2010-{}, Open Ephys & Contributors".format(datetime.now(timezone.utc).year)
 author = "Open Ephys & Contributors"
 
@@ -88,8 +88,9 @@ todo_include_todos = True
 # a list of builtin themes.
 #
 html_theme = "pydata_sphinx_theme"
-html_logo = "_static/images/oe_logo_name.png"
+html_logo = "_static/images/oe_logo_commutators.svg"
 html_scaled_image_link = True
+html_title = project
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -106,8 +107,9 @@ html_static_path = ["_static"]
 
 html_sidebars = {
     'index': ['search-field.html'],
-    "**": ["search-field.html", "sidebar-nav-bs.html"]
+    "**": ["sidebar-nav-bs.html"]
 }
+
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
@@ -184,17 +186,19 @@ epub_exclude_files = ["search.html"]
 # documentation.
 
 html_theme = "pydata_sphinx_theme"
-html_logo = "_static/images/oe_logo_name.png"
+html_logo = "_static/images/oe_logo_name.svg"
 html_scaled_image_link = True
 
 html_theme_options = {
-    'external_links': [{'name': 'Open Ephys', 'url': 'https://open-ephys.org'}, ],
-    'navigation_with_keys': True,
-    'use_edit_page_button': False,
-    'show_toc_level': 1,
+    'use_edit_page_button': True,
+    "navigation_with_keys": True,
+    "navbar_end": ["navbar-icon-links"],
+    "navbar_align": "content",
+    "footer_start": ["copyright"],
+    "external_links": [{"name": "Purchase", "url": "https://open-ephys.org/commutators/coaxial-commutator"},],
     'icon_links': [
         dict(name='GitHub',
-             url='https://github.com/open-ephys/commutator-docs',
+             url='https://github.com/open-ephys/onix-commutator',
              icon='fab fa-github'),
         dict(name='Twitter',
              url='https://twitter.com/openephys',
@@ -203,6 +207,18 @@ html_theme_options = {
              url='https://discord.gg/WXAx2URNQU',
              icon='fab fa-discord')
     ],
+    #'canonical_url': '',
+    #'analytics_id': '',
+    #'logo_only': False,
+    #
+    #'prev_next_buttons_location': 'bottom',
+    #'style_external_links': False,
+    # Toc options
+    #'collapse_navigation': False,
+    #'sticky_navigation': True,
+    #    'navigation_depth': 4,
+    #'includehidden': True,
+    #'titles_only': False
 }
 html_favicon = "_static/images/favicon.png"
 
