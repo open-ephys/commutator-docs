@@ -20,6 +20,7 @@ Language <https://bonsai-rx.org>`__ workflow.
      <https://bonsai-rx.org/docs/articles/installation.html>`_
    * Open Bonsai and `install the Bonsai.StarterPack package
      <https://bonsai-rx.org/docs/articles/packages.html>`_
+   * Install the **Bonsai.Scripting.IronPython** Package from Bonsai's package manager to use the automatic commutation scripts we provide.
 
 #. Connect a computer to the commutator using a micro-USB
    cable (connector 1 in the figure below) to establish power and communication
