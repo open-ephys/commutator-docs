@@ -22,10 +22,10 @@ schematic:
 .. note:: For clarity and planning, a 3D model of the commutator body is
    available on the `git repository <https://github.com/open-ephys/onix-commutator/tree/master/mechanical/single_channel>`_
 
-If the commutator is used for an animal behavior experiment, mount it such that the animal can traverse the
-behavior setup's full area given the length of your tether. Elastic thread can be utilized to prevent the tether from
-entering the animal's field while the the animal moves around by catching the thread onto the gear hook and attaching it
-to the tether at various points using Kapton tape.
+If the commutator is used for an animal behavior experiment, mount it such that the animal can
+traverse the behavioral arena. Elastic thread can be utilized to prevent the tether from entering
+the animal's field while the it moves around. This is achieved by catching the thread onto
+the gear hook and attaching it to the tether at various points using Kapton tape. 
 
 .. figure:: ../../_static/images/tether-drawing.png
     :alt: tether drawing
@@ -34,6 +34,12 @@ to the tether at various points using Kapton tape.
     The Kapton tape dots (yellow) and elastic thread (blue) prevent the tether (purple) from draping into the mouse's
     field when the mouse is under the commutator as demonstrated in the top drawing while allowing the mouse to traverse
     the full space of the behavior arena as demonstrated in the bottom drawing.
+
+`Clover 3158 <https://theknittersattic.co.uk/product/elastic-yarn-thread-black/>`__ is the
+recommended elastic thread for this.
+
+.. image:: ../../_static/images/clover-3158.png
+    :alt: elastic thread image
 
 Connecting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -75,7 +81,7 @@ Commutator Connectors
                     <div class="card-body m-0 p-0">
                         <ol class="simple" start="2">
                             <li><p><b>Top SMA Connector:</b></p></li>
-                            <p> The commutator’s stator connects to the stationary data acquisition device (DAQ) through this interconnect </p>
+                            <p> The stationary cable connects to the stationary data acquisition device (DAQ) through this interconnect </p>
                         </ol>
                     </div>
                 </div>
@@ -83,7 +89,7 @@ Commutator Connectors
                     <div class="card-body m-0 p-0">
                         <ol class="simple" start="3">
                             <li><p><b>Bottom SMA Connector:</b></p></li>
-                            <p> The commutator’s rotor connects to the freely moving animal headstage through this interconnect </p>
+                            <p> The rotary tether connects to the freely moving animal headstage through this interconnect </p>
                         </ol>
                     </div>
                 </div>
