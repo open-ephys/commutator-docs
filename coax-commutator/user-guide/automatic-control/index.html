@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Automating Commutation &#8212; Open Ephys Commutator Docs</title>
+    <title>Automate Commutation &#8212; Open Ephys Commutator Docs</title>
   
   
   
@@ -42,7 +42,7 @@
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="ONIX and Coaxial Headstage-64" href="onix-coaxheadstage64.html" />
+    <link rel="next" title="Commutate with Computer Vision" href="computer-vision.html" />
     <link rel="prev" title="Saving Settings" href="../saving-settings.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -326,12 +326,8 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../manual-control.html">Manual Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../remote-control.html">Remote Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../saving-settings.html">Saving Settings</a></li>
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Automating Commutation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="onix-coaxheadstage64.html">ONIX and Coaxial Headstage-64</a></li>
-<li class="toctree-l3"><a class="reference internal" href="onix-neuropixels1%2C0.html">ONIX and Neuropixels 1.0</a></li>
-<li class="toctree-l3"><a class="reference internal" href="onix-miniscopev4.html">ONIX and UCLA Miniscope v4</a></li>
-<li class="toctree-l3"><a class="reference internal" href="computervision.html">Computer Vision and Any Coaxial Headstage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="miniscopedaq-miniscopev4.html">Miniscope DAQ and UCLA Miniscope v4</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Automate Commutation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="computer-vision.html">Commutate with Computer Vision</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
@@ -383,7 +379,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../index.html" class="nav-link">User Guide</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Automating Commutation</li>
+    <li class="breadcrumb-item active" aria-current="page">Automate Commutation</li>
   </ul>
 </nav>
 </div>
@@ -400,30 +396,69 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="automating-commutation">
-<h1>Automating Commutation<a class="headerlink" href="#automating-commutation" title="Permalink to this heading">#</a></h1>
-<p>The commutator’s <a class="reference internal" href="../remote-control.html#remote-control"><span class="std std-ref">remote control system</span></a> enables the
-user to interface the commutator with software to automate the commutation
-process for the purpose of (for example) preserving signal integrity and
-relieving the torsion exerted on a freely moving animal during animal behavior
-experiments.</p>
+  <section id="automate-commutation">
+<h1>Automate Commutation<a class="headerlink" href="#automate-commutation" title="Permalink to this heading">#</a></h1>
+<p>The commutator’s <a class="reference internal" href="../remote-control.html#remote-control"><span class="std std-ref">remote control</span></a> enables the user
+to interface the commutator with software to automate commutation during
+freely moving animal behavior experiments with minimal manual intervention.</p>
 <img alt="../../../_images/demo.gif" class="align-center" src="../../../_images/demo.gif" />
-<p>The following sections outline how to automate the commutator with different
-headstages, miniscopes, and pose-esitimation data sources. To interface your
-Open Ephys commutator with a third-party/custom system, refer to the
-<a class="reference internal" href="../../developer-guide/index.html#dev-guide"><span class="std std-ref">Developer Guide</span></a>.</p>
-<div class="toctree-wrapper compound">
-</div>
+<p>Our docs demonstrate two ways to automate commutation:</p>
+<ol class="arabic">
+<li><p>Using orientation data from a headstage. This requires a headstage or a miniscope that is
+capable of providing orientation data such as Open Ephys headstages with BNO055 IMU sensors.</p>
+<div class="row row-cols-2 gx-1">
+    <div class="card text-center page-card">
+    <a href="https://open-ephys.github.io/bonsai-onix1-docs/articles/hardware/index.html">
+        <div class="card-body">
+            <h3>Commutate with ONIX <i class="fas fa-external-link"></i></h3>
+            <img src="../../../_static/images/breakout_1r5_beta.png"
+            class="hover-zoom card-image-bottom" style="margin:0" alt="OpenEphys.Onix1 bonsai
+            package documentation">
+        </div>
+    </a>
+    </div>
+    <div class="card text-center page-card">
+    <a href="https://open-ephys.github.io/miniscope-docs/ucla-miniscope-v4/user/miniscope-daq/commutate/index.html">
+        <div class="card-body">
+            <h3 class="">Commutate with Miniscope DAQ <i class="fas fa-external-link"></i></h3>
+            <img src="../../../_static/images/miniscope-daq_ucla-miniscope-v4.webp"
+            class="hover-zoom card-image-bottom" style="margin:0" alt="OpenEphys.Onix1 bonsai
+            package documentation">
+        </div>
+    </a>
+    </div>
+</div></li>
+<li><p>Using computer vision. This requires a computer with sufficient graphics processing capabilities
+and training a network to track your animal. Follow the <a class="reference internal" href="computer-vision.html#computer-vision"><span class="std std-ref">Commutate with Computer Vision</span></a> guide.</p>
+<div class="row row-cols-2 gx-1">
+    <div class="card text-center page-card">
+    <a href="~/coax-commutator/user-guide/automatic-control/computer-vision.html">
+        <div class="card-body">
+            <h3>Commutate with Computer Vision <i class="fas fa-external-link"></i></h3>
+            <img src="../../../_static/images/computer-vision.jpg"
+            class="hover-zoom card-image-bottom" style="margin:0" alt="OpenEphys.Onix1 bonsai
+            package documentation">
+        </div>
+    </a>
+    </div>
+</div></li>
+</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Many of these examples use <a class="reference external" href="https://open-ephys.org/bonsai">Bonsai</a>.
+<p>The above examples for automated commutation use <a class="reference external" href="https://open-ephys.org/bonsai">Bonsai</a>.
 Bonsai is open-source software for processing asynchronous, heterogeneous
-streams of data. In our case, it can be used to coordinate orientation data
-(from an IMU sensor or camera sensor for instance) to provide feedback to
-commutator and automate the commutation process. To learn more about how to
-use Bonsai, explore the <a class="reference external" href="https://bonsai-rx.org/">bonsai-rx.org</a> website.
-It is briefly introduced here because it is utilized heavily in the
-remainder following guides for controlling and automating commutation.</p>
+streams of data. To learn more about how to use Bonsai with our hardware, visit:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://open-ephys.github.io/bonsai-onix1-docs/articles/getting-started/index.html">OpenEphys.Onix1 Getting Started Guide</a></p></li>
+<li><p><a class="reference external" href="https://open-ephys.github.io/miniscope-docs/ucla-miniscope-v4/user/miniscope-daq/index.html">UCLA Miniscope 4.0 Data Acquisition Guide</a></p></li>
+<li><p><a class="reference external" href="https://bonsai-rx.org/">Official Bonsai documentation</a>.</p></li>
+</ul>
+</div>
+<p>If you are unable to integrate the Open Ephys Commutator as described above, refer to the
+<a class="reference internal" href="../remote-control.html#remote-control"><span class="std std-ref">Remote Control</span></a> guide to write your own script that writes serial commands to turn the
+commutator. If that is insufficient, try consulting the <a class="reference internal" href="../../developer-guide/index.html#dev-guide"><span class="std std-ref">Developer Guide</span></a> or contacting Open Ephys
+for help.</p>
+<div class="toctree-wrapper compound">
 </div>
 </section>
 
@@ -448,11 +483,11 @@ remainder following guides for controlling and automating commutation.</p>
       </div>
     </a>
     <a class="right-next"
-       href="onix-coaxheadstage64.html"
+       href="computer-vision.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ONIX and Coaxial Headstage-64</p>
+        <p class="prev-next-title">Commutate with Computer Vision</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -515,7 +550,7 @@ remainder following guides for controlling and automating commutation.</p>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2024, Open Ephys &amp; Contributors.
+      © Copyright 2010-2025, Open Ephys &amp; Contributors.
       <br/>
     
   </p>
