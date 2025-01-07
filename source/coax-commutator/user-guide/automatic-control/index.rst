@@ -1,34 +1,77 @@
-Automating Commutation
+Automate Commutation
 *************************
-The commutator's :ref:`remote control system <remote_control>` enables the
-user to interface the commutator with software to automate the commutation
-process for the purpose of (for example) preserving signal integrity and
-relieving the torsion exerted on a freely moving animal during animal behavior
-experiments.
+The commutator's :ref:`remote control <remote_control>` enables the user
+to interface the commutator with software to automate commutation during 
+freely moving animal behavior experiments with minimal manual intervention.
 
 .. image:: ../../../_static/images/demo.gif
     :align: center
 
-The following sections outline how to automate the commutator with different
-headstages, miniscopes, and pose-esitimation data sources. To interface your
-Open Ephys commutator with a third-party/custom system, refer to the
-:ref:`dev_guide`.
+Our docs demonstrate two ways to automate commutation:
+
+
+#.  Using orientation data from a headstage. This requires a headstage or a miniscope that is
+    capable of providing orientation data such as Open Ephys headstages with BNO055 IMU sensors.
+
+    .. raw:: html
+
+        <div class="row row-cols-2 gx-1">
+            <div class="card text-center page-card">
+            <a href="https://open-ephys.github.io/bonsai-onix1-docs/articles/hardware/index.html">
+                <div class="card-body">
+                    <h3>Commutate with ONIX <i class="fas fa-external-link"></i></h3>
+                    <img src="../../../_static/images/breakout_1r5_beta.png"
+                    class="hover-zoom card-image-bottom" style="margin:0" alt="OpenEphys.Onix1 bonsai
+                    package documentation">
+                </div>
+            </a>
+            </div>
+            <div class="card text-center page-card">
+            <a href="https://open-ephys.github.io/miniscope-docs/ucla-miniscope-v4/user/miniscope-daq/commutate/index.html">
+                <div class="card-body">
+                    <h3 class="">Commutate with Miniscope DAQ <i class="fas fa-external-link"></i></h3>
+                    <img src="../../../_static/images/miniscope-daq_ucla-miniscope-v4.webp"
+                    class="hover-zoom card-image-bottom" style="margin:0" alt="OpenEphys.Onix1 bonsai
+                    package documentation">
+                </div>
+            </a>
+            </div>
+        </div>
+
+#.  Using computer vision. This requires a computer with sufficient graphics processing capabilities
+    and training a network to track your animal. Follow the :ref:`computer_vision` guide.
+
+    .. raw:: html
+
+        <div class="row row-cols-2 gx-1">
+            <div class="card text-center page-card">
+            <a href="~/coax-commutator/user-guide/automatic-control/computer-vision.html">
+                <div class="card-body">
+                    <h3>Commutate with Computer Vision <i class="fas fa-external-link"></i></h3>
+                    <img src="../../../_static/images/computer-vision.jpg"
+                    class="hover-zoom card-image-bottom" style="margin:0" alt="OpenEphys.Onix1 bonsai
+                    package documentation">
+                </div>
+            </a>
+            </div>
+        </div>
+
+..  note:: 
+    The above examples for automated commutation use `Bonsai <https://open-ephys.org/bonsai>`__.
+    Bonsai is open-source software for processing asynchronous, heterogeneous
+    streams of data. To learn more about how to use Bonsai with our hardware, visit:
+
+    -   `OpenEphys.Onix1 Getting Started Guide <https://open-ephys.github.io/bonsai-onix1-docs/articles/getting-started/index.html>`__
+    -   `UCLA Miniscope 4.0 Data Acquisition Guide
+        <https://open-ephys.github.io/miniscope-docs/ucla-miniscope-v4/user/miniscope-daq/index.html>`__
+    -   `Official Bonsai documentation <https://bonsai-rx.org/>`__.
+
+If you are unable to integrate the Open Ephys Commutator as described above, refer to the
+:ref:`remote_control` guide to write your own script that writes serial commands to turn the
+commutator. If that is insufficient, try consulting the :ref:`dev_guide` or contacting Open Ephys
+for help.
 
 .. toctree::
     :hidden:
 
-    onix-coaxheadstage64
-    onix-neuropixels1,0
-    onix-miniscopev4
-    computervision
-    miniscopedaq-miniscopev4
-
-
-.. note:: Many of these examples use `Bonsai <https://open-ephys.org/bonsai>`_.
-   Bonsai is open-source software for processing asynchronous, heterogeneous
-   streams of data. In our case, it can be used to coordinate orientation data
-   (from an IMU sensor or camera sensor for instance) to provide feedback to
-   commutator and automate the commutation process. To learn more about how to
-   use Bonsai, explore the `bonsai-rx.org <https://bonsai-rx.org/>`_ website.
-   It is briefly introduced here because it is utilized heavily in the
-   remainder following guides for controlling and automating commutation.
+    computer-vision
