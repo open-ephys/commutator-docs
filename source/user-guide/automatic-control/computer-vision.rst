@@ -3,7 +3,7 @@
 Commutate with Computer Vision
 *******************************
 
-.. image:: ../../../_static/images/computer-vision.jpg
+.. image:: /_static/images/computer-vision.jpg
 
 ..  Note:: 
     To commutate in real-time using computer vision, a high-performance NVIDIA graphics card is recommended. More performant
@@ -21,12 +21,12 @@ moving animal. This example uses SLEAP.
 
     -   Select Bonsai Feed
 
-        ..  image:: ../../../_static/images/bonsai-feed.png
+        ..  image:: /_static/images/bonsai-feed.png
             :alt: Screenshot for selecting package source
 
     -   Install **Bonsai.Sleap.Design** and **Bonsai.StarterPack** by searching and clicking install. For example:
 
-        ..  image:: ../../../_static/images/install-bonsai-starter.png
+        ..  image:: /_static/images/install-bonsai-starter.png
             :alt: Screenshot for installing Bonsai.StarterPack
 
 #.  Prepare your network model for automating commutation:
@@ -49,9 +49,9 @@ moving animal. This example uses SLEAP.
 
         <div class="bonsai-workflow-container">
             <div class="workflow-filler"></div>
-            <div class="workflow-download"><img class="download-copy-img" src="../../../_static/images/download.svg" onclick="getFileFromURL('../../../_static/downloads/sleap-commutate.zip')" width=18px /></div>
+            <div class="workflow-download"><img class="download-copy-img" src="~/_static/images/download.svg" onclick="getFileFromURL('~/_static/downloads/sleap-commutate.zip')" width=18px /></div>
             <div class="workflow-name"><b>sleap-commutate.zip</b></div>
-            <div class="workflow-image"><img src="../../../_static/images/sleap-commutate.svg" alt="sleap-commutate" /></div>
+            <div class="workflow-image"><img src="~/_static/images/sleap-commutate.svg" alt="sleap-commutate" /></div>
         </div>
 
     This example workflow uses pre-recorded video of a hand to demonstrate commutation. First run it

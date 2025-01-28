@@ -9,13 +9,13 @@ They are useful for situations such as:
 - Screwing or unscrewing the tether's SMA connector by turning the motor
 - Untwisting the tether due to an error during automated commutation
 
-.. important:: Manual controls override any ongoing remote controls. In other
-   words, remote commands sent when a button is being pressed are ignored and
-   cleared.
+..  important:: Manual controls override any ongoing remote controls. In other
+    words, remote commands sent when a button is being pressed are ignored and
+    cleared.
    
 .. note:: The buttons on the front panel are capacitive sensor buttons. They are not mechanical so they do not provide tactile or auditory feedback.   
 
-.. image:: ../../_static/images/commutator-buttons-numbered.png
+.. image:: /_static/images/commutator-buttons-numbered.png
     :width: 50%
     :align: center
     :alt: Commutator front image
@@ -46,10 +46,10 @@ They are useful for situations such as:
 
 Reset Button
 ______________________________________________
-On the side of the device, there is a hard **Reset Button**. Pressing this button will reset the internal
-microcontroller's firmware. This might be useful if USB connectivity or custom firmware is causing difficulty.
+On the side of the device, there is a hard **Reset Button**. Pressing this button will power cycle
+the commutator.
 
-.. image:: ../../_static/images/commutator-side-button-numbered.png
+..  image:: /_static/images/commutator-side-button-numbered.png
     :width: 50%
     :align: center
     :alt: Commutator side image

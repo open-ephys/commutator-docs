@@ -42,6 +42,7 @@ release = "0.0.0"
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.githubpages',
+    'sphinx_design',
     # 'sphinx-jinja'
     # 'sphinx.ext.graphviz',
     # 'sphinxcontrib.wavedrom',
@@ -76,7 +77,7 @@ exclude_patterns = []
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
 
-todo_include_todos = True
+todo_include_todos = False
 
 # Breathe Configuration
 # breathe_default_project = 'clroni'
@@ -227,13 +228,12 @@ html_context = {
     "github_repo": "commutator-docs",
     "github_version": "main",
     "doc_path": "source",
-    "css_files": ["_static/theme_overrides.css"],
+    "css_files": ["_static/sphinx-design.min.css", "_static/theme_overrides.css"],
     'default_mode': 'light',
 }
 
 # Option for linkcheck
 linkcheck_anchors = False
-
 
 def rstjinja(app, docname, source):
     '''
