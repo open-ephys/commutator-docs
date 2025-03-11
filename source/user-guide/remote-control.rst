@@ -10,15 +10,26 @@ port connection. This allows it to be controlled from any software or
 script capable of writing data to a serial port. Virtually every programming
 language will have a library for doing this (e.g. the `pySerial
 <https://pyserial.readthedocs.io/en/latest/pyserial.html>`__ Python library).
-Additionally, many software (e.g. Arduino IDE)
-provide the ability to write to a serial port without any programming.
+Additionally, many software (e.g. Arduino IDE) provide a serial monitor to 
+read from and write to a serial port without any programming.
 
-..  attention:: :ref:`Manual control <manual_control>` takes precedence over
+..  attention:: 
+    :ref:`Manual control <manual_control>` takes precedence over
     remote commands. The commutator will dispose all JSON commands that are
     received while manual controls are in use.
 
+All JSON commands must be appended by a LF character. If you are typing commands into
+a serial monitor or using Bonsai, confirm it is configured to append messages with
+the LF character. If multiple valid JSONs are received before receiving a LF character,
+only the first one is processed. 
+
+..  note::
+    Commutators with the Micro-USB connector do not need the LF character but can 
+    operate with it
+
 JSON Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 JSON is a human-readable data format for assigning values to or reading values from
 properties. The notation is::
 
@@ -111,7 +122,6 @@ properties is documented here:
     whether changed via the remote or manual interface, are saved automatically in
     non-volatile memory each time they are changed. The device will start in the
     same state it was last used.
-
 
 Compound JSON commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

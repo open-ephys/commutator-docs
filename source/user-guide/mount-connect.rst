@@ -5,168 +5,81 @@ Mounting and Connecting
 
 Mounting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The commutator should be mounted such that it is roughly centered over the behavioral arena. There
-are several holes in various positions around the commutator's body that are compatible standard
-`80/20 aluminum extrusion
+The commutator has several holes that can be used to mount it on `80/20 aluminum extrusion
 <https://8020.net/framing-options/t-slotted-profiles/fractional/10series100basedprofiles.html>`_
-using `t-nuts <https://youtu.be/nK-DsJxAdwM>`_ or a standard mechanical breadboard. Select the
-mounting holes that are convenient for your behavioral setup; not all the holes need to be used. For
-custom mounting solutions, the locations for the mounting holes (which accommodate 1/4"-20 or M6
-SHCS) are indicated in the below schematic:
+using `t-nuts <https://youtu.be/nK-DsJxAdwM>`_ or a standard mechanical breadboard. For example:
 
-..  ..  tab-set::
-..     :sync-group: commutator-type
+..  grid::
 
-..     ..  tab-item:: Coax
-..         :sync: coax
+    ..  grid-item::
 
-..         ..  image:: /_static/images/commutator-mounting-holes.png
-..             :alt: schematic image
-..             :align: center
+        ..  image:: /_static/images/commutator-mount-example-1.png
+            :alt: image of mounted commutator
+            :align: center
+            
+    ..  grid-item::
 
-..         For additional clarity, a 3D model of the commutator body is
-..         available `here <https://github.com/open-ephys/commutator-coax/tree/main/mechanical>`_
+        ..  image:: /_static/images/commutator-mount-example-2.png
+            :alt: image of mounted commutator
+            :align: center
 
-..     ..  tab-item:: Dual Coax
-..         :sync: dual-coax
+For custom mounting solutions, you can find the 3D mCAD files in the following repos: 
 
-..         Content 2
-        
-..         For additional clarity, a 3D model of the commutator body is
-..         available `here <https://github.com/open-ephys/commutator-dual/tree/main/mechanical>`_
+-   `Coax Commutator <https://github.com/open-ephys/commutator-coax/tree/main/mechanical>`_
+-   `Dual Coax Commutator <https://github.com/open-ephys/commutator-dual/tree/main/mechanical>`_
+-   `SPI Commutator <https://github.com/open-ephys/commutator-spi/tree/main/mechanical>`_
 
-..     ..  tab-item:: SPI
-..         :sync: spi
+These files can be be opened and their dimensions can be measured using mCAD softwares. `eDrawings
+<https://www.edrawingsviewer.com/download-edrawings>`_, `Blender
+<https://www.blender.org/download/>`_, `FreeCAD <https://www.freecad.org/>`_ are all free mCAD
+software examples that provide this functionality. All three support STL files. Only the first
+supports SolidWorks files which the original design files are. Both STL and SolidWorks files are
+available in those repos.
 
-..         Content 3
-
-..         For additional clarity, a 3D model of the commutator body is
-..         available `here <https://github.com/open-ephys/commutator-spi/tree/main/mechanical>`_
-
-If you need specific mounting dimensions, open the original design files and take
-measurements using a CAD program that supports the filetypes. For example, Dassault provides a `free
-software <https://www.edrawingsviewer.com/download-edrawings>`_ for viewing of and measuring dimensions
-in Solidworks files. The mechanical designs can be found in the following GitHub repositories:
-
-- `Coax <https://github.com/open-ephys/commutator-coax/tree/main/mechanical>`_
-- `Dual Coax <https://github.com/open-ephys/commutator-dual/tree/main/mechanical>`_
-- `SPI Coax <https://github.com/open-ephys/commutator-spi/tree/main/mechanical>`_
-
-If the commutator is used for an animal behavior experiment, mount it such that the animal can
-traverse the behavior setup's full area given the length of your tether. Elastic thread can be
-utilized to prevent the tether from entering the animal's field while the the animal moves around by
-catching the thread onto the gear hook and attaching it to the tether at various points using Kapton
-tape.
-
-..  figure:: /_static/images/tether-drawing.png
-    :alt: tether drawing
-    :align: center
-
-    The Kapton tape dots (yellow) and elastic thread (blue) prevent the tether (purple) from draping into the mouse's
-    field when the mouse is under the commutator as demonstrated in the top drawing while allowing the mouse to traverse
-    the full space of the behavior arena as demonstrated in the bottom drawing.
+More information on the best location to mount the commutator is available on the next
+:doc:`tether-management_counterweight` page.
 
 Connecting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Compatible tethers depend on the commutator type you have. 
+..  grid:: 
+    :margin: 0
 
-The coax commutators are compatible with a variety of tethers as long as they are terminated with a
-SMA connector (such as the `micro and mini Open Ephys tethers <https://open-ephys.org/tethers>`_). A
-standard, high quality SMA-SMA cable (such as `these from Open Ephys
-<https://open-ephys.org/cables>`_) can be used between the commutator and the data acquisition
-device. There are three electrical interconnects on the coax commutator:
+    ..  grid-item::
 
-.. grid:: 
+        ..  grid:: 1
+            :margin: 0
+            :padding: 0
 
-    .. grid-item::
-
-        .. image:: /_static/images/connections-numbered.png
-
-    .. grid-item::
-
-        .. grid:: 1
-
-            .. grid-item:: **USB Connector**
+            ..  grid-item:: **1. USB Connector**
+                :padding: 0
 
                 The commutator receives power and communicates to the USB with serial
-                communication over USB through this interconnect. The newer commutators use
-                USB-C; the older commutators use Micro-USB.
+                communication over USB through this interconnect. Newer commutators use
+                USB-C. Older commutators use Micro-USB.
 
-            .. grid-item:: **Top SMA Connector**
+            ..  grid-item:: **2. Top SMA Connector**
+                :padding: 0
 
                 The commutator's stator connects to the stationary data acquisition device
                 (e.g. miniscope DAQ or ONIX breakout board) through this interconnect.
 
-            .. grid-item:: **Bottom SMA Connector**
+            ..  grid-item:: **3. Bottom SMA Connector**
+                :padding: 0
 
                 The commutator's rotor connects to the freely moving animal headstage
                 through this interconnect.
 
-The dual coax is similar except it has two top SMA connectors and two bottom SMA connectors
-making five total interconnects.
+    ..  grid-item::
 
-The SPI commutator is similar to the single coax commutator except it utilizes 12-conductor Omnetics
-connectors instead of SMA connectors. It is compatible with tethers that have this connector.
+        ..  image:: /_static/images/connections-numbered.png
 
-.. ..  tab-set::
-..     :sync-group: commutator-type
+..  tip::
 
-..     ..  tab-item:: Coax
-..         :sync: coax
-
-..         A variety of tethers are compatible with the commutator as long as they are terminated with
-..         a SMA connector (such as the `Miniscope V4 tether
-..         <https://open-ephys.org/miniscope-v4/miniscope-v4-coax-cable-kit>`_). A standard, high
-..         quality SMA-SMA cable (such as `these from Open Ephys
-..         <https://open-ephys.org/cables>`_) can be used between the commutator and
-..         the data acquisition device. There are three electrical interconnects on the commutator:
-
-..         .. grid:: 
-
-..             .. grid-item::
-
-..                 .. image:: /_static/images/connections-numbered.png
-
-..             .. grid-item::
-
-..                 .. grid:: 1
-
-..                     .. grid-item:: **USB Connector**
-
-..                         The commutator receives power and communicates to the USB with serial
-..                         communication over USB through this interconnect. The newer commutators use
-..                         USB-C; the older commutators use Micro-USB.
-
-..                     .. grid-item:: **Top SMA Connector**
-
-..                         The commutator's stator connects to the stationary data acquisition device
-..                         (e.g. miniscope DAQ or ONIX breakout board) through this interconnect.
-
-..                     .. grid-item:: **Bottom SMA Connector**
-
-..                         The commutator's rotor connects to the freely moving animal headstage
-..                         through this interconnect.
-
-..         The dual coax is similar except it has two top SMA connectors and two bottom SMA connectors
-..         making five total interconnects.
-
-..     ..  tab-item:: SPI
-..         :sync: spi
-
-..         The SPI commutator is similar to the single coax commutator except it utilizes 12-conductor
-..         Omnetics connectors instead of SMA connectors.
-
-..  Attention::
-    *   Some USB cables only supply power. Confirm cable transfers both
-        power and digital signals.
+    *   Some USB cables only supply power. Confirm your USB cable transfers both power and digital signals.
     *   Source your coaxial cables from a reputable vendor such as `Digikey <https://www.digikey.com/>`_ or
         `Mouser <https://www.digikey.com/>`_.
     *   Source your coaxial tether from the `Open Ephys <https://open-ephys.org/tethers>`_ or 
         `make your own <https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/tethers.html>`_.
     *   For animal behavior experiments, manage the USB cable and the coaxial cable (between the commutator and DAQ)
-        such that they do not interfere with the tether when the animal moves. For example:
-
-    ..  image:: /_static/images/commutator-cable-management.png
-        :alt: image suggesting cable management
-        :align: center
+        such that they do not interfere with the tether when the animal moves.

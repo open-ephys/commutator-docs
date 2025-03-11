@@ -5,15 +5,14 @@ Quick Start Guide
 *************************************************
 
 ..  important:: 
-    Although this example uses `Bonsai <https://bonsai-rx.org>`__
-    and Windows, the commutator communicates over a serial connection using a
-    simple :ref:`set of JSON commands <remote_control>` and therefore is
-    software and operating system agnostic.
+    Although this example uses `Bonsai <https://bonsai-rx.org>`__, 
+    the commutator communicates over a serial connection using a
+    simple :ref:`set of JSON commands <remote_control>` and therefore 
+    is software and operating system agnostic.
 
-This quick start guide provides basic setup instructions to verify the
-commutator's functionality. By following these steps, you will be able to turn
-the commutator using keyboard presses from a  `Bonsai Visual Programming
-Language <https://bonsai-rx.org>`__ workflow.
+This quick start guide provides basic setup instructions to verify the commutator's functionality.
+By following these steps, you will be able to turn the commutator using keyboard presses from a
+`Bonsai <https://bonsai-rx.org>`__ workflow.
 
 #.  If you have not already done so,
 
@@ -21,9 +20,7 @@ Language <https://bonsai-rx.org>`__ workflow.
     *   Open Bonsai and `install the Bonsai.StarterPack package <https://bonsai-rx.org/docs/articles/packages.html>`_ 
 
 #.  Connect the commutator to computer using a USB-C (Micro-USB in older versions) cable to
-    establish power and communication between the commutator and the computer. For this quick start
-    guide, the commutated connections are not needed. In other words, the coax, coaxes,
-    or 12-conductor Omnetics connector (depending on which commutator you have) can stay disconnected.
+    establish power and communication between the commutator and the computer. 
 
     ..  note:: 
         The commutator's RGB LED will flash red when the commutator is plugged in. 
