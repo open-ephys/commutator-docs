@@ -54,4 +54,17 @@ Determining current firmware version and microcontroller type
 Instructions to update the firmware in case you don't have the latest version
 --------------------------------------------------------------------------------
 
-#. 
+#. If the firmware version is not the latest, download the :ref:`fwupdate_latest` according to the microcontroller type 
+
+#. In the Arduino IDE, make sure the Teensy is selected as the Board. Click verify on any sketch and you will see another window pop up, the Teensy Loader application.
+
+#. In the Teensy Loader, go to File > Open HEX File. Select the hex file you downloaded earlier, and click OK.
+
+#. Press the physical button on the side of the commutator to upload the firmware.
+
+Test that the firmware update worked
+--------------------------------------------------------------------------------
+
+To test the upload, in the Arduino IDE, go to Tools -> Serial Monitor and type {print:} into the serial monitor prompt. Press enter and you should see the version of the commutator now matches what you uploaded.
+
+You can test your commutator works in Bonsai like explained in the :ref:`quick_start`, before moving on to using sensor data to drive it.
