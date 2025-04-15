@@ -41,7 +41,15 @@ Installing required software for firmware update
 Determining current firmware version and microcontroller type
 --------------------------------------------------------------------
 
+1. Connect your commutator to USB and wait for the Status LED to stop blinking red. When it is connected, the commutator charges its internal battery, which can take up to 30 seconds. Avoid using a USB hub so that the connection is reliable.
 
+#. Open the Arduino IDE.
+
+#. Select the Teensy from the Board dropdown menu.
+
+#. Go to Tools -> Serial Monitor to open a serial connection to the commutator
+
+#. Type {print:} into the serial monitor prompt and press enter. This will tell you the microcontroller type in the commutator and the installed firmware version.
 
 Instructions to update the firmware in case you don't have the latest version
 --------------------------------------------------------------------------------
