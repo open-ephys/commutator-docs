@@ -23,5 +23,4 @@ This user guide details how to use the coaxial commutator for this purpose.
     saving-settings
     automatic-control/index
     firmware-update
-    troubleshooting
 
