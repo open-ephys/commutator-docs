@@ -9,8 +9,8 @@ Here are the files and instructions to update the firmware of the Open Ephys Com
 
 .. _fwupdate_latest:
 
-Latest versions
--------------------------
+Latest firmware versions
+---------------------------
 
 .. note:: The firmware version you need to use depends on the Teensy version you have.
 
