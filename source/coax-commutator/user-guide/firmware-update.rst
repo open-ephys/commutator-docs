@@ -33,9 +33,13 @@ Installing required software for firmware update
 
 #. Download and install the latest version of the `Arduino IDE <https://www.arduino.cc/en/software/>`_.
 
-#. In the Arduino IDE, click File > Preferences and add ``https://www.pjrc.com/teensy/package_teensy_index.json`` to the Additional Board Manager URLs. Click OK.
+#. In the Arduino IDE, click File > Preferences. In the Settings tab, add ``https://www.pjrc.com/teensy/package_teensy_index.json`` to the Additional Board Manager URLs field. Click OK.
+
+    .. image:: /_static/images/fw-update/1-additional-board.png
 
 #. In the main Arduino IDE window, open the Boards Manager by clicking the left-side board icon, search for "teensy", and click Install. This will install another application, Teensyduino. 
+
+    .. image:: /_static/images/fw-update/2-teensy-install.png
 
 Determining current firmware version and microcontroller type
 --------------------------------------------------------------------
@@ -44,22 +48,38 @@ Determining current firmware version and microcontroller type
 
 #. Open the Arduino IDE.
 
-#. Select the Teensy from the Board dropdown menu.
+#. Select the microcontroller from the Board dropdown menu.
 
-#. Go to Tools > Serial Monitor to open a serial connection to the commutator
+    .. image:: /_static/images/fw-update/3-board-select.png
+
+#. Go to Tools > Serial Monitor to open a serial connection to the commutator.
+
+    .. image:: /_static/images/fw-update/4-serial-monitor.png
 
 #. Type ``{print:}`` into the serial monitor prompt and press Enter. This will tell you the microcontroller type the commutator has and what firmware version is installed.
+
+    .. image:: /_static/images/fw-update/5-print.png
 
 Instructions to update the firmware in case you don't have the latest version
 --------------------------------------------------------------------------------
 
-#. If the firmware version is not the latest, download the :ref:`latest version <fwupdate_latest>` according to the microcontroller type in your commutator.
+#. If the firmware version is not the :ref:`latest version <fwupdate_latest>`, download the latest version for the microcontroller type in your commutator.
 
-#. In the Arduino IDE, make sure the Teensy is selected as the Board. Click verify on any sketch and you will see another window pop up, the Teensy Loader application.
+#. In the Arduino IDE, make sure the Teensy is selected as the Board. Click the checkmark on any sketch. 
+
+    .. image:: /_static/images/fw-update/6-verify-sketch.png
+
+#. You should see another window pop up: the Teensy Loader application.
+
+    .. image:: /_static/images/fw-update/7-teensy-loader.png
 
 #. In the Teensy Loader, go to File > Open HEX File. Select the hex file you downloaded earlier, and click OK.
 
+    .. image:: /_static/images/fw-update/8-open-hex.png
+
 #. Press the physical button on the side of the commutator to upload the firmware.
+
+    .. image:: /_static/images/fw-update/9-button-press.png
 
 Test that the firmware was updated and test your commutator works
 --------------------------------------------------------------------------------
