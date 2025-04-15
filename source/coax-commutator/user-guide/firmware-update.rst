@@ -29,6 +29,15 @@ Latest versions
 
 .. _fwupdate_instructions:
 
+Installing required software for firmware update
+--------------------------------------------------------------------
+
+1. Download and install the latest version of the Arduino IDE https://www.arduino.cc/en/software/
+
+1. In the Arduino IDE, click File > Preferences and add https://www.pjrc.com/teensy/package_teensy_index.json to the Additional Board Manager URLs. Click "OK".
+
+1. In the main Arduino IDE window, open the Boards Manager by clicking the left-side board icon, search for "teensy", and click "Install". This will install another application, Teensyduino. 
+
 Determining current firmware version and microcontroller type
 --------------------------------------------------------------------
 
