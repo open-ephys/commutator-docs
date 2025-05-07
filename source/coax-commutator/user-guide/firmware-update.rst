@@ -1,89 +1,158 @@
 .. _fwupdate:
 
-Firmware Update
+Update Firmware
 *************************
 
-Here are the files and instructions to update the firmware of the Open Ephys Commutators
+Here are the files and instructions to update Open Ephys Commutator firmware.
 
-.. note:: We always ship the commutators with the latest version of the firmware and we don’t make changes to the firmware often, so you will typically not need to update it.
+..  note:: 
+    We always ship the commutators with the latest version of the firmware and we don't make 
+    changes to the firmware often, so you will typically not need to update it.
+
+Identify Your Commutator Controller Version
+=============================================
+
+The first step to update your firmware is to identify which microcontroller is in your commutator.
+This determines which firmware file and instructions you need to update the firmware. The list of
+microcontrollers contained by Open Ephys commutators is:
+
+-   RP2040
+-   Teensy LC
+-   Teensy 3.2
+
+..  image:: /_static/images/commutator-mcu-mermaid.png
+
+.. mermaid diagram 
+..
+    flowchart LR
+        A{"Does your commutator have USB-C?"}
+        A -->|"Yes"| B(["RP2040"])
+        A -->|"No"| C["Query your commutator with {print:true} command (instructions below)."]
+        C --- D{"What does the commutator print?"}
+        D -->|"lc"| E(["Teensy LC"])
+        D -->|"3.2"| F(["Teensy 3.2"])
+
+..  dropdown:: Query commutator with ``{print:true}`` command
+
+    #.  Connect your commutator to USB and wait for the status LED to stop blinking red. This can take
+        up to 30 seconds. Avoid using a USB hub so that the connection is reliable.
+
+    #.  Open up your preferred serial monitor. If you don't have one, use the `Arduino IDE
+        <https://www.arduino.cc/en/software/>`_ serial monitor.
+
+        -   If you are using the Arduino IDE, go to Tools > Serial Monitor to open a serial connection
+            to the commutator.
+
+            .. image:: /_static/images/fw-update/4-serial-monitor.png
+
+    #.  Type ``{print:true}`` into the serial monitor prompt and press Enter. This will provide information
+        about the commutator's microcontroller firmware version.
+        
+        -   If you are using the Arduino IDE, this step looks like:
+
+            .. image:: /_static/images/fw-update/5-print.png
 
 .. _fwupdate_latest:
 
-Latest firmware versions
----------------------------
+Latest firmware
+================
 
-.. note:: The firmware version you need to use depends on the Teensy version you have.
+Now that you know which microcontroller your commutator has, choose the pre-compiled firmware file
+that corresponds to your commutator.
 
-.. table::
-    :widths: 50 50
+..  tab-set::
 
-    +-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+
-    |        Commutator microcontroller type                |                             Commutator Firmware latest version                                              |
-    |        as determined by the procedure below           |                                   to download and update                                                    |
-    +=======================================================+=============================================================================================================+
-    | Teensy LC                                             | :download:`Firmware version 1.6 </_static/files/commutator.ino.SingleCoax.TeensyLC.v1.6.0.zip>`             |
-    +-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+
-    | Teensy 3.2                                            | :download:`Firmware version 1.5 </_static/files/commutator.ino.SingleCoax.Teensy3.2.v1.5.1.zip>`            |
-    +-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+
+    ..  tab-item:: Teensy LC
 
-.. _fwupdate_instructions:
+        ..  rubric:: Teensy LC HEX files
+            :heading-level: 4
 
-Installing required software for firmware update
---------------------------------------------------------------------
+        Coax commutator
+            :download:`Firmware version 1.6 </_static/files/commutator.ino.SingleCoax.TeensyLC.v1.6.0.zip>` 
 
-#. Download and install the latest version of the `Arduino IDE <https://www.arduino.cc/en/software/>`_.
+        .. SPI commutator
+        ..     :download:`Firmware version 1.6 </_static/files/commutator.ino.SPI.TeensyLC.v1.6.0.zip>`
+        .. Dual Commutator
+        ..     :download:`Firmware version 1.6 </_static/files/commutator.ino.DualCoax.TeensyLC.v1.6.0.zip>`
 
-#. In the Arduino IDE, click File > Preferences. In the Settings tab, add ``https://www.pjrc.com/teensy/package_teensy_index.json`` to the Additional Board Manager URLs field. Click OK.
+    ..  tab-item:: Teensy 3.2
 
-    .. image:: /_static/images/fw-update/1-additional-board.png
+        ..  rubric:: Teensy 3.2 HEX files
+            :heading-level: 4
 
-#. In the main Arduino IDE window, open the Boards Manager by clicking the left-side board icon, search for "teensy", and click Install. This will install another application, Teensyduino. 
+        Coax commutator
+            :download:`Firmware version 1.5 </_static/files/commutator.ino.SingleCoax.Teensy3.2.v1.5.1.zip>`     
 
-    .. image:: /_static/images/fw-update/2-teensy-install.png
+        .. SPI commutator
+        ..     :download:`Firmware version 1.5 </_static/files/commutator.ino.SPI.Teensy3.2.v1.5.1.zip>`
+        .. Dual Commutator
+        ..     :download:`Firmware version 1.5 </_static/files/commutator.ino.DualCoax.Teensy3.2.v1.5.1.zip>`
 
-Determining current firmware version and microcontroller type
---------------------------------------------------------------------
+    .. tab-item:: RP2040
 
-#. Connect your commutator to USB and wait for the Status LED to stop blinking red. When it is connected, the commutator charges its internal battery, which can take up to 30 seconds. Avoid using a USB hub so that the connection is reliable.
+        ..  rubric:: RP2040 UF2 files
+            :heading-level: 4
 
-#. Open the Arduino IDE.
+        Not available yet
 
-#. Select the microcontroller from the Board dropdown menu.
+Update Firmware
+=======================================
 
-    .. image:: /_static/images/fw-update/3-board-select.png
+..  tab-set::
 
-#. Go to Tools > Serial Monitor to open a serial connection to the commutator.
+    ..  tab-item:: Teensy
 
-    .. image:: /_static/images/fw-update/4-serial-monitor.png
+        #.  Download the HEX file that corresponds to your commutator.
 
-#. Type ``{print:}`` into the serial monitor prompt and press Enter. This will tell you the microcontroller type the commutator has and what firmware version is installed.
+        #.  Connect the commutator to your PC through USB. 
 
-    .. image:: /_static/images/fw-update/5-print.png
+        #.  Download the `Teensy Loader <https://www.pjrc.com/teensy/loader.html>`_ and follow 
+            instructions to open the Teensy Loader for your operating system.
 
-Instructions to update the firmware in case you don't have the latest version
---------------------------------------------------------------------------------
+        #.  Click the reset button on the commutator.
 
-#. If the firmware version is not the :ref:`latest version <fwupdate_latest>`, download the latest version for the microcontroller type in your commutator.
+            ..  figure:: /_static/images/teensy-loader_reset-button-press.svg
 
-#. In the Arduino IDE, make sure the Teensy is selected as the Board. Click the checkmark on any sketch. 
+                The Teensy Loader changes appearance after successfully completing this step.
 
-    .. image:: /_static/images/fw-update/6-verify-sketch.png
+        #.  Select the downloaded HEX file by clicking the first button in the upper-left corner of
+            the Teensy Loader. 
+        
+            ..  figure:: /_static/images/teensy-loader_hex-file-select.svg
 
-#. You should see another window pop up: the Teensy Loader application.
+                Click the 1st button indicated in the left screenshot. The selected file is
+                shown in the bottom status strip as indicated in the right screenshot after successfully
+                completing this step 
 
-    .. image:: /_static/images/fw-update/7-teensy-loader.png
+        #.  Upload the HEX file to the Teensy by pressing the second button in the upper-left
+            corner of the Teensy Loader.
 
-#. In the Teensy Loader, go to File > Open HEX File. Select the hex file you downloaded earlier, and click OK.
+            ..  figure:: /_static/images/teensy-loader_upload.svg
 
-    .. image:: /_static/images/fw-update/8-open-hex.png
+                Click the 2nd button indicated in the left screenshot. A "Download Complete" message
+                appears as shown in the right screenshot after successfully completing this step.
 
-#. Press the physical button on the side of the commutator to upload the firmware.
+        #.  Reboot the Teensy pressing the third button in the upper-left corner of the Teensy
+            Loader.
 
-    .. image:: /_static/images/fw-update/9-button-press.png
+            ..  figure:: /_static/images/teensy-loader_reboot.svg
 
-Test that the firmware was updated and test your commutator works
---------------------------------------------------------------------------------
+                Click the 3rd button indicated in the left screenshot. A "Reboot OK" message
+                appears as shown in the right screenshot after successfully completing this step.
 
-To test if the firmware was updated, in the Arduino IDE, go to Tools > Serial Monitor and type ``{print:}`` into the serial monitor prompt. Press Enter and you should see the version of the commutator now matches what you uploaded.
+            This can step can also be completed by disconnecting/reconnecting the commutator's USB
+            though you won't get a "Reboot OK" message in the Teensy Loader.
 
-You can test your commutator works in Bonsai as explained in the :ref:`quick_start`, before moving on to using sensor data to drive it.
+    ..  tab-item:: RP2040
+
+        #.  Download the UF2 file that corresponds to your commutator.
+
+        #.  Connect your commutator to your PC through USB. 
+
+        #.  Tap the reset button twice in quick succession. A virtual drive labeled :code:`RPI-RP2`
+            should appear connected to your computer. 
+        
+        #.  Copy-and-paste the downloaded UF2 file from your PC to that drive.
+
+        #.  When the copy process is completed, the virtual :code:`RPI-RP2` drive disconnects and
+            your commutator controller reboots with the updated firmware.
