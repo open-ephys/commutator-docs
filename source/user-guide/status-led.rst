@@ -13,6 +13,7 @@ The LED on the front panel provides information about the operational state of t
 
         ..  list-table:: 
             :header-rows: 1
+            :stub-columns: 1
             :class: hover-table
 
             *   -   LED State
@@ -31,18 +32,21 @@ The LED on the front panel provides information about the operational state of t
                 -   **Enabled:** Remote and manual controls are unlocked.
             *   -   no color
                 -   **LED Disabled:** The commutator could be in any of the above states.
+
+        The LED can be toggled off if it presents unwanted visual stimulus by pressing the LED button. The
+        LED can then be toggled on by pressing the button again. Alternatively, the LED can be toggled
+        off/on remotely using the :ref:`{led:false} or {led:true} command <remote_control>`.
                 
     ..  grid-item::
         :columns: 4
 
-        ..  image:: /_static/images/commutator-front-status-led.jpg
+        ..  figure:: /_static/images/commutator-front-status-led.jpg
             :alt: Status LED
             :align: center
             :class: hover-image
 
-The LED can be toggled off if it presents unwanted visual stimulus by pressing the LED button. The
-LED can then be toggled on by pressing the button again. Alternatively, the LED can be toggled
-off/on remotely using the :ref:`{led:false} or {led:true} command <remote_control>`.
+            Your commutator controller front panel might not be identical to the one pictured, but
+            the status LED functions equivalently.   
 
 ..  note::
     Toggling the LED on commutators that use Micro-USB requires holding the LED button for > 0.5 seconds.

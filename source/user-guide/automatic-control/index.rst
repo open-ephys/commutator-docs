@@ -1,6 +1,6 @@
 .. _automate-commutation:
 
-Automate Commutation
+Automated Commutation
 *************************
 The commutator's :ref:`remote control <remote_control>` enables the user
 to interface the commutator with software to automate commutation during 

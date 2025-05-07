@@ -2,6 +2,7 @@
 
 Manual Control
 *******************************************************
+
 The front panel of the commutator has four buttons for manual control.
 They are useful in the following situations:
 
@@ -18,6 +19,7 @@ They are useful in the following situations:
 
     ..  grid-item::
         :padding: 0
+        :columns: 7
 
         :1. Enable/Disable:	Press to toggle commutator enable/disable.
 
@@ -43,10 +45,14 @@ They are useful in the following situations:
 
     ..  grid-item::
         :child-align: center
+        :columns: 5
 
-        ..  image:: /_static/images/commutator-buttons-numbered.png
+        ..  figure:: /_static/images/commutator-buttons-numbered.png
             :align: center
             :alt: Commutator front image
+
+            Your commutator controller front panel might not be identical to the one pictured, but
+            the manual control functions equivalently.   
 
 ..  note::
     -  	The buttons on the front panel are capacitive sensor buttons. They are not mechanical so they do not provide tactile or auditory feedback.   

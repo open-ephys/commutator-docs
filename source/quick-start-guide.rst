@@ -4,11 +4,11 @@
 Quick Start Guide
 *************************************************
 
-..  important:: 
-    Although this example uses `Bonsai <https://bonsai-rx.org>`__, 
-    the commutator communicates over a serial connection using a
-    simple :ref:`set of JSON commands <remote_control>` and therefore 
-    is software and operating system agnostic.
+..  attention::
+    -   This quick start guide is intended to help you rotate the commutator using keyboard presses to
+        test the commutator's core functionality. 
+    -   To find additional instructions to automate commutation for your particular hardware and software choices,
+        navigate through the :doc:`user-guide/automatic-control/index` page.
 
 This quick start guide provides basic setup instructions to verify the commutator's functionality.
 By following these steps, you will be able to turn the commutator using keyboard presses from a
@@ -63,6 +63,6 @@ By following these steps, you will be able to turn the commutator using keyboard
         **SerialWriteLine** node while the workflow is running to show a text
         visualizer.
 
-After confirming its functionality, you are ready to :ref:`mount
-the commutator <mounting>` and :ref:`automate commutation <automate-commutation>`.
+After confirming its functionality, you are ready to start setting up your commutator for an
+experiment. Start with learning more in-depth about :doc:`/user-guide/mount-connect` your commutator.
 

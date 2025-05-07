@@ -18,10 +18,8 @@ read from and write to a serial port without any programming.
     remote commands. The commutator will dispose all JSON commands that are
     received while manual controls are in use.
 
-All JSON commands must be appended by a LF character. If you are typing commands into
-a serial monitor or using Bonsai, confirm it is configured to append messages with
-the LF character. If multiple valid JSONs are received before receiving a LF character,
-only the first one is processed. 
+All JSON commands must be appended by a LF character. If multiple valid JSONs are received before
+receiving a LF character, only the first one will be processed when a LF character is finally received. 
 
 ..  note::
     Commutators with the Micro-USB connector do not need the LF character but can 

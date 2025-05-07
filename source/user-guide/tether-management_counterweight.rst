@@ -48,7 +48,7 @@ Elastic Thread Length
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The elastic thread's length should be tuned so that it properly counterbalances the weight of the
-headstage. A procedure for doing this is as follows:
+headstage. Below is a procedure for this:
 
 #.  Unwind enough thread from the spool to be able to extend it from the commutator to the closest
     point in the experimental field.
@@ -68,5 +68,5 @@ headstage. A procedure for doing this is as follows:
 
     Clover 3158 has successfully been used for the purpose described on this page.
 
-    ..  image:: /_static/images/clover-3158.png
-        :width: 25%
+    ..  image:: /_static/images/clover-3158.webp
+        :width: 50%
