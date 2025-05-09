@@ -23,7 +23,7 @@ receiving a LF character, only the first one will be processed when a LF charact
 
 ..  note::
     Commutators with the Micro-USB connector do not need the LF character but can 
-    operate with it
+    operate with it.
 
 JSON Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -19,7 +19,7 @@ Open Ephys commutators `are available <https://open-ephys.org/commutators>`__ fo
 
 - **Single Coax**: Commutates a single coaxial 18 GHz connection 
 - **Dual Coax**: Commutates up to two coaxial 18 GHz connections
-- **SPI**: Commutates one 12-conductor Omnetics PZN-12 SPI connection
+- **SPI**: Commutates one 12-conductor SPI connection
 
 All of our commutators work in a similar way. This documentation applies to all variants and highlights differences where appropriate.
 

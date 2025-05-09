@@ -66,7 +66,7 @@ headstage. Below is a procedure for this:
 
 ..  tip:: 
 
-    Clover 3158 has successfully been used for the purpose described on this page.
+    Clover 3158 elastic thread has successfully been used for the purpose described on this page.
 
     ..  image:: /_static/images/clover-3158.webp
         :width: 50%

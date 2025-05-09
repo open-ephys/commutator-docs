@@ -9,7 +9,7 @@ The user guide covers the following features in greater detail:
 - Mounting on optical table or 80/20 & Connecting
 - Manual control using capacitive sense buttons
 - Remote control using JSON-encoded commands
-- Indication LED (can be turned off)
+- Status LED (can be turned off)
 - Automated Commutation
 
 ..  attention:: 

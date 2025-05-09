@@ -2,18 +2,15 @@
 
 Automated Commutation
 *************************
-The commutator's :ref:`remote control <remote_control>` enables the user
-to interface the commutator with software to automate commutation during 
-freely moving animal behavior experiments with minimal manual intervention.
+The commutator's :ref:`remote control <remote_control>` enables moment-to-moment orientation data from a freely moving animal to drive the commutator automatically with minimal manual intervention. Orientation data can be acquired from a 3D capable headstage or miniscope, or from extracted from a behavioral camera (computer vision). Different software options exist to interface between the source of orientation data and the commutator.
 
 .. image:: /_static/images/demo.gif
     :align: center
 
-Using Orientation Data from a 3D Capable Headstage/Miniscope
+Using a 3D Capable Headstage/Miniscope
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This method requires a headstage or a miniscope that is capable of providing orientation data such as the Open
-Ephys 3D capable headstages with 9-axis inertial measurement unit (IMU) absolute orientation sensors. Click a card from the matrix below to navigate to instructions for automating commutation using your particular set of hardware and software.
+This method requires a headstage or a miniscope that has an onboard sensor capable of providing absolute orientation data such as the Open Ephys 3D capable headstages with 9-axis inertial measurement units (IMUs). Click a card from the matrix below to navigate to instructions for automating commutation using your particular set of hardware and software.
 
 ..  grid:: 
 
@@ -124,7 +121,7 @@ Using Computer Vision
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 This method requires a computer with sufficient graphics processing capabilities
-and training a network to track your animal. Follow the :ref:`computer_vision` guide
+and training a network to track your animal and extract orientation data. Follow the :ref:`computer_vision` guide
 
 .. toctree::
     :hidden:

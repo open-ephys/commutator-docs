@@ -36,7 +36,7 @@ supports either SolidWorks files (e.g. `eDrawings
 <https://www.edrawingsviewer.com/download-edrawings>`_) or STL files (e.g, `FreeCAD
 <https://www.freecad.org/>`_). Both file types are available in the repositories linked above.
 
-More information on the best location to mount the commutator is available on the next
+More information on the best location to mount the commutator is available on the
 :doc:`tether-management_counterweight` page.
 
 Connecting
@@ -66,14 +66,14 @@ Connecting
                         :padding: 0
 
                         The commutator's stator connects to a stationary data acquisition device
-                        that has a coaxial port (e.g. miniscope DAQ or ONIX breakout board) through
-                        this interconnect.
+                        that has a coaxial port (e.g. Miniscope DAQ or ONIX breakout board) through
+                        this SMA interconnect.
 
                     ..  grid-item:: **3. Bottom SMA Connector**
                         :padding: 0
 
                         The commutator's rotor connects to a freely moving animal headstage that has
-                        a coaxial port through this interconnect.
+                        a coaxial connector through this SMA interconnect.
 
             ..  grid-item::
 
@@ -101,14 +101,14 @@ Connecting
                         :padding: 0
 
                         The commutator's stator connects to a stationary data acquisition device
-                        that has a 12-pin PZN-12 SPI port (e.g. the Open Ephys Acquisition Board) through
-                        this interconnect.
+                        that has a SPI port (e.g. the Open Ephys Acquisition Board) through
+                        this 12-pin Omnetics PZN-12 interconnect.
 
                     ..  grid-item:: **3. Bottom SPI Connector**
                         :padding: 0
 
                         The commutator's rotor connects to a freely moving animal headstage that has
-                        a 12-pin PZN-12 SPI connector through this interconnect.
+                        a SPI connector through this 12-pin Omnetics PZN-12 interconnect.
 
             ..  grid-item::
 

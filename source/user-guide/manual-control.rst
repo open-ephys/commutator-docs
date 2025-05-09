@@ -8,7 +8,7 @@ They are useful in the following situations:
 
 - Quickly halting motor operation 
 - Screwing or unscrewing the tether's SMA connector by turning the motor
-- Untwisting the tether due to drift in the sensor measurements
+- Untwisting the tether to correct the starting tether orientation or due to drift in the orientation information
 
 ..  important:: 
     Manual controls override any ongoing remote controls. In other
@@ -40,7 +40,7 @@ They are useful in the following situations:
                             will not result in the commutator re-engaging an old target position.
                             Remote commands sent when a button is being pressed are ignored.  
 
-        :3. LED:    Pressing the LED turns toggles it (e.g for cases where it presents an unwanted
+        :3. LED:    Pressing the LED turns toggles it on and off (e.g for cases where it presents an unwanted
                     visual stimulus). 
 
     ..  grid-item::
