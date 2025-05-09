@@ -42,10 +42,10 @@ Compatible Cables
 #################################################
 
 A variety of tethers are compatible with the commutator as long as they are terminated with a SMA connector (such as
-the `Miniscope V4 tether <https://open-ephys.org/miniscope-v4/miniscope-v4-coax-cable-kit>`_) or something that can be
-adapted to a SMA connector (such as the `headstage link <https://open-ephys.org/miniscope-v4/miniscope-v4-coax-cable-kit>`_)
+the `Miniscope V4 tether <https://open-ephys.org/miniscope-v4/oeps-5501>`_) or something that can be
+adapted to a SMA connector (such as the `headstage link <https://open-ephys.org/miniscope-v4/oeps-5502>`_)
 on the commutator end. A standard, high quality SMA-SMA cable (such as
-`these from Open Ephys <https://open-ephys.org/minicam/sma-to-sma-cable>`_)
+`these 50 Ohm (SMA to SMA) cables <https://open-ephys.org/cables>`_) from Open Ephys
 can be used between the commutator and the data acquisition device.
 
 Commutator Connectors

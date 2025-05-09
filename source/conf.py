@@ -235,7 +235,16 @@ html_context = {
 
 # Option for linkcheck
 linkcheck_anchors = False
+linkcheck_timeout = 4
 
+linkcheck_ignore = [
+    'https://8020.net/*',
+    'https://www.mouser.com/*',
+    'https://www.octopart.com/*',
+    'https://www.sculpteo.com/en/*',
+    'https://www.digikey.com/*',
+    'https://www.arrow.com/*',
+]
 
 def rstjinja(app, docname, source):
     '''
