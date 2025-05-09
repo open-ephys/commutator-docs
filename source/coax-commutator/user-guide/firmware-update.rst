@@ -47,14 +47,14 @@ Teensy based commutators have a micro-USB port, but you need to identify which T
     -   If you are using the Arduino IDE, go to Tools > Serial Monitor to open a serial connection
         to the commutator.
 
-        .. image:: /_static/images/fw-update/4-serial-monitor.png
+        .. image:: /_static/images/serial-monitor.png
 
 #.  Type ``{print:true}`` into the serial monitor prompt and press Enter. This will provide information
     about the commutator's microcontroller firmware version.
     
     -   If you are using the Arduino IDE, this step looks like:
 
-        .. image:: /_static/images/fw-update/5-print.png
+        .. image:: /_static/images/print.png
 
 .. _fwupdate_latest:
 
