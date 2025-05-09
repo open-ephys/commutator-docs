@@ -16,9 +16,9 @@ The first step to update your firmware is to identify which microcontroller is i
 This determines which firmware file and instructions you need to update the firmware. The list of
 microcontrollers contained by Open Ephys commutators is:
 
--   RP2040
--   Teensy LC
--   Teensy 3.2
+-   RP2040 (USB-C)
+-   Teensy LC (Micro-USB)
+-   Teensy 3.2 (Micro-USB)
 
 ..  image:: /_static/images/commutator-mcu-mermaid.png
 
