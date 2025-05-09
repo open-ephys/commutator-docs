@@ -470,7 +470,6 @@ strong {
   transition: transform 0.2s ease;
   background-color: #FFFFFF;
   border-color: #000000;
-  padding: 20px;
   color: var(--onix-txt-color) !important;
   transform: scale(0.9);
 }
@@ -479,9 +478,11 @@ strong {
   transform: scale(1.00);
 }
 
-.page-card-img-marg {
-  margin-top: 2em;
-  margin-bottom: 1em;
-  margin-right: 5em;
-  margin-left: 5em;
+.remove-padding div {
+  padding: 0;
+}
+
+.center-text > p {
+  text-align: center;
+  margin: 0;
 }

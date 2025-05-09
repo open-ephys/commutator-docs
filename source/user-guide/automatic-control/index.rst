@@ -13,33 +13,113 @@ Using Orientation Data from a Headstage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This method requires a headstage or a miniscope that is capable of providing orientation data such as Open
-Ephys headstages with BNO055 IMU orientation sensors.
+Ephys headstages with BNO055 IMU orientation sensors. Click a card from the matrix below to navigate
+to instructions for automating commutation using your particular set of hardware and software.
 
-.. raw:: html
+..  grid:: 
 
-    <div class="row row-cols-2 gx-1">
-        <div class="card text-center page-card">
-        <a href="https://open-ephys.github.io/bonsai-onix1-docs/articles/hardware/index.html">
-            <div class="card-body">
-                <h3>Commutate with ONIX <i class="fas fa-external-link"></i></h3>
-                <img src="../../_static/images/breakout_1r5_beta.png"
-                class="hover-zoom card-image-bottom" style="margin:0" alt="OpenEphys.Onix1 bonsai
-                package documentation">
-            </div>
-        </a>
-        </div>
-        <div class="card text-center page-card">
-        <a href="https://open-ephys.github.io/miniscope-docs/ucla-miniscope-v4/user/miniscope-daq/commutate/index.html">
-            <div class="card-body">
-                <h3>Commutate with Miniscope DAQ <i class="fas fa-external-link"></i></h3>
-                <img src="../../_static/images/miniscopedaq.webp"
-                class="hover-zoom card-image-bottom" style="margin:0" alt="OpenEphys.Miniscope bonsai
-                package documentation">
-            </div>
-        </a>
-        </div>
-    </div>
+    ..  grid-item:: 
+        :columns: 12
+        
+        ..  grid:: 
+            :gutter: 0
+            :margin: 0
+            :padding: 0
 
+            ..  grid-item:: 
+                :columns: 1
+                :child-direction: row
+                :child-align: center
+                :margin: 0
+                :padding: 0
+
+            ..  grid-item:: ONIX
+                :child-direction: row
+                :child-align: center
+                :margin: 0
+                :padding: 0
+
+            ..  grid-item:: Acquisition Board Gen3
+                :child-direction: row
+                :child-align: center
+                :margin: 0
+                :padding: 0
+
+            ..  grid-item:: Miniscope DAQ
+                :child-direction: row
+                :child-align: center
+                :margin: 0
+                :padding: 0
+
+    ..  grid-item:: 
+        :columns: 12
+
+        ..  grid:: 
+
+            ..  grid-item:: Bonsai
+                :columns: 1
+                :child-align: center
+                :margin: 0
+                :padding: 0
+                :class: center-text
+
+            ..  grid-item-card::
+                :link: https://open-ephys.github.io/bonsai-onix1-docs/articles/hardware/index.html 
+                :img-background: /_static/images/breakout-bonsai.png 
+                :class-card: page-card
+
+            ..  grid-item:: 
+                :child-align: center
+                :class: center-text
+
+                Not currently supported
+
+            ..  grid-item-card:: 
+                :link: https://open-ephys.github.io/miniscope-docs/ucla-miniscope-v4/user/miniscope-daq/commutate/index.html
+                :img-background: /_static/images/miniscopedaq-bonsai.png 
+                :class-card: page-card
+
+    ..  grid-item:: 
+        :columns: 12
+
+        ..  grid:: 
+
+            ..  grid-item:: Open Ephys GUI
+                :columns: 1
+                :child-align: center
+                :margin: 0
+                :padding: 0
+                :class: center-text
+
+            ..  grid-item-card::
+                :class-item: remove-padding
+                :img-background: /_static/images/breakout-oegui.png 
+                :class-card: page-card 
+
+                ..  raw:: html
+
+                    <div data-bs-toggle="tooltip" data-bs-placement="top" 
+                    title="This doesn't exist yet. Check next week!" 
+                    data-container="body" style="height:100%; width:100%; overflow:visible;
+                    z-index:1000; position:absolute;"></div>
+
+            ..  grid-item-card:: 
+                :class-item: remove-padding
+                :img-background: /_static/images/acqboard-oegui.png 
+                :class-card: page-card 
+
+                ..  raw:: html
+
+                    <div data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="This doesn't exist yet. Check next week!" 
+                    data-container="body" style="height:100%; width:100%; overflow:visible;
+                    z-index:1000; position:absolute;"></div>
+
+            ..  grid-item:: 
+                :child-align: center
+                :class: center-text
+
+                Not currently supported
 
 Using Computer Vision
 ^^^^^^^^^^^^^^^^^^^^^^^
