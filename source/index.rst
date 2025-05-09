@@ -23,7 +23,7 @@ Open Ephys commutators `are available <https://open-ephys.org/commutators>`__ fo
 
 All of our commutators work in a similar way. This documentation applies to all variants and highlights differences where appropriate.
 
-Follow the :ref:`quick_start` guide to verify the core functionality of your Open Ephys commutator. Learn in-depth about the commutators' features in the :ref:`user_guide`, or dive straight into the :doc:`user-guide/automatic-control/index` section to integrate a commutator with your acquisition hardware and software.
+Follow the :ref:`quick_start` guide to verify the core functionality of your Open Ephys commutator. Learn in-depth about the commutators' features in the :ref:`user_guide`, or dive straight into the :doc:`user-guide/automatic-control/index` section to integrate a commutator with your acquisition hardware and software. Use the :doc:`developer-guide` if you are looking to build or make modifications to the hardware.
 
 .. toctree::
     :hidden:
