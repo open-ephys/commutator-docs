@@ -110,7 +110,7 @@ monitors can be used (see `Termite <https://www.compuphase.com/software_termite.
 instructions recommend the Arduino IDE because the Arduino IDE is already quite common in the open-source and science community.
 It also allows the user to program the Teensy in a convenient way if that is desired. Commutator firmware can be modified to accept other RPCs or inputs.
 
-This is the `firmware with which the commutator ships <https://github.com/open-ephys/onix-commutator/tree/master/firmware/commutator>`_.
+Reference this page to find the hex files of the :ref:`latest firmware version <fwupdate_latest>`, or find the source files in the `GitHub repository <https://github.com/open-ephys/onix-commutator/tree/master/firmware/commutator>`_.
 
 Assembly
 **************************************************************

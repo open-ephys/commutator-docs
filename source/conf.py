@@ -42,6 +42,7 @@ release = "0.0.0"
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.githubpages',
+    'sphinx_design',
     # 'sphinx-jinja'
     # 'sphinx.ext.graphviz',
     # 'sphinxcontrib.wavedrom',
@@ -96,6 +97,7 @@ html_title = project
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+html_css_files = ['theme_overrides.css']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -227,7 +229,7 @@ html_context = {
     "github_repo": "commutator-docs",
     "github_version": "main",
     "doc_path": "source",
-    "css_files": ["_static/theme_overrides.css"],
+    # "css_files": ["_static/theme_overrides.css"],
     'default_mode': 'light',
 }
 
