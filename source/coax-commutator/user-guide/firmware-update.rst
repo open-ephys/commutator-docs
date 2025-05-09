@@ -27,30 +27,33 @@ microcontrollers contained by Open Ephys commutators is:
     flowchart LR
         A{"Does your commutator have USB-C?"}
         A -->|"Yes"| B(["RP2040"])
-        A -->|"No"| C["Query your commutator with {print:true} command (instructions below)."]
+        A -->|"No"| C["Identify your Teensy version (instructions below)."]
         C --- D{"What does the commutator print?"}
         D -->|"lc"| E(["Teensy LC"])
         D -->|"3.2"| F(["Teensy 3.2"])
 
-..  dropdown:: Query commutator with ``{print:true}`` command
+Identify Your Teensy Version
+-------------------------------
 
-    #.  Connect your commutator to USB and wait for the status LED to stop blinking red. This can take
-        up to 30 seconds. Avoid using a USB hub so that the connection is reliable.
+Teensy based commutators have a micro-USB port, but you need to identify which Teensy version they have.
 
-    #.  Open up your preferred serial monitor. If you don't have one, use the `Arduino IDE
-        <https://www.arduino.cc/en/software/>`_ serial monitor.
+#.  Connect your commutator to USB and wait for the status LED to stop blinking red. This can take
+    up to 30 seconds. Avoid using a USB hub so that the connection is reliable.
 
-        -   If you are using the Arduino IDE, go to Tools > Serial Monitor to open a serial connection
-            to the commutator.
+#.  Open up your preferred serial monitor. If you don't have one, use the `Arduino IDE
+    <https://www.arduino.cc/en/software/>`_ serial monitor.
 
-            .. image:: /_static/images/fw-update/4-serial-monitor.png
+    -   If you are using the Arduino IDE, go to Tools > Serial Monitor to open a serial connection
+        to the commutator.
 
-    #.  Type ``{print:true}`` into the serial monitor prompt and press Enter. This will provide information
-        about the commutator's microcontroller firmware version.
-        
-        -   If you are using the Arduino IDE, this step looks like:
+        .. image:: /_static/images/fw-update/4-serial-monitor.png
 
-            .. image:: /_static/images/fw-update/5-print.png
+#.  Type ``{print:true}`` into the serial monitor prompt and press Enter. This will provide information
+    about the commutator's microcontroller firmware version.
+    
+    -   If you are using the Arduino IDE, this step looks like:
+
+        .. image:: /_static/images/fw-update/5-print.png
 
 .. _fwupdate_latest:
 
