@@ -25,12 +25,13 @@ microcontrollers contained by Open Ephys commutators is:
 .. mermaid diagram 
 ..
     flowchart LR
-        A{"Does your commutator have USB-C?"}
-        A -->|"Yes"| B(["RP2040"])
-        A -->|"No"| C["Identify your Teensy version (instructions below)."]
-        C --- D{"What does the commutator print?"}
-        D -->|"lc"| E(["Teensy LC"])
-        D -->|"3.2"| F(["Teensy 3.2"])
+            A{"Does the commutator have a USB-C port?"}
+            A -->|"Yes"| B(["RP2040"])
+            A -->|"No"| C["`Identify Teensy version
+            (instructions below)`"]
+            C --- D{"What does the serial monitor print?"}
+            D -->|"lc"| E(["Teensy LC"])
+            D -->|"3.2"| F(["Teensy 3.2"])
 
 Identify Your Teensy Version
 -------------------------------
