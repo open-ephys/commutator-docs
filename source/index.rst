@@ -15,11 +15,11 @@ measurement, which is used in conventional active commutators. This permits the 
 thin tethers that promote natural animal behavior but are too flexible to be used with conventional
 commutators.
 
-Three different connectorizations are available:
+Open Ephys commutators `are available <https://open-ephys.org/commutators>`__ for two different types of tethers; coaxial (either single or dual channel) and SPI:
 
-- `Single Coax <https://open-ephys.org/commutators?rq=commutator>`__: Commutates one 18 GHz connection 
-- **Dual Coax**: Commutates up to two 18 GHz connections
-- **SPI**: Commutates one 12-conductor Omnetics SPI connection
+- **Single Coax**: Commutates a single coaxial 18 GHz connection 
+- **Dual Coax**: Commutates up to two coaxial 18 GHz connections
+- **SPI**: Commutates one 12-conductor Omnetics PZN-12 SPI connection
 
 .. toctree::
     :hidden:
