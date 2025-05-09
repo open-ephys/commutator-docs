@@ -97,18 +97,18 @@ Connecting
                         this interconnect. Newer commutators use USB-C. Older commutators use
                         Micro-USB.
 
-                    ..  grid-item:: **2. Top PZN-12 Connector**
+                    ..  grid-item:: **2. Top SPI Connector**
                         :padding: 0
 
                         The commutator's stator connects to a stationary data acquisition device
-                        that has a 12-pin SPI port (e.g. the Open Ephys Acquisition Board) through
+                        that has a 12-pin PZN-12 SPI port (e.g. the Open Ephys Acquisition Board) through
                         this interconnect.
 
-                    ..  grid-item:: **3. Bottom PZN-12 Connector**
+                    ..  grid-item:: **3. Bottom SPI Connector**
                         :padding: 0
 
                         The commutator's rotor connects to a freely moving animal headstage that has
-                        a 12-pin SPI port through this interconnect.
+                        a 12-pin PZN-12 SPI connector through this interconnect.
 
             ..  grid-item::
 
