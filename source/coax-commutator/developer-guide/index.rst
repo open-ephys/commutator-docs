@@ -17,7 +17,7 @@ other inputs in addition to the :ref:`JSON commands <remote_control>` that the c
 accepts. Finally, there are some design considerations at the bottom of the page in case you are considering designing
 your own commutator.
 
-.. important:: The RF rotary joint and slip rings used in Open Ephys commutator are specified for millions of cycles without failure. If you want to replace these components, make sure you get them from a reputable manufacturer to maintain their reliability. We have found that `Spinner <https://www.spinner-group.com/en/products/rf-rotary-joints>`__ is a very good option for gettin high quality rotary joints.
+.. important:: The RF rotary joint and slip rings used in Open Ephys commutator are specified for millions of cycles without failure. If you want to replace these components, make sure you get them from a reputable manufacturer to maintain their reliability. We have found that `Spinner <https://www.spinner-group.com/en/products/rf-rotary-joints>`__ is a very good option for getting high quality rotary joints.
 
 .. _bom:
 
@@ -58,11 +58,11 @@ Printed circuit boards (PCBs) are boards that electrically connect a set of elec
 Those parts are soldered to the PCB to create mechanically stable and reliable operation. The commutator front panel
 is a PCB. Fortunately, PCBs are pretty cheap to fabricate nowadays. For instance,
 you can get a 5-pack of PCBs from `JLCPCB <https://jlcpcb.com>`_ for less than $5. To fabricate a PCB, a manufacturer usually
-requires that you upload `Gerber files <https://github.com/open-ephys/onix-commutator/tree/master/control-board/gerber>`_. For the commutator front panel,
+requires that you upload `Gerber files <https://github.com/open-ephys/commutators/tree/main/pcb/manufacturing/gerber>`_. For the commutator front panel,
 these Gerber files can be found in the public Github repository or produced using ECAD (electrical computer-assisted drawing) files in ECAD software. ECAD software permits the design of a PCB. Open Ephys uses `KiCad <https://www.kicad.org/>`_ for this purpose. Teaching such software is beyond the scope of this guide, but you can find
 `tutorials on KiCad's website <https://www.kicad.org/help/learning-resources/>`_ and elsewhere on the web.
 
-For ordering the electronics parts that are mounted onto the PCB, `Digikey <https://www.digikey.com>`_, `Mouser <https://www.mouser.com>`_, and `Arrow <https://www.arrow.com>`_ are go-to vendors.
+For ordering the electronics parts that are mounted onto the PCB, `Digikey <https://www.digikey.com/>`_, `Mouser <https://www.mouser.com/>`_, and `Arrow <https://www.arrow.com/>`_ are go-to vendors.
 Open Ephys has no affiliation with any of these companies. Some parts may be out-of-stock in which case you are forced to
 purchase from more than one distributor if you inflexible regarding component selection. `Octopart <https://www.octopart.com>`_ is
 helpful for sorting through stock at various vendors and comparing prices. The electrical components for the commutator
