@@ -15,11 +15,15 @@ measurement, which is used in conventional active commutators. This permits the 
 thin tethers that promote natural animal behavior but are too flexible to be used with conventional
 commutators.
 
-Open Ephys commutators `are available <https://open-ephys.org/commutators>`__ for two different types of tethers; coaxial (either single or dual channel) and SPI:
+Open Ephys commutators `are available <https://open-ephys.org/commutators>`__ for two different types of tethers: coaxial (either single or dual channel) and SPI.
 
 - **Single Coax**: Commutates a single coaxial 18 GHz connection 
 - **Dual Coax**: Commutates up to two coaxial 18 GHz connections
 - **SPI**: Commutates one 12-conductor Omnetics PZN-12 SPI connection
+
+All of our commutators work in a similar way. This documentation applies to all variants and highlights differences where appropriate.
+
+Follow the :ref:`quick_start` guide to verify the core functionality of your Open Ephys commutator. Learn in-depth about the commutators' features in the :ref:`user_guide`, or dive straight into the :doc:`user-guide/automatic-control/index` section to integrate a commutator with your acquisition hardware and software.
 
 .. toctree::
     :hidden:
