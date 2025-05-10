@@ -8,7 +8,7 @@ They are useful in the following situations:
 
 - Quickly halting motor operation 
 - Screwing or unscrewing the tether's SMA connector by turning the motor
-- Untwisting the tether to correct the starting tether orientation or due to drift in the orientation information
+- Untwisting the tether to correct the starting tether orientation
 
 ..  important:: 
     Manual controls override any ongoing remote controls. In other

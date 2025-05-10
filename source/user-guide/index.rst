@@ -25,4 +25,5 @@ The user guide covers the following features in greater detail:
     manual-control
     remote-control
     automatic-control/index
+    firmware-update
 

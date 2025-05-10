@@ -97,6 +97,7 @@ html_title = project
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+html_css_files = ['theme_overrides.css']
 html_css_files = ["theme_overrides.css"]
 
 # Custom sidebar templates, must be a dictionary that maps document names
@@ -229,11 +230,22 @@ html_context = {
     "github_repo": "commutator-docs",
     "github_version": "main",
     "doc_path": "source",
+    # "css_files": ["_static/theme_overrides.css"],
     'default_mode': 'light',
 }
 
 # Option for linkcheck
 linkcheck_anchors = False
+linkcheck_timeout = 4
+
+linkcheck_ignore = [
+    'https://8020.net/*',
+    'https://www.mouser.com/*',
+    'https://www.octopart.com/*',
+    'https://www.sculpteo.com/en/*',
+    'https://www.digikey.com/*',
+    'https://www.arrow.com/*',
+]
 
 def rstjinja(app, docname, source):
     '''
