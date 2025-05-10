@@ -2,20 +2,35 @@
 
 .. title:: Home
 
-.. image:: _static/images/commutator-front-thin.jpg
+.. image:: /_static/images/commutator-front-thin.jpg
   :alt: Commutator front image
   :width: 230px
 
-**Open Ephys Commutators** provide nearly torque-free tether management for freely moving recordings. Inertial-measurement units (IMUs) or video-based pose-estimation methods (e.g. `DeepLabCut <https://github.com/DeepLabCut/DeepLabCut>`_ or `SLEAP <https://github.com/talmolab/sleap>`_) provide real-time measurements of animal orientation. Therefore, these technologies can be used to drive active commutation instead of relying on tether torque measurement, which is used in conventional active commutators. This permits the use of exceptionally thin tethers that promote natural animal behavior but are too flexible to be used with conventional commutators.
+**Open Ephys Commutators** provide nearly torque-free tether management for freely moving
+recordings. Inertial-measurement units (IMUs) or video-based pose-estimation methods (e.g.
+`DeepLabCut <https://github.com/DeepLabCut/DeepLabCut>`_ or 
+`SLEAP <https://github.com/talmolab/sleap>`_) provide real-time measurements of animal orientation.
+These technologies can be used to drive active commutation instead of relying on tether torque
+measurement, which is used in conventional active commutators. This permits the use of exceptionally
+thin tethers that promote natural animal behavior but are too flexible to be used with conventional
+commutators.
 
-The **Coax Commutator** is compatible with `UCLA Miniscopes <https://open-ephys.org/miniscope-v4/miniscope-v4>`__ and `ONIX Headstages <https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html>`__.
+Open Ephys commutators `are available <https://open-ephys.org/commutators>`__ for two different types of tethers: coaxial (either single or dual channel) and SPI.
 
-A commutator compatible with SPI cables is under active development.
+- **Single Coax**: Commutates a single coaxial 18 GHz connection 
+- **Dual Coax**: Commutates up to two coaxial 18 GHz connections
+- **SPI**: Commutates one 12-conductor SPI connection
 
+All of our commutators work in a similar way. This documentation applies to all variants and highlights differences where appropriate.
+
+Follow the :ref:`quick_start` guide to verify the core functionality of your Open Ephys commutator. Learn in-depth about the commutators' features in the :ref:`user_guide`, or dive straight into the :doc:`user-guide/automatic-control/index` section to integrate a commutator with your acquisition hardware and software. Use the :doc:`developer-guide` if you are looking to build or make modifications to the hardware.
 
 .. toctree::
     :hidden:
     :maxdepth: 2
     :titlesonly:
 
-    coax-commutator/index
+    quick-start-guide
+    user-guide/index
+    developer-guide
+
