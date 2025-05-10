@@ -245,6 +245,7 @@ linkcheck_ignore = [
     'https://www.sculpteo.com/en/*',
     'https://www.digikey.com/*',
     'https://www.arrow.com/*',
+    'https://github.com/open-ephys/*'
 ]
 
 def rstjinja(app, docname, source):
@@ -258,13 +259,6 @@ def rstjinja(app, docname, source):
     rendered = app.builder.templates.render_string(
         src, app.config.html_context
     )
-    # if src[0:8] == ":orphan:":
-    #     print(src)
-    #     print(docname)
-    #     new_filename = os.path.splitext(docname)[0]+'.html'
-    #     with open('source/'+new_filename, 'w') as file:
-    #         file.write(rendered)
-    #     print(rendered)
     source[0] = rendered
 
 
