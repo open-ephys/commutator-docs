@@ -34,9 +34,11 @@ More information on the best location to mount the commutator is available on th
 Connecting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. tab-set::
+..  tab-set::
+    :sync-group: commutator
 
-    .. tab-item:: Coax Commutator
+    ..  tab-item:: Coax Commutator
+        :sync: coax
 
         ..  grid:: 
             :margin: 0
@@ -71,7 +73,8 @@ Connecting
 
                 ..  image:: /_static/images/connections-numbered.png
 
-    .. tab-item:: SPI Commutator
+    ..  tab-item:: SPI Commutator
+        :sync: spi
 
         ..  grid:: 
             :margin: 0
