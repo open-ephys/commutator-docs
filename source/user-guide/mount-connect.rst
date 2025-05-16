@@ -7,19 +7,11 @@ The commutator has several holes that can be used to mount it on `80/20 aluminum
 <https://8020.net/framing-options/t-slotted-profiles/fractional/10series100basedprofiles.html>`_
 using `t-nuts <https://youtu.be/nK-DsJxAdwM>`_ or a standard mechanical breadboard. For example:
 
-..  grid::
 
-    ..  grid-item::
-
-        ..  image:: /_static/images/commutator-mount-example-1.png
-            :alt: image 1 of mounted commutator
-            :align: center
-            
-    ..  grid-item::
-
-        ..  image:: /_static/images/commutator-mount-example-2.png
-            :alt: image 2 of mounted commutator
-            :align: center
+..  image:: /_static/images/commutator-mount-example-1.png
+    :alt: image of mounted commutator
+    :align: center
+    :width: 80%
 
 For custom mounting solutions, you can find the 3D mCAD files in the following repos: 
 
