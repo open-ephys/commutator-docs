@@ -197,7 +197,7 @@ html_theme_options = {
     "navbar_end": ["navbar-icon-links"],
     "navbar_align": "content",
     "footer_start": ["copyright"],
-    "external_links": [{"name": "Purchase", "url": "https://open-ephys.org/commutators/coaxial-commutator"},],
+    "external_links": [{"name": "Purchase", "url": "https://open-ephys.org/commutators"},],
     'icon_links': [
         dict(name='GitHub',
              url='https://github.com/open-ephys/onix-commutator',
