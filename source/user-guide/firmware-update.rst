@@ -9,6 +9,8 @@ Here are the files and instructions to update Open Ephys Commutator firmware.
     We always ship the commutators with the latest version of the firmware and we don't make 
     changes to the firmware often, so you will typically not need to update it.
 
+.. _com-controller-version:
+
 Identify Your Commutator Controller Version
 =============================================
 

@@ -22,7 +22,8 @@ All JSON commands must be appended by a LF character. If multiple valid JSONs ar
 receiving a LF character, only the first one will be processed when a LF character is finally received. 
 
 ..  note::
-    Commutators with the Micro-USB connector do not need the LF character but can 
+    :ref:`Teensy Commutator Controllers <com-controller-version>` (e.g. if your commutator has a
+    Micro-USB instead of USB-C) do not need the end-line LF character, but they can 
     operate with it.
 
 JSON Commands
@@ -79,13 +80,13 @@ properties is documented here:
 
         {turn: -0.5}
 
-{print: *null*}
+{print: true}
     Return a JSON string containing parameters and motor operational state. For
     example:
 
     .. code-block::
 
-        {print: null}
+        {print: true}
 
     returns something like
 
@@ -96,30 +97,10 @@ properties is documented here:
 
     though the exact output depends on the commutator version and its current working status.
 
-.. note:: **Micro-USB version only**
+..  note::  
 
-    {speed: *float*}     
-        A floating point value in the range (*0*, *1000*] to set the maximum
-        rotation speed in RPM. The default value is 100 RPM. For example, to set
-        the maximal rotation speed to 6.28319 RPM:
-
-        .. code-block::
-
-            {speed: 6.28319}
-
-    {accel: *float*}     
-        A floating point value in the range (*0*, *1000*] to set the maximum
-        rotational acceleration in RPMM. The default value is 200 RPMM. For
-        example, to set the rotational acceleration to 6.28319 RPMM:
-
-        .. code-block::
-
-            {accel: 6.28319}
-
-    The enabled state, LED state, motor speed, and motor acceleration settings,
-    whether changed via the remote or manual interface, are saved automatically in
-    non-volatile memory each time they are changed. The device will start in the
-    same state it was last used.
+    For :ref:`Teensy Commutator Controllers <com-controller-version>` (e.g. if your commutator has a
+    Micro-USB instead of USB-C), the enable state and LED state persist across power cycles.
 
 Compound JSON commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
