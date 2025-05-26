@@ -49,9 +49,9 @@ moving animal. This example uses SLEAP.
 
         <div class="bonsai-workflow-container">
             <div class="workflow-filler"></div>
-            <div class="workflow-download"><img class="download-copy-img" src="~/_static/images/download.svg" onclick="getFileFromURL('~/_static/downloads/sleap-commutate.zip')" width=18px /></div>
+            <div class="workflow-download"><img class="download-copy-img" src="../../_static/images/download.svg" onclick="getFileFromURL('../../_static/downloads/sleap-commutate.zip')" width=18px /></div>
             <div class="workflow-name"><b>sleap-commutate.zip</b></div>
-            <div class="workflow-image"><img src="~/_static/images/sleap-commutate.svg" alt="sleap-commutate" /></div>
+            <div class="workflow-image"><img src="../../_static/images/sleap-commutate.svg" alt="sleap-commutate" /></div>
         </div>
 
     This example workflow uses pre-recorded video of a hand to demonstrate commutation. First run it
@@ -70,7 +70,7 @@ moving animal. This example uses SLEAP.
         two properties that pertain to saving files: Overwrite and Suffix. Click on those properties
         and read the description that appears in the bottom-right corner to understand their function.
 
-    #.  Set the BackgroundFileName property of the *Algorithm* node to the background image file
+    #.  Set the BackgroundFileName property of the *Algorithm* node to set the background image file
         created in a previous step.
 
     #.  Set the MaskFileName property of the *Algorithm* node to the mask image file created in a
