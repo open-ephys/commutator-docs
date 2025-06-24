@@ -88,34 +88,20 @@ This method requires a headstage or a miniscope that has an onboard sensor capab
                 :class: center-text
 
             ..  grid-item-card::
-                :class-item: remove-padding
+                :link: https://open-ephys.github.io/gui-docs/Tutorials/Commutator.html
                 :img-background: /_static/images/breakout-oegui.png 
                 :class-card: page-card 
 
-                ..  raw:: html
-
-                    <div data-bs-toggle="tooltip" data-bs-placement="top" 
-                    title="This doesn't exist yet. Check next week!" 
-                    data-container="body" style="height:100%; width:100%; overflow:visible;
-                    z-index:1000; position:absolute;"></div>
-
             ..  grid-item-card:: 
-                :class-item: remove-padding
+                :link: https://open-ephys.github.io/gui-docs/Tutorials/Commutator.html
                 :img-background: /_static/images/acqboard-oegui.png 
                 :class-card: page-card 
-
-                ..  raw:: html
-
-                    <div data-bs-toggle="tooltip" data-bs-placement="top"
-                    title="This doesn't exist yet. Check next week!" 
-                    data-container="body" style="height:100%; width:100%; overflow:visible;
-                    z-index:1000; position:absolute;"></div>
 
             ..  grid-item:: 
                 :child-align: center
                 :class: center-text
 
-                Not currently supported
+                Not applicable
 
 Using Computer Vision
 ^^^^^^^^^^^^^^^^^^^^^^^
