@@ -107,7 +107,63 @@ Connecting
 
             ..  grid-item::
 
-                ..  image:: /_static/images/spi-commutator.png
+                ..  image:: /_static/images/spi-commutator.webp
+
+    ..  tab-item:: Dual Coax Commutator
+        :sync: dual
+
+        ..  grid:: 
+            :margin: 0
+
+            ..  grid-item::
+
+                ..  grid:: 1
+                    :margin: 0
+                    :padding: 0
+
+                    ..  grid-item:: **1. USB Connector**
+                        :padding: 0
+
+                        The commutator receives power and communicates to the PC over USB through
+                        this interconnect. Newer commutators use USB-C. Older commutators use
+                        Micro-USB.
+
+                    ..  grid-item:: **2. Center Top SMA Connector**
+                        :padding: 0
+
+                        The commutator's center top SMA connects to a stationary data acquisition device
+                        that has a coaxial port (e.g. Miniscope DAQ or ONIX breakout board) through
+                        this SMA interconnect. It has electrical continuity with **4. Center Bottom
+                        SMA Connector**. 
+
+                    ..  grid-item:: **3. Side Top SMA Connector**
+                        :padding: 0
+
+                        The commutator's side top SMA connects to a stationary data acquisition device
+                        that has a coaxial port (e.g. Miniscope DAQ or ONIX breakout board) through
+                        this SMA interconnect. It has electrical continuity with **5. Side Bottom
+                        SMA Connector**.
+
+                    ..  grid-item:: **4. Center Bottom SMA Connectors**
+                        :padding: 0
+
+                        The commutator's center bottom connects to a freely moving animal headstage that has
+                        a coaxial connector through this SMA interconnect. It has electrical
+                        continuity with **2. Center Top SMA Connector**.
+
+                    ..  grid-item:: **5. Side Bottom SMA Connectors**
+                        :padding: 0
+
+                        The commutator's side bottom connects to a freely moving animal headstage that has
+                        a coaxial connector through this SMA interconnect. It has electrical
+                        continuity with **3. Center Top SMA Connector**.
+
+            ..  grid-item::
+                :child-align: center
+                :margin: 0
+                :padding: 0
+
+                ..  image:: /_static/images/dual-commutator.webp
 
 ..  tip::
 
