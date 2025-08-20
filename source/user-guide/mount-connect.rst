@@ -64,6 +64,7 @@ Connecting
                         a coaxial connector through this SMA interconnect.
 
             ..  grid-item::
+                :child-align: center
 
                 ..  image:: /_static/images/connections-numbered.png
 
@@ -94,6 +95,7 @@ Connecting
                         a SPI connector through this 12-pin Omnetics PZN-12 interconnect.
 
             ..  grid-item::
+                :child-align: center
 
                 ..  image:: /_static/images/spi-commutator.webp
 
@@ -133,7 +135,7 @@ Connecting
                         electrical continuity with **2. Top Center SMA Connector**.
 
             ..  grid-item::
-                :child-align: justify
+                :child-align: center
 
                 ..  image:: /_static/images/dual-commutator.webp
 
