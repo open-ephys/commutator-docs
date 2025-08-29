@@ -41,35 +41,30 @@ Connecting
         :sync: coax
 
         ..  grid:: 
-            :margin: 0
 
             ..  grid-item::
 
                 ..  grid:: 1
-                    :margin: 0
-                    :padding: 0
 
                     ..  grid-item:: **1. USB Connector**
-                        :padding: 0
 
                         The commutator receives power and communicates to the PC over USB through
                         this interconnect. Newer commutators use USB-C. Older commutators use
                         Micro-USB.
 
                     ..  grid-item:: **2. Top SMA Connector**
-                        :padding: 0
 
                         The commutator's stator connects to a stationary data acquisition device
                         that has a coaxial port (e.g. Miniscope DAQ or ONIX breakout board) through
                         this SMA interconnect.
 
                     ..  grid-item:: **3. Bottom SMA Connector**
-                        :padding: 0
 
                         The commutator's rotor connects to a freely moving animal headstage that has
                         a coaxial connector through this SMA interconnect.
 
             ..  grid-item::
+                :child-align: center
 
                 ..  image:: /_static/images/connections-numbered.png
 
@@ -77,37 +72,80 @@ Connecting
         :sync: spi
 
         ..  grid:: 
-            :margin: 0
 
             ..  grid-item::
 
                 ..  grid:: 1
-                    :margin: 0
-                    :padding: 0
 
                     ..  grid-item:: **1. USB Connector**
-                        :padding: 0
 
                         The commutator receives power and communicates to the PC over USB through
                         this interconnect. Newer commutators use USB-C. Older commutators use
                         Micro-USB.
 
                     ..  grid-item:: **2. Top SPI Connector**
-                        :padding: 0
 
                         The commutator's stator connects to a stationary data acquisition device
                         that has a SPI port (e.g. the Open Ephys Acquisition Board) through
                         this 12-pin Omnetics PZN-12 interconnect.
 
                     ..  grid-item:: **3. Bottom SPI Connector**
-                        :padding: 0
 
                         The commutator's rotor connects to a freely moving animal headstage that has
                         a SPI connector through this 12-pin Omnetics PZN-12 interconnect.
 
             ..  grid-item::
+                :child-align: center
 
-                ..  image:: /_static/images/spi-commutator.png
+                ..  image:: /_static/images/spi-commutator.webp
+
+    ..  tab-item:: Dual Coax Commutator
+        :sync: dual
+
+        ..  grid:: 
+
+            ..  grid-item::
+
+                ..  grid:: 1
+
+                    ..  grid-item:: **1. USB Connector**
+
+                        The commutator receives power and communicates to the PC over USB through
+                        this interconnect. Newer commutators use USB-C. Older commutators use
+                        Micro-USB.
+
+                    ..  grid-item:: **2. Top Center SMA Connector**
+
+                        The commutator's top center SMA connector connects to a stationary data acquisition 
+                        device that has a coaxial port (e.g. Miniscope DAQ or ONIX breakout board) through
+                        this SMA interconnect. It has electrical continuity with **4. Bottom Center SMA 
+                        Connector**. 
+
+                    ..  grid-item:: **3. Top Off-Center SMA Connector**
+
+                        The commutator's top off-center SMA connector connects to a stationary data acquisition 
+                        device that has a coaxial port (e.g. Miniscope DAQ or ONIX breakout board) through
+                        this SMA interconnect. It has electrical continuity with **5. Bottom Off-Center
+                        SMA Connector**.
+
+                    ..  grid-item:: **4. Bottom Center SMA Connector**
+
+                        The commutator's bottom center SMA connector connects to a freely moving animal 
+                        headstage that has a coaxial connector through this SMA interconnect. It has 
+                        electrical continuity with **2. Top Center SMA Connector**.
+
+            ..  grid-item::
+                :child-align: center
+
+                ..  image:: /_static/images/dual-commutator.webp
+
+                ..  grid:: 1
+
+                    ..  grid-item:: **5. Bottom Off-Center SMA Connector**
+
+                        The commutator's bottom off-center SMA connector connects to a freely moving animal 
+                        headstage that has a coaxial connector through this SMA interconnect. It has 
+                        electrical continuity with **3. Top Off-Center SMA Connector**.
 
 ..  tip::
 
