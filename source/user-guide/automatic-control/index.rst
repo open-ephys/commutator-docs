@@ -88,12 +88,12 @@ This method requires a headstage or a miniscope that has an onboard sensor capab
                 :class: center-text
 
             ..  grid-item-card::
-                :link: https://open-ephys.github.io/gui-docs/Tutorials/Commutator.html?acquisition-hardware=acquisition-board
+                :link: https://open-ephys.github.io/gui-docs/Tutorials/Commutator.html?acquisition-hardware=onix
                 :img-background: /_static/images/breakout-oegui.png 
                 :class-card: page-card 
 
             ..  grid-item-card:: 
-                :link: https://open-ephys.github.io/gui-docs/Tutorials/Commutator.html?acquisition-hardware=onix
+                :link: https://open-ephys.github.io/gui-docs/Tutorials/Commutator.html?acquisition-hardware=acquisition-board
                 :img-background: /_static/images/acqboard-oegui.png 
                 :class-card: page-card 
 
