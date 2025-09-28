@@ -10,7 +10,7 @@ The commutator's :ref:`remote control <remote_control>` enables moment-to-moment
 Using a 3D Capable Headstage/Miniscope
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-..  include:: /_static/includes/automated-commutation-cards.rst
+..  include:: /_static/includes/automated-commutation_cards.rst
 
 Using Computer Vision
 ^^^^^^^^^^^^^^^^^^^^^^^
