@@ -1,0 +1,10 @@
+**Pose Estimation Algorithm**,Version,Framework,Models and configuration/files format,Bonsai support for real-time pose estimation,Documentation
+**SLEAP**,< v1.5,TensorFlow,".pb
+.json",Yes. Bonsai.SLEAP (version 0.3.0),"https://bonsai-rx.org/sleap/index.html
+https://legacy.sleap.ai/guides/bonsai.html"
+**SLEAP**,≥ v1.5,Torch,"Torch checkpoints .pt
+.yaml","Not yet, but on the `radar <https://github.com/bonsai-rx/sleap/issues/34>`_",
+**Deep Lab Cut**,< v3.0,TensorFlow,".pb
+.yaml",Yes. Bonsai.DeepLabCut (version 0.3.0),https://bonsai-rx.org/deeplabcut/
+**Deep Lab Cut**,≥ v3.0,Torch,"Torch checkpoints .pt
+.yaml",Not yet.,
