@@ -32,10 +32,10 @@ moving animal. This example uses SLEAP.
 #.  Prepare your network model for automating commutation:
 
     #.  Follow `these instructions to train a network model
-        <https://sleap.ai/develop/tutorials/initial-labeling.html>`_ if you do not already have one.
+        <https://docs.sleap.ai/latest/tutorial/initial-labeling/>`_ if you do not already have one.
 
     #.  Follow `these instructions to configure your trained network
-        <https://sleap.ai/develop/guides/choosing-models.html>`_.
+        <https://docs.sleap.ai/latest/learnings/configuring-models/>`_.
     
     #.  Take a snapshot of your behavioral arena with no animal inside which will serve as the background.
 
@@ -85,3 +85,14 @@ moving animal. This example uses SLEAP.
         commutator is connected.
 
 #. Run the workflow in Bonsai. If all above steps are correctly performed, the commutator will follow rotations.
+
+SLEAP and DeepLabCut versions and Bonsai Compatibility
+------------------------------------------------------
+
+Machine learning frameworks have recently migrated from TensorFlow to Torch, and while older versions of both SLEAP and DLC were supported in Bonsai, newer Torch models don’t yet have standalone packages. You can still use older TensorFlow models with the older Bonsai packages, as per the table below.
+
+.. csv-table:: 
+   :file: /_static/files/SLEAP-DLC-Bonsai-diff.csv
+   :widths: 30, 30, 30, 30, 30, 30
+   :header-rows: 1
+   :stub-columns: 1
