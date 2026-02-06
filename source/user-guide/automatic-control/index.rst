@@ -20,4 +20,8 @@ Using Computer Vision
 .. toctree::
     :hidden:
 
+    Acquisition Board in OE GUI <https://open-ephys.github.io/gui-docs/Tutorials/Commutator.html?acquisition-hardware=acquisition-board>
+    ONIX in OE GUI <https://open-ephys.github.io/gui-docs/Tutorials/Commutator.html?acquisition-hardware=onix>
+    ONIX in Bonsai <https://open-ephys.github.io/bonsai-onix1-docs/articles/hardware/index.html>    
+    Miniscope DAQ in Bonsai <https://open-ephys.github.io/miniscope-docs/ucla-miniscope-v4/user/miniscope-daq/commutate/index.html>
     computer-vision
