@@ -92,9 +92,6 @@ that corresponds to your commutator.
 
         SPI commutator
              :download:`Firmware version 1.5 </_static/files/commutator.ino.SPI.Teensy3.2.v1.5.1.zip>`
-        
-        Dual Commutator
-             :download:`Firmware version 1.5 </_static/files/commutator.ino.DualCoax.Teensy3.2.v1.5.1.zip>`
 
     .. tab-item:: RP2040
 
