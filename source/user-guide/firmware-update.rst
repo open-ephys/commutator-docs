@@ -76,10 +76,11 @@ that corresponds to your commutator.
         Coax commutator
             :download:`Firmware version 1.6 </_static/files/commutator.ino.SingleCoax.TeensyLC.v1.6.0.zip>` 
 
-        .. SPI commutator
-        ..     :download:`Firmware version 1.6 </_static/files/commutator.ino.SPI.TeensyLC.v1.6.0.zip>`
-        .. Dual Commutator
-        ..     :download:`Firmware version 1.6 </_static/files/commutator.ino.DualCoax.TeensyLC.v1.6.0.zip>`
+        SPI commutator
+             :download:`Firmware version 1.6 </_static/files/commutator.ino.SPI.TeensyLC.v1.6.0.zip>`
+        
+        Dual Commutator
+             :download:`Firmware version 1.6 </_static/files/commutator.ino.DualCoax.TeensyLC.v1.6.0.zip>`
 
     ..  tab-item:: Teensy 3.2
 
@@ -89,10 +90,11 @@ that corresponds to your commutator.
         Coax commutator
             :download:`Firmware version 1.5 </_static/files/commutator.ino.SingleCoax.Teensy3.2.v1.5.1.zip>`     
 
-        .. SPI commutator
-        ..     :download:`Firmware version 1.5 </_static/files/commutator.ino.SPI.Teensy3.2.v1.5.1.zip>`
-        .. Dual Commutator
-        ..     :download:`Firmware version 1.5 </_static/files/commutator.ino.DualCoax.Teensy3.2.v1.5.1.zip>`
+        SPI commutator
+             :download:`Firmware version 1.5 </_static/files/commutator.ino.SPI.Teensy3.2.v1.5.1.zip>`
+        
+        Dual Commutator
+             :download:`Firmware version 1.5 </_static/files/commutator.ino.DualCoax.Teensy3.2.v1.5.1.zip>`
 
     .. tab-item:: RP2040
 
