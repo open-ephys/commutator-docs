@@ -31,11 +31,12 @@ moving animal. This example uses SLEAP.
 
 #.  Prepare your network model for automating commutation:
 
+    #.  Visit the `SLEAP learning page
+        <https://docs.sleap.ai/latest/tutorial/initial-labeling/>`_  to learn
+        about how SLEAP works.
+
     #.  Follow `these instructions to train a network model
         <https://docs.sleap.ai/latest/tutorial/initial-labeling/>`_ if you do not already have one.
-
-    #.  Follow `these instructions to configure your trained network
-        <https://docs.sleap.ai/latest/learnings/configuring-models/>`_.
     
     #.  Take a snapshot of your behavioral arena with no animal inside which will serve as the background.
 
