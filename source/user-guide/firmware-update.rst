@@ -73,25 +73,25 @@ that corresponds to your commutator.
         ..  rubric:: Teensy LC HEX files
             :heading-level: 4
 
-        Coaxial commutator
+        SPI Commutator
+            :download:`Firmware version 1.6 </_static/files/commutator.ino.SPI.TeensyLC.v1.6.0.zip>`
+        
+        Coaxial Commutator
             :download:`Firmware version 1.6 </_static/files/commutator.ino.SingleCoax.TeensyLC.v1.6.0.zip>` 
-
-        SPI commutator
-             :download:`Firmware version 1.6 </_static/files/commutator.ino.SPI.TeensyLC.v1.6.0.zip>`
         
         Dual Coaxial Commutator
-             :download:`Firmware version 1.6 </_static/files/commutator.ino.DualCoax.TeensyLC.v1.6.0.zip>`
+            :download:`Firmware version 1.6 </_static/files/commutator.ino.DualCoax.TeensyLC.v1.6.0.zip>`
 
     ..  tab-item:: Teensy 3.2
 
         ..  rubric:: Teensy 3.2 HEX files
             :heading-level: 4
 
-        Coaxial commutator
-            :download:`Firmware version 1.5 </_static/files/commutator.ino.SingleCoax.Teensy3.2.v1.5.1.zip>`     
-
-        SPI commutator
-             :download:`Firmware version 1.5 </_static/files/commutator.ino.SPI.Teensy3.2.v1.5.1.zip>`
+        SPI Commutator
+            :download:`Firmware version 1.5 </_static/files/commutator.ino.SPI.Teensy3.2.v1.5.1.zip>`
+        
+        Coaxial Commutator
+            :download:`Firmware version 1.5 </_static/files/commutator.ino.SingleCoax.Teensy3.2.v1.5.1.zip>`
 
     .. tab-item:: RP2040
 
